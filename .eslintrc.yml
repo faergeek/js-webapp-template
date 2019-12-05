@@ -1,0 +1,175 @@
+root: true
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
+  - prettier
+  - prettier/react
+parserOptions:
+  ecmaVersion: 2020
+  sourceType: module
+  ecmaFeatures:
+    impliedStrict: true
+plugins:
+  - react
+  - react-hooks
+settings:
+  react:
+    pragma: h
+    version: '16.12.0'
+env:
+  commonjs: true
+  es6: true
+  shared-node-browser: true
+globals:
+  __dirname: false
+  cancelAnimationFrame: false
+  document: false
+  fetch: false
+  navigator: false
+  process: false
+  Promise: false
+  requestAnimationFrame: false
+  window: false
+rules:
+  array-callback-return: error
+  block-scoped-var: error
+  camelcase:
+    - error
+    - properties: never
+  consistent-this: error
+  curly:
+    - error
+    - all
+  default-case: error
+  dot-notation: error
+  eqeqeq:
+    - error
+    - allow-null
+  func-names:
+    - error
+    - as-needed
+  func-style:
+    - error
+    - declaration
+    - allowArrowFunctions: true
+  guard-for-in: error
+  handle-callback-err: error
+  max-depth: error
+  max-params:
+    - error
+    - 5
+  max-statements-per-line: error
+  no-alert: error
+  no-array-constructor: error
+  no-bitwise: error
+  no-caller: error
+  no-console: error
+  no-div-regex: error
+  no-else-return: error
+  no-empty-function: error
+  no-eval: error
+  no-extend-native: error
+  no-extra-bind: error
+  no-extra-label: error
+  no-implicit-coercion: error
+  no-implicit-globals: error
+  no-implied-eval: error
+  no-iterator: error
+  no-label-var: error
+  no-labels:
+    - error
+    - allowLoop: true
+  no-lone-blocks: error
+  no-lonely-if: error
+  no-loop-func: error
+  no-mixed-requires:
+    - error
+    - grouping: true
+  no-multi-str: error
+  no-negated-condition: error
+  no-new: error
+  no-new-func: error
+  no-new-object: error
+  no-new-require: error
+  no-new-symbol: error
+  no-new-wrappers: error
+  no-octal-escape: error
+  no-path-concat: error
+  no-param-reassign: error
+  no-proto: error
+  no-prototype-builtins: error
+  no-return-assign: error
+  no-return-await: error
+  no-script-url: error
+  no-self-compare: error
+  no-sequences: error
+  no-shadow: error
+  no-shadow-restricted-names: error
+  no-throw-literal: error
+  no-undef-init: error
+  no-unmodified-loop-condition: error
+  no-unneeded-ternary: error
+  no-unused-expressions: error
+  no-use-before-define:
+    - error
+    - nofunc
+  no-useless-call: error
+  no-useless-computed-key: error
+  no-useless-concat: error
+  no-useless-constructor: error
+  no-useless-rename: error
+  no-var: error
+  no-void: error
+  no-with: error
+  object-shorthand: error
+  operator-assignment: error
+  padding-line-between-statements: error
+  prefer-const: error
+  prefer-rest-params: error
+  prefer-spread: error
+  prefer-template: error
+  radix: error
+  spaced-comment:
+    - error
+    - always
+    - block:
+        balanced: true
+  strict:
+    - error
+    - never
+  vars-on-top: error
+  yoda: error
+  react/boolean-prop-naming: error
+  react/forbid-dom-props: error
+  react/forbid-foreign-prop-types: error
+  react/jsx-boolean-value: error
+  react/jsx-curly-brace-presence: error
+  react/jsx-fragments: error
+  react/jsx-key: error
+  react/jsx-no-comment-textnodes: error
+  react/jsx-no-target-blank: error
+  react/jsx-pascal-case: error
+  react/jsx-sort-default-props: error
+  react/no-children-prop: error
+  react/no-danger: error
+  react/no-danger-with-children: error
+  react/no-did-mount-set-state: error
+  react/no-did-update-set-state: error
+  react/no-redundant-should-component-update: error
+  react/no-string-refs: error
+  react/no-this-in-sfc: error
+  react/no-typos: error
+  react/no-unknown-property:
+    - error
+    - ignore:
+        - class
+        - for
+  react/no-will-update-set-state: error
+  react/prefer-es6-class: error
+  react/prefer-read-only-props: error
+  react/prop-types: 'off'
+  react/sort-comp: error
+  react/style-prop-object: error
+  react/void-dom-elements-no-children: error
+  react-hooks/rules-of-hooks: error
+  react-hooks/exhaustive-deps: error

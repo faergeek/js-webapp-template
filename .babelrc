@@ -1,0 +1,14 @@
+{
+  "presets": [
+    [
+      "@babel/preset-react",
+      {
+        "pragma": "h",
+        "pragmaFrag": "Fragment",
+        "useBuiltIns": true
+      }
+    ]
+  ],
+
+  "plugins": [["@babel/plugin-transform-runtime", { "useESModules": true }]]
+}
