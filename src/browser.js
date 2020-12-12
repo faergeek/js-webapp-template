@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV === 'development') {
+  require('preact/debug')
+}
+
 import { createRouter } from '@curi/router';
 import { browser } from '@hickory/browser';
 import { h, hydrate } from 'preact';
