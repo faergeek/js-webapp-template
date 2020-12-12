@@ -38,9 +38,9 @@ if (argv[0] === 'prerender') {
         renderHtml({
           getAssetUrl: getAssetUrlFromManifest,
           response,
-          router
-        })
-    }
+          router,
+        }),
+    },
   }).then(
     results => {
       // eslint-disable-next-line no-console
@@ -66,7 +66,7 @@ if (argv[0] === 'prerender') {
   if (process.env.NODE_ENV === 'production') {
     requestHandlerOptions = {
       getAssetUrl: getAssetUrlFromManifest,
-      publicDir: PUBLIC_DIR
+      publicDir: PUBLIC_DIR,
     };
   } else {
     const webpack = require('webpack');
@@ -75,7 +75,7 @@ if (argv[0] === 'prerender') {
 
     const webpackConfig = require('../webpack.config')({
       dev: true,
-      node: false
+      node: false,
     });
 
     const compiler = webpack(webpackConfig);
@@ -83,13 +83,8 @@ if (argv[0] === 'prerender') {
     requestHandlerOptions = {
       getAssetUrl: asset => `${webpackConfig.output.publicPath + asset}`,
       publicDir: PUBLIC_DIR,
-
-      webpackDevMiddleware: webpackDevMiddleware(compiler, {
-        publicPath: webpackConfig.output.publicPath,
-        stats: 'minimal'
-      }),
-
-      webpackHotMiddleware: webpackHotMiddleware(compiler)
+      webpackDevMiddleware: webpackDevMiddleware(compiler),
+      webpackHotMiddleware: webpackHotMiddleware(compiler),
     };
   }
 

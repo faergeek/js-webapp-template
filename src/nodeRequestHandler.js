@@ -10,7 +10,7 @@ export function createRequestHandler({
   getAssetUrl,
   publicDir,
   webpackDevMiddleware,
-  webpackHotMiddleware
+  webpackHotMiddleware,
 }) {
   const reusable = createReusable();
 
@@ -24,7 +24,7 @@ export function createRequestHandler({
     .use('/', express.static(publicDir, { maxAge: '1y' }))
     .use(nocache(), (req, res) => {
       const router = createRouter(reusable, routes, {
-        history: { location: { url: req.originalUrl } }
+        history: { location: { url: req.originalUrl } },
       });
 
       router.once(({ response }) => {

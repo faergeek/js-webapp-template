@@ -52,9 +52,9 @@ export function renderHtml({ getAssetUrl, response, router }) {
             __html: escapeJsonForEval(
               JSON.stringify({
                 data: response.data,
-                meta: response.meta
+                meta: response.meta,
               })
-            )
+            ),
           }}
         />
       </body>
