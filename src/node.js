@@ -25,7 +25,7 @@ function getAssetUrlFromManifest(asset) {
 const PUBLIC_DIR = path.join(__dirname, '..', 'public');
 const argv = process.argv.slice(2);
 
-if (argv[0] === 'static') {
+if (argv[0] === 'prerender') {
   staticFiles({
     fallback: staticFallback,
     pages: staticPages,
