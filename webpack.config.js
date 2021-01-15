@@ -1,4 +1,3 @@
-const Dotenv = require('dotenv-webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
@@ -101,7 +100,6 @@ module.exports = ({ dev = false, node = false } = {}) => ({
   },
 
   plugins: [
-    new Dotenv({ systemvars: true }),
     process.stdout.isTTY && new SimpleProgressWebpackPlugin(),
     dev && new webpack.HotModuleReplacementPlugin(),
 
