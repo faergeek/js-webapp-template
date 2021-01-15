@@ -2,7 +2,7 @@ import { createRouter } from '@curi/router';
 import { createReusable } from '@hickory/in-memory';
 import * as express from 'express';
 import * as nocache from 'nocache';
-import { h } from 'preact';
+import { h, Fragment } from 'preact';
 import renderToString from 'preact-render-to-string';
 
 import { routes } from './routes';
@@ -37,31 +37,27 @@ export function createRequestHandler({
           .set('Content-Type', 'text/html')
           .end(
             `<!doctype html>${renderToString(
-              <html>
-                <head>
-                  <meta charSet="utf-8" />
-                  <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+              <>
+                <meta charSet="utf-8" />
+                <meta httpEquiv="x-ua-compatible" content="ie=edge" />
 
-                  <meta
-                    name="viewport"
-                    content="width=device-width,initial-scale=1"
-                  />
+                <meta
+                  name="viewport"
+                  content="width=device-width,initial-scale=1"
+                />
 
-                  {['main.css'].map(getAssetUrl).map(href => (
-                    <link key={href} rel="stylesheet" href={href} />
-                  ))}
+                {['main.css'].map(getAssetUrl).map(href => (
+                  <link key={href} rel="stylesheet" href={href} />
+                ))}
 
-                  {['main.js'].map(getAssetUrl).map(src => (
-                    <script key={src} defer src={src} />
-                  ))}
-                </head>
+                {['main.js'].map(getAssetUrl).map(src => (
+                  <script key={src} defer src={src} />
+                ))}
 
-                <body>
-                  <div id="root">
-                    <Root router={router} />
-                  </div>
-                </body>
-              </html>
+                <div id="root">
+                  <Root router={router} />
+                </div>
+              </>
             )}`
           );
       });
