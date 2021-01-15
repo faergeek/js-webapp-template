@@ -1,5 +1,6 @@
 {
   "private": true,
+  "main": "dist/main.js",
   "engines": {
     "node": "^10 || ^13 || ^15",
     "yarn": "^1"
@@ -12,8 +13,8 @@
     "dev:browser": "node dist/main.js",
     "build:browser": "webpack",
     "build:node": "webpack --env node",
-    "build:prerender": "node dist/main.js prerender",
-    "build": "yarn run build:browser && yarn run build:node && yarn run build:prerender",
+    "build": "yarn run build:browser && yarn run build:node",
+    "start": "node .",
     "cleanup": "rimraf dist public"
   },
   "dependencies": {
@@ -28,7 +29,6 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.7.4",
     "@curi/router": "^2.0.1",
-    "@curi/static": "^2.0.1",
     "@hickory/browser": "^2.0.1",
     "@hickory/in-memory": "^2.0.0",
     "babel-loader": "^8.0.6",

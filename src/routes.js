@@ -16,10 +16,3 @@ export const routes = prepareRoutes([
     respond: () => ({ meta: { status: 404 }, body: NotFoundPage }),
   },
 ]);
-
-export const staticPages = [{ name: 'home' }];
-
-export const staticFallback = {
-  pathname: '/404',
-  filename: '404.html',
-};
