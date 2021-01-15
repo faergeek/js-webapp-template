@@ -98,16 +98,6 @@ module.exports = ({ dev = false, node = false } = {}) => ({
               'postcss-loader',
             ],
       },
-
-      {
-        test: /\.(svg|png|gif|jpe?g|eot|ttf|woff2?)$/,
-        loader: 'url-loader',
-        options: {
-          emitFile: !node,
-          name: dev ? '[name].[ext]' : '[name].[contenthash].[ext]',
-          limit: 4000,
-        },
-      },
     ],
   },
 
