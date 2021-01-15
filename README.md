@@ -15,4 +15,4 @@ Node.js entrypoint can't hot-reload, you'll have to restart `yarn run dev:browse
 
 ## License
 
-[Just do what the fuck you want to](https://github.com/faergeek/webpack-ssr-hmr-boilerplate/blob/master/COPYING).
+[Just do what the fuck you want to](COPYING).
