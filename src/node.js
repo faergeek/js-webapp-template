@@ -1,7 +1,6 @@
 import { staticFiles } from '@curi/static';
 import * as fs from 'fs';
 import * as http from 'http';
-import 'isomorphic-unfetch';
 import * as path from 'path';
 
 import { renderHtml } from './nodeRenderHtml';
