@@ -8,24 +8,6 @@ import renderToString from 'preact-render-to-string';
 import { routes } from './routes';
 import { Root } from './root';
 
-// see http://www.thespanner.co.uk/2011/07/25/the-json-specification-is-now-wrong/
-const symbolsToEscape = ['\u2028', '\u2029'];
-
-const replacements = symbolsToEscape.reduce((result, sym) => {
-  result[sym] = `\\${sym}`;
-
-  return result;
-}, {});
-
-function escapeJsonForEval(str) {
-  return str
-    .replace(
-      new RegExp(`(${symbolsToEscape.join('|')})`, 'g'),
-      (_, toEscape) => replacements[toEscape]
-    )
-    .replace(/<\/script>/g, '<\\/script>');
-}
-
 export function createRequestHandler({
   getAssetUrl,
   publicDir,
@@ -78,20 +60,6 @@ export function createRequestHandler({
                   <div id="root">
                     <Root router={router} />
                   </div>
-
-                  <script
-                    id="initial-response"
-                    type="application/json"
-                    // eslint-disable-next-line react/no-danger
-                    dangerouslySetInnerHTML={{
-                      __html: escapeJsonForEval(
-                        JSON.stringify({
-                          data: response.data,
-                          meta: response.meta,
-                        })
-                      ),
-                    }}
-                  />
                 </body>
               </html>
             )}`
