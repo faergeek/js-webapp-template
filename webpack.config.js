@@ -9,7 +9,6 @@ const packageJson = require('./package.json');
 
 const BROWSER_OUTPUT_PATH = path.join(__dirname, 'public', '_assets');
 const NODE_OUTPUT_PATH = path.join(__dirname, 'dist');
-const REPORTS_OUTPUT_PATH = path.join(__dirname, 'reports');
 
 module.exports = ({ dev = false, node = false } = {}) => ({
   mode: dev ? 'development' : 'production',
@@ -112,28 +111,6 @@ module.exports = ({ dev = false, node = false } = {}) => ({
         raw: true,
         entryOnly: false,
       }),
-
-    node
-      ? new (require('webpack-bundle-analyzer').BundleAnalyzerPlugin)({
-          analyzerMode: dev ? 'server' : 'static',
-          analyzerPort: 8081,
-          openAnalyzer: false,
-
-          reportFilename: path.relative(
-            NODE_OUTPUT_PATH,
-            path.join(REPORTS_OUTPUT_PATH, 'node-bundle.html')
-          ),
-        })
-      : new (require('webpack-bundle-analyzer').BundleAnalyzerPlugin)({
-          analyzerMode: dev ? 'server' : 'static',
-          analyzerPort: 8082,
-          openAnalyzer: false,
-
-          reportFilename: path.relative(
-            BROWSER_OUTPUT_PATH,
-            path.join(REPORTS_OUTPUT_PATH, 'browser-bundle.html')
-          ),
-        }),
 
     !node &&
       !dev &&
