@@ -4,26 +4,27 @@ import * as path from 'path';
 
 import { createRequestHandler } from './nodeRequestHandler';
 
+const BUILD_ROOT = path.resolve('build');
+const PUBLIC_ROOT = path.resolve(BUILD_ROOT, 'public');
+
 let manifest;
 
 function getAssetUrlFromManifest(asset) {
   if (!manifest) {
     manifest = JSON.parse(
-      fs.readFileSync(path.resolve('dist', 'manifest.json'), 'utf-8')
+      fs.readFileSync(path.resolve(BUILD_ROOT, 'manifest.json'), 'utf-8')
     );
   }
 
   return `${manifest[asset]}`;
 }
 
-const PUBLIC_DIR = path.resolve('public');
-
 let requestHandlerOptions;
 
 if (process.env.NODE_ENV === 'production') {
   requestHandlerOptions = {
     getAssetUrl: getAssetUrlFromManifest,
-    publicDir: PUBLIC_DIR,
+    publicDir: PUBLIC_ROOT,
   };
 } else {
   const webpack = require('webpack');
@@ -39,7 +40,7 @@ if (process.env.NODE_ENV === 'production') {
 
   requestHandlerOptions = {
     getAssetUrl: asset => `${webpackConfig.output.publicPath + asset}`,
-    publicDir: PUBLIC_DIR,
+    publicDir: PUBLIC_ROOT,
     webpackDevMiddleware: webpackDevMiddleware(compiler),
     webpackHotMiddleware: webpackHotMiddleware(compiler),
   };

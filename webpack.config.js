@@ -5,8 +5,8 @@ const webpack = require('webpack');
 
 const packageJson = require('./package.json');
 
-const BROWSER_OUTPUT_PATH = path.resolve('public', '_assets');
-const NODE_OUTPUT_PATH = path.resolve('dist');
+const BUILD_ROOT = path.resolve('build');
+const PUBLIC_ROOT = path.resolve(BUILD_ROOT, 'public', '_assets');
 
 module.exports = ({ dev = false, node = false } = {}) => ({
   mode: dev ? 'development' : 'production',
@@ -26,12 +26,12 @@ module.exports = ({ dev = false, node = false } = {}) => ({
   },
 
   output: {
-    path: node ? NODE_OUTPUT_PATH : BROWSER_OUTPUT_PATH,
+    path: node ? BUILD_ROOT : PUBLIC_ROOT,
     filename: `[name]${dev || node ? '' : '.[contenthash]'}.js`,
     chunkFilename: `[name]${dev || node ? '' : '.[contenthash]'}.js`,
     publicPath: '/_assets/',
     devtoolModuleFilenameTemplate: node
-      ? path.relative(NODE_OUTPUT_PATH, '[resource-path]')
+      ? path.relative(BUILD_ROOT, '[resource-path]')
       : undefined,
   },
 
@@ -101,8 +101,8 @@ module.exports = ({ dev = false, node = false } = {}) => ({
       !dev &&
       new (require('webpack-manifest-plugin').WebpackManifestPlugin)({
         fileName: path.relative(
-          BROWSER_OUTPUT_PATH,
-          path.join(NODE_OUTPUT_PATH, 'manifest.json')
+          PUBLIC_ROOT,
+          path.join(BUILD_ROOT, 'manifest.json')
         ),
       }),
 

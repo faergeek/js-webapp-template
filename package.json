@@ -1,6 +1,6 @@
 {
   "private": true,
-  "main": "dist/main.js",
+  "main": "build/main.js",
   "scripts": {
     "prettier": "prettier --write .",
     "prettier:check": "prettier --list-different .",
@@ -11,7 +11,7 @@
     "build:node": "webpack --env node",
     "build": "yarn run build:browser && yarn run build:node",
     "start": "node .",
-    "cleanup": "rimraf dist public"
+    "cleanup": "rimraf build"
   },
   "dependencies": {
     "@curi/router": "^2.0.1",
