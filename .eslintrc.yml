@@ -21,7 +21,6 @@ env:
   es6: true
   shared-node-browser: true
 globals:
-  __dirname: false
   cancelAnimationFrame: false
   document: false
   fetch: false

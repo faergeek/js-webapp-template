@@ -9,17 +9,14 @@ let manifest;
 function getAssetUrlFromManifest(asset) {
   if (!manifest) {
     manifest = JSON.parse(
-      fs.readFileSync(
-        path.join(__dirname, '..', 'dist', 'manifest.json'),
-        'utf-8'
-      )
+      fs.readFileSync(path.resolve('dist', 'manifest.json'), 'utf-8')
     );
   }
 
   return `${manifest[asset]}`;
 }
 
-const PUBLIC_DIR = path.join(__dirname, '..', 'public');
+const PUBLIC_DIR = path.resolve('public');
 
 let requestHandlerOptions;
 

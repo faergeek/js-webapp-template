@@ -5,8 +5,8 @@ const webpack = require('webpack');
 
 const packageJson = require('./package.json');
 
-const BROWSER_OUTPUT_PATH = path.join(__dirname, 'public', '_assets');
-const NODE_OUTPUT_PATH = path.join(__dirname, 'dist');
+const BROWSER_OUTPUT_PATH = path.resolve('public', '_assets');
+const NODE_OUTPUT_PATH = path.resolve('dist');
 
 module.exports = ({ dev = false, node = false } = {}) => ({
   mode: dev ? 'development' : 'production',
@@ -32,14 +32,6 @@ module.exports = ({ dev = false, node = false } = {}) => ({
     publicPath: '/_assets/',
     devtoolModuleFilenameTemplate: node ? '../[resource-path]' : undefined,
   },
-
-  node: node
-    ? {
-        __filename: false,
-        __dirname: false,
-        global: false,
-      }
-    : undefined,
 
   externals: node
     ? ({ request }, cb) => {
@@ -67,7 +59,7 @@ module.exports = ({ dev = false, node = false } = {}) => ({
 
       {
         test: /\.js$/,
-        include: [path.join(__dirname, 'src')],
+        include: [path.resolve('src')],
         use: {
           loader: 'babel-loader',
           options: {
