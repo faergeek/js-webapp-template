@@ -16,7 +16,11 @@ module.exports = ({ dev = false, node = false } = {}) => ({
 
   entry: {
     main: (node
-      ? [dev && 'webpack/hot/poll?1000', './src/node']
+      ? [
+          'source-map-support/register',
+          dev && 'webpack/hot/poll?1000',
+          './src/node',
+        ]
       : [dev && 'webpack-hot-middleware/client?reload=true', './src/browser']
     ).filter(Boolean),
   },
@@ -98,13 +102,6 @@ module.exports = ({ dev = false, node = false } = {}) => ({
 
   plugins: [
     dev && new webpack.HotModuleReplacementPlugin(),
-
-    node &&
-      new webpack.BannerPlugin({
-        banner: "require('source-map-support').install();",
-        raw: true,
-        entryOnly: false,
-      }),
 
     !node &&
       !dev &&
