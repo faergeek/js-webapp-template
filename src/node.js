@@ -1,11 +1,15 @@
+import * as assert from 'assert';
 import * as fs from 'fs';
 import * as http from 'http';
 import * as path from 'path';
 
 import { createRequestHandler } from './nodeRequestHandler';
 
+const PORT = parseInt(process.env.PORT, 10);
 const BUILD_ROOT = path.resolve('build');
 const PUBLIC_ROOT = path.resolve(BUILD_ROOT, 'public');
+
+assert(isFinite(PORT));
 
 let manifest;
 
@@ -59,4 +63,4 @@ if (module.hot) {
   });
 }
 
-server.listen(8080);
+server.listen(PORT);

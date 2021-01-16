@@ -16,6 +16,7 @@
   "dependencies": {
     "@curi/router": "^2.0.1",
     "@hickory/in-memory": "^2.0.0",
+    "dotenv-flow": "^3.2.0",
     "express": "^4.17.1",
     "preact": "^10.3.4",
     "preact-render-to-string": "^5.0.6",
