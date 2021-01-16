@@ -27,8 +27,8 @@ module.exports = ({ dev = false, node = false } = {}) => ({
 
   output: {
     path: node ? NODE_OUTPUT_PATH : BROWSER_OUTPUT_PATH,
-    filename: `[name]${dev || node ? '' : '.[chunkhash]'}.js`,
-    chunkFilename: `[name]${dev || node ? '' : '.[chunkhash]'}.js`,
+    filename: `[name]${dev || node ? '' : '.[contenthash]'}.js`,
+    chunkFilename: `[name]${dev || node ? '' : '.[contenthash]'}.js`,
     publicPath: '/_assets/',
     devtoolModuleFilenameTemplate: node ? '../[resource-path]' : undefined,
   },
