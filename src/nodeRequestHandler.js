@@ -1,7 +1,6 @@
 import { createRouter } from '@curi/router';
 import { createReusable } from '@hickory/in-memory';
 import * as express from 'express';
-import * as nocache from 'nocache';
 import { h, Fragment } from 'preact';
 import renderToString from 'preact-render-to-string';
 
@@ -22,9 +21,9 @@ export function createRequestHandler({
     app.use(webpackDevMiddleware, webpackHotMiddleware);
   }
 
-  return app
-    .use('/', express.static(publicDir, { maxAge: '1y' }))
-    .use(nocache(), (req, res) => {
+  return app.use(
+    express.static(publicDir, { maxAge: '1 year' }),
+    (req, res) => {
       const router = createRouter(reusable, routes, {
         history: { location: { url: req.originalUrl } },
       });
@@ -61,5 +60,6 @@ export function createRequestHandler({
             )}`
           );
       });
-    });
+    }
+  );
 }

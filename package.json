@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "nocache": "^2.1.0",
     "source-map-support": "^0.5.13"
   },
   "devDependencies": {
