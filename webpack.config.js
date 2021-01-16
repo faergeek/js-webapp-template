@@ -42,7 +42,7 @@ module.exports = ({ dev = false, node = false } = {}) => ({
     : undefined,
 
   externals: node
-    ? (_context, request, cb) => {
+    ? ({ request }, cb) => {
         if (
           ([
             ...Object.keys(packageJson.dependencies),
