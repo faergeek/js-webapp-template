@@ -1,7 +1,6 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const SimpleProgressWebpackPlugin = require('simple-progress-webpack-plugin');
 const webpack = require('webpack');
 
 const packageJson = require('./package.json');
@@ -100,7 +99,6 @@ module.exports = ({ dev = false, node = false } = {}) => ({
   },
 
   plugins: [
-    process.stdout.isTTY && new SimpleProgressWebpackPlugin(),
     dev && new webpack.HotModuleReplacementPlugin(),
 
     node &&
