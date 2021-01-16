@@ -6,7 +6,7 @@
     "prettier:check": "prettier --list-different .",
     "lint": "eslint .",
     "dev:node": "webpack --watch --env dev --env node",
-    "dev:browser": "node dist/main.js",
+    "dev:browser": "node .",
     "build:browser": "webpack",
     "build:node": "webpack --env node",
     "build": "yarn run build:browser && yarn run build:node",
