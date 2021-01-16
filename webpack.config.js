@@ -19,6 +19,7 @@ module.exports = ({ dev = false, node = false } = {}) => ({
       ? [
           'source-map-support/register',
           dev && 'webpack/hot/poll?1000',
+          'dotenv-flow/config',
           './src/node',
         ]
       : [dev && 'webpack-hot-middleware/client?reload=true', './src/browser']
