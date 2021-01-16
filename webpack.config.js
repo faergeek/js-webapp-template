@@ -30,7 +30,9 @@ module.exports = ({ dev = false, node = false } = {}) => ({
     filename: `[name]${dev || node ? '' : '.[contenthash]'}.js`,
     chunkFilename: `[name]${dev || node ? '' : '.[contenthash]'}.js`,
     publicPath: '/_assets/',
-    devtoolModuleFilenameTemplate: node ? '../[resource-path]' : undefined,
+    devtoolModuleFilenameTemplate: node
+      ? path.relative(NODE_OUTPUT_PATH, '[resource-path]')
+      : undefined,
   },
 
   externals: node
