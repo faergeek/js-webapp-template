@@ -14,7 +14,11 @@
     "cleanup": "rimraf dist public"
   },
   "dependencies": {
+    "@curi/router": "^2.0.1",
+    "@hickory/in-memory": "^2.0.0",
     "express": "^4.17.1",
+    "preact": "^10.3.4",
+    "preact-render-to-string": "^5.0.6",
     "source-map-support": "^0.5.13"
   },
   "devDependencies": {
@@ -23,9 +27,7 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.7.4",
-    "@curi/router": "^2.0.1",
     "@hickory/browser": "^2.0.1",
-    "@hickory/in-memory": "^2.0.0",
     "babel-loader": "^8.0.6",
     "browserslist": "^4.16.0",
     "core-js": "^3.2.1",
@@ -41,8 +43,6 @@
     "postcss-loader": "^4.1.0",
     "postcss-normalize": "^9.0.0",
     "postcss-preset-env": "^6.7.0",
-    "preact": "^10.3.4",
-    "preact-render-to-string": "^5.0.6",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.0",
     "source-map-loader": "^1.1.3",
