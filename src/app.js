@@ -9,7 +9,7 @@ function RouterView() {
   return h(response.body);
 }
 
-export function Root({ router }) {
+export function App({ router }) {
   return (
     <RouterProvider router={router}>
       <Layout>

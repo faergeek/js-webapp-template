@@ -8,7 +8,7 @@ import { h, Fragment } from 'preact';
 import renderToString from 'preact-render-to-string';
 
 import { routes } from './routes';
-import { Root } from './root';
+import { App } from './app';
 
 function getEntryUrls(entry) {
   if (typeof entry === 'string') {
@@ -83,7 +83,7 @@ export const app = express().use(
                 ))}
 
                 <div id="root">
-                  <Root router={router} />
+                  <App router={router} />
                 </div>
               </>
             )}`
