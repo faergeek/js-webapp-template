@@ -5,8 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const { RunScriptWebpackPlugin } = require('run-script-webpack-plugin');
 const webpack = require('webpack');
-
-const packageJson = require('./package.json');
+const nodeExternals = require('webpack-node-externals');
 
 const BUILD_ROOT = path.resolve('build');
 
@@ -51,19 +50,7 @@ function makeConfig({ dev, node }) {
           }
         : undefined,
     externals: node
-      ? ({ request }, cb) => {
-          if (
-            [
-              ...Object.keys(packageJson.dependencies),
-              ...Object.keys(packageJson.devDependencies),
-            ].some(packageName => request.startsWith(packageName)) &&
-            !request.startsWith('webpack/hot')
-          ) {
-            cb(null, `commonjs ${request}`);
-          } else {
-            cb();
-          }
-        }
+      ? nodeExternals({ allowlist: [/^webpack\/hot/] })
       : undefined,
     module: {
       rules: [
