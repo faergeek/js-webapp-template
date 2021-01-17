@@ -63,6 +63,8 @@ export const app = express().use(
                   content="width=device-width,initial-scale=1"
                 />
 
+                <title>Webpack SSR HMR Boilerplate</title>
+
                 {getEntryUrls(webpackAssets.main.css).map(href => (
                   <link key={href} rel="stylesheet" href={href} />
                 ))}
