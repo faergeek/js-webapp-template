@@ -3,6 +3,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
+const { RunScriptWebpackPlugin } = require('run-script-webpack-plugin');
 const webpack = require('webpack');
 
 const packageJson = require('./package.json');
@@ -106,6 +107,12 @@ function makeConfig({ dev, node }) {
     plugins: [
       dev && new FriendlyErrorsWebpackPlugin({ clearConsole: false }),
       dev && new webpack.HotModuleReplacementPlugin(),
+      dev &&
+        node &&
+        new RunScriptWebpackPlugin({
+          name: 'main.js',
+          nodeArgs: ['--inspect'],
+        }),
       !node &&
         new AssetsPlugin({
           entrypoints: true,
