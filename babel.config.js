@@ -19,6 +19,9 @@ module.exports = function babelConfig(api) {
         { development: api.env('development'), useBuiltIns: true },
       ],
     ],
-    plugins: [['@babel/transform-runtime', { useESModules: true }]],
+    plugins: [
+      ['@babel/transform-runtime', { useESModules: true }],
+      api.env('development') && target === 'web' && 'react-refresh/babel',
+    ].filter(Boolean),
   };
 };

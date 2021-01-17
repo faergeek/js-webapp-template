@@ -1,3 +1,4 @@
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const AssetsPlugin = require('assets-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
@@ -70,6 +71,9 @@ function makeConfig({ dev, node }) {
     plugins: [
       dev && new FriendlyErrorsWebpackPlugin(),
       dev && node && new webpack.HotModuleReplacementPlugin(),
+      dev &&
+        !node &&
+        new ReactRefreshWebpackPlugin({ overlay: { sockIntegration: 'wps' } }),
       dev &&
         node &&
         new RunScriptWebpackPlugin({
