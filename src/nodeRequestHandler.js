@@ -5,7 +5,7 @@ import * as express from 'express';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as React from 'react';
-import { renderToString } from 'react-dom/server';
+import { renderToStaticNodeStream } from 'react-dom/server';
 
 import { App } from './app';
 import { routes } from './routes';
@@ -51,43 +51,44 @@ export const app = express().use(
       router.once(({ response }) => {
         res
           .status((response.meta && response.meta.status) || 200)
-          .set('Content-Type', 'text/html')
-          .end(
-            `<!doctype html>${renderToString(
-              <>
-                <meta charSet="utf-8" />
-                <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+          .set('Content-Type', 'text/html');
 
-                <meta
-                  name="viewport"
-                  content="width=device-width,initial-scale=1"
-                />
+        res.write('<!doctype html>');
 
-                <title>Webpack SSR HMR Boilerplate</title>
+        renderToStaticNodeStream(
+          <html lang="en">
+            <meta charSet="utf-8" />
+            <meta httpEquiv="x-ua-compatible" content="ie=edge" />
 
-                {getEntryUrls(webpackAssets.main.css).map(href => (
-                  <link key={href} rel="stylesheet" href={href} />
-                ))}
+            <meta
+              name="viewport"
+              content="width=device-width,initial-scale=1"
+            />
 
-                {getEntryUrls(webpackAssets.main.js).map(src => (
-                  <script
-                    key={src}
-                    crossOrigin={
-                      process.env.NODE_ENV === 'production'
-                        ? undefined
-                        : 'anonymous'
-                    }
-                    defer
-                    src={src}
-                  />
-                ))}
+            <title>Webpack SSR HMR Boilerplate</title>
 
-                <div id="root">
-                  <App router={router} />
-                </div>
-              </>
-            )}`
-          );
+            {getEntryUrls(webpackAssets.main.css).map(href => (
+              <link key={href} rel="stylesheet" href={href} />
+            ))}
+
+            {getEntryUrls(webpackAssets.main.js).map(src => (
+              <script
+                key={src}
+                crossOrigin={
+                  process.env.NODE_ENV === 'production'
+                    ? undefined
+                    : 'anonymous'
+                }
+                defer
+                src={src}
+              />
+            ))}
+
+            <div id="root">
+              <App router={router} />
+            </div>
+          </html>
+        ).pipe(res);
       });
     } catch (err) {
       next(err);
