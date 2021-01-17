@@ -1,3 +1,4 @@
+const AssetsPlugin = require('assets-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
@@ -15,7 +16,6 @@ function makeConfig({ dev, node }) {
     watch: dev && node,
     devtool: dev && !node ? 'inline-source-map' : 'source-map',
     target: node ? 'node' : 'web',
-    stats: 'minimal',
 
     entry: {
       main: (node
@@ -25,7 +25,7 @@ function makeConfig({ dev, node }) {
             'dotenv-flow/config',
             './src/node',
           ]
-        : [dev && 'webpack-hot-middleware/client?reload=true', './src/browser']
+        : ['./src/browser']
       ).filter(Boolean),
     },
 
@@ -33,21 +33,31 @@ function makeConfig({ dev, node }) {
       path: node ? BUILD_ROOT : PUBLIC_ROOT,
       filename: `[name]${dev || node ? '' : '.[contenthash]'}.js`,
       chunkFilename: `[name]${dev || node ? '' : '.[contenthash]'}.js`,
-      publicPath: '/_assets/',
+      publicPath: dev ? 'http://localhost:8081/' : '/',
       devtoolModuleFilenameTemplate: node
         ? path.relative(BUILD_ROOT, '[resource-path]')
         : undefined,
     },
 
+    devServer:
+      dev && !node
+        ? {
+            contentBase: false,
+            headers: { 'Access-Control-Allow-Origin': '*' },
+            hot: true,
+            injectClient: true,
+            port: 8081,
+          }
+        : undefined,
+
     externals: node
       ? ({ request }, cb) => {
           if (
-            ([
+            [
               ...Object.keys(packageJson.dependencies),
               ...Object.keys(packageJson.devDependencies),
             ].some(packageName => request.startsWith(packageName)) &&
-              !request.startsWith('webpack/hot')) ||
-            /webpack\.config$/.test(request)
+            !request.startsWith('webpack/hot')
           ) {
             cb(null, `commonjs ${request}`);
           } else {
@@ -102,12 +112,11 @@ function makeConfig({ dev, node }) {
       dev && new webpack.HotModuleReplacementPlugin(),
 
       !node &&
-        !dev &&
-        new (require('webpack-manifest-plugin').WebpackManifestPlugin)({
-          fileName: path.relative(
-            PUBLIC_ROOT,
-            path.join(BUILD_ROOT, 'manifest.json')
-          ),
+        new AssetsPlugin({
+          entrypoints: true,
+          includeAuxiliaryAssets: true,
+          path: BUILD_ROOT,
+          prettyPrint: dev,
         }),
 
       !node &&

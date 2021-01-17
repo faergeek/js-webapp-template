@@ -1,38 +1,44 @@
 import { createRouter } from '@curi/router';
 import { createReusable } from '@hickory/in-memory';
+import * as assert from 'assert';
 import * as express from 'express';
+import * as fs from 'fs/promises';
+import * as path from 'path';
 import { h, Fragment } from 'preact';
 import renderToString from 'preact-render-to-string';
 
 import { routes } from './routes';
 import { Root } from './root';
 
-export function createRequestHandler({
-  getAssetUrl,
-  publicDir,
-  webpackDevMiddleware,
-  webpackHotMiddleware,
-}) {
-  const reusable = createReusable();
-
-  const app = express();
-
-  if (process.env.NODE_ENV !== 'production') {
-    app.use(webpackDevMiddleware, webpackHotMiddleware);
+function getEntryUrls(entry) {
+  if (typeof entry === 'string') {
+    return [entry];
   }
 
-  return app.use(
-    express.static(publicDir, { maxAge: '1 year' }),
-    (req, res) => {
-      const router = createRouter(reusable, routes, {
-        history: { location: { url: req.originalUrl } },
-      });
+  if (Array.isArray(entry)) {
+    return entry;
+  }
 
+  assert(entry === undefined);
+}
+
+const webpackAssetsPromise = fs
+  .readFile(path.resolve('build', 'webpack-assets.json'), 'utf-8')
+  .then(JSON.parse);
+
+const reusable = createReusable();
+
+export const app = express().use(
+  express.static(path.resolve('build', 'public'), { maxAge: '1 year' }),
+  (req, res) => {
+    const router = createRouter(reusable, routes, {
+      history: { location: { url: req.originalUrl } },
+    });
+
+    webpackAssetsPromise.then(webpackAssets => {
       router.once(({ response }) => {
-        const status = (response.meta && response.meta.status) || 200;
-
         res
-          .status(status)
+          .status((response.meta && response.meta.status) || 200)
           .set('Content-Type', 'text/html')
           .end(
             `<!doctype html>${renderToString(
@@ -45,11 +51,11 @@ export function createRequestHandler({
                   content="width=device-width,initial-scale=1"
                 />
 
-                {['main.css'].map(getAssetUrl).map(href => (
+                {getEntryUrls(webpackAssets.main.css).map(href => (
                   <link key={href} rel="stylesheet" href={href} />
                 ))}
 
-                {['main.js'].map(getAssetUrl).map(src => (
+                {getEntryUrls(webpackAssets.main.js).map(src => (
                   <script key={src} defer src={src} />
                 ))}
 
@@ -60,6 +66,6 @@ export function createRequestHandler({
             )}`
           );
       });
-    }
-  );
-}
+    });
+  }
+);
