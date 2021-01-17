@@ -2,7 +2,7 @@ import { createRouter } from '@curi/router';
 import { createReusable } from '@hickory/in-memory';
 import * as assert from 'assert';
 import * as express from 'express';
-import * as fs from 'fs/promises';
+import * as fs from 'fs';
 import * as path from 'path';
 import { h, Fragment } from 'preact';
 import renderToString from 'preact-render-to-string';
@@ -22,20 +22,32 @@ function getEntryUrls(entry) {
   assert(entry === undefined);
 }
 
-const webpackAssetsPromise = fs
-  .readFile(path.resolve('build', 'webpack-assets.json'), 'utf-8')
-  .then(JSON.parse);
+const getAssetsManifest = (() => {
+  let promise;
+
+  return () => {
+    if (!promise) {
+      promise = fs.promises
+        .readFile(path.resolve('build', 'webpack-assets.json'), 'utf-8')
+        .then(content => JSON.parse(`${content}`));
+    }
+
+    return promise;
+  };
+})();
 
 const reusable = createReusable();
 
 export const app = express().use(
   express.static(path.resolve('build', 'public'), { maxAge: '1 year' }),
-  (req, res) => {
+  async (req, res, next) => {
     const router = createRouter(reusable, routes, {
       history: { location: { url: req.originalUrl } },
     });
 
-    webpackAssetsPromise.then(webpackAssets => {
+    try {
+      const webpackAssets = await getAssetsManifest();
+
       router.once(({ response }) => {
         res
           .status((response.meta && response.meta.status) || 200)
@@ -66,6 +78,8 @@ export const app = express().use(
             )}`
           );
       });
-    });
+    } catch (err) {
+      next(err);
+    }
   }
 );
