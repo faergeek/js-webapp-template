@@ -5,7 +5,7 @@
     "prettier": "prettier --write .",
     "prettier:check": "prettier --list-different .",
     "lint": "eslint .",
-    "dev:browser": "webpack serve --env dev --config-name browser",
+    "dev:browser": "webpack --env dev --config-name browser",
     "dev:node": "webpack --env dev --config-name node",
     "build": "webpack",
     "cleanup": "rimraf build",
@@ -50,7 +50,7 @@
     "source-map-loader": "^1.1.3",
     "webpack": "^5.10.1",
     "webpack-cli": "^4.2.0",
-    "webpack-dev-server": "^3.11.2",
-    "webpack-node-externals": "^2.5.2"
+    "webpack-node-externals": "^2.5.2",
+    "webpack-plugin-serve": "^1.2.1"
   }
 }
