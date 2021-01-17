@@ -1,4 +1,0 @@
-{
-  "presets": [["@babel/preset-react", { "useBuiltIns": true }]],
-  "plugins": [["@babel/plugin-transform-runtime", { "useESModules": true }]]
-}

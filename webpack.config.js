@@ -53,23 +53,7 @@ function makeConfig({ dev, node }) {
         {
           test: /\.js$/,
           include: [path.resolve('src')],
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: [
-                [
-                  '@babel/preset-env',
-                  {
-                    corejs: 3,
-                    loose: true,
-                    modules: false,
-                    useBuiltIns: 'usage',
-                    targets: node ? { node: 'current' } : undefined,
-                  },
-                ],
-              ],
-            },
-          },
+          use: 'babel-loader',
         },
         {
           test: /\.css$/,
