@@ -1,7 +1,8 @@
 const AssetsPlugin = require('assets-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const webpack = require('webpack');
 
 const packageJson = require('./package.json');
@@ -10,7 +11,7 @@ const BUILD_ROOT = path.resolve('build');
 const PUBLIC_ROOT = path.resolve(BUILD_ROOT, 'public', '_assets');
 
 function makeConfig({ dev, node }) {
-  const stats = dev ? 'errors-warnings' : undefined;
+  const stats = dev ? 'none' : undefined;
 
   return {
     name: node ? 'node' : 'browser',
@@ -106,6 +107,7 @@ function makeConfig({ dev, node }) {
       ],
     },
     plugins: [
+      dev && new FriendlyErrorsWebpackPlugin({ clearConsole: false }),
       dev && new webpack.HotModuleReplacementPlugin(),
       !node &&
         new AssetsPlugin({
