@@ -22,7 +22,7 @@ function makeConfig({ dev, node }) {
       main: (node
         ? [
             'source-map-support/register',
-            dev && 'webpack/hot/poll?1000',
+            dev && 'webpack/hot/signal',
             'dotenv-flow/config',
             './src/node',
           ]
@@ -112,6 +112,7 @@ function makeConfig({ dev, node }) {
         new RunScriptWebpackPlugin({
           name: 'main.js',
           nodeArgs: ['--inspect'],
+          signal: true,
         }),
       !node &&
         new AssetsPlugin({
