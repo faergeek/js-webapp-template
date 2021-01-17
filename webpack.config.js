@@ -10,15 +10,13 @@ const packageJson = require('./package.json');
 const BUILD_ROOT = path.resolve('build');
 
 function makeConfig({ dev, node }) {
-  const stats = dev ? 'none' : undefined;
-
   return {
     name: node ? 'node' : 'browser',
     mode: dev ? 'development' : 'production',
     watch: dev && node,
     devtool: dev && !node ? 'inline-source-map' : 'source-map',
     target: node ? 'node' : 'web',
-    stats,
+    stats: dev ? 'none' : undefined,
     entry: {
       main: (node
         ? [
@@ -47,8 +45,8 @@ function makeConfig({ dev, node }) {
             headers: { 'Access-Control-Allow-Origin': '*' },
             hot: true,
             injectClient: true,
+            noInfo: true,
             port: 8081,
-            stats,
           }
         : undefined,
     externals: node
