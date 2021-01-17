@@ -84,7 +84,7 @@ function makeConfig({ dev, node }) {
       ],
     },
     plugins: [
-      dev && new FriendlyErrorsWebpackPlugin({ clearConsole: false }),
+      dev && new FriendlyErrorsWebpackPlugin(),
       dev && node && new webpack.HotModuleReplacementPlugin(),
       dev &&
         node &&
