@@ -1,20 +1,10 @@
+import { useResponse } from '@curi/react-dom';
 import * as React from 'react';
 
 import { Layout } from './layout';
-import { RouterProvider, useRouterState } from './routerContext';
 
-function RouterView() {
-  const { response } = useRouterState();
+export function App() {
+  const { response } = useResponse();
 
-  return React.createElement(response.body);
-}
-
-export function App({ router }) {
-  return (
-    <RouterProvider router={router}>
-      <Layout>
-        <RouterView />
-      </Layout>
-    </RouterProvider>
-  );
+  return <Layout>{React.createElement(response.body)}</Layout>;
 }

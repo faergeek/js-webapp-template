@@ -1,6 +1,5 @@
+import { Link } from '@curi/react-dom';
 import * as React from 'react';
-
-import { Link } from './link';
 
 export function Layout({ children }) {
   return (
@@ -12,7 +11,7 @@ export function Layout({ children }) {
           <nav>
             <ul>
               <li>
-                <Link to="home">Home</Link>
+                <Link name="home">Home</Link>
               </li>
             </ul>
           </nav>

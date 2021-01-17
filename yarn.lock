@@ -925,6 +925,25 @@
     "@curi/types" "^2.0.2"
     "@hickory/root" "^2.1.0"
 
+"@curi/react-dom@^2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@curi/react-dom/-/react-dom-2.0.4.tgz#f8db44f3c1b0b28255b7c8dd53958e9366e8cee7"
+  integrity sha512-awgkkj/aQln0x4H7fB/2bZEAGRB6OjgQ4w1pQH2yz+zVK1xde2M+syL34rUCHxbAxh3dWHmsBxKnpHs0goRxwQ==
+  dependencies:
+    "@curi/react-universal" "^2.0.3"
+    "@curi/types" "^2.0.2"
+    "@types/react" "^16.7.18"
+
+"@curi/react-universal@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@curi/react-universal/-/react-universal-2.0.3.tgz#2d26f2eb309a8a19df87e353eda05eaff8d50a9b"
+  integrity sha512-uBSq5iKUCaQg9BOKgkc6jQOR+uToxn4pHHVpVVPjJUstqlu9u1Sg2BrWvCdKLTYgMlH+XwgYmcVDh8+LdBdRXQ==
+  dependencies:
+    "@curi/interactions" "^2.0.3"
+    "@curi/types" "^2.0.2"
+    "@hickory/root" "^2.1.0"
+    "@types/react" "^16.7.18"
+
 "@curi/router@^2.0.1":
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/@curi/router/-/router-2.1.2.tgz#b7d5c23c7c8ea8993a72d82281c19aa68ecbe175"
@@ -1085,10 +1104,23 @@
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
 
+"@types/prop-types@*":
+  version "15.7.3"
+  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
+  integrity sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
+
 "@types/q@^1.5.1":
   version "1.5.4"
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.4.tgz#15925414e0ad2cd765bfef58842f7e26a7accb24"
   integrity sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==
+
+"@types/react@^16.7.18":
+  version "16.14.2"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.14.2.tgz#85dcc0947d0645349923c04ccef6018a1ab7538c"
+  integrity sha512-BzzcAlyDxXl2nANlabtT4thtvbbnhee8hMmH/CcJrISDBVcJS1iOsP1f0OAgSdGE0MsY9tqcrb9YoZcOFv9dbQ==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^3.0.2"
 
 "@webassemblyjs/ast@1.11.0":
   version "1.11.0"
@@ -2008,6 +2040,11 @@ csso@^4.0.2:
   integrity sha512-wvlcdIbf6pwKEk7vHj8/Bkc0B4ylXZruLvOgs9doS5eOsOpuodOV2zJChSpkp+pRpYQLQMeF04nr3Z68Sta9jA==
   dependencies:
     css-tree "^1.1.2"
+
+csstype@^3.0.2:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.6.tgz#865d0b5833d7d8d40f4e5b8a6d76aea3de4725ef"
+  integrity sha512-+ZAmfyWMT7TiIlzdqJgjMb7S4f1beorDbWbsocyK4RaiqA5RTX3K14bnBWmmA9QEM0gRdsjyyrEmcyga8Zsxmw==
 
 debug@*, debug@^4.0.1, debug@^4.1.0, debug@^4.1.1:
   version "4.3.1"

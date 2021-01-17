@@ -1,6 +1,7 @@
 /* eslint-env browser */
 import './browser.css';
 
+import { createRouterComponent } from '@curi/react-dom';
 import { createRouter } from '@curi/router';
 import { browser } from '@hickory/browser';
 import * as React from 'react';
@@ -10,7 +11,13 @@ import { App } from './app';
 import { routes } from './routes';
 
 const router = createRouter(browser, routes);
+const Router = createRouterComponent(router);
 
 router.once(() => {
-  hydrate(<App router={router} />, document.getElementById('root'));
+  hydrate(
+    <Router>
+      <App />
+    </Router>,
+    document.getElementById('root')
+  );
 });

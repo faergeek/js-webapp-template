@@ -1,3 +1,4 @@
+import { createRouterComponent } from '@curi/react-dom';
 import { createRouter } from '@curi/router';
 import { createReusable } from '@hickory/in-memory';
 import * as assert from 'assert';
@@ -45,6 +46,8 @@ export const app = express().use(
       history: { location: { url: req.originalUrl } },
     });
 
+    const Router = createRouterComponent(router);
+
     try {
       const webpackAssets = await getAssetsManifest();
 
@@ -85,7 +88,9 @@ export const app = express().use(
             ))}
 
             <div id="root">
-              <App router={router} />
+              <Router>
+                <App />
+              </Router>
             </div>
           </html>
         ).pipe(res);
