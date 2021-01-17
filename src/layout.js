@@ -1,4 +1,4 @@
-import { Fragment, h } from 'preact';
+import * as React from 'react';
 
 import { Link } from './link';
 import { useRouterState } from './routerContext';
@@ -7,7 +7,7 @@ export function Layout({ children }) {
   const state = useRouterState();
 
   return (
-    <Fragment>
+    <>
       <header>
         <details>
           <summary>Menu</summary>
@@ -31,6 +31,6 @@ export function Layout({ children }) {
           <pre>{JSON.stringify(state, null, 2)}</pre>
         </details>
       </footer>
-    </Fragment>
+    </>
   );
 }

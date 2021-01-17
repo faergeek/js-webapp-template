@@ -1,13 +1,12 @@
-import { h, createContext } from 'preact';
-import { useContext, useEffect, useState } from 'preact/hooks';
+import * as React from 'react';
 
-const RouterContext = createContext(null);
-const RouterStateContext = createContext(null);
+const RouterContext = React.createContext(null);
+const RouterStateContext = React.createContext(null);
 
 export function RouterProvider({ children, router }) {
-  const [routerState, setRouterState] = useState(() => router.current());
+  const [routerState, setRouterState] = React.useState(() => router.current());
 
-  useEffect(() => {
+  React.useEffect(() => {
     const stop = router.observe(
       ({ navigation, response }) => {
         setRouterState({ navigation, response });
@@ -31,9 +30,9 @@ export function RouterProvider({ children, router }) {
 }
 
 export function useRouterState() {
-  return useContext(RouterStateContext);
+  return React.useContext(RouterStateContext);
 }
 
 export function useRouter() {
-  return useContext(RouterContext);
+  return React.useContext(RouterContext);
 }

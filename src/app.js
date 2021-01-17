@@ -1,4 +1,4 @@
-import { h } from 'preact';
+import * as React from 'react';
 
 import { Layout } from './layout';
 import { RouterProvider, useRouterState } from './routerContext';
@@ -6,7 +6,7 @@ import { RouterProvider, useRouterState } from './routerContext';
 function RouterView() {
   const { response } = useRouterState();
 
-  return h(response.body);
+  return React.createElement(response.body);
 }
 
 export function App({ router }) {

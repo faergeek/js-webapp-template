@@ -4,8 +4,8 @@ import * as assert from 'assert';
 import * as express from 'express';
 import * as fs from 'fs';
 import * as path from 'path';
-import { h, Fragment } from 'preact';
-import renderToString from 'preact-render-to-string';
+import * as React from 'react';
+import { renderToString } from 'react-dom/server';
 
 import { routes } from './routes';
 import { App } from './app';

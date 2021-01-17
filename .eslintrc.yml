@@ -14,8 +14,7 @@ plugins:
   - react-hooks
 settings:
   react:
-    pragma: h
-    version: '16.12.0'
+    version: detect
 env:
   commonjs: true
   es6: true
