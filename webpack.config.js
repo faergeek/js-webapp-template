@@ -37,6 +37,7 @@ function makeConfig({ dev, node }) {
         ? path.relative(BUILD_ROOT, '[resource-path]')
         : undefined,
       filename: `[name]${dev || node ? '' : '.[contenthash]'}.js`,
+      libraryTarget: node ? 'commonjs' : undefined,
       path: node ? BUILD_ROOT : PUBLIC_ROOT,
       publicPath: dev ? 'http://localhost:8081/' : '/',
     },
