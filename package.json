@@ -5,7 +5,7 @@
     "prettier": "prettier --write .",
     "prettier:check": "prettier --list-different .",
     "lint": "eslint .",
-    "dev:node": "webpack --watch --env dev --config-name node",
+    "dev:node": "webpack --env dev --config-name node",
     "dev:browser": "node .",
     "build": "webpack",
     "start": "node .",

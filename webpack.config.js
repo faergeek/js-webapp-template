@@ -12,6 +12,7 @@ function makeConfig({ dev, node }) {
   return {
     name: node ? 'node' : 'browser',
     mode: dev ? 'development' : 'production',
+    watch: dev && node,
     devtool: dev && !node ? 'inline-source-map' : 'source-map',
     target: node ? 'node' : 'web',
     stats: 'minimal',
