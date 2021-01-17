@@ -1,11 +1,8 @@
 import * as React from 'react';
 
 import { Link } from './link';
-import { useRouterState } from './routerContext';
 
 export function Layout({ children }) {
-  const state = useRouterState();
-
   return (
     <>
       <header>
@@ -23,14 +20,6 @@ export function Layout({ children }) {
       </header>
 
       <main>{children}</main>
-
-      <footer>
-        <details>
-          <summary>Current location</summary>
-
-          <pre>{JSON.stringify(state, null, 2)}</pre>
-        </details>
-      </footer>
     </>
   );
 }
