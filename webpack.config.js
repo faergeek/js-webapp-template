@@ -119,6 +119,23 @@ function makeConfig({ dev, node }) {
     ].filter(Boolean),
     optimization: {
       minimizer: ['...', new CssMinimizerPlugin()],
+      runtimeChunk: 'single',
+      splitChunks: {
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/](?!webpack[\\/]hot[\\/]).*\.js$/,
+            name: 'vendors',
+            chunks: 'initial',
+            enforce: true,
+          },
+          css: {
+            test: /\.css$/,
+            name: 'main',
+            chunks: 'all',
+            enforce: true,
+          },
+        },
+      },
     },
   };
 }
