@@ -78,7 +78,7 @@ function makeConfig({ dev, node }) {
         node &&
         new RunScriptWebpackPlugin({
           name: 'main.js',
-          nodeArgs: ['--inspect'],
+          nodeArgs: ['--inspect=9229'],
           signal: true,
         }),
       dev &&
