@@ -17,7 +17,7 @@ function makeConfig({ dev, node }) {
     name: node ? 'node' : 'browser',
     mode: dev ? 'development' : 'production',
     watch: dev,
-    devtool: dev && !node ? 'inline-source-map' : 'source-map',
+    devtool: dev ? 'cheap-module-source-map' : 'source-map',
     target: node ? 'node' : 'web',
     stats: dev ? 'none' : undefined,
     entry: {
