@@ -68,7 +68,16 @@ export const app = express().use(
                 ))}
 
                 {getEntryUrls(webpackAssets.main.js).map(src => (
-                  <script key={src} defer src={src} />
+                  <script
+                    key={src}
+                    crossOrigin={
+                      process.env.NODE_ENV === 'production'
+                        ? undefined
+                        : 'anonymous'
+                    }
+                    defer
+                    src={src}
+                  />
                 ))}
 
                 <div id="root">

@@ -16,7 +16,6 @@ function makeConfig({ dev, node }) {
     watch: dev && node,
     devtool: dev && !node ? 'inline-source-map' : 'source-map',
     target: node ? 'node' : 'web',
-
     entry: {
       main: (node
         ? [
@@ -28,17 +27,16 @@ function makeConfig({ dev, node }) {
         : ['./src/browser']
       ).filter(Boolean),
     },
-
     output: {
-      path: node ? BUILD_ROOT : PUBLIC_ROOT,
-      filename: `[name]${dev || node ? '' : '.[contenthash]'}.js`,
       chunkFilename: `[name]${dev || node ? '' : '.[contenthash]'}.js`,
-      publicPath: dev ? 'http://localhost:8081/' : '/',
+      crossOriginLoading: dev ? 'anonymous' : undefined,
       devtoolModuleFilenameTemplate: node
         ? path.relative(BUILD_ROOT, '[resource-path]')
         : undefined,
+      filename: `[name]${dev || node ? '' : '.[contenthash]'}.js`,
+      path: node ? BUILD_ROOT : PUBLIC_ROOT,
+      publicPath: dev ? 'http://localhost:8081/' : '/',
     },
-
     devServer:
       dev && !node
         ? {
@@ -49,7 +47,6 @@ function makeConfig({ dev, node }) {
             port: 8081,
           }
         : undefined,
-
     externals: node
       ? ({ request }, cb) => {
           if (
@@ -65,14 +62,12 @@ function makeConfig({ dev, node }) {
           }
         }
       : undefined,
-
     module: {
       rules: [
         {
           test: /\.js$/,
           use: 'source-map-loader',
         },
-
         {
           test: /\.js$/,
           include: [path.resolve('src')],
@@ -94,7 +89,6 @@ function makeConfig({ dev, node }) {
             },
           },
         },
-
         {
           test: /\.css$/,
           use: node
@@ -107,10 +101,8 @@ function makeConfig({ dev, node }) {
         },
       ],
     },
-
     plugins: [
       dev && new webpack.HotModuleReplacementPlugin(),
-
       !node &&
         new AssetsPlugin({
           entrypoints: true,
@@ -118,13 +110,11 @@ function makeConfig({ dev, node }) {
           path: BUILD_ROOT,
           prettyPrint: dev,
         }),
-
       !node &&
         new MiniCssExtractPlugin({
           filename: dev ? '[name].css' : '[name].[contenthash].css',
         }),
     ].filter(Boolean),
-
     optimization: {
       minimizer: ['...', new CssMinimizerPlugin()],
     },
