@@ -7,8 +7,8 @@ import * as path from 'path';
 import * as React from 'react';
 import { renderToString } from 'react-dom/server';
 
-import { routes } from './routes';
 import { App } from './app';
+import { routes } from './routes';
 
 function getEntryUrls(entry) {
   if (typeof entry === 'string') {
