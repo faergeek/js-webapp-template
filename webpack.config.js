@@ -10,12 +10,15 @@ const BUILD_ROOT = path.resolve('build');
 const PUBLIC_ROOT = path.resolve(BUILD_ROOT, 'public', '_assets');
 
 function makeConfig({ dev, node }) {
+  const stats = dev ? 'errors-warnings' : undefined;
+
   return {
     name: node ? 'node' : 'browser',
     mode: dev ? 'development' : 'production',
     watch: dev && node,
     devtool: dev && !node ? 'inline-source-map' : 'source-map',
     target: node ? 'node' : 'web',
+    stats,
     entry: {
       main: (node
         ? [
@@ -45,6 +48,7 @@ function makeConfig({ dev, node }) {
             hot: true,
             injectClient: true,
             port: 8081,
+            stats,
           }
         : undefined,
     externals: node
