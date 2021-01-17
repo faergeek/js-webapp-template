@@ -35,10 +35,9 @@ if (process.env.NODE_ENV === 'production') {
   const webpackDevMiddleware = require('webpack-dev-middleware');
   const webpackHotMiddleware = require('webpack-hot-middleware');
 
-  const webpackConfig = require('../webpack.config')({
-    dev: true,
-    node: false,
-  });
+  const webpackConfig = require('../webpack.config')({ dev: true }).find(
+    config => config.name === 'browser'
+  );
 
   const compiler = webpack(webpackConfig);
 

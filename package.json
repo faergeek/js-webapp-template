@@ -5,11 +5,9 @@
     "prettier": "prettier --write .",
     "prettier:check": "prettier --list-different .",
     "lint": "eslint .",
-    "dev:node": "webpack --watch --env dev --env node",
+    "dev:node": "webpack --watch --env dev --config-name node",
     "dev:browser": "node .",
-    "build:browser": "webpack",
-    "build:node": "webpack --env node",
-    "build": "yarn run build:browser && yarn run build:node",
+    "build": "webpack",
     "start": "node .",
     "cleanup": "rimraf build"
   },
