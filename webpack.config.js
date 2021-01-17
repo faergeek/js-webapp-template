@@ -8,7 +8,6 @@ const webpack = require('webpack');
 const packageJson = require('./package.json');
 
 const BUILD_ROOT = path.resolve('build');
-const PUBLIC_ROOT = path.resolve(BUILD_ROOT, 'public', '_assets');
 
 function makeConfig({ dev, node }) {
   const stats = dev ? 'none' : undefined;
@@ -38,7 +37,7 @@ function makeConfig({ dev, node }) {
         ? path.relative(BUILD_ROOT, '[resource-path]')
         : undefined,
       filename: `[name]${dev || node ? '' : '.[contenthash]'}.js`,
-      path: node ? BUILD_ROOT : PUBLIC_ROOT,
+      path: node ? BUILD_ROOT : path.resolve(BUILD_ROOT, 'public'),
       publicPath: dev ? 'http://localhost:8081/' : '/',
     },
     devServer:
