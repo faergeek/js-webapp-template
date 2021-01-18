@@ -64,6 +64,7 @@ function makeConfig({ dev, node }) {
               options: {
                 importLoaders: 2,
                 modules: {
+                  auto: true,
                   exportOnlyLocals: node,
                   exportLocalsConvention: 'dashesOnly',
                   localIdentName: dev
