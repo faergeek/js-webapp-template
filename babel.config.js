@@ -13,7 +13,7 @@ module.exports = function babelConfig(api) {
           useBuiltIns: 'usage',
         },
       ],
-      ['@babel/react', { development: dev, useBuiltIns: true }],
+      ['@babel/react', { development: dev, useSpread: true }],
     ],
     plugins: [
       ['@babel/transform-runtime', { useESModules: supportsStaticESM }],
