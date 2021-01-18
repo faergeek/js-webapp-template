@@ -6,10 +6,10 @@ import * as express from 'express';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as React from 'react';
-import { renderToStaticNodeStream } from 'react-dom/server';
+import { renderToNodeStream } from 'react-dom/server';
 
 import { App } from './app';
-import { routes } from './routes';
+import { routes } from './pages/_routes';
 
 function getEntryUrls(entry) {
   if (typeof entry === 'string') {
@@ -58,7 +58,7 @@ export const app = express().use(
 
         res.write('<!doctype html>');
 
-        renderToStaticNodeStream(
+        renderToNodeStream(
           <html lang="en">
             <meta charSet="utf-8" />
             <meta httpEquiv="x-ua-compatible" content="ie=edge" />

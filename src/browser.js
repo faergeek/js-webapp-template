@@ -8,7 +8,7 @@ import * as React from 'react';
 import { hydrate } from 'react-dom';
 
 import { App } from './app';
-import { routes } from './routes';
+import { routes } from './pages/_routes';
 
 const router = createRouter(browser, routes);
 const Router = createRouterComponent(router);
