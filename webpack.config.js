@@ -54,7 +54,10 @@ function makeConfig({ dev, node }) {
         {
           test: /\.js$/,
           include: [path.resolve('src')],
-          use: 'babel-loader',
+          loader: 'babel-loader',
+          options: {
+            envName: dev ? 'development' : 'production',
+          },
         },
         {
           test: /\.css$/,
