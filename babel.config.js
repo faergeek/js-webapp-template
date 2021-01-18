@@ -1,8 +1,5 @@
-const assert = require('assert');
-
 module.exports = function babelConfig(api) {
-  const target = api.caller(caller => caller && caller.target);
-  assert(['node', 'web'].includes(target));
+  const target = api.caller(caller => caller.target);
 
   return {
     presets: [
