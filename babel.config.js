@@ -1,5 +1,7 @@
 module.exports = function babelConfig(api) {
-  const target = api.caller(caller => caller.target);
+  const dev = api.env('development');
+  const node = api.caller(caller => caller.target === 'node');
+  const supportsStaticESM = api.caller(caller => caller.supportsStaticESM);
 
   return {
     presets: [
@@ -7,18 +9,15 @@ module.exports = function babelConfig(api) {
         '@babel/env',
         {
           corejs: 3,
-          targets: target === 'node' ? { node: 'current' } : undefined,
+          targets: node ? { node: 'current' } : undefined,
           useBuiltIns: 'usage',
         },
       ],
-      [
-        '@babel/react',
-        { development: api.env('development'), useBuiltIns: true },
-      ],
+      ['@babel/react', { development: dev, useBuiltIns: true }],
     ],
     plugins: [
-      ['@babel/transform-runtime', { useESModules: true }],
-      api.env('development') && target === 'web' && 'react-refresh/babel',
+      ['@babel/transform-runtime', { useESModules: supportsStaticESM }],
+      dev && !node && 'react-refresh/babel',
     ].filter(Boolean),
   };
 };
