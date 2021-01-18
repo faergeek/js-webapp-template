@@ -78,6 +78,10 @@ function makeConfig({ dev, node }) {
           ]),
         },
         { test: /\.css$/, use: 'source-map-loader' },
+        {
+          test: /\.(svg|png|gif|jpe?g|eot|ttf|woff2?)$/,
+          type: 'asset',
+        },
       ],
     },
     plugins: [
