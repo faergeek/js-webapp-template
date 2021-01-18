@@ -58,14 +58,25 @@ function makeConfig({ dev, node }) {
         },
         {
           test: /\.css$/,
-          use: node
-            ? 'null-loader'
-            : [
-                MiniCssExtractPlugin.loader,
-                { loader: 'css-loader', options: { importLoaders: 1 } },
-                'postcss-loader',
-              ],
+          use: (node ? [] : [MiniCssExtractPlugin.loader]).concat([
+            {
+              loader: 'css-loader',
+              options: {
+                importLoaders: 2,
+                modules: {
+                  exportOnlyLocals: node,
+                  exportLocalsConvention: 'dashesOnly',
+                  localIdentName: dev
+                    ? '[local]@[1]#[contenthash:base64:5]'
+                    : undefined,
+                  localIdentRegExp: /\/([^/]*)\.module\.\w+$/i,
+                },
+              },
+            },
+            'postcss-loader',
+          ]),
         },
+        { test: /\.css$/, use: 'source-map-loader' },
       ],
     },
     plugins: [
