@@ -12,6 +12,8 @@ const { WebpackPluginServe } = require('webpack-plugin-serve');
 const BUILD_ROOT = path.resolve('build');
 const PUBLIC_ROOT = path.resolve(BUILD_ROOT, 'public');
 
+const ASSETS_RE = /\.(svg|png|gif|jpe?g|eot|ttf|woff2?)$/;
+
 function makeConfig({ dev, node, watch = false }) {
   return {
     name: node ? 'node' : 'browser',
@@ -19,7 +21,7 @@ function makeConfig({ dev, node, watch = false }) {
     stats: dev ? 'none' : 'errors-warnings',
     devtool: dev ? 'cheap-module-source-map' : 'source-map',
     externals: node
-      ? nodeExternals({ allowlist: [/^webpack\/hot/] })
+      ? nodeExternals({ allowlist: [/^webpack\/hot/, ASSETS_RE] })
       : undefined,
     entry: {
       main: (node
@@ -86,7 +88,20 @@ function makeConfig({ dev, node, watch = false }) {
             'sass-loader',
           ],
         },
-        { test: /\.(svg|png|gif|jpe?g|eot|ttf|woff2?)$/, type: 'asset' },
+        {
+          test: ASSETS_RE,
+          type: 'javascript/auto',
+          use: [
+            {
+              loader: 'url-loader',
+              options: {
+                emitFile: !node,
+                limit: 4000,
+                name: dev ? '[name].[ext]' : '[name].[contenthash].[ext]',
+              },
+            },
+          ],
+        },
       ],
     },
     plugins: [
