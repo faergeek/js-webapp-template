@@ -8,7 +8,7 @@ module.exports = function babelConfig(api) {
       [
         '@babel/env',
         {
-          corejs: 3,
+          corejs: '3.8',
           targets: node ? { node: 'current' } : undefined,
           useBuiltIns: 'usage',
         },
