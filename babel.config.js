@@ -10,7 +10,7 @@ module.exports = function babelConfig(api) {
         {
           corejs: '3.8',
           targets: node ? { node: 'current' } : undefined,
-          useBuiltIns: 'usage',
+          useBuiltIns: 'entry',
         },
       ],
       ['@babel/react', { development: dev, useSpread: true }],
