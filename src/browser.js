@@ -1,6 +1,4 @@
 /* eslint-env browser */
-import './browser.css';
-
 import { createRouterComponent } from '@curi/react-dom';
 import { createRouter } from '@curi/router';
 import { browser } from '@hickory/browser';

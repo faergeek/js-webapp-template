@@ -1,3 +1,5 @@
+import './app.css';
+
 import { useResponse } from '@curi/react-dom';
 import * as React from 'react';
 
