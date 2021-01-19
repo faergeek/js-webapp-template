@@ -55,7 +55,7 @@ function makeConfig({ dev, node, watch = false }) {
           },
         },
         {
-          test: /\.css$/,
+          test: /\.(css|sass|scss)$/,
           use: (node ? [] : [MiniCssExtractPlugin.loader]).concat([
             {
               loader: 'css-loader',
@@ -76,6 +76,7 @@ function makeConfig({ dev, node, watch = false }) {
           ]),
         },
         { test: /\.(css|js)$/, use: 'source-map-loader' },
+        { test: /\.(sass|scss)$/, use: 'sass-loader' },
         { test: /\.(svg|png|gif|jpe?g|eot|ttf|woff2?)$/, type: 'asset' },
       ],
     },
