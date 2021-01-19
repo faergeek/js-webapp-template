@@ -6,7 +6,7 @@
     "prettier:check": "prettier --list-different .",
     "lint": "eslint .",
     "webpack:check": "webpack configtest",
-    "dev": "webpack --mode=development",
+    "dev": "webpack watch --mode=development",
     "build": "webpack --mode=production",
     "cleanup": "rimraf build",
     "start": "node ."

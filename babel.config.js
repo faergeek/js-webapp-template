@@ -1,6 +1,7 @@
 module.exports = function babelConfig(api) {
   const dev = api.env('development');
   const node = api.caller(caller => caller.target === 'node');
+  const watch = api.caller(caller => caller.watch === true);
   const supportsStaticESM = api.caller(caller => caller.supportsStaticESM);
 
   return {
@@ -17,7 +18,7 @@ module.exports = function babelConfig(api) {
     ],
     plugins: [
       ['@babel/transform-runtime', { useESModules: supportsStaticESM }],
-      dev && !node && 'react-refresh/babel',
+      dev && watch && !node && 'react-refresh/babel',
     ].filter(Boolean),
   };
 };
