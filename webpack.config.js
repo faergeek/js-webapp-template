@@ -48,11 +48,7 @@ function makeConfig({ dev, node }) {
       rules: [
         {
           test: /\.js$/,
-          use: 'source-map-loader',
-        },
-        {
-          test: /\.js$/,
-          include: [path.resolve('src')],
+          include: path.resolve('src'),
           loader: 'babel-loader',
           options: {
             envName: dev ? 'development' : 'production',
@@ -79,11 +75,8 @@ function makeConfig({ dev, node }) {
             'postcss-loader',
           ]),
         },
-        { test: /\.css$/, use: 'source-map-loader' },
-        {
-          test: /\.(svg|png|gif|jpe?g|eot|ttf|woff2?)$/,
-          type: 'asset',
-        },
+        { test: /\.(css|js)$/, use: 'source-map-loader' },
+        { test: /\.(svg|png|gif|jpe?g|eot|ttf|woff2?)$/, type: 'asset' },
       ],
     },
     plugins: [
