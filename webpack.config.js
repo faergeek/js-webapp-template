@@ -76,7 +76,16 @@ function makeConfig({ dev, node, watch = false }) {
           ]),
         },
         { test: /\.(css|js)$/, use: 'source-map-loader' },
-        { test: /\.(sass|scss)$/, use: 'sass-loader' },
+        {
+          test: /\.(sass|scss)$/,
+          use: [
+            {
+              loader: 'resolve-url-loader',
+              options: { keepQuery: true, sourceMap: true },
+            },
+            'sass-loader',
+          ],
+        },
         { test: /\.(svg|png|gif|jpe?g|eot|ttf|woff2?)$/, type: 'asset' },
       ],
     },
