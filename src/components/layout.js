@@ -91,9 +91,9 @@ export function Layout({ children }) {
               className="icon-text"
               href="https://github.com/faergeek/webpack-ssr-hmr-boilerplate"
             >
-              <span className="icon">
+              <span className="icon is-inline">
                 <FontAwesomeIcon icon={faGithub} />
-              </span>
+              </span>{' '}
               <span>source code</span>
             </a>{' '}
             is licensed under <a href="http://www.wtfpl.net">WTFPL</a>.
