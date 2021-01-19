@@ -1,4 +1,7 @@
 import { Link, useResponse, useRouter } from '@curi/react-dom';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import * as React from 'react';
 
@@ -65,7 +68,7 @@ export function Layout({ children }) {
                     />
 
                     <span className="icon is-left">
-                      <i className="fas fa-search" />
+                      <FontAwesomeIcon icon={faSearch} />
                     </span>
                   </p>
                 </form>
@@ -89,7 +92,7 @@ export function Layout({ children }) {
               href="https://github.com/faergeek/webpack-ssr-hmr-boilerplate"
             >
               <span className="icon">
-                <i className="fab fa-github" />
+                <FontAwesomeIcon icon={faGithub} />
               </span>
               <span>source code</span>
             </a>{' '}
