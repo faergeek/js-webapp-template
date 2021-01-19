@@ -123,7 +123,7 @@ function makeConfig({ dev, node, watch = false }) {
         new WebpackPluginServe({
           client: { retry: true },
           hmr: 'refresh-on-failure',
-          log: { level: 'error' },
+          log: { level: 'warn' },
           port: 8081,
           static: [PUBLIC_ROOT],
           waitForBuild: true,
