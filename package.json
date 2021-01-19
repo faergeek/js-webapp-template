@@ -5,8 +5,8 @@
     "prettier": "prettier --write .",
     "prettier:check": "prettier --list-different .",
     "lint": "eslint .",
-    "dev": "webpack --env dev",
-    "build": "webpack",
+    "dev": "webpack --mode=development",
+    "build": "webpack --mode=production",
     "cleanup": "rimraf build",
     "start": "node ."
   },

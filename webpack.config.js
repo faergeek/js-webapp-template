@@ -15,7 +15,6 @@ const PUBLIC_ROOT = path.resolve(BUILD_ROOT, 'public');
 function makeConfig({ dev, node }) {
   return {
     name: node ? 'node' : 'browser',
-    mode: dev ? 'development' : 'production',
     watch: dev,
     devtool: dev ? 'cheap-module-source-map' : 'source-map',
     target: node ? 'node' : 'web',
@@ -147,7 +146,8 @@ function makeConfig({ dev, node }) {
   };
 }
 
-module.exports = ({ dev = false } = {}) => [
-  makeConfig({ dev, node: false }),
-  makeConfig({ dev, node: true }),
-];
+module.exports = (env, argv) => {
+  const dev = argv.mode === 'development';
+
+  return [makeConfig({ dev, node: false }), makeConfig({ dev, node: true })];
+};
