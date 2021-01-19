@@ -18,7 +18,7 @@ function makeConfig({ dev, node }) {
     watch: dev,
     devtool: dev ? 'cheap-module-source-map' : 'source-map',
     target: node ? 'node' : 'web',
-    stats: dev ? 'none' : undefined,
+    stats: 'none',
     entry: {
       main: (node
         ? [
@@ -87,7 +87,7 @@ function makeConfig({ dev, node }) {
       ],
     },
     plugins: [
-      dev && new FriendlyErrorsWebpackPlugin(),
+      new FriendlyErrorsWebpackPlugin({ clearConsole: dev }),
       dev && node && new webpack.HotModuleReplacementPlugin(),
       dev &&
         !node &&
