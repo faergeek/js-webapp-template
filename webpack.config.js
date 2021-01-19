@@ -18,7 +18,7 @@ function makeConfig({ dev, node }) {
     watch: dev,
     devtool: dev ? 'cheap-module-source-map' : 'source-map',
     target: node ? 'node' : 'web',
-    stats: dev ? 'none' : undefined,
+    stats: dev ? 'none' : 'errors-warnings',
     entry: {
       main: (node
         ? [
