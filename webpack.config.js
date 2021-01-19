@@ -15,10 +15,13 @@ const PUBLIC_ROOT = path.resolve(BUILD_ROOT, 'public');
 function makeConfig({ dev, node }) {
   return {
     name: node ? 'node' : 'browser',
-    watch: dev,
-    devtool: dev ? 'cheap-module-source-map' : 'source-map',
     target: node ? 'node' : 'web',
     stats: dev ? 'none' : 'errors-warnings',
+    devtool: dev ? 'cheap-module-source-map' : 'source-map',
+    watch: dev,
+    externals: node
+      ? nodeExternals({ allowlist: [/^webpack\/hot/] })
+      : undefined,
     entry: {
       main: (node
         ? [
@@ -41,9 +44,6 @@ function makeConfig({ dev, node }) {
       path: node ? BUILD_ROOT : PUBLIC_ROOT,
       publicPath: dev ? 'http://localhost:8081/' : '/',
     },
-    externals: node
-      ? nodeExternals({ allowlist: [/^webpack\/hot/] })
-      : undefined,
     module: {
       rules: [
         {
