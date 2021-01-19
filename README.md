@@ -6,7 +6,7 @@ using webpack.
 ## Getting started
 
 1. Install deps: `yarn`
-2. Run webpack for node: `yarn run dev`
+2. Run webpack: `yarn run dev`
 
 ## License
 
