@@ -140,7 +140,20 @@ function makeConfig({ dev, node }) {
 }
 
 module.exports = (env, argv) => {
-  const dev = argv.mode === 'development';
-
-  return [makeConfig({ dev, node: false }), makeConfig({ dev, node: true })];
+  return argv.mode === 'development'
+    ? [
+        makeConfig({ dev: true, node: false }),
+        makeConfig({ dev: true, node: true }),
+      ]
+    : argv.mode === 'production'
+    ? [
+        makeConfig({ dev: false, node: false }),
+        makeConfig({ dev: false, node: true }),
+      ]
+    : [
+        makeConfig({ dev: true, node: false }),
+        makeConfig({ dev: true, node: true }),
+        makeConfig({ dev: false, node: false }),
+        makeConfig({ dev: false, node: true }),
+      ];
 };
