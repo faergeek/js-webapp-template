@@ -143,7 +143,10 @@ function makeConfig({ dev, node, watch = false }) {
         }),
     ].filter(Boolean),
     optimization: {
-      minimizer: ['...', new CssMinimizerPlugin()],
+      minimizer: [
+        '...',
+        new CssMinimizerPlugin({ minimizerOptions: { preset: ['advanced'] } }),
+      ],
       runtimeChunk: 'single',
       splitChunks: {
         cacheGroups: {
