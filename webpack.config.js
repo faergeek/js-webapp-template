@@ -12,13 +12,12 @@ const { WebpackPluginServe } = require('webpack-plugin-serve');
 const BUILD_ROOT = path.resolve('build');
 const PUBLIC_ROOT = path.resolve(BUILD_ROOT, 'public');
 
-function makeConfig({ dev, node }) {
+function makeConfig({ dev, node, watch = false }) {
   return {
     name: node ? 'node' : 'browser',
     target: node ? 'node' : 'web',
     stats: dev ? 'none' : 'errors-warnings',
     devtool: dev ? 'cheap-module-source-map' : 'source-map',
-    watch: dev,
     externals: node
       ? nodeExternals({ allowlist: [/^webpack\/hot/] })
       : undefined,
@@ -26,23 +25,23 @@ function makeConfig({ dev, node }) {
       main: (node
         ? [
             'source-map-support/register',
-            dev && 'webpack/hot/signal',
+            watch && 'webpack/hot/signal',
             'dotenv-flow/config',
             './src/node',
           ]
-        : [dev && 'webpack-plugin-serve/client', './src/browser']
+        : [watch && 'webpack-plugin-serve/client', './src/browser']
       ).filter(Boolean),
     },
     output: {
       chunkFilename: `[name]${dev || node ? '' : '.[contenthash]'}.js`,
-      crossOriginLoading: dev ? 'anonymous' : undefined,
+      crossOriginLoading: watch ? 'anonymous' : undefined,
       devtoolModuleFilenameTemplate: node
         ? path.relative(BUILD_ROOT, '[resource-path]')
         : undefined,
       filename: `[name]${dev || node ? '' : '.[contenthash]'}.js`,
       libraryTarget: node ? 'commonjs' : undefined,
       path: node ? BUILD_ROOT : PUBLIC_ROOT,
-      publicPath: dev ? 'http://localhost:8081/' : '/',
+      publicPath: watch ? 'http://localhost:8081/' : '/',
     },
     module: {
       rules: [
@@ -52,6 +51,7 @@ function makeConfig({ dev, node }) {
           loader: 'babel-loader',
           options: {
             envName: dev ? 'development' : 'production',
+            caller: { watch },
           },
         },
         {
@@ -80,19 +80,20 @@ function makeConfig({ dev, node }) {
       ],
     },
     plugins: [
-      dev && new FriendlyErrorsWebpackPlugin(),
-      dev && node && new webpack.HotModuleReplacementPlugin(),
+      dev && new FriendlyErrorsWebpackPlugin({ clearConsole: watch }),
+      watch && node && new webpack.HotModuleReplacementPlugin(),
       dev &&
+        watch &&
         !node &&
         new ReactRefreshWebpackPlugin({ overlay: { sockIntegration: 'wps' } }),
-      dev &&
+      watch &&
         node &&
         new RunScriptWebpackPlugin({
           name: 'main.js',
           nodeArgs: ['--inspect=9229'],
           signal: true,
         }),
-      dev &&
+      watch &&
         !node &&
         new WebpackPluginServe({
           client: { retry: true },
@@ -140,20 +141,27 @@ function makeConfig({ dev, node }) {
 }
 
 module.exports = (env, argv) => {
-  return argv.mode === 'development'
+  return argv.mode
     ? [
-        makeConfig({ dev: true, node: false }),
-        makeConfig({ dev: true, node: true }),
-      ]
-    : argv.mode === 'production'
-    ? [
-        makeConfig({ dev: false, node: false }),
-        makeConfig({ dev: false, node: true }),
+        makeConfig({
+          dev: argv.mode === 'development',
+          node: false,
+          watch: argv.watch,
+        }),
+        makeConfig({
+          dev: argv.mode === 'development',
+          node: true,
+          watch: argv.watch,
+        }),
       ]
     : [
-        makeConfig({ dev: true, node: false }),
-        makeConfig({ dev: true, node: true }),
-        makeConfig({ dev: false, node: false }),
-        makeConfig({ dev: false, node: true }),
+        makeConfig({ dev: false, node: false, watch: false }),
+        makeConfig({ dev: false, node: false, watch: true }),
+        makeConfig({ dev: false, node: true, watch: false }),
+        makeConfig({ dev: false, node: true, watch: true }),
+        makeConfig({ dev: true, node: false, watch: false }),
+        makeConfig({ dev: true, node: false, watch: true }),
+        makeConfig({ dev: true, node: true, watch: false }),
+        makeConfig({ dev: true, node: true, watch: true }),
       ];
 };
