@@ -21,6 +21,7 @@ function getEntryUrls(entry) {
   }
 
   assert(entry === undefined);
+  return [];
 }
 
 const getAssetsManifest = (() => {
