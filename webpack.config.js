@@ -52,8 +52,8 @@ function makeConfig({ dev, node, watch = false }) {
           include: path.resolve('src'),
           loader: 'babel-loader',
           options: {
-            envName: dev ? 'development' : 'production',
             caller: { watch },
+            envName: dev ? 'development' : 'production',
           },
         },
         {
