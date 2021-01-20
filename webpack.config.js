@@ -19,7 +19,7 @@ function makeConfig({ dev, node, watch = false }) {
   return {
     name: node ? 'node' : 'browser',
     target: node ? 'node' : 'web',
-    stats: dev ? 'none' : 'errors-warnings',
+    stats: watch ? 'none' : 'errors-warnings',
     devtool: dev ? 'cheap-module-source-map' : 'source-map',
     externals: node
       ? nodeExternals({ allowlist: [/^webpack\/hot/, ASSETS_RE] })
@@ -106,7 +106,7 @@ function makeConfig({ dev, node, watch = false }) {
       ],
     },
     plugins: [
-      dev && new FriendlyErrorsWebpackPlugin({ clearConsole: watch }),
+      watch && new FriendlyErrorsWebpackPlugin(),
       watch && node && new webpack.HotModuleReplacementPlugin(),
       dev &&
         watch &&
