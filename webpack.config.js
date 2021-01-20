@@ -142,7 +142,10 @@ function makeConfig({ dev, node, watch = false }) {
         new MiniCssExtractPlugin({
           filename: dev ? '[name].css' : '[name].[contenthash].css',
         }),
-      !dev && watch && !node && new BundleAnalyzerPlugin(),
+      !dev &&
+        watch &&
+        !node &&
+        new BundleAnalyzerPlugin({ openAnalyzer: false }),
     ].filter(Boolean),
     optimization: {
       minimizer: [
