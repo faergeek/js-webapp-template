@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const { RunScriptWebpackPlugin } = require('run-script-webpack-plugin');
 const webpack = require('webpack');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const nodeExternals = require('webpack-node-externals');
 const { WebpackPluginServe } = require('webpack-plugin-serve');
 
@@ -141,6 +142,7 @@ function makeConfig({ dev, node, watch = false }) {
         new MiniCssExtractPlugin({
           filename: dev ? '[name].css' : '[name].[contenthash].css',
         }),
+      !dev && watch && !node && new BundleAnalyzerPlugin(),
     ].filter(Boolean),
     optimization: {
       minimizer: [
