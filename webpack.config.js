@@ -32,7 +32,7 @@ function makeConfig({ dev, node, watch = false }) {
             'dotenv-flow/config',
             './src/node',
           ]
-        : [watch && 'webpack-plugin-serve/client', './src/browser']
+        : [dev && watch && 'webpack-plugin-serve/client', './src/browser']
       ).filter(Boolean),
     },
     output: {
