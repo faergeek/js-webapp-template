@@ -36,12 +36,12 @@ function makeConfig({ dev, node, watch = false }) {
       ).filter(Boolean),
     },
     output: {
-      chunkFilename: `[name]${dev || node ? '' : '.[contenthash]'}.js`,
+      chunkFilename: `[name]${node || watch ? '' : '.[contenthash]'}.js`,
       crossOriginLoading: watch ? 'anonymous' : undefined,
       devtoolModuleFilenameTemplate: node
         ? path.relative(BUILD_ROOT, '[resource-path]')
         : undefined,
-      filename: `[name]${dev || node ? '' : '.[contenthash]'}.js`,
+      filename: `[name]${node || watch ? '' : '.[contenthash]'}.js`,
       libraryTarget: node ? 'commonjs' : undefined,
       path: node ? BUILD_ROOT : PUBLIC_ROOT,
       publicPath: watch ? 'http://localhost:8081/' : '/',
@@ -98,7 +98,7 @@ function makeConfig({ dev, node, watch = false }) {
               options: {
                 emitFile: !node,
                 limit: 4000,
-                name: dev ? '[name].[ext]' : '[name].[contenthash].[ext]',
+                name: watch ? '[name].[ext]' : '[name].[contenthash].[ext]',
               },
             },
           ],
@@ -140,7 +140,7 @@ function makeConfig({ dev, node, watch = false }) {
         }),
       !node &&
         new MiniCssExtractPlugin({
-          filename: dev ? '[name].css' : '[name].[contenthash].css',
+          filename: watch ? '[name].css' : '[name].[contenthash].css',
         }),
       !dev &&
         watch &&
