@@ -25,16 +25,20 @@ function getEntryUrls(entry) {
 }
 
 const getAssetsManifest = (() => {
-  let promise;
+  if (process.env.NODE_ENV === 'production') {
+    const promise = fs.promises
+      .readFile(path.resolve('build', 'webpack-assets.json'), 'utf-8')
+      .then(content => JSON.parse(`${content}`));
 
-  return () => {
-    if (!promise) {
-      promise = fs.promises
-        .readFile(path.resolve('build', 'webpack-assets.json'), 'utf-8')
-        .then(content => JSON.parse(`${content}`));
-    }
+    return () => promise;
+  }
 
-    return promise;
+  return async () => {
+    const json = await import(
+      /* webpackIgnore: true */ '../build/webpack-assets.json'
+    );
+
+    return json.default;
   };
 })();
 
