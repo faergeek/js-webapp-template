@@ -156,7 +156,7 @@ function makeConfig({ dev, node, watch = false }) {
         '...',
         new CssMinimizerPlugin({ minimizerOptions: { preset: ['advanced'] } }),
       ],
-      runtimeChunk: 'single',
+      runtimeChunk: node ? undefined : 'single',
       splitChunks: {
         cacheGroups: {
           vendor: {
