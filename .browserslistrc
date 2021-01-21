@@ -1,4 +1,19 @@
+[production]
 > 1%
 not ie <= 11
 not dead
 not op_mini all
+
+[development]
+last 1 Chrome version
+last 1 ChromeAndroid version
+last 1 Edge version
+last 1 Firefox version
+last 1 FirefoxAndroid version
+last 1 iOS version
+last 1 Opera version
+last 1 OperaMobile version
+last 1 Safari version
+
+[node]
+current node

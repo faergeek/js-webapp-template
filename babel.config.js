@@ -9,8 +9,8 @@ module.exports = function babelConfig(api) {
       [
         '@babel/env',
         {
+          browserslistEnv: node ? 'node' : api.env(),
           corejs: '3.8',
-          targets: node ? { node: 'current' } : undefined,
           useBuiltIns: 'entry',
         },
       ],

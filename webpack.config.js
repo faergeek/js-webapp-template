@@ -18,7 +18,11 @@ const ASSETS_RE = /\.(svg|png|gif|jpe?g|eot|ttf|woff2?)$/;
 function makeConfig({ dev, node, watch = false }) {
   return {
     name: node ? 'node' : 'browser',
-    target: node ? 'node' : 'web',
+    target: node
+      ? 'browserslist:node'
+      : dev
+      ? 'browserslist:development'
+      : 'browserslist:production',
     stats: watch ? 'none' : 'errors-warnings',
     devtool: dev ? 'cheap-module-source-map' : 'source-map',
     externals: node
