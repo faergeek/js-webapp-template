@@ -12,6 +12,7 @@ module.exports = function babelConfig(api) {
           browserslistEnv: node ? 'node' : api.env(),
           bugfixes: true,
           corejs: '3.8',
+          shippedProposals: true,
           useBuiltIns: 'entry',
         },
       ],
