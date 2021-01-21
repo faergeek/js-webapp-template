@@ -45,6 +45,7 @@
     "cssnano-preset-advanced": "^4.0.7",
     "eslint": "^7.15.0",
     "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-compat": "^3.9.0",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",

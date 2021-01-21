@@ -29,6 +29,7 @@ overrides:
     env: { node: true }
   - files: src/**/*
     extends:
+      - plugin:compat/recommended
       - plugin:react/recommended
       - plugin:react-hooks/recommended
       - prettier/react
