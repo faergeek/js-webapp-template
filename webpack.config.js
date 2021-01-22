@@ -9,6 +9,7 @@ const webpack = require('webpack');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const nodeExternals = require('webpack-node-externals');
 const { WebpackPluginServe } = require('webpack-plugin-serve');
+const WebpackBar = require('webpackbar');
 
 const BUILD_ROOT = path.resolve('build');
 const PUBLIC_ROOT = path.resolve(BUILD_ROOT, 'public');
@@ -110,7 +111,8 @@ function makeConfig({ dev, node, watch = false }) {
       ],
     },
     plugins: [
-      watch && new FriendlyErrorsWebpackPlugin(),
+      new WebpackBar({ name: node ? 'node' : 'browser' }),
+      watch && new FriendlyErrorsWebpackPlugin({ clearConsole: false }),
       watch && node && new webpack.HotModuleReplacementPlugin(),
       dev &&
         watch &&
