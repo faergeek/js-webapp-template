@@ -3,7 +3,6 @@ import { createRouter } from '@curi/router';
 import { createReusable } from '@hickory/in-memory';
 import * as assert from 'assert';
 import * as express from 'express';
-import * as fs from 'fs';
 import * as path from 'path';
 import * as React from 'react';
 import { renderToNodeStream } from 'react-dom/server';
@@ -24,24 +23,6 @@ function getEntryUrls(entry) {
   return [];
 }
 
-const getAssetsManifest = (() => {
-  if (process.env.NODE_ENV === 'production') {
-    const promise = fs.promises
-      .readFile(path.resolve('build', 'webpack-assets.json'), 'utf-8')
-      .then(content => JSON.parse(`${content}`));
-
-    return () => promise;
-  }
-
-  return async () => {
-    const json = await import(
-      /* webpackIgnore: true */ '../build/webpack-assets.json'
-    );
-
-    return json.default;
-  };
-})();
-
 const reusable = createReusable();
 
 export const app = express().use(
@@ -54,7 +35,7 @@ export const app = express().use(
     const Router = createRouterComponent(router);
 
     try {
-      const webpackAssets = await getAssetsManifest();
+      const webpackAssets = await import('../build/webpack-assets.json');
 
       router.once(({ response }) => {
         res

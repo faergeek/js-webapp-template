@@ -19,6 +19,7 @@ const ASSETS_RE = /\.(svg|png|gif|jpe?g|eot|ttf|woff2?)$/;
 function makeConfig({ dev, node, watch = false }) {
   return {
     name: node ? 'node' : 'browser',
+    dependencies: node ? ['browser'] : undefined,
     target: node
       ? 'browserslist:node'
       : dev
@@ -122,11 +123,7 @@ function makeConfig({ dev, node, watch = false }) {
         node &&
         new RunScriptWebpackPlugin({
           name: 'main.js',
-          nodeArgs: [
-            '--experimental-json-modules',
-            '--inspect=9229',
-            '--inspect-publish-uid=http',
-          ],
+          nodeArgs: ['--inspect=9229', '--inspect-publish-uid=http'],
           signal: true,
         }),
       watch &&
