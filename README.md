@@ -40,7 +40,7 @@ yarn start
 ## Environment Variables
 
 dotenv-flow reads files like `.env`, `env.local` to setup environment
-variables. For details see [dotenv
+variables. For details see [dotenv-flow
 docs](https://github.com/kerimdzhanov/dotenv-flow)
 
 ## License
