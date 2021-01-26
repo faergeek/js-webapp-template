@@ -1,4 +1,4 @@
-# webpack-ssr-hmr-boilerplate
+# js-webapp-template
 
 ## Setup
 

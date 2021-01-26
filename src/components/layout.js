@@ -89,7 +89,7 @@ export function Layout({ children }) {
             <a href="https://twitter.com/faergeek">Sergey Slipchenko</a>. The{' '}
             <a
               className="icon-text"
-              href="https://github.com/faergeek/webpack-ssr-hmr-boilerplate"
+              href="https://github.com/faergeek/js-webapp-template"
             >
               <span className="icon is-inline">
                 <FontAwesomeIcon icon={faGithub} />
