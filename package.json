@@ -62,7 +62,7 @@
     "rimraf": "^3.0.0",
     "run-script-webpack-plugin": "^0.0.5",
     "sass": "^1.32.4",
-    "sass-loader": "^10.1.1",
+    "sass-loader": "^11.0.0",
     "source-map-loader": "^2.0.0",
     "url-loader": "^4.1.1",
     "webpack": "^5.10.1",
