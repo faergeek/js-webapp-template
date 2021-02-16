@@ -27,6 +27,8 @@ rules:
 overrides:
   - files: '*'
     env: { node: true }
+  - files: '**/*.mjs'
+    parserOptions: { sourceType: module }
   - files: src/**/*
     extends:
       - plugin:compat/recommended
