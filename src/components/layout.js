@@ -1,10 +1,8 @@
 import { Link, useResponse, useRouter } from '@curi/react-dom';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import * as React from 'react';
 
+import { GithubIcon, SearchIcon } from './icons';
 import css from './layout.module.css';
 
 export function Layout({ children }) {
@@ -68,7 +66,7 @@ export function Layout({ children }) {
                     />
 
                     <span className="icon is-left">
-                      <FontAwesomeIcon icon={faSearch} />
+                      <SearchIcon />
                     </span>
                   </p>
                 </form>
@@ -92,7 +90,7 @@ export function Layout({ children }) {
               href="https://github.com/faergeek/js-webapp-template"
             >
               <span className="icon is-inline">
-                <FontAwesomeIcon icon={faGithub} />
+                <GithubIcon />
               </span>{' '}
               <span>source code</span>
             </a>{' '}
