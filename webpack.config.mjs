@@ -1,16 +1,17 @@
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-const AssetsPlugin = require('assets-webpack-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const path = require('path');
-const { RunScriptWebpackPlugin } = require('run-script-webpack-plugin');
-const webpack = require('webpack');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-const nodeExternals = require('webpack-node-externals');
-const { WebpackPluginServe } = require('webpack-plugin-serve');
-const WebpackBar = require('webpackbar');
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import AssetsPlugin from 'assets-webpack-plugin';
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
+import FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import path from 'path';
+import { RunScriptWebpackPlugin } from 'run-script-webpack-plugin';
+import webpack from 'webpack';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import nodeExternals from 'webpack-node-externals';
+import { WebpackPluginServe } from 'webpack-plugin-serve';
+import WebpackBar from 'webpackbar';
 
+const SRC_ROOT = path.resolve('src');
 const BUILD_ROOT = path.resolve('build');
 const PUBLIC_ROOT = path.resolve(BUILD_ROOT, 'public');
 
@@ -56,7 +57,7 @@ function makeConfig({ dev, node, watch = false }) {
       rules: [
         {
           test: /\.js$/,
-          include: path.resolve('src'),
+          include: SRC_ROOT,
           loader: 'babel-loader',
           options: {
             caller: { watch },
@@ -180,7 +181,7 @@ function makeConfig({ dev, node, watch = false }) {
   };
 }
 
-module.exports = (env, argv) => {
+export default (env, argv) => {
   return argv.mode
     ? [
         makeConfig({
