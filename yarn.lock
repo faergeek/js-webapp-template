@@ -3572,10 +3572,10 @@ koa-compose@^4.1.0:
   resolved "https://registry.yarnpkg.com/koa-compose/-/koa-compose-4.1.0.tgz#507306b9371901db41121c812e923d0d67d3e877"
   integrity sha512-8ODW8TrDuMYvXRwra/Kh7/rJo9BtOfPc6qO8eAfC80CnCvSjSl0bkRM24X6/XBBEyj0v1nRUQ1LyOy3dbqOWXw==
 
-koa-compress@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/koa-compress/-/koa-compress-5.0.1.tgz#9e89e2847998f8f9f73a5674e5739a2f4b6531fc"
-  integrity sha512-uTo7Hcyyt6e9o2X3htRS/SNEKy9vDOUc/r1qs/F0YI2Frv9IEbkjz/9dC6IdJWBQAG34lRuU7jBXeq3DRur9Ng==
+koa-compress@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/koa-compress/-/koa-compress-4.0.1.tgz#7a7ed52ce7c3e0cbe918e99e1eaaeba87ec11d48"
+  integrity sha512-It4WYfsBb9HegnFgcBhiRbPeh1LDjXhRM4+xi2jMp8ujwaVAdqhFzHpbDWuTxbLxuBwStn+Bwdwn2zDZxeNChg==
   dependencies:
     bytes "^3.0.0"
     compressible "^2.0.0"
@@ -5266,11 +5266,6 @@ safe-buffer@^5.1.0:
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.2.1.tgz#1eaf9fa9bdb1fdd4ec75f58f9cdb4e6b7827eec6"
   integrity sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==
 
-safe-stable-stringify@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/safe-stable-stringify/-/safe-stable-stringify-1.1.1.tgz#c8a220ab525cd94e60ebf47ddc404d610dc5d84a"
-  integrity sha512-ERq4hUjKDbJfE4+XtZLFPCDi8Vb1JqaxAPTxWFLBx8XcAlf9Bda/ZJdVezs/NAfsMQScyIlUMx+Yeu7P7rx5jw==
-
 "safer-buffer@>= 2.1.2 < 3", "safer-buffer@>= 2.1.2 < 3.0.0":
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
@@ -5641,6 +5636,11 @@ stylehacks@^4.0.0:
     postcss "^7.0.0"
     postcss-selector-parser "^3.0.0"
 
+superstruct@^0.10.12:
+  version "0.10.13"
+  resolved "https://registry.yarnpkg.com/superstruct/-/superstruct-0.10.13.tgz#705535a5598ff231bd976601a7b6b534a71a821b"
+  integrity sha512-W4SitSZ9MOyMPbHreoZVEneSZyPEeNGbdfJo/7FkJyRs/M3wQRFzq+t3S/NBwlrFSWdx1ONLjLb9pB+UKe4IqQ==
+
 superstruct@^0.12.1:
   version "0.12.2"
   resolved "https://registry.yarnpkg.com/superstruct/-/superstruct-0.12.2.tgz#214d419e2c1eabd87d7a3774150664dfe53506e0"
@@ -5994,10 +5994,10 @@ webpack-plugin-ramdisk@^0.1.2:
     execa "^4.0.3"
     superstruct "^0.12.1"
 
-webpack-plugin-serve@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/webpack-plugin-serve/-/webpack-plugin-serve-1.2.1.tgz#f9def36e4f8dd9ab5a225c401dfafa3dbd32272e"
-  integrity sha512-9FVTFFEqgMuc83pL6xdw3Cmhts9LlS1Oi/iRgvbbMaspfgCfL+DeZvCzoM5sFPm9YwQpMN97UW5OUjgz4/R7cA==
+webpack-plugin-serve@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/webpack-plugin-serve/-/webpack-plugin-serve-1.2.0.tgz#30b253722f79192928113fd6e26b6d673444d79d"
+  integrity sha512-wBAQi2ZwDZMUEpbQUQcz//HaBPX6QJp9v6pCyB9efmS1RlhzUwVwRUwQgJ79J/MyElXoos1ToQeLAK5aIStOYQ==
   dependencies:
     chalk "^4.0.0"
     connect-history-api-fallback "^1.5.0"
@@ -6007,7 +6007,7 @@ webpack-plugin-serve@^1.2.1:
     is-path-cwd "^2.2.0"
     is-promise "^4.0.0"
     koa "^2.5.3"
-    koa-compress "^5.0.1"
+    koa-compress "^4.0.1"
     koa-connect "^2.0.1"
     koa-route "^3.2.0"
     koa-static "^5.0.0"
@@ -6017,9 +6017,8 @@ webpack-plugin-serve@^1.2.1:
     open "^7.0.3"
     p-defer "^3.0.0"
     rimraf "^3.0.2"
-    safe-stable-stringify "^1.1.1"
     strip-ansi "^6.0.0"
-    superstruct "^0.12.1"
+    superstruct "^0.10.12"
     webpack-plugin-ramdisk "^0.1.2"
     ws "^7.1.0"
 
