@@ -32,7 +32,6 @@ overrides:
       - plugin:compat/recommended
       - plugin:react/recommended
       - plugin:react-hooks/recommended
-      - prettier/react
     env: { shared-node-browser: true }
     settings: { react: { version: 'detect' } }
     rules:
