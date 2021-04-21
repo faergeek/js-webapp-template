@@ -59,8 +59,8 @@ function makeConfig({ dev, node, watch = false }) {
           include: path.resolve('src'),
           loader: 'babel-loader',
           options: {
-            caller: { watch },
             envName: dev ? 'development' : 'production',
+            plugins: dev && watch && !node ? ['react-refresh/babel'] : [],
           },
         },
         {
