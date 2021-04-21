@@ -155,10 +155,7 @@ function makeConfig({ dev, node, watch = false }) {
         new BundleAnalyzerPlugin({ openAnalyzer: false }),
     ].filter(Boolean),
     optimization: {
-      minimizer: [
-        '...',
-        new CssMinimizerPlugin({ minimizerOptions: { preset: ['advanced'] } }),
-      ],
+      minimizer: ['...', new CssMinimizerPlugin()],
       runtimeChunk: node ? undefined : 'single',
       splitChunks: {
         cacheGroups: {
