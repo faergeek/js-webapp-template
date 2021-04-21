@@ -45,7 +45,7 @@ export default function HomePage() {
             </p>
 
             <p>
-              When click, it shows loading spinner for a second (hence the
+              When clicked, it shows loading spinner for a second (hence the
               text).
             </p>
           </div>
