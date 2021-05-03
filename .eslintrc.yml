@@ -1,49 +1,11 @@
 root: true
-reportUnusedDisableDirectives: true
-extends: [eslint:recommended, prettier]
+extends: ['@faergeek']
 plugins: [simple-import-sort]
-parserOptions: { sourceType: module }
-env: { es2021: true }
 rules:
-  dot-notation: warn
-  eqeqeq: [warn, smart]
-  func-names: [warn, as-needed]
-  func-style: [warn, declaration, { allowArrowFunctions: true }]
-  no-alert: warn
-  no-console: warn
-  no-throw-literal: warn
-  no-useless-computed-key: warn
-  no-useless-concat: warn
-  no-useless-rename: warn
-  object-shorthand: warn
-  operator-assignment: warn
-  prefer-const: warn
-  prefer-template: warn
-  radix: warn
-  spaced-comment: [warn, always, { block: { balanced: true } }]
-  strict: [warn, never]
   simple-import-sort/imports: warn
   simple-import-sort/exports: warn
 overrides:
   - files: '*'
     env: { node: true }
   - files: src/**/*
-    extends:
-      - plugin:compat/recommended
-      - plugin:react/recommended
-      - plugin:react-hooks/recommended
-    env: { shared-node-browser: true }
-    settings: { react: { version: 'detect' } }
-    rules:
-      react/display-name: off
-      react/jsx-boolean-value: warn
-      react/jsx-curly-brace-presence: warn
-      react/jsx-fragments: warn
-      react/jsx-key:
-        - warn
-        - checkFragmentShorthand: true
-          checkKeyMustBeforeSpread: true
-      react/no-danger: warn
-      react/no-unused-prop-types: warn
-      react/prop-types: off
-      react/require-render-return: off
+    extends: ['@faergeek/eslint-config/react']

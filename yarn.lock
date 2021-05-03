@@ -1017,6 +1017,13 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@faergeek/eslint-config@^0.0.0-development":
+  version "0.0.0-development"
+  resolved "https://registry.yarnpkg.com/@faergeek/eslint-config/-/eslint-config-0.0.0-development.tgz#04d5178281ff298ef819a73eff3515d60db09a15"
+  integrity sha512-UxZoXQrJvCAUIvbC/o3N+pRn4n0LU2R/AapSBvSAIaN0sG2xGmCRBo9rt0sqace0OcW1/y5eW8U/NdzA4poYqw==
+  dependencies:
+    eslint-config-prettier "^8.3.0"
+
 "@hickory/browser@^2.0.1":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@hickory/browser/-/browser-2.1.0.tgz#d4aaed089957fe1c5b90aab94703f8c92fb18506"
@@ -2470,7 +2477,7 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-eslint-config-prettier@^8.0.0:
+eslint-config-prettier@^8.3.0:
   version "8.3.0"
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.3.0.tgz#f7471b20b6fe8a9a9254cc684454202886a2dd7a"
   integrity sha512-BgZuLUSeKzvlL/VUjx/Yb787VQ26RU3gGjA3iiFvdsp/2bMfVIWUVP7tjxtjS0e+HP409cPlPvNkQloz8C91ew==
