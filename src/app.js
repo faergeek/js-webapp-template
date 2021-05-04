@@ -1,7 +1,7 @@
 import { useResponse } from '@curi/react-dom';
 import * as React from 'react';
 
-import { Layout } from './components/layout';
+import { Layout } from './layout';
 
 export function App() {
   const { response } = useResponse();
