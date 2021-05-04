@@ -2,7 +2,7 @@ import { Link, useResponse, useRouter } from '@curi/react-dom';
 import clsx from 'clsx';
 import * as React from 'react';
 
-import { GithubIcon, SearchIcon } from './icons';
+import { SearchIcon } from './icons';
 import css from './layout.module.css';
 
 export function Layout({ children }) {
@@ -85,14 +85,8 @@ export function Layout({ children }) {
           <p>
             Built by{' '}
             <a href="https://twitter.com/faergeek">Sergey Slipchenko</a>. The{' '}
-            <a
-              className="icon-text"
-              href="https://github.com/faergeek/js-webapp-template"
-            >
-              <span className="icon is-inline">
-                <GithubIcon />
-              </span>{' '}
-              <span>source code</span>
+            <a href="https://github.com/faergeek/js-webapp-template">
+              source code
             </a>{' '}
             is licensed under <a href="http://www.wtfpl.net">WTFPL</a>.
           </p>
