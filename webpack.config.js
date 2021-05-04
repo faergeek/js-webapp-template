@@ -11,6 +11,7 @@ const nodeExternals = require('webpack-node-externals');
 const { WebpackPluginServe } = require('webpack-plugin-serve');
 const WebpackBar = require('webpackbar');
 
+const SRC_ROOT = path.resolve('src');
 const BUILD_ROOT = path.resolve('build');
 const PUBLIC_ROOT = path.resolve(BUILD_ROOT, 'public');
 
@@ -56,7 +57,7 @@ function makeConfig({ dev, node, watch = false }) {
       rules: [
         {
           test: /\.js$/,
-          include: path.resolve('src'),
+          include: SRC_ROOT,
           loader: 'babel-loader',
           options: {
             envName: dev ? 'development' : 'production',
