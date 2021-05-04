@@ -21,7 +21,7 @@ function makeConfig({ dev, node, watch = false }) {
     name: node ? 'node' : 'browser',
     dependencies: node ? ['browser'] : undefined,
     target: node
-      ? 'browserslist:node'
+      ? 'node'
       : dev
       ? 'browserslist:development'
       : 'browserslist:production',
