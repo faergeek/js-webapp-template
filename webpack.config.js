@@ -124,7 +124,7 @@ function makeConfig({ dev, node, watch = false }) {
         node &&
         new RunScriptWebpackPlugin({
           name: 'main.js',
-          nodeArgs: ['--inspect=9229', '--inspect-publish-uid=http'],
+          nodeArgs: ['--inspect=9229'],
           signal: true,
         }),
       watch &&
