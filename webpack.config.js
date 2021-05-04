@@ -172,28 +172,15 @@ function makeConfig({ dev, node, watch = false }) {
   };
 }
 
-module.exports = (env, argv) => {
-  return argv.mode
-    ? [
-        makeConfig({
-          dev: argv.mode === 'development',
-          node: false,
-          watch: argv.watch,
-        }),
-        makeConfig({
-          dev: argv.mode === 'development',
-          node: true,
-          watch: argv.watch,
-        }),
-      ]
-    : [
-        makeConfig({ dev: false, node: false, watch: false }),
-        makeConfig({ dev: false, node: false, watch: true }),
-        makeConfig({ dev: false, node: true, watch: false }),
-        makeConfig({ dev: false, node: true, watch: true }),
-        makeConfig({ dev: true, node: false, watch: false }),
-        makeConfig({ dev: true, node: false, watch: true }),
-        makeConfig({ dev: true, node: true, watch: false }),
-        makeConfig({ dev: true, node: true, watch: true }),
-      ];
-};
+module.exports = (env, argv) => [
+  makeConfig({
+    dev: argv.mode === 'development',
+    node: false,
+    watch: argv.watch,
+  }),
+  makeConfig({
+    dev: argv.mode === 'development',
+    node: true,
+    watch: argv.watch,
+  }),
+];

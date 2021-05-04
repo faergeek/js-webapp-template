@@ -5,7 +5,6 @@
     "prettier": "prettier --write .",
     "prettier:check": "prettier --list-different .",
     "lint": "eslint .",
-    "webpack:check": "webpack configtest",
     "dev": "webpack watch --mode=development",
     "build": "webpack --mode=production",
     "build:analyze": "webpack watch --mode=production",

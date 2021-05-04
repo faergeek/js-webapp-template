@@ -26,7 +26,3 @@ jobs:
           name: Lint
           command: yarn run lint
           when: always
-      - run:
-          name: Check webpack config
-          command: yarn run webpack:check
-          when: always
