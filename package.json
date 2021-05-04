@@ -29,7 +29,7 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.7.4",
-    "@faergeek/eslint-config": "^0.0.0-development",
+    "@faergeek/eslint-config": "^1.0.0",
     "@hickory/browser": "^2.0.1",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
     "assets-webpack-plugin": "^7.0.0",

@@ -1017,10 +1017,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@faergeek/eslint-config@^0.0.0-development":
-  version "0.0.0-development"
-  resolved "https://registry.yarnpkg.com/@faergeek/eslint-config/-/eslint-config-0.0.0-development.tgz#04d5178281ff298ef819a73eff3515d60db09a15"
-  integrity sha512-UxZoXQrJvCAUIvbC/o3N+pRn4n0LU2R/AapSBvSAIaN0sG2xGmCRBo9rt0sqace0OcW1/y5eW8U/NdzA4poYqw==
+"@faergeek/eslint-config@^1.0.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@faergeek/eslint-config/-/eslint-config-1.2.0.tgz#38f8b1f23e88ac2632b9e544039f38e13d3c160c"
+  integrity sha512-fbTz8fEkUcpGxdauvWzLGLI2dhBpqSyKByXyLypPOt+07UBUC8LN8U/RD6U3lztBrSNxiQtIsnO8UlAHAMy4vA==
   dependencies:
     eslint-config-prettier "^8.3.0"
 
