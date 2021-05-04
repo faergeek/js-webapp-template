@@ -56,7 +56,7 @@ function makeConfig({ dev, node, watch = false }) {
     module: {
       rules: [
         {
-          test: /\.js$/,
+          test: /\.(j|t)sx?$/,
           include: SRC_ROOT,
           loader: 'babel-loader',
           options: {
