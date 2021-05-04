@@ -165,12 +165,6 @@ function makeConfig({ dev, node, watch = false }) {
             chunks: 'initial',
             enforce: true,
           },
-          css: {
-            test: /\.css$/,
-            name: 'main',
-            chunks: 'all',
-            enforce: true,
-          },
         },
       },
     },
