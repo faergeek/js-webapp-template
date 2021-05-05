@@ -11,182 +11,184 @@ const nodeExternals = require('webpack-node-externals');
 const { WebpackPluginServe } = require('webpack-plugin-serve');
 const WebpackBar = require('webpackbar');
 
-const SRC_ROOT = path.resolve('src');
-const BUILD_ROOT = path.resolve('build');
-const PUBLIC_ROOT = path.resolve(BUILD_ROOT, 'public');
+function makeWebpackConfigs({ dev, watch }) {
+  const SRC_ROOT = path.resolve('src');
+  const BUILD_ROOT = path.resolve('build');
+  const PUBLIC_ROOT = path.resolve(BUILD_ROOT, 'public');
 
-const ASSETS_RE = /\.(svg|png|gif|jpe?g|eot|ttf|woff2?)$/;
+  const ASSETS_RE = /\.(svg|png|gif|jpe?g|eot|ttf|woff2?)$/;
 
-function makeWebpackConfig({ dev, node, watch = false }) {
-  return {
-    name: node ? 'node' : 'browser',
-    dependencies: node ? ['browser'] : undefined,
-    target: node
-      ? 'node'
-      : dev
-      ? 'browserslist:development'
-      : 'browserslist:production',
-    stats: watch ? 'none' : 'errors-warnings',
-    devtool: dev ? 'cheap-module-source-map' : 'source-map',
-    externals: node
-      ? nodeExternals({ allowlist: [/^webpack\/hot/, ASSETS_RE] })
-      : undefined,
-    entry: {
-      main: (node
-        ? [
-            'source-map-support/register',
-            watch && 'webpack/hot/signal',
-            'dotenv-flow/config',
-            './src/node',
-          ]
-        : [dev && watch && 'webpack-plugin-serve/client', './src/browser']
-      ).filter(Boolean),
-    },
-    output: {
-      chunkFilename: `[name]${node || watch ? '' : '.[contenthash]'}.js`,
-      crossOriginLoading: watch ? 'anonymous' : undefined,
-      devtoolModuleFilenameTemplate: node
-        ? path.relative(BUILD_ROOT, '[resource-path]')
+  function makeWebpackConfig({ dev, node, watch = false }) {
+    return {
+      name: node ? 'node' : 'browser',
+      dependencies: node ? ['browser'] : undefined,
+      target: node
+        ? 'node'
+        : dev
+        ? 'browserslist:development'
+        : 'browserslist:production',
+      stats: watch ? 'none' : 'errors-warnings',
+      devtool: dev ? 'cheap-module-source-map' : 'source-map',
+      externals: node
+        ? nodeExternals({ allowlist: [/^webpack\/hot/, ASSETS_RE] })
         : undefined,
-      filename: `[name]${node || watch ? '' : '.[contenthash]'}.js`,
-      libraryTarget: node ? 'commonjs' : undefined,
-      path: node ? BUILD_ROOT : PUBLIC_ROOT,
-      publicPath: watch ? 'http://localhost:8081/' : '/',
-    },
-    module: {
-      rules: [
-        {
-          test: /\.(j|t)sx?$/,
-          include: SRC_ROOT,
-          loader: 'babel-loader',
-          options: {
-            envName: dev ? 'development' : 'production',
-            plugins: dev && watch && !node ? ['react-refresh/babel'] : [],
+      entry: {
+        main: (node
+          ? [
+              'source-map-support/register',
+              watch && 'webpack/hot/signal',
+              'dotenv-flow/config',
+              './src/node',
+            ]
+          : [dev && watch && 'webpack-plugin-serve/client', './src/browser']
+        ).filter(Boolean),
+      },
+      output: {
+        chunkFilename: `[name]${node || watch ? '' : '.[contenthash]'}.js`,
+        crossOriginLoading: watch ? 'anonymous' : undefined,
+        devtoolModuleFilenameTemplate: node
+          ? path.relative(BUILD_ROOT, '[resource-path]')
+          : undefined,
+        filename: `[name]${node || watch ? '' : '.[contenthash]'}.js`,
+        libraryTarget: node ? 'commonjs' : undefined,
+        path: node ? BUILD_ROOT : PUBLIC_ROOT,
+        publicPath: watch ? 'http://localhost:8081/' : '/',
+      },
+      module: {
+        rules: [
+          {
+            test: /\.(j|t)sx?$/,
+            include: SRC_ROOT,
+            loader: 'babel-loader',
+            options: {
+              envName: dev ? 'development' : 'production',
+              plugins: dev && watch && !node ? ['react-refresh/babel'] : [],
+            },
           },
-        },
-        {
-          test: /\.(css|sass|scss)$/,
-          use: (node ? [] : [MiniCssExtractPlugin.loader]).concat([
-            {
-              loader: 'css-loader',
-              options: {
-                importLoaders: 2,
-                modules: {
-                  auto: true,
-                  exportOnlyLocals: node,
-                  exportLocalsConvention: 'dashesOnly',
-                  localIdentName: dev
-                    ? '[local]@[1]#[contenthash:base64:5]'
-                    : undefined,
-                  localIdentRegExp: /\/([^/]*)\.module\.\w+$/i,
+          {
+            test: /\.(css|sass|scss)$/,
+            use: (node ? [] : [MiniCssExtractPlugin.loader]).concat([
+              {
+                loader: 'css-loader',
+                options: {
+                  importLoaders: 2,
+                  modules: {
+                    auto: true,
+                    exportOnlyLocals: node,
+                    exportLocalsConvention: 'dashesOnly',
+                    localIdentName: dev
+                      ? '[local]@[1]#[contenthash:base64:5]'
+                      : undefined,
+                    localIdentRegExp: /\/([^/]*)\.module\.\w+$/i,
+                  },
                 },
               },
-            },
-            'postcss-loader',
-          ]),
-        },
-        { test: /\.(css|js)$/, use: 'source-map-loader' },
-        {
-          test: /\.(sass|scss)$/,
-          use: [
-            {
-              loader: 'resolve-url-loader',
-              options: { keepQuery: true, sourceMap: true },
-            },
-            'sass-loader',
-          ],
-        },
-        {
-          test: ASSETS_RE,
-          type: 'javascript/auto',
-          use: [
-            {
-              loader: 'url-loader',
-              options: {
-                emitFile: !node,
-                limit: 4000,
-                name: watch ? '[name].[ext]' : '[name].[contenthash].[ext]',
-              },
-            },
-          ],
-        },
-      ],
-    },
-    plugins: [
-      new WebpackBar({ name: node ? 'node' : 'browser' }),
-      watch && new FriendlyErrorsWebpackPlugin({ clearConsole: false }),
-      watch && node && new webpack.HotModuleReplacementPlugin(),
-      dev &&
-        watch &&
-        !node &&
-        new ReactRefreshWebpackPlugin({ overlay: { sockIntegration: 'wps' } }),
-      watch &&
-        node &&
-        new RunScriptWebpackPlugin({
-          name: 'main.js',
-          nodeArgs: ['--inspect=9229'],
-          signal: true,
-        }),
-      watch &&
-        !node &&
-        new WebpackPluginServe({
-          client: { retry: true },
-          hmr: dev ? 'refresh-on-failure' : false,
-          log: { level: 'warn' },
-          port: 8081,
-          static: [PUBLIC_ROOT],
-          waitForBuild: true,
-          middleware: (app, builtins) =>
-            builtins.headers({ 'Access-Control-Allow-Origin': '*' }),
-        }),
-      !node &&
-        new AssetsPlugin({
-          entrypoints: true,
-          includeAuxiliaryAssets: true,
-          path: BUILD_ROOT,
-          prettyPrint: dev,
-        }),
-      !node &&
-        new MiniCssExtractPlugin({
-          filename: watch ? '[name].css' : '[name].[contenthash].css',
-        }),
-      !dev &&
-        watch &&
-        !node &&
-        new BundleAnalyzerPlugin({ openAnalyzer: false }),
-    ].filter(Boolean),
-    optimization: {
-      minimizer: ['...', new CssMinimizerPlugin()],
-      runtimeChunk: node ? undefined : 'single',
-      splitChunks: {
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/](?!webpack[\\/]hot[\\/]).*\.js$/,
-            name: 'vendors',
-            chunks: 'initial',
-            enforce: true,
+              'postcss-loader',
+            ]),
           },
-          css: {
-            test: /\.css$/,
-            name: 'main',
-            chunks: 'all',
-            enforce: true,
+          { test: /\.(css|js)$/, use: 'source-map-loader' },
+          {
+            test: /\.(sass|scss)$/,
+            use: [
+              {
+                loader: 'resolve-url-loader',
+                options: { keepQuery: true, sourceMap: true },
+              },
+              'sass-loader',
+            ],
+          },
+          {
+            test: ASSETS_RE,
+            type: 'javascript/auto',
+            use: [
+              {
+                loader: 'url-loader',
+                options: {
+                  emitFile: !node,
+                  limit: 4000,
+                  name: watch ? '[name].[ext]' : '[name].[contenthash].[ext]',
+                },
+              },
+            ],
+          },
+        ],
+      },
+      plugins: [
+        new WebpackBar({ name: node ? 'node' : 'browser' }),
+        watch && new FriendlyErrorsWebpackPlugin({ clearConsole: false }),
+        watch && node && new webpack.HotModuleReplacementPlugin(),
+        dev &&
+          watch &&
+          !node &&
+          new ReactRefreshWebpackPlugin({
+            overlay: { sockIntegration: 'wps' },
+          }),
+        watch &&
+          node &&
+          new RunScriptWebpackPlugin({
+            name: 'main.js',
+            nodeArgs: ['--inspect=9229'],
+            signal: true,
+          }),
+        watch &&
+          !node &&
+          new WebpackPluginServe({
+            client: { retry: true },
+            hmr: dev ? 'refresh-on-failure' : false,
+            log: { level: 'warn' },
+            port: 8081,
+            static: [PUBLIC_ROOT],
+            waitForBuild: true,
+            middleware: (app, builtins) =>
+              builtins.headers({ 'Access-Control-Allow-Origin': '*' }),
+          }),
+        !node &&
+          new AssetsPlugin({
+            entrypoints: true,
+            includeAuxiliaryAssets: true,
+            path: BUILD_ROOT,
+            prettyPrint: dev,
+          }),
+        !node &&
+          new MiniCssExtractPlugin({
+            filename: watch ? '[name].css' : '[name].[contenthash].css',
+          }),
+        !dev &&
+          watch &&
+          !node &&
+          new BundleAnalyzerPlugin({ openAnalyzer: false }),
+      ].filter(Boolean),
+      optimization: {
+        minimizer: ['...', new CssMinimizerPlugin()],
+        runtimeChunk: node ? undefined : 'single',
+        splitChunks: {
+          cacheGroups: {
+            vendor: {
+              test: /[\\/]node_modules[\\/](?!webpack[\\/]hot[\\/]).*\.js$/,
+              name: 'vendors',
+              chunks: 'initial',
+              enforce: true,
+            },
+            css: {
+              test: /\.css$/,
+              name: 'main',
+              chunks: 'all',
+              enforce: true,
+            },
           },
         },
       },
-    },
-  };
+    };
+  }
+
+  return [
+    makeWebpackConfig({ dev, node: false, watch }),
+    makeWebpackConfig({ dev, node: true, watch }),
+  ];
 }
 
-module.exports = (env, argv) => [
-  makeWebpackConfig({
+module.exports = (env, argv) =>
+  makeWebpackConfigs({
     dev: argv.mode === 'development',
-    node: false,
     watch: argv.watch,
-  }),
-  makeWebpackConfig({
-    dev: argv.mode === 'development',
-    node: true,
-    watch: argv.watch,
-  }),
-];
+  });
