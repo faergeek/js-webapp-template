@@ -11,14 +11,14 @@ const nodeExternals = require('webpack-node-externals');
 const { WebpackPluginServe } = require('webpack-plugin-serve');
 const WebpackBar = require('webpackbar');
 
-function makeWebpackConfigs({ dev, watch }) {
+function makeWebpackConfig({ dev, watch }) {
   const SRC_ROOT = path.resolve('src');
   const BUILD_ROOT = path.resolve('build');
   const PUBLIC_ROOT = path.resolve(BUILD_ROOT, 'public');
 
   const ASSETS_RE = /\.(svg|png|gif|jpe?g|eot|ttf|woff2?)$/;
 
-  function makeWebpackConfig({ dev, node, watch = false }) {
+  function makeConfig({ dev, node, watch = false }) {
     return {
       name: node ? 'node' : 'browser',
       dependencies: node ? ['browser'] : undefined,
@@ -182,13 +182,13 @@ function makeWebpackConfigs({ dev, watch }) {
   }
 
   return [
-    makeWebpackConfig({ dev, node: false, watch }),
-    makeWebpackConfig({ dev, node: true, watch }),
+    makeConfig({ dev, node: false, watch }),
+    makeConfig({ dev, node: true, watch }),
   ];
 }
 
 module.exports = (env, argv) =>
-  makeWebpackConfigs({
+  makeWebpackConfig({
     dev: argv.mode === 'development',
     watch: argv.watch,
   });
