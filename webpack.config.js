@@ -17,7 +17,7 @@ const PUBLIC_ROOT = path.resolve(BUILD_ROOT, 'public');
 
 const ASSETS_RE = /\.(svg|png|gif|jpe?g|eot|ttf|woff2?)$/;
 
-function makeConfig({ dev, node, watch = false }) {
+function makeWebpackConfig({ dev, node, watch = false }) {
   return {
     name: node ? 'node' : 'browser',
     dependencies: node ? ['browser'] : undefined,
@@ -179,12 +179,12 @@ function makeConfig({ dev, node, watch = false }) {
 }
 
 module.exports = (env, argv) => [
-  makeConfig({
+  makeWebpackConfig({
     dev: argv.mode === 'development',
     node: false,
     watch: argv.watch,
   }),
-  makeConfig({
+  makeWebpackConfig({
     dev: argv.mode === 'development',
     node: true,
     watch: argv.watch,
