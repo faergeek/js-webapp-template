@@ -11,6 +11,10 @@
     "cleanup": "rimraf build",
     "start": "node ."
   },
+  "prettier": {
+    "arrowParens": "avoid",
+    "singleQuote": true
+  },
   "dependencies": {
     "@curi/react-dom": "^2.0.4",
     "@curi/router": "^2.0.1",
