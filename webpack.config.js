@@ -57,7 +57,7 @@ function makeWebpackConfig({ dev, watch }) {
       module: {
         rules: [
           {
-            test: /\.(j|t)sx?$/,
+            test: /\.(js|ts|tsx)$/,
             include: SRC_ROOT,
             loader: 'babel-loader',
             options: {
