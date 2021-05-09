@@ -12,15 +12,29 @@ const { WebpackPluginServe } = require('webpack-plugin-serve');
 const WebpackBar = require('webpackbar');
 
 function makeWebpackConfig({ dev, watch }) {
-  const SRC_ROOT = path.resolve('src');
-  const BUILD_ROOT = path.resolve('build');
-  const PUBLIC_ROOT = path.resolve(BUILD_ROOT, 'public');
-
-  const ASSETS_RE = /\.(svg|png|gif|jpe?g|eot|ttf|woff2?)$/;
+  const buildRoot = path.resolve('build');
+  const publicRoot = path.resolve('build', 'public');
+  const srcRoot = path.resolve('src');
+  const assetsRegExp = /\.(svg|png|gif|jpe?g|eot|ttf|woff2?)$/;
 
   function makeConfig({ dev, node, watch = false }) {
+    const name = node ? 'node' : 'browser';
+    const reactRefresh = dev && watch && !node;
+
+    function wrapEntry(entry) {
+      return (node
+        ? [
+            'source-map-support/register',
+            watch && 'webpack/hot/signal',
+            'dotenv-flow/config',
+            entry,
+          ]
+        : [dev && watch && 'webpack-plugin-serve/client', entry]
+      ).filter(Boolean);
+    }
+
     return {
-      name: node ? 'node' : 'browser',
+      name,
       dependencies: node ? ['browser'] : undefined,
       target: node
         ? 'node'
@@ -30,39 +44,31 @@ function makeWebpackConfig({ dev, watch }) {
       stats: watch ? 'none' : 'errors-warnings',
       devtool: dev ? 'cheap-module-source-map' : 'source-map',
       externals: node
-        ? nodeExternals({ allowlist: [/^webpack\/hot/, ASSETS_RE] })
+        ? nodeExternals({ allowlist: [/^webpack\/hot/, assetsRegExp] })
         : undefined,
       entry: {
-        main: (node
-          ? [
-              'source-map-support/register',
-              watch && 'webpack/hot/signal',
-              'dotenv-flow/config',
-              './src/node',
-            ]
-          : [dev && watch && 'webpack-plugin-serve/client', './src/browser']
-        ).filter(Boolean),
+        main: wrapEntry(node ? './src/node' : './src/browser'),
       },
       output: {
         chunkFilename: `[name]${node || watch ? '' : '.[contenthash]'}.js`,
         crossOriginLoading: watch ? 'anonymous' : undefined,
         devtoolModuleFilenameTemplate: node
-          ? path.relative(BUILD_ROOT, '[resource-path]')
+          ? path.relative(buildRoot, '[resource-path]')
           : undefined,
         filename: `[name]${node || watch ? '' : '.[contenthash]'}.js`,
         libraryTarget: node ? 'commonjs' : undefined,
-        path: node ? BUILD_ROOT : PUBLIC_ROOT,
+        path: node ? buildRoot : publicRoot,
         publicPath: watch ? 'http://localhost:8081/' : '/',
       },
       module: {
         rules: [
           {
             test: /\.(js|ts|tsx)$/,
-            include: SRC_ROOT,
+            include: srcRoot,
             loader: 'babel-loader',
             options: {
               envName: dev ? 'development' : 'production',
-              plugins: dev && watch && !node ? ['react-refresh/babel'] : [],
+              plugins: reactRefresh ? ['react-refresh/babel'] : [],
             },
           },
           {
@@ -98,7 +104,7 @@ function makeWebpackConfig({ dev, watch }) {
             ],
           },
           {
-            test: ASSETS_RE,
+            test: assetsRegExp,
             type: 'javascript/auto',
             use: [
               {
@@ -114,21 +120,19 @@ function makeWebpackConfig({ dev, watch }) {
         ],
       },
       plugins: [
-        new WebpackBar({ name: node ? 'node' : 'browser' }),
+        new WebpackBar({ name }),
         watch && new FriendlyErrorsWebpackPlugin({ clearConsole: false }),
         watch && node && new webpack.HotModuleReplacementPlugin(),
-        dev &&
-          watch &&
-          !node &&
-          new ReactRefreshWebpackPlugin({
-            overlay: { sockIntegration: 'wps' },
-          }),
         watch &&
           node &&
           new RunScriptWebpackPlugin({
             name: 'main.js',
             nodeArgs: ['--inspect=9229'],
             signal: true,
+          }),
+        reactRefresh &&
+          new ReactRefreshWebpackPlugin({
+            overlay: { sockIntegration: 'wps' },
           }),
         watch &&
           !node &&
@@ -137,7 +141,7 @@ function makeWebpackConfig({ dev, watch }) {
             hmr: dev ? 'refresh-on-failure' : false,
             log: { level: 'warn' },
             port: 8081,
-            static: [PUBLIC_ROOT],
+            static: [publicRoot],
             waitForBuild: true,
             middleware: (app, builtins) =>
               builtins.headers({ 'Access-Control-Allow-Origin': '*' }),
@@ -146,7 +150,7 @@ function makeWebpackConfig({ dev, watch }) {
           new AssetsPlugin({
             entrypoints: true,
             includeAuxiliaryAssets: true,
-            path: BUILD_ROOT,
+            path: buildRoot,
             prettyPrint: dev,
           }),
         !node &&
