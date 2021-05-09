@@ -15,6 +15,26 @@
     "arrowParens": "avoid",
     "singleQuote": true
   },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@faergeek"
+    ],
+    "overrides": [
+      {
+        "files": "*",
+        "extends": [
+          "@faergeek/eslint-config/node"
+        ]
+      },
+      {
+        "files": "src/**/*",
+        "extends": [
+          "@faergeek/eslint-config/react"
+        ]
+      }
+    ]
+  },
   "dependencies": {
     "@curi/react-dom": "^2.0.4",
     "@curi/router": "^2.0.1",
