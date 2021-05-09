@@ -2,6 +2,6 @@ root: true
 extends: ['@faergeek']
 overrides:
   - files: '*'
-    env: { node: true }
+    extends: ['@faergeek/eslint-config/node']
   - files: src/**/*
     extends: ['@faergeek/eslint-config/react']
