@@ -63,7 +63,6 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "postcss": "^8.2.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.0",
