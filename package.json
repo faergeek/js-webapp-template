@@ -17,21 +17,15 @@
   },
   "eslintConfig": {
     "root": true,
-    "extends": [
-      "@faergeek"
-    ],
+    "extends": "@faergeek",
     "overrides": [
       {
         "files": "*",
-        "extends": [
-          "@faergeek/eslint-config/node"
-        ]
+        "extends": "@faergeek/eslint-config/node"
       },
       {
         "files": "src/**/*",
-        "extends": [
-          "@faergeek/eslint-config/react"
-        ]
+        "extends": "@faergeek/eslint-config/react"
       }
     ]
   },
