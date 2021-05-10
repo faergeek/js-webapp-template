@@ -154,7 +154,7 @@ function makeConfig({
           use: [
             {
               loader: 'resolve-url-loader',
-              options: { keepQuery: true, sourceMap: true },
+              options: { sourceMap: true },
             },
             'sass-loader',
           ],
