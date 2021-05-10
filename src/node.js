@@ -1,3 +1,5 @@
+import 'dotenv-flow/config';
+
 import * as assert from 'assert';
 import * as http from 'http';
 
