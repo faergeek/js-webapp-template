@@ -55,7 +55,6 @@
     "@faergeek/eslint-config": "^1.0.0",
     "@faergeek/make-webpack-config": "^2.0.2",
     "@hickory/browser": "^2.0.1",
-    "browserslist": "^4.16.0",
     "bulma": "^0.9.1",
     "core-js": "^3.2.1",
     "eslint": "^7.15.0",
