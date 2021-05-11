@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export default function AboutPage() {
+export function AboutPage() {
   return (
     <div className="section">
       <div className="container">

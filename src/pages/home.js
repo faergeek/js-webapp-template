@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import css from './home.module.css';
 
-export default function HomePage() {
+export function HomePage() {
   const [isLoading, setIsLoading] = React.useState(false);
 
   return (

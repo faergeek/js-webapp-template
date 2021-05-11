@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export default function NotFoundPage() {
+export function NotFoundPage() {
   return (
     <section className="hero is-flex-grow-1 is-flex">
       <div className="hero-body is-flex-grow-1 is-flex is-align-items-center">

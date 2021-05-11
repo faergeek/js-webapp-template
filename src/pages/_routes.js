@@ -1,25 +1,23 @@
 import { prepareRoutes } from '@curi/router';
 
+import { NotFoundPage } from './_404';
+import { AboutPage } from './about';
+import { HomePage } from './home';
+
 export const routes = prepareRoutes([
   {
     name: 'home',
     path: '',
-    resolve: () => import(/* webpackChunkName: "home" */ './home'),
-    respond: ({ resolved }) => ({ body: resolved.default }),
+    respond: () => ({ body: HomePage }),
   },
   {
     name: 'about',
     path: 'about',
-    resolve: () => import(/* webpackChunkName: "about" */ './about'),
-    respond: ({ resolved }) => ({ body: resolved.default }),
+    respond: () => ({ body: AboutPage }),
   },
   {
     name: '404',
     path: '(.*)',
-    resolve: () => import(/* webpackChunkName: "404" */ './_404'),
-    respond: ({ resolved }) => ({
-      meta: { status: 404 },
-      body: resolved.default,
-    }),
+    respond: () => ({ meta: { status: 404 }, body: NotFoundPage }),
   },
 ]);
