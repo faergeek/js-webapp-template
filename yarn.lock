@@ -1016,9 +1016,9 @@
     eslint-config-prettier "^8.3.0"
 
 "@faergeek/make-webpack-config@^3.0.0":
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-3.1.2.tgz#81ff1024d01122449c5eb703e15d3ec6c20471a7"
-  integrity sha512-9dq9VCoaN4Kb1JGJno2AoatXFSnUnk+7yn6N4lO0Kuj9ia95bVEVkZe3n8qIXiGGgNz1Q13I1PseNKlRlB7RMA==
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-3.1.4.tgz#29240f4de98f3b21e2b11c0eb71a62a172e64f65"
+  integrity sha512-m/MsJSWgO2U4EVND1SBmMiNdRM+JWhCWqhWi518Kmp7tMQ7rko3MAXwYINLQjveXM2o70c8I4S0gA8c30M+zSA==
   dependencies:
     "@pmmmwh/react-refresh-webpack-plugin" "^0.4.3"
     assets-webpack-plugin "^7.1.0"
@@ -4517,9 +4517,9 @@ postcss-selector-parser@^5.0.0-rc.3, postcss-selector-parser@^5.0.0-rc.4:
     uniq "^1.0.1"
 
 postcss-selector-parser@^6.0.2, postcss-selector-parser@^6.0.4:
-  version "6.0.5"
-  resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-6.0.5.tgz#042d74e137db83e6f294712096cb413f5aa612c4"
-  integrity sha512-aFYPoYmXbZ1V6HZaSvat08M97A8HqO6Pjz+PiNpw/DhuRrC72XWAdp3hL6wusDCN31sSmcZyMGa2hZEuX+Xfhg==
+  version "6.0.6"
+  resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-6.0.6.tgz#2c5bba8174ac2f6981ab631a42ab0ee54af332ea"
+  integrity sha512-9LXrvaaX3+mcv5xkg5kFwqSzSH1JIObIx51PrndZwlmznwXRfxMddDvo9gve3gVR8ZTKgoFDdWkbRFmEhT4PMg==
   dependencies:
     cssesc "^3.0.0"
     util-deprecate "^1.0.2"
