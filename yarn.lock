@@ -1016,9 +1016,9 @@
     eslint-config-prettier "^8.3.0"
 
 "@faergeek/make-webpack-config@^3.0.0":
-  version "3.2.4"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-3.2.4.tgz#86b47a23e746285674dc9d3d462f4d01c235d7b8"
-  integrity sha512-D4LcGtpYzoBsgeAHPG9YE9dBpjYyvdQMLx9gr/HAlH9rYxvbZhjYh1iWnzP8rr8Ga1TCmaZIzWZ5paLyGIbLXg==
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-3.2.5.tgz#ed9a7094266b01c63aa2ac6eb7ed23544662c2ec"
+  integrity sha512-m2bxKdthAdkoAQMwfveYcbEhBu+rCOw3JE50UVt57WieJy11ICJzsWaBKB68ZE7r4OvFuGOiIlxamRwAUOS0gA==
   dependencies:
     "@pmmmwh/react-refresh-webpack-plugin" "^0.4.3"
     assets-webpack-plugin "^7.1.0"
