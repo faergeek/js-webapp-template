@@ -1,5 +1,5 @@
-const path = require('path');
 const makeWebpackConfig = require('@faergeek/make-webpack-config');
+const path = require('path');
 
 module.exports = (env, argv) =>
   makeWebpackConfig({
