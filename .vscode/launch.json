@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Node",
+      "name": "Server",
       "type": "pwa-node",
       "request": "attach",
       "port": 9229,
