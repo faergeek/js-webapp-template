@@ -29,6 +29,25 @@
       }
     ]
   },
+  "browserslist": {
+    "production": [
+      "> 1%",
+      "not IE <= 11",
+      "not OperaMini all",
+      "not dead"
+    ],
+    "development": [
+      "last 1 Chrome version",
+      "last 1 ChromeAndroid version",
+      "last 1 Edge version",
+      "last 1 Firefox version",
+      "last 1 FirefoxAndroid version",
+      "last 1 iOS version",
+      "last 1 Opera version",
+      "last 1 OperaMobile version",
+      "last 1 Safari version"
+    ]
+  },
   "dependencies": {
     "@curi/react-dom": "^2.0.4",
     "@curi/router": "^2.0.1",
