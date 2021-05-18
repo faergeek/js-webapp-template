@@ -1026,15 +1026,16 @@
     eslint-config-prettier "^8.3.0"
 
 "@faergeek/make-webpack-config@^3.0.0":
-  version "3.2.5"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-3.2.5.tgz#ed9a7094266b01c63aa2ac6eb7ed23544662c2ec"
-  integrity sha512-m2bxKdthAdkoAQMwfveYcbEhBu+rCOw3JE50UVt57WieJy11ICJzsWaBKB68ZE7r4OvFuGOiIlxamRwAUOS0gA==
+  version "3.2.6"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-3.2.6.tgz#cff41db0203ccfce35b16efbbab222f6c52edfeb"
+  integrity sha512-zEDGye/euh3c8XcwE14w1DiRog6CheA5OSFh9Ge+CooWZCG5Mec5L2hRmtt+BrMcgCqPcRyhfnXmcY+aGCY4hw==
   dependencies:
     "@pmmmwh/react-refresh-webpack-plugin" "^0.4.3"
     assets-webpack-plugin "^7.1.0"
     babel-loader "^8.2.2"
     css-loader "^5.2.4"
     css-minimizer-webpack-plugin "^3.0.0"
+    file-loader "^6.2.0"
     friendly-errors-webpack-plugin "^1.7.0"
     mini-css-extract-plugin "^1.6.0"
     postcss-loader "^5.2.0"
@@ -2238,9 +2239,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.723:
-  version "1.3.729"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.729.tgz#3dc87b55c4aa3c75370471d9c72accf70d9af263"
-  integrity sha512-Ho8K+hCEFOt6FsRZRgh1zUpIJ4Nn9MUSgLBEF+I2Xbzo3E8zvvxZFV/tEmAl2e9dsJDWzTFnGsZTuEVfYEv8eg==
+  version "1.3.730"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.730.tgz#6e1fad8f250827f5524672e572f823b34a6417e1"
+  integrity sha512-1Tr3h09wXhmqXnvDyrRe6MFgTeU0ZXy3+rMJWTrOHh/HNesWwBBrKnMxRJWZ86dzs8qQdw2c7ZE1/qeGHygImA==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -2636,6 +2637,14 @@ file-entry-cache@^6.0.1:
   integrity sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==
   dependencies:
     flat-cache "^3.0.4"
+
+file-loader@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-6.2.0.tgz#baef7cf8e1840df325e4390b4484879480eebe4d"
+  integrity sha512-qo3glqyTa61Ytg4u73GultjHGjdRyig3tG6lPtyX/jOEJvHif9uB0/OCI2Kif6ctF3caQTW2G5gym21oAsI4pw==
+  dependencies:
+    loader-utils "^2.0.0"
+    schema-utils "^3.0.0"
 
 fill-range@^7.0.1:
   version "7.0.1"
