@@ -21,7 +21,7 @@
   resolved "https://registry.yarnpkg.com/@babel/compat-data/-/compat-data-7.14.0.tgz#a901128bce2ad02565df95e6ecbf195cf9465919"
   integrity sha512-vu9V3uMM/1o5Hl5OekMUowo3FqXLJSw+s+66nt0fSWVWTtmosdzn45JHOB3cPtZoe6CTBDzvSw0RdOY85Q37+Q==
 
-"@babel/core@^7.5.5":
+"@babel/core@^7.14.3", "@babel/core@^7.5.5":
   version "7.14.3"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.14.3.tgz#5395e30405f0776067fbd9cf0884f15bfb770a38"
   integrity sha512-jB5AmTKOCSJIZ72sd78ECEhuPiDMKlQdDI/4QRI6lzYATx5SSogS1oQA2AoPecRCknm30gHi2l+QVvNUu3wZAg==
@@ -1026,10 +1026,11 @@
     eslint-config-prettier "^8.3.0"
 
 "@faergeek/make-webpack-config@^5.0.0":
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-5.0.2.tgz#77a8898f221302a00c54c28a647834c52e76986c"
-  integrity sha512-d5prHI4s7fFCg425BwhsZTbvWWctgg7RDELG1uFZUapiywCFc9NlJTF2P79lSPxaroVQZZogpd1SMVhzFQ2x3Q==
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-5.0.4.tgz#a3b9cb100384637d7c006d4a7968ebc95fcb09dc"
+  integrity sha512-dvZ7xC3581WaGe6Y08xFBFv0KuFhPXqlv05mQEQ7Z/N7/jnIkZx2z3TZ7f6vZeB+xNi1qpRto7UjTmEhZf+u2g==
   dependencies:
+    "@babel/core" "^7.14.3"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.4.3"
     assets-webpack-plugin "^7.1.0"
     babel-loader "^8.2.2"
@@ -1038,8 +1039,9 @@
     file-loader "^6.2.0"
     friendly-errors-webpack-plugin "^1.7.0"
     mini-css-extract-plugin "^1.6.0"
+    postcss "^8.3.0"
     postcss-loader "^5.2.0"
-    react-refresh "^0.10.0"
+    react-refresh "0.9.0"
     resolve-url-loader "^4.0.0"
     run-script-webpack-plugin "^0.0.11"
     sass "^1.32.12"
@@ -4463,7 +4465,7 @@ postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.2, postcss@^7.0.32, postcss@^7.0.
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-postcss@^8.2.15, postcss@^8.2.9:
+postcss@^8.2.15, postcss@^8.2.9, postcss@^8.3.0:
   version "8.3.0"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.3.0.tgz#b1a713f6172ca427e3f05ef1303de8b65683325f"
   integrity sha512-+ogXpdAjWGa+fdYY5BQ96V/6tAo+TdSSIMP5huJBIygdWwKtVoB5JWZ7yUd4xZ8r+8Kvvx4nyg/PQ071H4UtcQ==
@@ -4573,10 +4575,10 @@ react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-refresh@^0.10.0:
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.10.0.tgz#2f536c9660c0b9b1d500684d9e52a65e7404f7e3"
-  integrity sha512-PgidR3wST3dDYKr6b4pJoqQFpPGNKDSCDx4cZoshjXipw3LzO7mG1My2pwEzz2JVkF+inx3xRpDeQLFQGH/hsQ==
+react-refresh@0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.9.0.tgz#71863337adc3e5c2f8a6bfddd12ae3bfe32aafbf"
+  integrity sha512-Gvzk7OZpiqKSkxsQvO/mbTN1poglhmAV7gR/DdIrRrSMXraRQQlfikRJOr3Nb9GTMPC5kof948Zy6jJZIFtDvQ==
 
 react@^17.0.1:
   version "17.0.2"
