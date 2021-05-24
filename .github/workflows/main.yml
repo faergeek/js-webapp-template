@@ -1,0 +1,32 @@
+name: CI
+on: [push]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v2
+      - name: Set up node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Restore dependencies cache
+        uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          path: |
+            ~/.cache/yarn
+            node_modules
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+      - name: Check code formatting
+        run: yarn run prettier:check
+      - name: Lint
+        run: yarn run lint
