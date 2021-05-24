@@ -1,5 +1,7 @@
 # js-webapp-template
 
+![Build status](https://github.com/faergeek/js-webapp-template/actions/workflows/main.yml/badge.svg)
+
 ## Setup
 
 Install packages:
