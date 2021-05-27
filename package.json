@@ -60,6 +60,7 @@
     "source-map-support": "^0.5.13"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.3",
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
@@ -70,6 +71,7 @@
     "bulma": "^0.9.1",
     "core-js": "^3.2.1",
     "eslint": "^7.15.0",
+    "postcss": "^8.3.0",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.0",
