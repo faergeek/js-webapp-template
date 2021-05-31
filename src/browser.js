@@ -1,4 +1,8 @@
 /* eslint-env browser */
+if (__DEV__) {
+  require('preact/debug');
+}
+
 import 'bulma';
 
 import { createRouterComponent } from '@curi/react-dom';
