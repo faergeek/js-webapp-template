@@ -1,3 +1,7 @@
+.root {
+  min-height: 100vh;
+}
+
 .button:global(.button.is-primary) {
   border: 5px ridge hotpink;
 }

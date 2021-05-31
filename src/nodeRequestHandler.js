@@ -1,14 +1,9 @@
-import { createRouterComponent } from '@curi/react-dom';
-import { createRouter } from '@curi/router';
-import { createReusable } from '@hickory/in-memory';
-import * as assert from 'assert';
 import * as express from 'express';
 import * as path from 'path';
-import * as React from 'react';
-import { renderToNodeStream } from 'react-dom/server';
+import renderToString from 'preact-render-to-string';
+import invariant from 'tiny-invariant';
 
 import { App } from './app';
-import { routes } from './pages/_routes';
 
 function getEntryUrls(entry) {
   if (typeof entry === 'string') {
@@ -19,32 +14,18 @@ function getEntryUrls(entry) {
     return entry;
   }
 
-  assert(entry === undefined);
+  invariant(entry === undefined);
   return [];
 }
-
-const reusable = createReusable();
 
 export const app = express().use(
   express.static(path.resolve('build', 'public'), { maxAge: '1 year' }),
   async (req, res, next) => {
-    const router = createRouter(reusable, routes, {
-      history: { location: { url: req.originalUrl } },
-    });
-
-    const Router = createRouterComponent(router);
-
     try {
       const webpackAssets = await import('../build/webpack-assets.json');
 
-      router.once(({ response }) => {
-        res
-          .status((response.meta && response.meta.status) || 200)
-          .set('Content-Type', 'text/html');
-
-        res.write('<!doctype html>');
-
-        renderToNodeStream(
+      res.set('Content-Type', 'text/html').send(
+        `<!doctype html>${renderToString(
           <html lang="en">
             <meta charSet="utf-8" />
             <meta httpEquiv="x-ua-compatible" content="ie=edge" />
@@ -74,13 +55,11 @@ export const app = express().use(
             ))}
 
             <div id="root">
-              <Router>
-                <App />
-              </Router>
+              <App />
             </div>
           </html>
-        ).pipe(res);
-      });
+        )}`
+      );
     } catch (err) {
       next(err);
     }
