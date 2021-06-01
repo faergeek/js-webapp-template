@@ -25,11 +25,7 @@
       },
       {
         "files": "src/**/*",
-        "extends": "@faergeek/eslint-config/react",
-        "rules": {
-          "react/jsx-uses-react": "off",
-          "react/react-in-jsx-scope": "off"
-        }
+        "extends": "@faergeek/eslint-config/react"
       }
     ]
   },
@@ -67,7 +63,7 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.7.4",
-    "@faergeek/eslint-config": "^2.0.0",
+    "@faergeek/eslint-config": "^3.0.0",
     "@faergeek/make-webpack-config": "^7.0.0",
     "bulma": "^0.9.1",
     "eslint": "^7.15.0",
