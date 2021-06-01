@@ -25,7 +25,7 @@
       },
       {
         "files": "src/**/*",
-        "extends": "@faergeek/eslint-config/react"
+        "extends": "@faergeek/eslint-config/preact"
       }
     ]
   },
@@ -52,8 +52,8 @@
     "core-js": "^3.2.1",
     "dotenv-flow": "^3.2.0",
     "express": "^4.17.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "preact": "^10.5.13",
+    "preact-render-to-string": "^5.1.19",
     "source-map-support": "^0.5.13",
     "tiny-invariant": "^1.1.0"
   },

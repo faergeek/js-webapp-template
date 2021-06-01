@@ -1,7 +1,7 @@
 /* eslint-env browser */
 import './browser.sass';
 
-import { hydrate } from 'react-dom';
+import { hydrate } from 'preact';
 
 import { App } from './app';
 
