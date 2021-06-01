@@ -12,7 +12,10 @@ module.exports = api => ({
         useBuiltIns: 'entry',
       },
     ],
-    ['@babel/react', { development: api.env('development'), useSpread: true }],
+    [
+      '@babel/react',
+      { development: api.env('development'), runtime: 'automatic' },
+    ],
   ],
   plugins: [
     [
