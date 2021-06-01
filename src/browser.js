@@ -5,4 +5,15 @@ import { hydrate } from 'preact';
 
 import { App } from './app';
 
-hydrate(<App />, document.getElementById('root'));
+const root = document.getElementById('root');
+
+let el;
+function init() {
+  el = hydrate(<App />, root, el);
+}
+
+init();
+
+if (module.hot) {
+  module.hot.accept('./app', init);
+}
