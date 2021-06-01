@@ -1,5 +1,5 @@
 /* eslint-env browser */
-import 'bulma';
+import './browser.sass';
 
 import * as React from 'react';
 import { hydrate } from 'react-dom';
