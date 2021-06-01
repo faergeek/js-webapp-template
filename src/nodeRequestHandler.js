@@ -1,6 +1,5 @@
 import * as express from 'express';
 import * as path from 'path';
-import * as React from 'react';
 import { renderToString } from 'react-dom/server';
 import invariant from 'tiny-invariant';
 

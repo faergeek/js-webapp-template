@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 export function App() {
   return (
     <section className="hero is-primary is-fullheight">

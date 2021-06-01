@@ -25,7 +25,11 @@
       },
       {
         "files": "src/**/*",
-        "extends": "@faergeek/eslint-config/react"
+        "extends": "@faergeek/eslint-config/react",
+        "rules": {
+          "react/jsx-uses-react": "off",
+          "react/react-in-jsx-scope": "off"
+        }
       }
     ]
   },
