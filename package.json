@@ -54,7 +54,8 @@
     "express": "^4.17.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "source-map-support": "^0.5.13"
+    "source-map-support": "^0.5.13",
+    "tiny-invariant": "^1.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",

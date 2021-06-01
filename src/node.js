@@ -1,12 +1,12 @@
 import 'dotenv-flow/config';
 
-import * as assert from 'assert';
 import * as http from 'http';
+import invariant from 'tiny-invariant';
 
 import { app } from './nodeRequestHandler';
 
 const PORT = parseInt(process.env.PORT, 10);
-assert(isFinite(PORT));
+invariant(isFinite(PORT));
 
 if (module.hot) {
   module.hot.accept('./nodeRequestHandler');

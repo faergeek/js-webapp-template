@@ -1,8 +1,8 @@
-import * as assert from 'assert';
 import * as express from 'express';
 import * as path from 'path';
 import * as React from 'react';
 import { renderToString } from 'react-dom/server';
+import invariant from 'tiny-invariant';
 
 import webpackAssets from '../build/webpack-assets.json';
 import { App } from './app';
@@ -16,7 +16,7 @@ function getEntryUrls(entry) {
     return entry;
   }
 
-  assert(entry === undefined);
+  invariant(entry === undefined);
   return [];
 }
 
