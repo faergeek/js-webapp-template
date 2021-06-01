@@ -1,3 +1,4 @@
+import * as compression from 'compression';
 import * as express from 'express';
 import * as path from 'path';
 import renderToString from 'preact-render-to-string';
@@ -20,6 +21,7 @@ function getEntryUrls(entry) {
 }
 
 export const app = express().use(
+  compression(),
   express.static(path.resolve('build', 'public'), { maxAge: '1 year' }),
   (req, res) => {
     res.set('Content-Type', 'text/html').send(
