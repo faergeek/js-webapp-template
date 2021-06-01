@@ -1,6 +1,6 @@
 import * as express from 'express';
 import * as path from 'path';
-import { renderToString } from 'react-dom/server';
+import renderToString from 'preact-render-to-string';
 import invariant from 'tiny-invariant';
 
 import webpackAssets from '../build/webpack-assets.json';

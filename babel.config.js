@@ -14,7 +14,11 @@ module.exports = api => ({
     ],
     [
       '@babel/react',
-      { development: api.env('development'), runtime: 'automatic' },
+      {
+        development: api.env('development'),
+        importSource: 'preact',
+        runtime: 'automatic',
+      },
     ],
   ],
   plugins: [

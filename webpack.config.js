@@ -3,6 +3,10 @@ const path = require('path');
 
 module.exports = (env, argv) =>
   makeWebpackConfig({
+    alias: {
+      react: 'preact/compat',
+      'react-dom': 'preact/compat',
+    },
     dev: argv.mode === 'development',
     entry: {
       browser: './src/browser',
@@ -13,6 +17,5 @@ module.exports = (env, argv) =>
       public: path.resolve('build', 'public'),
       src: path.resolve('src'),
     },
-    reactRefresh: true,
     watch: argv.watch,
   });
