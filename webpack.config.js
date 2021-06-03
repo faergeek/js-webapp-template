@@ -13,5 +13,6 @@ module.exports = (env, argv) =>
       public: path.resolve('build', 'public'),
       src: path.resolve('src'),
     },
+    prefresh: true,
     watch: argv.watch,
   });
