@@ -2,7 +2,7 @@ export function App() {
   return (
     <div className="hero is-primary">
       <div className="hero-body">
-        <div className="container has-text-centered">
+        <div className="container">
           <h1 className="title">JS WebApp Template</h1>
 
           <p className="subtitle">

@@ -55,7 +55,7 @@
       "path": "build/public/*.css"
     },
     {
-      "limit": "4133 B",
+      "limit": "4123 B",
       "name": "js",
       "path": "build/public/*.js"
     }
