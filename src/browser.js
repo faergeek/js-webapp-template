@@ -1,4 +1,5 @@
 /* eslint-env browser */
+import './browser.css';
 import './browser.sass';
 
 import { hydrate } from 'preact';
