@@ -6,7 +6,6 @@ import './button.sass';
 import './container.sass';
 import './title.sass';
 import './tools.sass';
-import './typography.sass';
 import './hero.sass';
 
 import { hydrate } from 'preact';
