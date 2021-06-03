@@ -3,6 +3,8 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      CI_JOB_NUMBER: 1
     steps:
       - name: Check out the code
         uses: actions/checkout@v2
@@ -30,3 +32,6 @@ jobs:
         run: yarn run prettier:check
       - name: Lint
         run: yarn run lint
+      - uses: andresz1/size-limit-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
