@@ -50,12 +50,12 @@
   },
   "size-limit": [
     {
-      "limit": "6856 B",
+      "limit": 6856,
       "name": "css",
       "path": "build/public/*.css"
     },
     {
-      "limit": "4123 B",
+      "limit": 4123,
       "name": "js",
       "path": "build/public/*.js"
     }
