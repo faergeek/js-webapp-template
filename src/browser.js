@@ -1,6 +1,13 @@
 /* eslint-env browser */
 import './browser.css';
-import './browser.sass';
+import './minireset.sass';
+import './generic.sass';
+import './button.sass';
+import './container.sass';
+import './title.sass';
+import './tools.sass';
+import './typography.sass';
+import './hero.sass';
 
 import { hydrate } from 'preact';
 
