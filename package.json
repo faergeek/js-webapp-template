@@ -55,7 +55,7 @@
       "path": "build/public/*.css"
     },
     {
-      "limit": "300 ms",
+      "limit": "200 ms",
       "name": "js",
       "path": "build/public/*.js"
     }
