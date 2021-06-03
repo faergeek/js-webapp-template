@@ -1,28 +1,34 @@
+import css from './app.module.sass';
+
 export function App() {
   return (
-    <div className="hero is-primary">
-      <div className="hero-body">
-        <div className="container">
-          <h1 className="title">JS WebApp Template</h1>
+    <div className={[css.hero, css.isPrimary].join(' ')}>
+      <div className={css.heroBody}>
+        <div className={css.container}>
+          <p className={css.title}>JS WebApp Template</p>
 
-          <p className="subtitle">
+          <p className={css.subtitle}>
             Template to build web applications with bundling for both Node.js
             and browsers
           </p>
 
-          <div className="field is-grouped is-grouped-centered">
-            <p className="control">
+          <div
+            className={[css.field, css.isGrouped, css.isGroupedCentered].join(
+              ' '
+            )}
+          >
+            <p className={css.control}>
               <a
-                className="button is-link"
+                className={[css.button, css.isLink].join(' ')}
                 href="https://github.com/faergeek/js-webapp-template/generate"
               >
                 Use this template
               </a>
             </p>
 
-            <p className="control">
+            <p className={css.control}>
               <a
-                className="button is-link is-outlined"
+                className={[css.button, css.isLink, css.isOutlined].join(' ')}
                 href="https://github.com/faergeek/js-webapp-template"
               >
                 Get the source code
