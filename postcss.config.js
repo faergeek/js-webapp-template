@@ -1,5 +1,8 @@
 module.exports = function postcssConfig(api) {
   return {
-    plugins: [['postcss-preset-env', { autoprefixer: { env: api.mode } }]],
+    plugins: [
+      ['postcss-preset-env', { autoprefixer: { env: api.mode } }],
+      'postcss-normalize',
+    ],
   };
 };
