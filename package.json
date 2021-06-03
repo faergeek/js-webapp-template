@@ -50,8 +50,14 @@
   },
   "size-limit": [
     {
-      "limit": "400 ms",
-      "path": "build/public/*.{css,js}"
+      "limit": "200 ms",
+      "name": "css",
+      "path": "build/public/*.css"
+    },
+    {
+      "limit": "300 ms",
+      "name": "js",
+      "path": "build/public/*.js"
     }
   ],
   "dependencies": {
