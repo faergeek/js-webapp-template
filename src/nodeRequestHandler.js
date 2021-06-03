@@ -22,6 +22,7 @@ function getEntryUrls(entry) {
 
 export const app = express().use(
   compression(),
+  express.static(path.resolve('public')),
   express.static(path.resolve('build', 'public'), { maxAge: '1 year' }),
   (req, res) => {
     res.set('Content-Type', 'text/html').send(
