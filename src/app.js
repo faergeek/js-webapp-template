@@ -1,9 +1,9 @@
 export function App() {
   return (
-    <section className="hero is-primary is-fullheight">
+    <div className="hero is-primary">
       <div className="hero-body">
         <div className="container has-text-centered">
-          <p className="title">JS WebApp Template</p>
+          <h1 className="title">JS WebApp Template</h1>
 
           <p className="subtitle">
             Template to build web applications with bundling for both Node.js
@@ -31,6 +31,6 @@ export function App() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
