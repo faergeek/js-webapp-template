@@ -48,6 +48,12 @@
       "last 1 Safari version"
     ]
   },
+  "size-limit": [
+    {
+      "limit": "400 ms",
+      "path": "build/public/*.{css,js}"
+    }
+  ],
   "dependencies": {
     "@babel/runtime": "^7.7.4",
     "compression": "^1.7.4",
@@ -66,12 +72,14 @@
     "@babel/preset-react": "^7.0.0",
     "@faergeek/eslint-config": "^3.0.0",
     "@faergeek/make-webpack-config": "^7.0.0",
+    "@size-limit/preset-app": "^4.11.0",
     "bulma": "^0.9.1",
     "eslint": "^7.15.0",
     "postcss": "^8.3.0",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.0",
+    "size-limit": "^4.11.0",
     "webpack": "5.38.1",
     "webpack-cli": "4.4.0"
   }
