@@ -18,11 +18,6 @@ Launch app in dev mode:
 yarn run dev
 ```
 
-Debugger is listening on default port 9229.
-
-For more information on debugging see [node guide on
-debugging](https://nodejs.org/en/docs/inspector/).
-
 ## Production
 
 Build assets for production:
