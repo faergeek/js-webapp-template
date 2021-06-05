@@ -1,4 +1,3 @@
-/* eslint-env browser */
 if (__DEV__) {
   require('preact/debug');
 }
