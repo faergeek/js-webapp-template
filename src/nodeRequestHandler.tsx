@@ -4,7 +4,7 @@ import * as path from 'path';
 import renderToString from 'preact-render-to-string';
 import invariant from 'tiny-invariant';
 
-// @ts-ignore
+// @ts-ignore this file does not exist until initial build completes
 import webpackAssets from '../build/webpack-assets.json';
 import { App } from './app';
 
