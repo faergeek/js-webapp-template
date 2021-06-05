@@ -39,7 +39,3 @@ yarn start
 dotenv-flow reads files like `.env`, `env.local` to setup environment
 variables. For details see [dotenv-flow
 docs](https://github.com/kerimdzhanov/dotenv-flow)
-
-## License
-
-[Just do what the fuck you want to](COPYING).
