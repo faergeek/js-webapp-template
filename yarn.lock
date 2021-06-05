@@ -982,10 +982,10 @@
     eslint-plugin-react-hooks "^4.2.0"
     eslint-plugin-simple-import-sort "^7.0.0"
 
-"@faergeek/make-webpack-config@^8.0.0":
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-8.0.0.tgz#0e2940229918d28f42cdf644c4588183ce6b1a75"
-  integrity sha512-sIbNw4kZIn+fAK+dYu6IxEZi+DhUjG8tfi92Ja3x274UbHHJiQcTt5y4DDfxC2UItm3Sf+9oxUOM7zcujyMfaA==
+"@faergeek/make-webpack-config@^9.0.0":
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-9.0.1.tgz#89f88bf7236d87d4a6f8ed58d9d59625e64a1de2"
+  integrity sha512-tu3NZgBXqstpctTKM5TKPbfNNDG8S59/kfqhcm0yRDLC0C7enMjBZCLOSIKYt04/d2OxmtAl3Gn/2b0NHZSDSQ==
   dependencies:
     "@pmmmwh/react-refresh-webpack-plugin" "^0.4.3"
     "@prefresh/babel-plugin" "^0.4.1"
@@ -1006,7 +1006,6 @@
     source-map-loader "^3.0.0"
     url-loader "^4.1.1"
     webpack-bundle-analyzer "^4.4.1"
-    webpack-node-externals "^3.0.0"
     webpack-plugin-serve "^1.4.1"
     webpackbar "^5.0.0-3"
 
@@ -6679,11 +6678,6 @@ webpack-merge@^5.7.3:
   dependencies:
     clone-deep "^4.0.1"
     wildcard "^2.0.0"
-
-webpack-node-externals@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/webpack-node-externals/-/webpack-node-externals-3.0.0.tgz#1a3407c158d547a9feb4229a9e3385b7b60c9917"
-  integrity sha512-LnL6Z3GGDPht/AigwRh2dvL9PQPFQ8skEpVrWZXLWBYmqcaojHNN0onvHzie6rq7EWKrrBfPYqNEzTJgiwEQDQ==
 
 webpack-plugin-ramdisk@^0.1.2:
   version "0.1.8"
