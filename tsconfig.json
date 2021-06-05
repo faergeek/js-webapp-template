@@ -1,0 +1,21 @@
+{
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    "baseUrl": "src",
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "jsxImportSource": "preact",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noErrorTruncation": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "pretty": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "target": "esnext"
+  }
+}

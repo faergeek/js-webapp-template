@@ -5,7 +5,7 @@ import invariant from 'tiny-invariant';
 
 import { app } from './nodeRequestHandler';
 
-const PORT = parseInt(process.env.PORT, 10);
+const PORT = parseInt(String(process.env.PORT), 10);
 invariant(isFinite(PORT));
 
 if (module.hot) {

@@ -7,6 +7,8 @@
       "packagePatterns": [
         "^@babel/",
         "^@faergeek/eslint-config",
+        "^@types/",
+        "^@typescript-eslint/",
         "^eslint",
         "^prettier$"
       ]

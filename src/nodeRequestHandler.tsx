@@ -4,10 +4,11 @@ import * as path from 'path';
 import renderToString from 'preact-render-to-string';
 import invariant from 'tiny-invariant';
 
+// @ts-ignore
 import webpackAssets from '../build/webpack-assets.json';
 import { App } from './app';
 
-function getEntryUrls(entry) {
+function getEntryUrls(entry: string | string[] | undefined) {
   if (typeof entry === 'string') {
     return [entry];
   }
@@ -24,7 +25,7 @@ export const app = express().use(
   compression(),
   express.static(path.resolve('public')),
   express.static(path.resolve('build', 'public'), { maxAge: '1 year' }),
-  (req, res) => {
+  (_req, res) => {
     res.set('Content-Type', 'text/html').send(
       `<!doctype html>${renderToString(
         <html lang="en">
