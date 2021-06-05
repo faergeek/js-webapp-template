@@ -44,9 +44,7 @@ export const app = express().use(
               src={src}
             />
           ))}
-          <div id="root">
-            <App />
-          </div>
+          <App />
         </html>
       )}`
     );

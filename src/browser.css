@@ -1,1 +1,60 @@
 @import 'normalize.css/opinionated.css';
+
+::selection {
+  background: hsl(52deg 71% 53%);
+  color: hsl(0 0% 100%);
+}
+
+:root {
+  box-sizing: border-box;
+  padding: 24px;
+  min-width: 320px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(0 0% 100%);
+  color: hsl(0 0% 0%);
+  font: 16px system-ui;
+  text-align: center;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.tagline {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid;
+  padding: 0.5em 2em;
+  color: inherit;
+  line-height: 1.5;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: 1px solid hsl(52deg 71% 53%);
+}
+
+.btn_theme_solid {
+  border-color: hsl(52deg 71% 53%);
+  background: hsl(52deg 71% 53%);
+  color: hsl(0 0% 100%);
+}
+
+.btn_theme_outlined {
+  border-color: hsl(0 0% 0%);
+}
+
+.btn + .btn {
+  margin-left: 12px;
+}
