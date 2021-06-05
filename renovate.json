@@ -8,8 +8,7 @@
         "^@babel/",
         "^@faergeek/eslint-config",
         "^eslint",
-        "^prettier$",
-        "^semantic-release$"
+        "^prettier$"
       ]
     }
   ],
