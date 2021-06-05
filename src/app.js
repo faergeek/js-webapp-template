@@ -1,21 +1,29 @@
+import css from './app.module.css';
+
 const REPO_URL = 'https://github.com/faergeek/js-webapp-template';
 
 export function App() {
   return (
     <>
-      <h1 className="title">JS WebApp Template</h1>
+      <h1 className={css.title}>JS WebApp Template</h1>
 
-      <p className="tagline">
+      <p className={css.tagline}>
         A template to build web applications with bundling for both Node.js and
         browsers
       </p>
 
       <p>
-        <a className="btn btn_theme_solid" href={`${REPO_URL}/generate`}>
+        <a
+          className={[css.btn, css.btn_theme_solid].join(' ')}
+          href={`${REPO_URL}/generate`}
+        >
           Use it
         </a>
 
-        <a className="btn btn_theme_outlined" href={REPO_URL}>
+        <a
+          className={[css.btn, css.btn_theme_outlined].join(' ')}
+          href={REPO_URL}
+        >
           Sources
         </a>
       </p>
