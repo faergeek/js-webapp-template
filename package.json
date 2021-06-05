@@ -79,6 +79,7 @@
     "@faergeek/eslint-config": "^3.0.0",
     "@faergeek/make-webpack-config": "^8.0.0",
     "@size-limit/preset-app": "^4.11.0",
+    "browserslist": "^4.16.6",
     "eslint": "^7.15.0",
     "postcss": "^8.3.0",
     "postcss-normalize": "^10.0.0",
