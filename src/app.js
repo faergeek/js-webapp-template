@@ -1,36 +1,24 @@
+const REPO_URL = 'https://github.com/faergeek/js-webapp-template';
+
 export function App() {
   return (
-    <div className="hero is-primary">
-      <div className="hero-body">
-        <div className="container">
-          <h1 className="title">JS WebApp Template</h1>
+    <>
+      <h1 className="title">JS WebApp Template</h1>
 
-          <p className="subtitle">
-            Template to build web applications with bundling for both Node.js
-            and browsers
-          </p>
+      <p className="tagline">
+        A template to build web applications with bundling for both Node.js and
+        browsers
+      </p>
 
-          <div className="field is-grouped is-grouped-centered">
-            <p className="control">
-              <a
-                className="button is-link"
-                href="https://github.com/faergeek/js-webapp-template/generate"
-              >
-                Use this template
-              </a>
-            </p>
+      <p>
+        <a className="btn btn_theme_solid" href={`${REPO_URL}/generate`}>
+          Use it
+        </a>
 
-            <p className="control">
-              <a
-                className="button is-link is-outlined"
-                href="https://github.com/faergeek/js-webapp-template"
-              >
-                Get the source code
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+        <a className="btn btn_theme_outlined" href={REPO_URL}>
+          Sources
+        </a>
+      </p>
+    </>
   );
 }
