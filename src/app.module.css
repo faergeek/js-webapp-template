@@ -1,25 +1,3 @@
-@import 'normalize.css/opinionated.css';
-
-::selection {
-  background: hsl(52deg 71% 53%);
-  color: hsl(0 0% 100%);
-}
-
-:root {
-  box-sizing: border-box;
-  padding: 24px;
-  min-width: 320px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: hsl(0 0% 100%);
-  color: hsl(0 0% 0%);
-  font: 16px system-ui;
-  text-align: center;
-}
-
 .title {
   font-size: 32px;
   font-weight: 600;
