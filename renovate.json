@@ -6,7 +6,7 @@
       "automerge": true,
       "packagePatterns": [
         "^@babel/",
-        "@faergeek/eslint-config",
+        "^@faergeek/eslint-config",
         "^eslint",
         "^prettier$",
         "^semantic-release$"
