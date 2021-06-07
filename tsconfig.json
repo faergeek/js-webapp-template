@@ -1,7 +1,6 @@
 {
   "include": ["src/**/*"],
   "compilerOptions": {
-    "baseUrl": "src",
     "isolatedModules": true,
     "jsx": "preserve",
     "jsxImportSource": "preact",
