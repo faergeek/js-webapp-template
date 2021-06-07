@@ -1,4 +1,4 @@
-import css from './app.module.css';
+import * as css from './app.module.css';
 
 const REPO_URL = 'https://github.com/faergeek/js-webapp-template';
 

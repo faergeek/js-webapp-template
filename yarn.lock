@@ -1007,10 +1007,10 @@
     eslint-plugin-react-hooks "^4.2.0"
     eslint-plugin-simple-import-sort "^7.0.0"
 
-"@faergeek/make-webpack-config@^10.0.0":
-  version "10.1.1"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-10.1.1.tgz#df2a29232ed3b40860a019f688526db8d5f2d7bf"
-  integrity sha512-43uCogbMZ7tj9xYqjihH/US2SAB+zBQn3ZHdZr6HLAgmdAek0RQ88qQyFLuXYcIZUrn2bGRV/2DepQBNJoU3jQ==
+"@faergeek/make-webpack-config@^11.0.0":
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-11.0.0.tgz#a70f1a5c95998631afe3de6a65751b5e1b6b1ea7"
+  integrity sha512-OAn7mdabxAf+NmUPmup1i423tiuACSUdbpT/gQXx+AmzVDWPThO0DQVAujy3Vhcy7twD/RHqlVMK3FfOnwG38g==
   dependencies:
     "@pmmmwh/react-refresh-webpack-plugin" "^0.4.3"
     "@prefresh/babel-plugin" "^0.4.1"

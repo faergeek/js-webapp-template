@@ -3,15 +3,15 @@ declare const __NODE__: boolean;
 
 declare module '*.module.css' {
   const css: { [key: string]: string };
-  export default css;
+  export = css;
 }
 
 declare module '*.module.sass' {
   const css: { [key: string]: string };
-  export default css;
+  export = css;
 }
 
 declare module '*.module.scss' {
   const css: { [key: string]: string };
-  export default css;
+  export = css;
 }
