@@ -1,6 +1,7 @@
-import './browser.css';
 __DEV__ && require('preact/debug');
-import { hydrate } from 'preact';
+import './browser.css';
+
+import { hydrate } from 'react-dom';
 
 import { App } from './app';
 

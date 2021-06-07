@@ -2,8 +2,7 @@
   "include": ["src/**/*"],
   "compilerOptions": {
     "isolatedModules": true,
-    "jsx": "preserve",
-    "jsxImportSource": "preact",
+    "jsx": "react-jsx",
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,

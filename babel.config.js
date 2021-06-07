@@ -14,11 +14,7 @@ module.exports = api => ({
     ],
     [
       '@babel/react',
-      {
-        development: api.env('development'),
-        importSource: 'preact',
-        runtime: 'automatic',
-      },
+      { development: api.env('development'), runtime: 'automatic' },
     ],
     '@babel/typescript',
   ],
