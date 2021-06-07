@@ -994,10 +994,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@faergeek/eslint-config@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@faergeek/eslint-config/-/eslint-config-3.0.0.tgz#874400c4f9e4ed606448daf7c3a602d34129945d"
-  integrity sha512-K4qw2Li1lPrq0+E5SF1uLUw1L5eSWYS+X6vD6YWCjQWLyeyIYN5JHGBkbfFdPSQ2Md+t5vD5HGQlbOqcRDGhOA==
+"@faergeek/eslint-config@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@faergeek/eslint-config/-/eslint-config-4.0.0.tgz#205891acddf2367dc11339ceb148799e20e4c666"
+  integrity sha512-7hUIeHVeuloD4lCJS7IC/+kKzIFgz7GjFs3xR4gb0yRUeajSGhiJleaTXdN+ODeBw/c3tOTlAOjukgUHGT+SFA==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.24.0"
     "@typescript-eslint/parser" "^4.24.0"
