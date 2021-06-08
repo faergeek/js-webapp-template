@@ -26,11 +26,7 @@
       },
       {
         "files": "src/**/*",
-        "extends": "@faergeek/eslint-config/preact",
-        "globals": {
-          "__DEV__": false,
-          "__NODE__": false
-        }
+        "extends": "@faergeek/eslint-config/preact"
       },
       {
         "files": "**/*.ts?(x)",
