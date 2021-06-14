@@ -1017,9 +1017,9 @@
     eslint-plugin-simple-import-sort "^7.0.0"
 
 "@faergeek/make-webpack-config@^11.0.0":
-  version "11.0.8"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-11.0.8.tgz#6020efc604cdcab663fbbb29c3197ce0f63379ed"
-  integrity sha512-5y9QVoHH0E6A2WyvDuB6a5KbeQ7+D5g9QJcIHKVV+rH+P6oPSp/HOc+4UYzKwp5jUg3dqsL9RK+nOhGg437omw==
+  version "11.1.4"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-11.1.4.tgz#22c3f24ea21cabbe515f6200acd42900880577aa"
+  integrity sha512-CQbPOI51pHYU27l7u0vkUPsMf2yodzC4Rg9Dw6T5tcvZwULVFSnczkbyhv8VzvqCEwTCOx3WxF6ktK4xuVb3vg==
   dependencies:
     "@pmmmwh/react-refresh-webpack-plugin" "^0.4.3"
     "@prefresh/babel-plugin" "^0.4.1"
@@ -1031,7 +1031,7 @@
     mini-css-extract-plugin "^1.6.0"
     mini-svg-data-uri "^1.3.3"
     node-sass "^6.0.0"
-    postcss-loader "^5.2.0"
+    postcss-loader "^6.0.0"
     react-refresh "0.9.0"
     resolve-url-loader "^4.0.0"
     run-script-webpack-plugin "^0.0.11"
@@ -5031,14 +5031,14 @@ postcss-lab-function@^2.0.1:
     postcss "^7.0.2"
     postcss-values-parser "^2.0.0"
 
-postcss-loader@^5.2.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-5.3.0.tgz#1657f869e48d4fdb018a40771c235e499ee26244"
-  integrity sha512-/+Z1RAmssdiSLgIZwnJHwBMnlABPgF7giYzTN2NOfr9D21IJZ4mQC1R2miwp80zno9M4zMD/umGI8cR+2EL5zw==
+postcss-loader@^6.0.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-6.1.0.tgz#13c800a00b3c7d434a1319a73d85e2df0714cdde"
+  integrity sha512-yA/cXBfACkthZNA2hQxOnaReVfQ6uLmvbEDQzNafpbK40URZJvP/28dL1DG174Gvz3ptkkHbbwDBCh+gXR94CA==
   dependencies:
     cosmiconfig "^7.0.0"
     klona "^2.0.4"
-    semver "^7.3.4"
+    semver "^7.3.5"
 
 postcss-logical@^3.0.0:
   version "3.0.0"
@@ -5406,16 +5406,7 @@ postcss@^7.0.35:
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-postcss@^8.2.15, postcss@^8.2.9:
-  version "8.3.2"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.3.2.tgz#ed3ec489f5428af5740cd6effcc216b4d455ee64"
-  integrity sha512-y1FK/AWdZlBF5lusS5j5l4/vF67+vQZt1SXPVJ32y1kRGDQyrs1zk32hG1cInRTu14P0V+orPz+ifwW/7rR4bg==
-  dependencies:
-    colorette "^1.2.2"
-    nanoid "^3.1.23"
-    source-map-js "^0.6.2"
-
-postcss@^8.3.0:
+postcss@^8.2.15, postcss@^8.2.9, postcss@^8.3.0:
   version "8.3.3"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.3.3.tgz#ef412a7a67e85c5b2c9f0ab3c4d9e8a3814d55cc"
   integrity sha512-gnXd9C4bGKevvlNFd80I8WfxHX+g6MR+W2h19PlDNHUuT9248rHTvCIDeZI3Hvs5mB3gzXiNDwVK3S153WJbZA==
@@ -5951,7 +5942,7 @@ semver@7.0.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.0.0.tgz#5f3ca35761e47e05b206c6daff2cf814f0316b8e"
   integrity sha512-+GB6zVA9LWh6zovYQLALHwv5rb2PHGlJi3lfiqIHxR0uuwCgefcOJc59v9fv1w8GbStwxuuqqAjI9NMAOOgq1A==
 
-semver@7.3.5, semver@^7.2.1, semver@^7.3.2, semver@^7.3.4, semver@^7.3.5:
+semver@7.3.5, semver@^7.2.1, semver@^7.3.2, semver@^7.3.5:
   version "7.3.5"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.5.tgz#0b621c879348d8998e4b0e4be94b3f12e6018ef7"
   integrity sha512-PoeGJYh8HK4BTO/a9Tf6ZG3veo/A7ZVsYrSA6J8ny9nb3B1VrpkuN+z9OE5wfE5p6H4LchYZsegiQgbJD94ZFQ==
