@@ -1,13 +1,16 @@
 const makeWebpackConfig = require('@faergeek/make-webpack-config');
 const path = require('path');
 
-module.exports = (env, argv) =>
-  makeWebpackConfig({
+module.exports = (env, argv) => {
+  const dev = argv.mode === 'development';
+
+  return makeWebpackConfig({
     alias: {
       react: 'preact/compat',
       'react-dom': 'preact/compat',
     },
-    dev: argv.mode === 'development',
+    analyze: !dev,
+    dev,
     entry: {
       browser: './src/browser',
       node: './src/node',
@@ -20,3 +23,4 @@ module.exports = (env, argv) =>
     prefresh: true,
     watch: argv.watch,
   });
+};
