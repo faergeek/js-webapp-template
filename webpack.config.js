@@ -2,7 +2,8 @@ const makeWebpackConfig = require('@faergeek/make-webpack-config');
 const path = require('path');
 
 module.exports = (env, argv) => {
-  const dev = argv.mode === 'development';
+  const dev = argv.nodeEnv === 'development';
+  const watch = env.WEBPACK_WATCH;
 
   return makeWebpackConfig({
     alias: {
@@ -21,6 +22,6 @@ module.exports = (env, argv) => {
       src: path.resolve('src'),
     },
     prefresh: true,
-    watch: env.WEBPACK_WATCH,
+    watch,
   });
 };

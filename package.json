@@ -6,9 +6,9 @@
     "prettier:check": "prettier --list-different .",
     "lint": "eslint --max-warnings 0 .",
     "typecheck": "tsc",
-    "dev": "webpack watch --mode=development",
-    "build": "webpack --mode=production",
-    "build:analyze": "webpack watch --mode=production",
+    "dev": "webpack watch --node-env=development",
+    "build": "webpack --node-env=production",
+    "build:analyze": "webpack watch --node-env=production",
     "cleanup": "rimraf build",
     "start": "node ."
   },
