@@ -1,11 +1,10 @@
 import * as compression from 'compression';
 import * as express from 'express';
+import { readFileSync } from 'fs';
 import * as path from 'path';
 import renderToString from 'preact-render-to-string';
 import invariant from 'tiny-invariant';
 
-// @ts-ignore this file does not exist until initial build completes
-import webpackAssets from '../build/webpack-assets.json';
 import { App } from './app';
 
 function getEntryUrls(entry: string | string[] | undefined) {
@@ -21,6 +20,10 @@ function getEntryUrls(entry: string | string[] | undefined) {
   return [];
 }
 
+const { main } = JSON.parse(
+  readFileSync(path.resolve(__dirname, 'webpack-assets.json'), 'utf-8')
+);
+
 export const app = express().use(
   compression(),
   express.static(path.resolve('public')),
@@ -32,10 +35,10 @@ export const app = express().use(
           <meta charSet="utf-8" />
           <title>JS WebApp Template</title>
           <meta name="viewport" content="width=device-width,initial-scale=1" />
-          {getEntryUrls(webpackAssets.main.css).map(href => (
+          {getEntryUrls(main.css).map(href => (
             <link key={href} rel="stylesheet" href={href} />
           ))}
-          {getEntryUrls(webpackAssets.main.js).map(src => (
+          {getEntryUrls(main.js).map(src => (
             <script
               key={src}
               crossOrigin={
