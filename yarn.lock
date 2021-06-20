@@ -1008,9 +1008,9 @@
     eslint-plugin-simple-import-sort "^7.0.0"
 
 "@faergeek/make-webpack-config@^12.0.0":
-  version "12.0.2"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-12.0.2.tgz#cd9b79a44ddf8f998c3f7ba502867eb7cb9769af"
-  integrity sha512-m1wT4FWTVSoNElbTWjvPW18VpD0UP8rCbAezh6KDRFDcpWzCcZxgvC8O3frO7OZQzWTzHLWfQgCeApX15yWy8Q==
+  version "12.0.3"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-12.0.3.tgz#d4308e71ab00aee0334fb8dada6205a940845dbf"
+  integrity sha512-6gJAT17VYeOiUutLeGV0W3C1wqi34YzOHHx75sZMFm8wYCuKQnPtVdxVO6HQvmjuQyOrgNE0WlYpcmflq6fHcw==
   dependencies:
     "@pmmmwh/react-refresh-webpack-plugin" "^0.4.3"
     "@prefresh/babel-plugin" "^0.4.1"
@@ -1958,7 +1958,12 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001219:
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001219:
+  version "1.0.30001239"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001239.tgz#66e8669985bb2cb84ccb10f68c25ce6dd3e4d2b8"
+  integrity sha512-cyBkXJDMeI4wthy8xJ2FvDU6+0dtcZSJW3voUF8+e9f1bBeuvyZfc3PNbkOETyhbR+dGCPzn9E7MA3iwzusOhQ==
+
+caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001109:
   version "1.0.30001238"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001238.tgz#e6a8b45455c5de601718736d0242feef0ecdda15"
   integrity sha512-bZGam2MxEt7YNsa2VwshqWQMwrYs5tR5WZQRYSuFxsBQunWjBuXhN4cS9nV5FFb1Z9y+DoQcQ0COyQbv6A+CKw==
