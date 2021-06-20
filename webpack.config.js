@@ -21,6 +21,6 @@ module.exports = (env, argv) => {
       src: path.resolve('src'),
     },
     prefresh: true,
-    watch: argv.watch,
+    watch: env.WEBPACK_WATCH,
   });
 };
