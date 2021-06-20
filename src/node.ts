@@ -15,7 +15,6 @@ const server =
 import.meta.webpackHot?.accept();
 
 import.meta.webpackHot?.dispose(data => {
-  server.removeAllListeners('request');
   data.prevServer = server;
 });
 
