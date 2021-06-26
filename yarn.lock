@@ -1104,27 +1104,27 @@
   dependencies:
     debug "^4.1.1"
 
-"@size-limit/file@4.12.0":
-  version "4.12.0"
-  resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-4.12.0.tgz#50166eca7b9b5aa15f51a72b3d9d31e2d8530e6f"
-  integrity sha512-csgGSAG3s2y9eOl/taahojXY91AXpNgqLs9HJ5c/Qmrs+6UHgXbwJ4vo475NfZmt1Y9simircb1ygqupauNUyA==
+"@size-limit/file@5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-5.0.0.tgz#29986ad7bac6208e289a38d5ae8007e60135f371"
+  integrity sha512-699vC9SlQWwJKtAurF9oE20gsfGhZnIiaw5YOZHkM6v6jb+qfns2Kdh63r/WPGJMcyc8J74pZvRt+CK8vLwlJg==
   dependencies:
     semver "7.3.5"
 
-"@size-limit/preset-app@^4.11.0":
-  version "4.12.0"
-  resolved "https://registry.yarnpkg.com/@size-limit/preset-app/-/preset-app-4.12.0.tgz#cce60986d672fbd32a43b67c25e013bfcc40bf88"
-  integrity sha512-5/6LsGCL3lkw8dcyjYBoSbMmTNTlJ4jV0MEMXcZFnHUpV30yVOKE63Q4Gx8U9Oj3MSoJ2V+87eVZsz9mcVTebQ==
+"@size-limit/preset-app@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@size-limit/preset-app/-/preset-app-5.0.0.tgz#9394f6642e315262f3c1071c30af109f9a7b0577"
+  integrity sha512-DDoZ//aRbfisdiL5hFEJ0qi4c+/sSR1f97hulmphI2/x/mwLkutQ7AmtZrS9/DfbP/oHe60cJV33mVQMYr82+w==
   dependencies:
-    "@size-limit/file" "4.12.0"
-    "@size-limit/time" "4.12.0"
+    "@size-limit/file" "5.0.0"
+    "@size-limit/time" "5.0.0"
 
-"@size-limit/time@4.12.0":
-  version "4.12.0"
-  resolved "https://registry.yarnpkg.com/@size-limit/time/-/time-4.12.0.tgz#f0e7a90e36c036aeff8fe5f005368e161216ce93"
-  integrity sha512-vqfeZbhXHmPqNtQsW6PDt8zHpLSgjAA9BdQOTVb7yAWyZB82KlPHM63hS1nplWEOCf04a4OVsyeqXVBNApQLNA==
+"@size-limit/time@5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@size-limit/time/-/time-5.0.0.tgz#9865258e0ce124d3d95e3a8d3b2594f0219bb5ac"
+  integrity sha512-LwjxLm81qbkjb3bcMpq52Jz1+M1p1MhQ4Fjh3ntSELdzA8Jaoze9L1ff7VSqR1zh0XhqSSfDH7t8JYPssv4rmA==
   dependencies:
-    estimo "^2.2.7"
+    estimo "^2.2.8"
     react "^17.0.2"
 
 "@trysound/sax@0.1.1":
@@ -2879,7 +2879,7 @@ esrecurse@^4.3.0:
   dependencies:
     estraverse "^5.2.0"
 
-estimo@^2.2.7:
+estimo@^2.2.8:
   version "2.2.8"
   resolved "https://registry.yarnpkg.com/estimo/-/estimo-2.2.8.tgz#5eb3ab381cffe46086f68dfcca3550c7f656e5a2"
   integrity sha512-7sQte1r5KtILz1BNl8b2Npf9K9HYE4vWfnj+9DDyUYsdKj9z+6bYXIahrqdTPBfhaUZ4Akd7EUqQxFnu5SCPkQ==
