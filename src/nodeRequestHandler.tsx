@@ -27,7 +27,9 @@ const { main } = JSON.parse(
 export const app = express().use(
   compression(),
   express.static(path.resolve('public')),
-  express.static(path.resolve('build', 'public'), { maxAge: '1 year' }),
+  express.static(path.resolve('build', 'public'), {
+    maxAge: __DEV__ ? undefined : '1 year',
+  }),
   (_req, res) => {
     res.set('Content-Type', 'text/html').send(
       `<!doctype html>${renderToString(
