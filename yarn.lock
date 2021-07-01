@@ -1056,9 +1056,9 @@
     eslint-plugin-simple-import-sort "^7.0.0"
 
 "@faergeek/make-webpack-config@^14.0.0":
-  version "14.1.1"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-14.1.1.tgz#b08705965077a2e80c497c68c6276a22d659d2f9"
-  integrity sha512-Z0uFUYx+Tb9INVH+JUX6dVU1gmFPX3OhTy4PWaig1w0i7Dylp951Eh9VpRZeLa10WffjKVCG6UTBS6uPLnkytA==
+  version "14.1.2"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-14.1.2.tgz#d2e0b6fb2848249057d81c6b68ba7c641edca329"
+  integrity sha512-hIcJhDsQdmZxT50eUQ/OPsZj36ZeRso1/acQmNVkkd9caUvKNkjlDzQz/5SauUYstJlqxWzSeeULl8sJ/bGt1g==
   dependencies:
     "@mdx-js/loader" "^1.6.22"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.4.3"
