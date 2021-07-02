@@ -1051,9 +1051,9 @@
     eslint-plugin-simple-import-sort "^7.0.0"
 
 "@faergeek/make-webpack-config@^14.0.0":
-  version "14.1.5"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-14.1.5.tgz#71d4d2dbf138f2839e058a7ff319942d461580d3"
-  integrity sha512-YgpGH9jduqTLVLNLLRVHfk99sK/1bXREayn2VVUWV5+pBMoJhhNP8koAzMDqCQNHFP/c528JYvnFZ/M5KAfYFw==
+  version "14.1.7"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-14.1.7.tgz#f90d58dc89997b30bf36c4a2703ae9a830b540bb"
+  integrity sha512-r2OhmqV1+i2V90TABlfMJ7Vc8IfJJEDRrOGvh4OQEUkxKuTFprGtPsB4qfxEEEyo4guf1L8W+uTSmGOPNMegtQ==
   dependencies:
     "@mdx-js/loader" "^1.6.22"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.4.3"
@@ -1063,6 +1063,7 @@
     babel-loader "^8.2.2"
     css-loader "^5.2.4"
     css-minimizer-webpack-plugin "^3.0.0"
+    escape-string-regexp "^4.0.0"
     mini-css-extract-plugin "^2.0.0"
     mini-svg-data-uri "^1.3.3"
     node-sass "^6.0.0"
@@ -1349,9 +1350,9 @@
     "@types/node" "*"
 
 "@types/unist@*", "@types/unist@^2.0.0", "@types/unist@^2.0.2", "@types/unist@^2.0.3":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.3.tgz#9c088679876f374eb5983f150d4787aa6fb32d7e"
-  integrity sha512-FvUupuM3rlRsRtCN+fDudtmytGO6iHJuuRKS1Ss0pG5z8oX0diNEw94UEL7hgDbpN94rgaK5R7sWm6RrSkZuAQ==
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.4.tgz#453e27c6930d66380b4c121e7d5e361c5c2d921b"
+  integrity sha512-zfyYsDTK1HTGYXU3fTiM76+om93HcFtsZd2M0bO/CL4DiETV7mSa/pIVN/6+G3esOqEMdg2An5cHHbK5t+9w+A==
 
 "@types/webpack-env@^1.16.0":
   version "1.16.2"
