@@ -5,7 +5,7 @@ const REPO_URL = 'https://github.com/faergeek/js-webapp-template';
 export function App() {
   return (
     <>
-      <h1 className={css.title}>JS WebApp Template</h1>
+      <h1>JS WebApp Template</h1>
 
       <p className={css.tagline}>
         A template to build web applications with bundling for both Node.js and
