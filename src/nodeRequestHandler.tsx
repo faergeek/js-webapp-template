@@ -6,7 +6,7 @@ import renderToString from 'preact-render-to-string';
 
 import { App } from './app';
 
-export const app = express().use(
+export const requestHandler = express().use(
   compression(),
   express.static(path.resolve('public')),
   express.static(path.resolve('build', 'public'), {

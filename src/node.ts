@@ -1,24 +1,19 @@
 import 'dotenv-flow/config';
 
-import { createServer, Server } from 'http';
+import { createServer } from 'http';
 import invariant from 'tiny-invariant';
 
-import { app } from './nodeRequestHandler';
+import { requestHandler } from './nodeRequestHandler';
 
 const PORT = parseInt(String(process.env.PORT), 10);
 invariant(isFinite(PORT));
 
-const server =
-  (import.meta.webpackHot?.data?.prevServer as Server | undefined) ||
-  createServer(app).listen(PORT);
+const server = createServer(
+  import.meta.webpackHot ? (...args) => requestHandler(...args) : requestHandler
+).listen(PORT);
 
-import.meta.webpackHot?.accept();
-
-import.meta.webpackHot?.dispose(data => {
-  data.prevServer = server;
-});
-
-import.meta.webpackHot?.accept('./nodeRequestHandler', () => {
-  server.removeAllListeners('request');
-  server.addListener('request', app);
-});
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept('./nodeRequestHandler');
+  import.meta.webpackHot.accept();
+  import.meta.webpackHot.dispose(() => server.close());
+}
