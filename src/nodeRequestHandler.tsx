@@ -3,22 +3,8 @@ import * as express from 'express';
 import { readFile } from 'fs/promises';
 import * as path from 'path';
 import renderToString from 'preact-render-to-string';
-import invariant from 'tiny-invariant';
 
 import { App } from './app';
-
-function getEntryUrls(entry: string | string[] | undefined) {
-  if (typeof entry === 'string') {
-    return [entry];
-  }
-
-  if (Array.isArray(entry)) {
-    return entry;
-  }
-
-  invariant(entry === undefined);
-  return [];
-}
 
 export const app = express().use(
   compression(),
@@ -29,7 +15,7 @@ export const app = express().use(
   }),
   async (_req, res, next) => {
     try {
-      const { main } = JSON.parse(
+      const { main }: { main: { css: string[]; js: string[] } } = JSON.parse(
         await readFile(path.resolve(__dirname, 'webpack-assets.json'), 'utf-8')
       );
 
@@ -42,10 +28,10 @@ export const app = express().use(
               name="viewport"
               content="width=device-width,initial-scale=1"
             />
-            {getEntryUrls(main.css).map(href => (
+            {main.css.map(href => (
               <link key={href} rel="stylesheet" href={href} />
             ))}
-            {getEntryUrls(main.js).map(src => (
+            {main.js.map(src => (
               <script key={src} defer src={src} />
             ))}
             <App />
