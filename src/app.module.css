@@ -1,30 +1,21 @@
 .tagline {
-  font-size: 20px;
+  font-size: 1.25em;
 }
 
 .btn {
   display: inline-block;
   border: 1px solid;
   padding: 0.5em 2em;
-  color: inherit;
-  line-height: 1.5;
+  font-weight: bold;
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
 }
 
-.btn:focus {
-  outline: 1px solid hsl(52deg 71% 53%);
-}
-
-.btn_theme_solid {
-  border-color: hsl(52deg 71% 53%);
-  background: hsl(52deg 71% 53%);
-  color: hsl(0 0% 100%);
-}
-
-.btn_theme_outlined {
-  border-color: hsl(0 0% 0%);
+.btn_solid {
+  border-color: transparent;
+  background: white;
+  color: rebeccapurple;
 }
 
 .btn + .btn {

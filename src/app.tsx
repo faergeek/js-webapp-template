@@ -14,16 +14,13 @@ export function App() {
 
       <p>
         <a
-          className={[css.btn, css.btn_theme_solid].join(' ')}
+          className={[css.btn, css.btn_solid].join(' ')}
           href={`${REPO_URL}/generate`}
         >
           Use it
         </a>
 
-        <a
-          className={[css.btn, css.btn_theme_outlined].join(' ')}
-          href={REPO_URL}
-        >
+        <a className={css.btn} href={REPO_URL}>
           Sources
         </a>
       </p>
