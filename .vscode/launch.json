@@ -11,7 +11,7 @@
     {
       "name": "Firefox",
       "type": "firefox",
-      "request": "launch",
+      "request": "attach",
       "url": "http://localhost:8080/",
       "webRoot": "${workspaceFolder}",
       "clearConsoleOnReload": true,
