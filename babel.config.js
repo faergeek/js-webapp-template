@@ -7,7 +7,7 @@ module.exports = api => ({
           ? undefined
           : api.env(),
         bugfixes: true,
-        corejs: '3.14',
+        corejs: '3.15',
         shippedProposals: true,
         useBuiltIns: 'entry',
       },
