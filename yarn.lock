@@ -1050,10 +1050,10 @@
     eslint-plugin-react-hooks "^4.2.0"
     eslint-plugin-simple-import-sort "^7.0.0"
 
-"@faergeek/make-webpack-config@^14.0.0":
-  version "14.2.3"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-14.2.3.tgz#ead753ce565b79764ebf9d83fc7937966a041f89"
-  integrity sha512-m+Mz+qGfMDap8yMnsgOS+4lOX7ape2DC2CgvbAXYU6pTypE3280wAXFR4jhGliJ7qOrUWIwXrRFnQCaQWbQ/Og==
+"@faergeek/make-webpack-config@^15.0.0":
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-15.0.0.tgz#17eb31bec217b12a06100de8a5b2a561fa0afd77"
+  integrity sha512-XhsHdsCxJfND4uPx3iE5zobhPySXECz8JQQrcs00PgYoEzipt2E2KTv7dGNdMhkqoxgY96g35zb1Y7s7RF5epA==
   dependencies:
     "@mdx-js/loader" "^1.6.22"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.4.3"
