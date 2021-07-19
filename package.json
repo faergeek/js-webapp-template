@@ -10,7 +10,7 @@
     "build": "webpack --node-env=production",
     "build:analyze": "webpack watch --node-env=production",
     "cleanup": "rimraf build",
-    "start": "node ."
+    "start": "node --enable-source-maps ."
   },
   "prettier": {
     "arrowParens": "avoid",
