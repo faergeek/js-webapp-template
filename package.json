@@ -77,7 +77,6 @@
     "express": "^4.17.1",
     "preact": "^10.5.13",
     "preact-render-to-string": "^5.1.19",
-    "source-map-support": "^0.5.13",
     "tiny-invariant": "^1.1.0"
   },
   "devDependencies": {
