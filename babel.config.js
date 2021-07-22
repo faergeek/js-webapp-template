@@ -3,9 +3,6 @@ module.exports = api => ({
     [
       '@babel/env',
       {
-        browserslistEnv: api.caller(caller => caller.target === 'node')
-          ? undefined
-          : api.env(),
         bugfixes: true,
         corejs: '3.15',
         shippedProposals: true,
