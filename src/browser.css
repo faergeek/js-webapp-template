@@ -1,11 +1,19 @@
-@import 'normalize.css/opinionated.css';
+@import 'normalize.css';
+
+:root {
+  font: 1em system-ui;
+}
 
 ::selection {
   background: white;
   color: rebeccapurple;
 }
 
-:root {
+:any-link {
+  color: inherit;
+}
+
+html {
   box-sizing: border-box;
   padding: 24px;
   min-width: 320px;
@@ -15,10 +23,9 @@
   justify-content: center;
   background: rebeccapurple;
   color: white;
-  font-family: system-ui;
   text-align: center;
 }
 
-:any-link {
-  color: inherit;
+body {
+  margin: 0;
 }
