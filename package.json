@@ -34,6 +34,12 @@
       }
     ]
   },
+  "postcss": {
+    "plugins": [
+      "postcss-preset-env",
+      "postcss-normalize"
+    ]
+  },
   "browserslist": [
     "> 1%",
     "not IE <= 11",
