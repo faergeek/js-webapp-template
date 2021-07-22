@@ -6,14 +6,16 @@ import renderToString from 'preact-render-to-string';
 
 import { App } from './app';
 
-export const requestHandler = express().use(
-  compression(),
-  express.static(path.resolve('public')),
-  express.static(path.resolve('build', 'public'), {
-    immutable: !import.meta.webpackHot,
-    maxAge: import.meta.webpackHot ? undefined : '1 year',
-  }),
-  async (_req, res, next) => {
+export const requestHandler = express()
+  .use(compression())
+  .use(express.static(path.resolve('public')))
+  .use(
+    express.static(path.resolve('build', 'public'), {
+      immutable: !import.meta.webpackHot,
+      maxAge: import.meta.webpackHot ? undefined : '1 year',
+    })
+  )
+  .get('/', async (_req, res, next) => {
     try {
       const { main }: { main: { css: string[]; js: string[] } } = JSON.parse(
         await readFile(path.resolve(__dirname, 'webpack-assets.json'), 'utf-8')
@@ -41,5 +43,4 @@ export const requestHandler = express().use(
     } catch (err) {
       next(err);
     }
-  }
-);
+  });
