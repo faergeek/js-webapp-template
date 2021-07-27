@@ -1200,25 +1200,25 @@
   dependencies:
     debug "^4.1.1"
 
-"@size-limit/file@5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-5.0.1.tgz#8cf5a550a88fe5972db31e65cfd0b040485fd141"
-  integrity sha512-BgbGFdFwijuR6tZRlmUoN3UzOIN+dt+28hzsYKjTl1LOn4zUJjTWgTCye11Qygj5L6+MkDZOA1ppEm4ZfjPgmQ==
+"@size-limit/file@5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-5.0.2.tgz#6dc7f971eb85ca1e32adcbac88410684e5140035"
+  integrity sha512-xWiQnB4D9ty0ZAMLgPfsAhDzYSxj58bOveGsn0lpT/bxcPKvR+Mqqjwf33yRyHeKKGmslj3Hxm2Y8D5eLD465w==
   dependencies:
     semver "7.3.5"
 
 "@size-limit/preset-app@^5.0.0":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@size-limit/preset-app/-/preset-app-5.0.1.tgz#aaa8b971964c080e7ce182a3ef62ee108212f3e1"
-  integrity sha512-ABVQiIgAMmTREhKD2YS6DpbzIgoJ+FC1GFeX8L8iraNM7GIo4s0R1o3rSRkSWIDi80TXN8/YjUjOl+ITIaFa8g==
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@size-limit/preset-app/-/preset-app-5.0.2.tgz#365b27cdca5e61df52c19c17c862074187c557c3"
+  integrity sha512-aN2ule1s41jVvoyYH0V+Y1v2P0FAvGr2A5tlKDVz337alPnyxpNiu+tN7mGmxEoMCC71Qoov6j1R/OJmtF1N2Q==
   dependencies:
-    "@size-limit/file" "5.0.1"
-    "@size-limit/time" "5.0.1"
+    "@size-limit/file" "5.0.2"
+    "@size-limit/time" "5.0.2"
 
-"@size-limit/time@5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@size-limit/time/-/time-5.0.1.tgz#0566ba1f7a139b4b593352f1d34f7d33dc9f572f"
-  integrity sha512-VcEQF3ejYPf97CjcJ6jnRTn8ypORma2uoeq2lPr+KEBTNoaUAnZJ1ByrXmhriz0iOSJ0WYKMnsVbaqnabC7RJQ==
+"@size-limit/time@5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@size-limit/time/-/time-5.0.2.tgz#8ea5f449c12922f135d647d610dbb4d21f65e651"
+  integrity sha512-TcYakKJnEWJ1/6YWXEcw686SEQocwgN14MFIGIsujhpmZewalPRKWTU0oa0AB1MEGY+fqpFczY8F6g+NGXK1Jw==
   dependencies:
     estimo "^2.2.8"
     react "^17.0.2"
@@ -1320,9 +1320,9 @@
   integrity sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==
 
 "@types/node@*":
-  version "16.4.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.4.0.tgz#2c219eaa3b8d1e4d04f4dd6e40bc68c7467d5272"
-  integrity sha512-HrJuE7Mlqcjj+00JqMWpZ3tY8w7EUd+S0U3L1+PQSWiXZbOgyQDvi+ogoUxaHApPJq5diKxYBQwA3iIlNcPqOg==
+  version "16.4.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.4.3.tgz#c01c1a215721f6dec71b47d88b4687463601ba48"
+  integrity sha512-GKM4FLMkWDc0sfx7tXqPWkM6NBow1kge0fgQh0bOnlqo4iT1kvTvMEKE0c1RtUGnbLlGRXiAA8SumE//90uKAg==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
