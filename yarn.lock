@@ -1330,9 +1330,9 @@
     "@types/node" "*"
 
 "@types/compression@^1.7.0":
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/@types/compression/-/compression-1.7.1.tgz#d935a1cd6f5cd9a4dc8b0d8aadf2ee91a2975acc"
-  integrity sha512-d6K1bU3qIjtfB2u+A1N0WDf62LpewRjrvbqY79qlPwk2otgQ4mWB4+LzPCWTvGmcuVwo+zAroEhsNlJavRcFvg==
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/@types/compression/-/compression-1.7.2.tgz#7cc1cdb01b4730eea284615a68fc70a2cdfd5e71"
+  integrity sha512-lwEL4M/uAGWngWFLSG87ZDr2kLrbuR8p7X+QZB1OQlT+qkHsCPDVFnHPyXf4Vyl4yDDorNY+mAhosxkCvppatg==
   dependencies:
     "@types/express" "*"
 
@@ -1413,9 +1413,9 @@
   integrity sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==
 
 "@types/node@*":
-  version "16.6.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.6.1.tgz#aee62c7b966f55fc66c7b6dfa1d58db2a616da61"
-  integrity sha512-Sr7BhXEAer9xyGuCN3Ek9eg9xPviCF2gfu9kTfuU2HkTVAMYSDeX40fvpmo72n5nansg3nsBjuQBrsS28r+NUw==
+  version "16.7.13"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.7.13.tgz#86fae356b03b5a12f2506c6cf6cd9287b205973f"
+  integrity sha512-pLUPDn+YG3FYEt/pHI74HmnJOWzeR+tOIQzUx93pi9M7D8OE7PSLr97HboXwk5F+JS+TLtWuzCOW97AHjmOXXA==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
