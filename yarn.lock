@@ -1215,25 +1215,25 @@
   dependencies:
     debug "^4.1.1"
 
-"@size-limit/file@6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-6.0.0.tgz#bb8c681f7e1675aa749d0f44d1f835cfb7523b95"
-  integrity sha512-l7SYjIMl1JFi1eQFfDULSutMr10v1FP2cfA/f81y4DTSYx8hCYAN7S95MoQu052pF6tWpDwd8debilZRstlejQ==
+"@size-limit/file@6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-6.0.1.tgz#6e333950c20e404c720a07cfacc4431b6ce01f4d"
+  integrity sha512-NurTGHCE2LByAZh1Rlqzjr9M1+0Hj49kpN1bNqDtH2RoTOHe02GUQbZadZcNmXEcMwoZr3/dxCaxb6txbiA9eA==
   dependencies:
     semver "7.3.5"
 
 "@size-limit/preset-app@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@size-limit/preset-app/-/preset-app-6.0.0.tgz#235f4bad3f630f2538a5e40399632a69468249aa"
-  integrity sha512-mn1H57OYpNKc6vObIxPH8rIMH7isIz7/TiP+ZRsDV1ESbZXNplnLaY9IKRraO5hJIpRZBNv38A/5U1kODjJz3A==
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@size-limit/preset-app/-/preset-app-6.0.1.tgz#bb4712b6fd047965aaba3224001f2fed7873c441"
+  integrity sha512-gV97matHaNUZkPyO+GMfVA3Zqxo7+VKfsgJaTtx9d58SHSwwMjUVne9iS7TrlkYZ/8mqaqOJP3rDMobqsclBeQ==
   dependencies:
-    "@size-limit/file" "6.0.0"
-    "@size-limit/time" "6.0.0"
+    "@size-limit/file" "6.0.1"
+    "@size-limit/time" "6.0.1"
 
-"@size-limit/time@6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@size-limit/time/-/time-6.0.0.tgz#ffd75b2b5bd7a8c53689d028d874f8bc23b689e0"
-  integrity sha512-aeH7PKfAiZVkGI9iIDUTzawaAX1WLoP0PWcfcsiVbAmMq08W1k4NlbylYa6m8DHp64DHgUh5bt9WyEW+/SvxbQ==
+"@size-limit/time@6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@size-limit/time/-/time-6.0.1.tgz#f8e695945358a5419bfafb7fb19694947504a5c7"
+  integrity sha512-ERupjIlhPMa0i71Pu9SZgOGy8VOflIxVKhTEC8Z8LGSi6m3Ycks9A+ZMj6fyJ0EovbHtbRyX9BPdPk3m9I6P/Q==
   dependencies:
     estimo "^2.2.8"
     react "^17.0.2"
@@ -3030,14 +3030,14 @@ esrecurse@^4.3.0:
     estraverse "^5.2.0"
 
 estimo@^2.2.8:
-  version "2.2.8"
-  resolved "https://registry.yarnpkg.com/estimo/-/estimo-2.2.8.tgz#5eb3ab381cffe46086f68dfcca3550c7f656e5a2"
-  integrity sha512-7sQte1r5KtILz1BNl8b2Npf9K9HYE4vWfnj+9DDyUYsdKj9z+6bYXIahrqdTPBfhaUZ4Akd7EUqQxFnu5SCPkQ==
+  version "2.2.9"
+  resolved "https://registry.yarnpkg.com/estimo/-/estimo-2.2.9.tgz#09df1516adf63abc83913e0f06e14b7b792f0d6b"
+  integrity sha512-X4026viC9gyZyXSROVBMHGlrBXIs3Al0kC2yMB+URqA/TsW29Q9kyQvGAO55rLnAxJarAqGN0RXzfUmxmLtXgg==
   dependencies:
     "@sitespeed.io/tracium" "^0.3.3"
-    nanoid "^3.1.23"
-    puppeteer-core "^10.0.0"
-    yargs "^17.0.1"
+    nanoid "^3.1.29"
+    puppeteer-core "^10.4.0"
+    yargs "^17.2.1"
 
 estraverse@^4.1.1:
   version "4.3.0"
@@ -4454,12 +4454,7 @@ nanocolors@^0.1.12:
   resolved "https://registry.yarnpkg.com/nanocolors/-/nanocolors-0.1.12.tgz#8577482c58cbd7b5bb1681db4cf48f11a87fd5f6"
   integrity sha512-2nMHqg1x5PU+unxX7PGY7AuYxl2qDx7PSrTRjizr8sxdd3l/3hBuWWaki62qmtYm2U5i4Z5E7GbjlyDFhs9/EQ==
 
-nanoid@^3.1.23:
-  version "3.1.28"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.28.tgz#3c01bac14cb6c5680569014cc65a2f26424c6bd4"
-  integrity sha512-gSu9VZ2HtmoKYe/lmyPFES5nknFrHa+/DT9muUFWFMi6Jh9E1I7bkvlQ8xxf1Kos9pi9o8lBnIOkatMhKX/YUw==
-
-nanoid@^3.1.28:
+nanoid@^3.1.28, nanoid@^3.1.29:
   version "3.1.29"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.29.tgz#214fb2d7a33e1a5bef4757b779dfaeb6a4e5aeb4"
   integrity sha512-dW2pUSGZ8ZnCFIlBIA31SV8huOGCHb6OwzVCc7A69rb/a+SgPBwfmLvK5TKQ3INPbRkcI8a/Owo0XbiTNH19wg==
@@ -5527,7 +5522,7 @@ punycode@^2.1.0, punycode@^2.1.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-puppeteer-core@^10.0.0:
+puppeteer-core@^10.4.0:
   version "10.4.0"
   resolved "https://registry.yarnpkg.com/puppeteer-core/-/puppeteer-core-10.4.0.tgz#4e2da57c52339b8c07cd9362922020eb3c3c95bf"
   integrity sha512-KU8zyb7AIOqNjLCN3wkrFXxh+EVaG+zrs2P03ATNjc3iwSxHsu5/EvZiREpQ/IJiT9xfQbDVgKcsvRuzLCxglQ==
@@ -7049,7 +7044,7 @@ yargs@^13.3.2:
     y18n "^4.0.0"
     yargs-parser "^13.1.2"
 
-yargs@^17.0.1:
+yargs@^17.2.1:
   version "17.2.1"
   resolved "https://registry.yarnpkg.com/yargs/-/yargs-17.2.1.tgz#e2c95b9796a0e1f7f3bf4427863b42e0418191ea"
   integrity sha512-XfR8du6ua4K6uLGm5S6fA+FIJom/MdJcFNVY8geLlp2v8GYbOXD4EB1tPNZsRn4vBzKGMgb5DRZMeWuFc2GO8Q==
