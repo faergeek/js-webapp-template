@@ -3871,9 +3871,9 @@ is-glob@^4.0.0:
     is-extglob "^2.1.1"
 
 is-glob@^4.0.1, is-glob@~4.0.1:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/is-glob/-/is-glob-4.0.2.tgz#859fc2e731e58c902f99fcabccb75a7dd07d29d8"
-  integrity sha512-ZZTOjRcDjuAAAv2cTBQP/lL59ZTArx77+7UzHdWW/XB1mrfp7DEaVpKmZ0XIzx+M7AxfhKcqV+nMetUQmFifwg==
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/is-glob/-/is-glob-4.0.3.tgz#64f61e42cbbb2eec2071a9dac0b28ba1e65d5084"
+  integrity sha512-xelSayHH36ZgE7ZWhli7pW34hNbNl8Ojv5KVmkJD4hBdD3th8Tfk9vYasLM+mXWOZhFkgZfxhLSnrwRr4elSSg==
   dependencies:
     is-extglob "^2.1.1"
 
@@ -4459,10 +4459,10 @@ nanoid@^3.1.28, nanoid@^3.1.29:
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.29.tgz#214fb2d7a33e1a5bef4757b779dfaeb6a4e5aeb4"
   integrity sha512-dW2pUSGZ8ZnCFIlBIA31SV8huOGCHb6OwzVCc7A69rb/a+SgPBwfmLvK5TKQ3INPbRkcI8a/Owo0XbiTNH19wg==
 
-nanospinner@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/nanospinner/-/nanospinner-0.2.2.tgz#6de68ee0073bdf13e15b32034050529d13af733e"
-  integrity sha512-sy9s0FNv/N2XY78uUwrgSm4e93Oy/w43GqDTxVh7cH7LDcG4dtNJJkWRIFUmC3EDp/lYIbPWpVysofYca0Yv2Q==
+nanospinner@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/nanospinner/-/nanospinner-0.3.0.tgz#3ff71ec10cfd55015086b0752a3573fac2bb24aa"
+  integrity sha512-PdmAgaOM3bXoywikjama+ZLez4qdxlPh4UEetjeSc9Vq2Wm6sY3hi7XMH8blQmBT+vFdwXrCeodE+6ENfNLrxg==
   dependencies:
     picocolors "^0.2.0"
 
@@ -6066,16 +6066,16 @@ sirv@^1.0.7:
     totalist "^1.0.0"
 
 size-limit@^6.0.0:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-6.0.1.tgz#6847de7adbfd5a0f8d0167a1db5605b1164bf0b1"
-  integrity sha512-AFMWULVTAH/VkI15+d4Hn3EXbhh3ZvPPdRs/x4Pu3ZlWs3IP5k9/F3nAl4wPIDEXmHJiA6pbrmWUumOpaidrow==
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-6.0.3.tgz#980e91993a409cb80dd4776fe3e2867afa4d55d0"
+  integrity sha512-bvZuNG1dPJ8GTkFq3lXkW8H1+ybVV3D7GecowAGlfbNO2T1Mcvy8kCoCpwVOWnq1wV+TraRUtExnQzIyyV94NQ==
   dependencies:
     bytes-iec "^3.1.1"
     chokidar "^3.5.2"
     ci-job-number "^1.2.2"
     globby "^11.0.4"
     lilconfig "^2.0.3"
-    nanospinner "^0.2.2"
+    nanospinner "^0.3.0"
     picocolors "^0.2.1"
 
 slash@^3.0.0:
