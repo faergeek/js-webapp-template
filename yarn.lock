@@ -1056,16 +1056,16 @@
     eslint-plugin-simple-import-sort "^7.0.0"
 
 "@faergeek/make-webpack-config@^15.0.0":
-  version "15.0.15"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-15.0.15.tgz#34293feb113d804b574a6a548fc3bc2f0466574f"
-  integrity sha512-4vPq1jK00gD0C3VERbDESyAS8fyYrsBIb1uSqehm/FIYI6lHgA1q3yHbpYftH5c44mG8l923wwf9RFo58LDXfA==
+  version "15.0.19"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-15.0.19.tgz#f037c894a6bf7065bf2f1ae6f10b0799c2735eeb"
+  integrity sha512-h1dkly4rGCA0ZxDsOFemtGfXVWp/kZxFL5TSdZ6Is+es31zecADhHvYV1ZSnQ2nYZNpr9UL98Ub6hg0oY2B9kA==
   dependencies:
     "@mdx-js/loader" "^1.6.22"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.5.0"
     "@prefresh/babel-plugin" "^0.4.1"
     "@prefresh/webpack" "^3.3.0"
     babel-loader "^8.2.2"
-    css-loader "^5.2.4"
+    css-loader "^6.0.0"
     css-minimizer-webpack-plugin "^3.0.0"
     escape-string-regexp "^4.0.0"
     mini-css-extract-plugin "^2.0.0"
@@ -2431,20 +2431,18 @@ css-has-pseudo@^0.10.0:
     postcss "^7.0.6"
     postcss-selector-parser "^5.0.0-rc.4"
 
-css-loader@^5.2.4:
-  version "5.2.7"
-  resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-5.2.7.tgz#9b9f111edf6fb2be5dc62525644cbc9c232064ae"
-  integrity sha512-Q7mOvpBNBG7YrVGMxRxcBJZFL75o+cH2abNASdibkj/fffYD8qWbInZrD0S9ccI6vZclF3DsHE7njGlLtaHbhg==
+css-loader@^6.0.0:
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-6.5.0.tgz#9d1cf7766a9a8f0b3c6e1638309b964dbdab46d3"
+  integrity sha512-VmuSdQa3K+wJsl39i7X3qGBM5+ZHmtTnv65fqMGI+fzmHoYmszTVvTqC1XN8JwWDViCB1a8wgNim5SV4fb37xg==
   dependencies:
     icss-utils "^5.1.0"
-    loader-utils "^2.0.0"
     postcss "^8.2.15"
     postcss-modules-extract-imports "^3.0.0"
     postcss-modules-local-by-default "^4.0.0"
     postcss-modules-scope "^3.0.0"
     postcss-modules-values "^4.0.0"
     postcss-value-parser "^4.1.0"
-    schema-utils "^3.0.0"
     semver "^7.3.5"
 
 css-minimizer-webpack-plugin@^3.0.0:
