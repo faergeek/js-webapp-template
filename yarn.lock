@@ -4075,10 +4075,10 @@ nanoid@^3.1.29, nanoid@^3.1.30:
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.30.tgz#63f93cc548d2a113dc5dfbc63bfa09e2b9b64362"
   integrity sha512-zJpuPDwOv8D2zq2WRoMe1HsfZthVewpel9CAvTfc/2mBD1uUT/agc5f7GHGWXlYkFvi1mVxe4IjvP2HNrop7nQ==
 
-nanospinner@^0.3.0:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/nanospinner/-/nanospinner-0.3.2.tgz#501ac31b48bf47be8e25fc07543b5fe620a742e8"
-  integrity sha512-ToZuxmiRuuNe3McB7CVzP7PCOhzWAy4qx6ndb5QWxJFp6INdg3n0mVm8f7HR6Fz8raRg3/vzglIZYrOSna8vkg==
+nanospinner@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/nanospinner/-/nanospinner-0.4.0.tgz#f544f71fb990423528b8f6dd6c26134cf9f21659"
+  integrity sha512-FhxiB9PcEztMw6XfQDSLJBMlmN4n7B2hl/oiK4Hy9479r1+df0i2099DgcEx+m6yBfBJVUuKpILvP8fM3rK3Sw==
   dependencies:
     picocolors "^1.0.0"
 
@@ -5593,17 +5593,17 @@ sirv@^1.0.7:
     totalist "^1.0.0"
 
 size-limit@^6.0.0:
-  version "6.0.3"
-  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-6.0.3.tgz#980e91993a409cb80dd4776fe3e2867afa4d55d0"
-  integrity sha512-bvZuNG1dPJ8GTkFq3lXkW8H1+ybVV3D7GecowAGlfbNO2T1Mcvy8kCoCpwVOWnq1wV+TraRUtExnQzIyyV94NQ==
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-6.0.4.tgz#f3345206d8c25485d0d31ea41622761a3a1aad93"
+  integrity sha512-zo/9FrXzetvZGFJnd1LC4mR9GvirElALlerMY3EOwEGdW7Lwgl2WT0hTRC2559ZR2PGfRpnXEgAFkayGAJOebg==
   dependencies:
     bytes-iec "^3.1.1"
     chokidar "^3.5.2"
     ci-job-number "^1.2.2"
     globby "^11.0.4"
     lilconfig "^2.0.3"
-    nanospinner "^0.3.0"
-    picocolors "^0.2.1"
+    nanospinner "^0.4.0"
+    picocolors "^1.0.0"
 
 slash@^3.0.0:
   version "3.0.0"
