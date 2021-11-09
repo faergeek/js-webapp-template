@@ -996,9 +996,9 @@
     strip-json-comments "^3.1.1"
 
 "@faergeek/eslint-config@^5.0.0":
-  version "5.0.12"
-  resolved "https://registry.yarnpkg.com/@faergeek/eslint-config/-/eslint-config-5.0.12.tgz#e82214df9842fab1c737e49a1dd3aff47816e28e"
-  integrity sha512-gf77SB2KYFa6QMQx1d97JFqlFhs+7bY34r0ZEl9QuKDJ2uu+kkr7M3Uj7g4PPvytyzHMlP9vkjHXDoq9rcFxTg==
+  version "5.0.13"
+  resolved "https://registry.yarnpkg.com/@faergeek/eslint-config/-/eslint-config-5.0.13.tgz#c93d83db2d9100e7269cd28053c9aebe23965295"
+  integrity sha512-3x5h3D0cMmbkk1hXyMiolC4pZgztfklqsHBnVRLGyq/b04lWhaQ7wwfllhdptVD9p/schxl43ljQUqrZEqxGAA==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.0.0"
     "@typescript-eslint/parser" "^5.0.0"
@@ -2674,9 +2674,9 @@ eslint-plugin-jest@^25.0.0:
     "@typescript-eslint/experimental-utils" "^5.0.0"
 
 eslint-plugin-react-hooks@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.2.0.tgz#8c229c268d468956334c943bb45fc860280f5556"
-  integrity sha512-623WEiZJqxR7VdxFCKLI6d6LLpwJkGPYKODnkH3D7WpOG5KM8yWueBd8TLsNAetEJNF5iJmolaAKO3F8yzyVBQ==
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.3.0.tgz#318dbf312e06fab1c835a4abef00121751ac1172"
+  integrity sha512-XslZy0LnMn+84NEG9jSGR6eGqaZB3133L8xewQo3fQagbQuGt7a63gf+P1NGKZavEYEC3UXaWEAA/AqDkuN6xA==
 
 eslint-plugin-react@^7.23.2:
   version "7.26.1"
