@@ -1874,7 +1874,7 @@ braces@^3.0.1, braces@~3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
-browserslist@^4.0.0, browserslist@^4.14.5, browserslist@^4.16.0, browserslist@^4.16.6:
+browserslist@^4.0.0, browserslist@^4.14.5, browserslist@^4.16.0:
   version "4.18.1"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.18.1.tgz#60d3920f25b6860eb917c6c7b185576f4d8b017f"
   integrity sha512-8ScCzdpPwR2wQh8IT82CA2VgDwjHyqMovPBZSNH54+tm4Jk2pCuv90gmAdH6J84OCRWi0b4gMe6O6XPXuJnjgQ==
@@ -1885,7 +1885,7 @@ browserslist@^4.0.0, browserslist@^4.14.5, browserslist@^4.16.0, browserslist@^4
     node-releases "^2.0.1"
     picocolors "^1.0.0"
 
-browserslist@^4.17.5, browserslist@^4.18.1:
+browserslist@^4.16.6, browserslist@^4.17.5, browserslist@^4.18.1:
   version "4.19.0"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.19.0.tgz#5f02742ac2b86dde56ae4cef7be2b003e47b1ee0"
   integrity sha512-JGHzm73ei2OnAcobcQ61GXNnN6vDCg5Oz5MayudL+FyzjoLnCzUWnuLtDLMIYw8aXgQzzdCZMVky+fftD5jbtA==
