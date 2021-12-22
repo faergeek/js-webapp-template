@@ -1945,10 +1945,15 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001272, caniuse-lite@^1.0.30001286, caniuse-lite@^1.0.30001287:
+caniuse-lite@^1.0.0:
   version "1.0.30001291"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001291.tgz#08a8d2cfea0b2cf2e1d94dd795942d0daef6108c"
   integrity sha512-roMV5V0HNGgJ88s42eE70sstqGW/gwFndosYrikHthw98N5tLnOTxFqMLQjZVRxTWFlJ4rn+MsgXrR7MDPY4jA==
+
+caniuse-lite@^1.0.30001272, caniuse-lite@^1.0.30001286, caniuse-lite@^1.0.30001291:
+  version "1.0.30001292"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001292.tgz#4a55f61c06abc9595965cfd77897dc7bc1cdc456"
+  integrity sha512-jnT4Tq0Q4ma+6nncYQVe7d73kmDmE9C3OGTx3MvW7lBM/eY1S1DZTMBON7dqV481RhNiS5OxD7k9JQvmDOTirw==
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -2511,9 +2516,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.4.17:
-  version "1.4.24"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.24.tgz#9cf8a92d5729c480ee47ff0aa5555f57467ae2fa"
-  integrity sha512-erwx5r69B/WFfFuF2jcNN0817BfDBdC4765kQ6WltOMuwsimlQo3JTEq0Cle+wpHralwdeX3OfAtw/mHxPK0Wg==
+  version "1.4.26"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.26.tgz#d71b9da220543cf10614a576c3d5ebbe43d96efb"
+  integrity sha512-cA1YwlRzO6TGp7yd3+KAqh9Tt6Z4CuuKqsAJP6uF/H5MQryjAGDhMhnY5cEXo8MaRCczpzSBhMPdqRIodkbZYw==
 
 emoji-regex@^7.0.1:
   version "7.0.3"
@@ -4689,9 +4694,9 @@ postcss-modules-values@^4.0.0:
     icss-utils "^5.0.0"
 
 postcss-nesting@^10.0.3:
-  version "10.0.3"
-  resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-10.0.3.tgz#f19288ad07ef5ee47eb86991580b5d7b16a7f5ca"
-  integrity sha512-Dshtj57d5ytK1AeVNpQHp8gINgdjsRJaRjH1QmJHGcfOQIP4TNtlrrrh5o3i3bBTwge2+nh1D9xbI2wrckz5Xw==
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-10.1.0.tgz#4e3deab5b18cd443495cf6be818ab758a9c3d71d"
+  integrity sha512-HQ8kc/kLid2YjTOjlUC2Lk9JCGTJ/WDqRtEbJWWTQNs0KObgp3a1DFQhS19toVK8d/2q2YmVasjdQaWqZhotPg==
   dependencies:
     postcss-selector-parser "^6.0.7"
 
@@ -4796,13 +4801,13 @@ postcss-place@^7.0.2:
     postcss-value-parser "^4.2.0"
 
 postcss-preset-env@^7.0.0:
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/postcss-preset-env/-/postcss-preset-env-7.0.2.tgz#f143d4aa2eb0f13a50f20bbcff8b3bb3413e7bc6"
-  integrity sha512-xgmkS+H2xhjPQWewnH4ViKBCHIZ15FfpldGZuBFaBIi/iipxHTLnBHKtkCp1L531SdNEPwo9md2psjOU1G77lw==
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/postcss-preset-env/-/postcss-preset-env-7.1.0.tgz#bb91486e15aa30307292acfcea07e871f30714d5"
+  integrity sha512-YZI44uxVJQQu18TeHEoDtdLsjKLQpCpzt/4FAzadIcnNYwvKSQqvxaHE6uWobEWQrcfU42zIddMPUKgYQxZs8g==
   dependencies:
     autoprefixer "^10.4.0"
     browserslist "^4.19.1"
-    caniuse-lite "^1.0.30001287"
+    caniuse-lite "^1.0.30001291"
     css-blank-pseudo "^3.0.0"
     css-has-pseudo "^3.0.0"
     css-prefers-color-scheme "^6.0.0"
