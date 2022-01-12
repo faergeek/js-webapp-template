@@ -4606,10 +4606,10 @@ postcss-custom-media@^8.0.0:
   resolved "https://registry.yarnpkg.com/postcss-custom-media/-/postcss-custom-media-8.0.0.tgz#1be6aff8be7dc9bf1fe014bde3b71b92bb4552f1"
   integrity sha512-FvO2GzMUaTN0t1fBULDeIvxr5IvbDXcIatt6pnJghc736nqNgsGao5NT+5+WVLAQiTt6Cb3YUms0jiPaXhL//g==
 
-postcss-custom-properties@^12.1.0:
-  version "12.1.1"
-  resolved "https://registry.yarnpkg.com/postcss-custom-properties/-/postcss-custom-properties-12.1.1.tgz#734076263ff1032f259c5310f03e6766ddd976f1"
-  integrity sha512-OpSjinS5X0xGOiau7I1vj4TkVcstne2XfDTyQGo6FEVtajsz1XRS3AmHTKnB4ZmVE7aZQUrB24iaaDTZ9R3BoQ==
+postcss-custom-properties@^12.1.2:
+  version "12.1.2"
+  resolved "https://registry.yarnpkg.com/postcss-custom-properties/-/postcss-custom-properties-12.1.2.tgz#066ecdb03779178ad60b8153755e79a2e70d17a9"
+  integrity sha512-Zvd+k66PHBYYPiXtdjNVx2l54Y9kQC7K1eUHzBND97RW/ayNxfaPOW+9NL3r0nsVbX1asPLdkDj585Wg0NBJCA==
   dependencies:
     postcss-value-parser "^4.2.0"
 
@@ -4713,7 +4713,7 @@ postcss-loader@^6.0.0:
     klona "^2.0.5"
     semver "^7.3.5"
 
-postcss-logical@^5.0.2:
+postcss-logical@^5.0.3:
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/postcss-logical/-/postcss-logical-5.0.3.tgz#9934e0fb16af70adbd94217b24d2f315ceb5c2f0"
   integrity sha512-P5NcHWYrif0vK8rgOy/T87vg0WRIj3HSknrvp1wzDbiBeoDPVmiVRmkown2eSQdpPveat/MC1ess5uhzZFVnqQ==
@@ -4908,9 +4908,9 @@ postcss-place@^7.0.3:
     postcss-value-parser "^4.2.0"
 
 postcss-preset-env@^7.0.0:
-  version "7.2.1"
-  resolved "https://registry.yarnpkg.com/postcss-preset-env/-/postcss-preset-env-7.2.1.tgz#851e8af81741edd459799912e6c4a67f2f0df39a"
-  integrity sha512-X+rp8R5a52rA0G41kHbdgQTEQQzYBVNTBg42zWY5qAnE6dLiQ4Xu7X2nGEoub8FO6Z5YYCVtSS+H/hhhi4LOBg==
+  version "7.2.2"
+  resolved "https://registry.yarnpkg.com/postcss-preset-env/-/postcss-preset-env-7.2.2.tgz#bebd1abf487e9cd3fe17ceb9ebc10e88f7de7888"
+  integrity sha512-qLlBuuxX05zX8nLNysqrU0U8y42ygGmcUyi43iGR34p9FSgNtTZXCpS+d0A2vt3a+XNiwcIbnomQqth8ejK1OQ==
   dependencies:
     autoprefixer "^10.4.2"
     browserslist "^4.19.1"
@@ -4924,7 +4924,7 @@ postcss-preset-env@^7.0.0:
     postcss-color-hex-alpha "^8.0.2"
     postcss-color-rebeccapurple "^7.0.2"
     postcss-custom-media "^8.0.0"
-    postcss-custom-properties "^12.1.0"
+    postcss-custom-properties "^12.1.2"
     postcss-custom-selectors "^6.0.0"
     postcss-dir-pseudo-class "^6.0.3"
     postcss-double-position-gradients "^3.0.4"
@@ -4936,7 +4936,7 @@ postcss-preset-env@^7.0.0:
     postcss-image-set-function "^4.0.4"
     postcss-initial "^4.0.1"
     postcss-lab-function "^4.0.3"
-    postcss-logical "^5.0.2"
+    postcss-logical "^5.0.3"
     postcss-media-minmax "^5.0.0"
     postcss-nesting "^10.1.2"
     postcss-overflow-shorthand "^3.0.2"
