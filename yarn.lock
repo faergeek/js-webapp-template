@@ -1061,9 +1061,9 @@
     strip-json-comments "^3.1.1"
 
 "@faergeek/eslint-config@^5.0.0":
-  version "5.0.34"
-  resolved "https://registry.yarnpkg.com/@faergeek/eslint-config/-/eslint-config-5.0.34.tgz#f1e7db7f3a6663fc6c2660121e51bd68ae912c3d"
-  integrity sha512-ncMpqQMgiGpJD5lZmrrhoizjWVCbPyq/JDtddY5GM9oxgu9+tzDnEKjpZGnN7yxO8NqnGmSDK+55ZVOcUOg2Dw==
+  version "5.0.37"
+  resolved "https://registry.yarnpkg.com/@faergeek/eslint-config/-/eslint-config-5.0.37.tgz#c44d091e6ed3e02d09bd9f433cfe4caad4a308b4"
+  integrity sha512-t0Ygjr0qOFU+oKUagrSF5o5QZ0mYoldTjkNrgdC8CWDn6588993ZUz1ls90QACqQlu5ZSWTNdd9MJK1be9K0FA==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.0.0"
     "@typescript-eslint/parser" "^5.0.0"
@@ -4109,9 +4109,9 @@ mini-svg-data-uri@^1.3.3:
   integrity sha512-gSfqpMRC8IxghvMcxzzmMnWpXAChSA+vy4cia33RgerMS8Fex95akUyQZPbxJJmeBGiGmK7n/1OpUX8ksRjIdA==
 
 minimatch@^3.0.4:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.1.1.tgz#879ad447200773912898b46cd516a7abbb5e50b0"
-  integrity sha512-reLxBcKUPNBnc/sVtAbxgRVFSegoGeLaSjmphNhcwcolhYLRgtJscn5mRl6YRZNQv40Y7P6JM2YhSIsbL9OB5A==
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.1.2.tgz#19cd194bfd3e428f049a70817c038d89ab4be35b"
+  integrity sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==
   dependencies:
     brace-expansion "^1.1.7"
 
