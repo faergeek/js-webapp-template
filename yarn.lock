@@ -1082,9 +1082,9 @@
     eslint-plugin-simple-import-sort "^7.0.0"
 
 "@faergeek/make-webpack-config@^16.0.0":
-  version "16.0.30"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-16.0.30.tgz#46412510ddabe6c2589280d93ab9ee2616f62df7"
-  integrity sha512-xe/el/+umuaCf+DcFB1kyQc3x/P5dEZvLgj/0uNW3JXV6cdPcKjXfwGbQ/gyiwmFfIyPu5pQKwvFQ9CfPpHA8Q==
+  version "16.0.32"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-16.0.32.tgz#8c5037e12c008c45504f00ddad6365b53b8a7497"
+  integrity sha512-Rwu49/7AG5m1wxjzM3kmIcZ3mb/U3EKBPL63wP4gLiRwCIGwNDhS9/0xDCJiGo06OBczGC6uo+6ilocjM1N89A==
   dependencies:
     "@pmmmwh/react-refresh-webpack-plugin" "^0.5.0"
     "@prefresh/babel-plugin" "^0.4.1"
