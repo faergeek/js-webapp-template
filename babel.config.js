@@ -4,7 +4,7 @@ module.exports = api => ({
       '@babel/env',
       {
         bugfixes: true,
-        corejs: '3.15',
+        corejs: '3.22',
         shippedProposals: true,
         useBuiltIns: 'entry',
       },
