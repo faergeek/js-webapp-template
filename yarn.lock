@@ -1080,9 +1080,9 @@
     strip-json-comments "^3.1.1"
 
 "@faergeek/eslint-config@^5.0.0":
-  version "5.0.63"
-  resolved "https://registry.yarnpkg.com/@faergeek/eslint-config/-/eslint-config-5.0.63.tgz#1b9c6c6753b8cdd9f29ec19d27489a5c6c5aab0a"
-  integrity sha512-moRoIYmCkWodSrNKFovb9wmmR9TnjbvgbW7mHM3nNTEkEE309sc+RGA2O6GLQWt5NcZ3YiULQTqgxlIjmXYm0w==
+  version "5.0.64"
+  resolved "https://registry.yarnpkg.com/@faergeek/eslint-config/-/eslint-config-5.0.64.tgz#2f1793ed0ffbf1e950c9c24e92cbe7907ea0d310"
+  integrity sha512-InLS3JUK/e9QRpxc4lK5lQLt2bvsoW3vw5NK/h1xwn1x3jF6SXdcaSz/eVHJHtHWvYU2MqUeO+5p6x5moAa+/w==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.0.0"
     "@typescript-eslint/parser" "^5.0.0"
@@ -2822,9 +2822,9 @@ eslint-config-prettier@^8.3.0:
   integrity sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==
 
 eslint-plugin-jest@^26.0.0:
-  version "26.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-26.2.0.tgz#13f676ded6e5ea663c28d1bfba3893fa88b3a4c1"
-  integrity sha512-XSOV5ybCdmakNm0YjGgvuJVQIEjUjCOzlIcOsWtEeWEJ7/wh4YGHgVaJvkHzky+ugzKG89r3Wy4A9z72tWSFmQ==
+  version "26.2.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-26.2.1.tgz#7ad729bb90ac5fde29291288fed44aad7849457f"
+  integrity sha512-4MffeAWEiC5z6rtPo8AFm59T32EIUwyLxpa46eNNrcewfpN6OfXChlnvaErjO2Kyhhi6BNo5ocsnpUg2mCRJPA==
   dependencies:
     "@typescript-eslint/utils" "^5.10.0"
 
