@@ -1116,9 +1116,9 @@
     eslint-plugin-simple-import-sort "^7.0.0"
 
 "@faergeek/make-webpack-config@^16.0.0":
-  version "16.0.46"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-16.0.46.tgz#7fca49f6b6f74c650f4dab092415c1f55135875d"
-  integrity sha512-0we+Sn+IUA7GCjS4oB5n8LUciH2V79lZ9R/5QAYGqYAaP7VPBoFAxz47+j9s7xLXnrlrb9LBB64HO4yK/aherQ==
+  version "16.0.47"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-16.0.47.tgz#2579a093b6cb21f20af74d48f8c2b4786416cc7b"
+  integrity sha512-A/lVbxuKsd8WlyTo1RmnIslYykkqVtwWR/9gW3vnW8kje0FGcwyPoeMGDAs2TbuJUQpGCckBBKPK3oNhrOIWrg==
   dependencies:
     "@pmmmwh/react-refresh-webpack-plugin" "^0.5.0"
     "@prefresh/babel-plugin" "^0.4.1"
@@ -1131,7 +1131,7 @@
     mini-svg-data-uri "^1.3.3"
     node-sass "^7.0.0"
     postcss-loader "^7.0.0"
-    react-refresh "0.13.0"
+    react-refresh "0.14.0"
     resolve-url-loader "^5.0.0"
     sass-loader "^13.0.0"
     source-map-loader "^4.0.0"
@@ -1403,9 +1403,9 @@
   integrity sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==
 
 "@types/node@*":
-  version "17.0.42"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.42.tgz#d7e8f22700efc94d125103075c074396b5f41f9b"
-  integrity sha512-Q5BPGyGKcvQgAMbsr7qEGN/kIPN6zZecYYABeTDBizOsau+2NMdSVTar9UQw21A2+JyA2KRNDYaYrPB0Rpk2oQ==
+  version "18.0.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.0.0.tgz#67c7b724e1bcdd7a8821ce0d5ee184d3b4dd525a"
+  integrity sha512-cHlGmko4gWLVI27cGJntjs/Sj8th9aYwplmZFwmmgYQQvL5NUsgVJG7OddLvNfLqYS31KFN0s3qlaD9qCaxACA==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -2137,7 +2137,12 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001335, caniuse-lite@^1.0.30001349:
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001349:
+  version "1.0.30001355"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001355.tgz#e240b7177443ed0198c737a7f609536976701c77"
+  integrity sha512-Sd6pjJHF27LzCB7pT7qs+kuX2ndurzCzkpJl6Qct7LPSZ9jn0bkOA8mdgMgmqnQAWLVOOGjLpc+66V57eLtb1g==
+
+caniuse-lite@^1.0.30001335:
   version "1.0.30001352"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001352.tgz#cc6f5da3f983979ad1e2cdbae0505dccaa7c6a12"
   integrity sha512-GUgH8w6YergqPQDGWhJGt8GDRnY0L/iJVQcU3eJ46GYf52R8tk0Wxp0PymuFVZboJYXGiCqwozAYZNRjVj6IcA==
@@ -2361,9 +2366,9 @@ core-js-compat@^3.21.0, core-js-compat@^3.22.1:
     semver "7.0.0"
 
 core-js-pure@^3.8.1:
-  version "3.23.0"
-  resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.23.0.tgz#f27426a6144a37484cfc5fd8b56eecc5180cd393"
-  integrity sha512-ksjJc/xVTQzT2q6trPja2qWynMEaGO36rDui2SiqLPYab9TmPgT8nIVcre/yscviPCSweUdCDGKe4MsQA9w1zQ==
+  version "3.23.1"
+  resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.23.1.tgz#0b27e4c3ad46178b84e790dbbb81987218ab82ad"
+  integrity sha512-3qNgf6TqI3U1uhuSYRzJZGfFd4T+YlbyVPl+jgRiKjdZopvG4keZQwWZDAWpu1UH9nCgTpUzIV3GFawC7cJsqg==
 
 core-js@^3.2.1:
   version "3.23.1"
@@ -2706,9 +2711,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.4.147:
-  version "1.4.154"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.154.tgz#d69c60499fc467a6c59591d29183e520afbc78a1"
-  integrity sha512-GbV9djOkrnj6xmW+YYVVEI3VCQnJ0pnSTu7TW2JyjKd5cakoiSaG5R4RbEtfaD92GsY10DzbU3GYRe+IOA9kqA==
+  version "1.4.158"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.158.tgz#abbdaaf64676bfa4bc0307522125db34424a0ada"
+  integrity sha512-gppO3/+Y6sP432HtvwvuU8S+YYYLH4PmAYvQwqUtt9HDOmEsBwQfLnK9T8+1NIKwAS1BEygIjTaATC4H5EzvxQ==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -4147,9 +4152,9 @@ min-indent@^1.0.0:
   integrity sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==
 
 mini-css-extract-plugin@^2.0.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/mini-css-extract-plugin/-/mini-css-extract-plugin-2.6.0.tgz#578aebc7fc14d32c0ad304c2c34f08af44673f5e"
-  integrity sha512-ndG8nxCEnAemsg4FSgS+yNyHKgkTB4nPKqCOgh65j3/30qqC5RaSQQXMm++Y6sb6E1zRSxPkztj9fqxhS1Eo6w==
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/mini-css-extract-plugin/-/mini-css-extract-plugin-2.6.1.tgz#9a1251d15f2035c342d99a468ab9da7a0451b71e"
+  integrity sha512-wd+SD57/K6DiV7jIR34P+s3uckTRuQvx0tKPcvjFlrEylk6P4mQ2KSWk1hblj1Kxaqok7LogKOieygXqBczNlg==
   dependencies:
     schema-utils "^4.0.0"
 
@@ -5296,10 +5301,10 @@ react-is@^16.13.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-refresh@0.13.0:
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.13.0.tgz#cbd01a4482a177a5da8d44c9755ebb1f26d5a1c1"
-  integrity sha512-XP8A9BT0CpRBD+NYLLeIhld/RqG9+gktUjW1FkE+Vm7OCinbG1SshcK5tb9ls4kzvjZr9mOQc7HYgBngEyPAXg==
+react-refresh@0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.14.0.tgz#4e02825378a5f227079554d4284889354e5f553e"
+  integrity sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==
 
 react@^17.0.2:
   version "17.0.2"
