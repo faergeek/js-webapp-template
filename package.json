@@ -50,7 +50,7 @@
     {
       "name": "css",
       "path": "build/public/*.css",
-      "limit": 1068
+      "limit": 997
     },
     {
       "name": "js",
@@ -59,7 +59,7 @@
         "!build/public/hot.js",
         "!**/*.hot-update.js"
       ],
-      "limit": 4115
+      "limit": 4130
     }
   ],
   "dependencies": {
