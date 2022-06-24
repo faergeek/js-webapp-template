@@ -1103,9 +1103,9 @@
     strip-json-comments "^3.1.1"
 
 "@faergeek/eslint-config@^5.0.0":
-  version "5.0.80"
-  resolved "https://registry.yarnpkg.com/@faergeek/eslint-config/-/eslint-config-5.0.80.tgz#e4b129c154c2c6bce19dfbfd00b6d688ca3bca3f"
-  integrity sha512-vTqKHp0SUjwzdjlhc/AcLkJgv0WrH0O0iu7NnWE79HExsKVe2LuKWEDcJXldcKplGn4WFgwg89I5yCFDy2TfGg==
+  version "5.0.81"
+  resolved "https://registry.yarnpkg.com/@faergeek/eslint-config/-/eslint-config-5.0.81.tgz#588393463a68e8e2934f78c63fc80cdea6870b1a"
+  integrity sha512-F/vL1apyCqOCyzUU/bgDFqKjYATtuYxW4Ahf0A1o/mAXC0r3u4KnzaPDn/LOj9pptguirTTk3ZgqJzFuYZjUuw==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.0.0"
     "@typescript-eslint/parser" "^5.0.0"
@@ -1842,7 +1842,7 @@ array-flatten@1.1.1:
   resolved "https://registry.yarnpkg.com/array-flatten/-/array-flatten-1.1.1.tgz#9a5f699051b1e7073328f2a008968b64ea2955d2"
   integrity sha512-PCVAQswWemu6UdxsDFFX/+gVeYqKAod3D3UVm91jHwynguOwAvYPhx8nNlM++NqRcK6CxxpUafjmhIdKiHibqg==
 
-array-includes@^3.1.4, array-includes@^3.1.5:
+array-includes@^3.1.5:
   version "3.1.5"
   resolved "https://registry.yarnpkg.com/array-includes/-/array-includes-3.1.5.tgz#2c320010db8d31031fd2a5f6b3bbd4b1aad31bdb"
   integrity sha512-iSDYZMMyTPkiFasVqfuAQnWAYcvO/SeBSCGKePoEthjp4LEMTe4uLc7b025o4jAZpHhihh8xPo99TNWUWWkGDQ==
@@ -2878,9 +2878,9 @@ eslint-plugin-react-hooks@^4.2.0:
   integrity sha512-oFc7Itz9Qxh2x4gNHStv3BqJq54ExXmfC+a1NjAta66IAN87Wu0R/QArgIS9qKzX3dXKPI9H5crl9QchNMY9+g==
 
 eslint-plugin-react@^7.23.2:
-  version "7.30.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.30.0.tgz#8e7b1b2934b8426ac067a0febade1b13bd7064e3"
-  integrity sha512-RgwH7hjW48BleKsYyHK5vUAvxtE9SMPDKmcPRQgtRCYaZA0XQPt5FSkrU3nhz5ifzMZcA8opwmRJ2cmOO8tr5A==
+  version "7.30.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.30.1.tgz#2be4ab23ce09b5949c6631413ba64b2810fd3e22"
+  integrity sha512-NbEvI9jtqO46yJA3wcRF9Mo0lF9T/jhdHqhCHXiXtD+Zcb98812wvokjWpU7Q4QH5edo6dmqrukxVvWWXHlsUg==
   dependencies:
     array-includes "^3.1.5"
     array.prototype.flatmap "^1.3.0"
@@ -3931,11 +3931,11 @@ jsprim@^1.2.2:
     verror "1.10.0"
 
 "jsx-ast-utils@^2.4.1 || ^3.0.0":
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/jsx-ast-utils/-/jsx-ast-utils-3.3.0.tgz#e624f259143b9062c92b6413ff92a164c80d3ccb"
-  integrity sha512-XzO9luP6L0xkxwhIJMTJQpZo/eeN60K08jHdexfD569AGxeNug6UketeHXEhROoM8aR7EcUoOQmIhcJQjcuq8Q==
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/jsx-ast-utils/-/jsx-ast-utils-3.3.1.tgz#a3e0f1cb7e230954eab4dcbce9f6288a78f8ba44"
+  integrity sha512-pxrjmNpeRw5wwVeWyEAk7QJu2GnBO3uzPFmHCKJJFPKK2Cy0cWL23krGtLdnMmbIi6/FjlrQpPyfQI19ByPOhQ==
   dependencies:
-    array-includes "^3.1.4"
+    array-includes "^3.1.5"
     object.assign "^4.1.2"
 
 kind-of@^6.0.2, kind-of@^6.0.3:
