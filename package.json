@@ -50,7 +50,7 @@
     {
       "name": "css",
       "path": "build/public/*.css",
-      "limit": 1048
+      "limit": 2145
     },
     {
       "name": "js",
