@@ -1123,9 +1123,9 @@
     strip-json-comments "^3.1.1"
 
 "@faergeek/eslint-config@^5.0.0":
-  version "5.0.111"
-  resolved "https://registry.yarnpkg.com/@faergeek/eslint-config/-/eslint-config-5.0.111.tgz#35e5b4920fa809658c9a3ee5578b910b096cbb2a"
-  integrity sha512-4C54CiOXGDa5KSOkcxm25bZYwpW1ft/QrIZ/S4yJCM05a2aICOU9eZD3HJtlM/0sAX2pZggghMixM1ddT5FeLA==
+  version "5.0.113"
+  resolved "https://registry.yarnpkg.com/@faergeek/eslint-config/-/eslint-config-5.0.113.tgz#11a65068a63cff145545f5e2c4b0c771ea3e989c"
+  integrity sha512-8/6CAnEAWiFlM7ipoAH/1WwyP/BNkad4QfqrNwtRKh1XahD/RzqHFmYrIqmnqcYiWjxeAG/KYkXpVrNYCwtNww==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.0.0"
     "@typescript-eslint/parser" "^5.0.0"
@@ -1133,7 +1133,7 @@
     eslint-plugin-jest "^27.0.0"
     eslint-plugin-react "^7.23.2"
     eslint-plugin-react-hooks "^4.2.0"
-    eslint-plugin-simple-import-sort "^7.0.0"
+    eslint-plugin-simple-import-sort "^8.0.0"
 
 "@faergeek/make-webpack-config@^16.0.0":
   version "16.0.54"
@@ -2928,10 +2928,10 @@ eslint-plugin-react@^7.23.2:
     semver "^6.3.0"
     string.prototype.matchall "^4.0.7"
 
-eslint-plugin-simple-import-sort@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-simple-import-sort/-/eslint-plugin-simple-import-sort-7.0.0.tgz#a1dad262f46d2184a90095a60c66fef74727f0f8"
-  integrity sha512-U3vEDB5zhYPNfxT5TYR7u01dboFZp+HNpnGhkDB2g/2E4wZ/g1Q9Ton8UwCLfRV9yAKyYqDh62oHOamvkFxsvw==
+eslint-plugin-simple-import-sort@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-simple-import-sort/-/eslint-plugin-simple-import-sort-8.0.0.tgz#9d9a2372b0606e999ea841b10458a370a6ccc160"
+  integrity sha512-bXgJQ+lqhtQBCuWY/FUWdB27j4+lqcvXv5rUARkzbeWLwea+S5eBZEQrhnO+WgX3ZoJHVj0cn943iyXwByHHQw==
 
 eslint-scope@5.1.1, eslint-scope@^5.1.1:
   version "5.1.1"
