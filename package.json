@@ -59,7 +59,7 @@
         "!build/public/hot.js",
         "!**/*.hot-update.js"
       ],
-      "limit": 4103
+      "limit": 4120
     }
   ],
   "dependencies": {
