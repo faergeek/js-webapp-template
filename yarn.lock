@@ -1134,9 +1134,9 @@
     eslint-plugin-simple-import-sort "^8.0.0"
 
 "@faergeek/make-webpack-config@^16.0.0":
-  version "16.1.1"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-16.1.1.tgz#72af64a67f07dad107a6cd32fe8796292685d7eb"
-  integrity sha512-owCCmPq9HMUma3VBWmU/X/rCt59kRVxslyXiQKMxKQp5qKrf1Jj7gqBFTdkWuR14VdemavWt3ew+eSLF+ZPcNQ==
+  version "16.1.2"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-16.1.2.tgz#71248d99494e56b652b3e1f1f3bfd43c3480595d"
+  integrity sha512-DOVmC579tMGKZ34O8xoRgl2ViEt4zWE1y734LbOH/kNdZmdJ72KwZfGFZzMe+lnR8NfgJyMwfuikIbSKeqzMwQ==
   dependencies:
     "@pmmmwh/react-refresh-webpack-plugin" "^0.5.0"
     "@prefresh/babel-plugin" "^0.4.1"
@@ -1328,9 +1328,9 @@
     "@prefresh/utils" "^1.1.2"
 
 "@sinclair/typebox@^0.24.1":
-  version "0.24.50"
-  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.24.50.tgz#35ee4db4ab8f3a8ff56490c51f92445d2776451e"
-  integrity sha512-k8ETQOOQDg5FtK7y9KJWpsGLik+QlPmIi8zzl/dGUgshV2QitprkFlCR/AemjWOTyKn9UwSSGRTzLVotvgCjYQ==
+  version "0.24.51"
+  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.24.51.tgz#645f33fe4e02defe26f2f5c0410e1c094eac7f5f"
+  integrity sha512-1P1OROm/rdubP5aFDSZQILU0vrLCJ4fvHt6EoqHEM+2D/G5MK3bIaymUKLit8Js9gbns5UyJnkP/TZROLw4tUA==
 
 "@sitespeed.io/tracium@^0.3.3":
   version "0.3.3"
@@ -1474,9 +1474,9 @@
   integrity sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==
 
 "@types/node@*":
-  version "18.11.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.5.tgz#1bc94cf2f9ab5fe33353bc7c79c797dcc5325bef"
-  integrity sha512-3JRwhbjI+cHLAkUorhf8RnqUbFXajvzX4q6fMn5JwkgtuwfYtRQYI3u4V92vI6NJuTsbBQWWh3RZjFsuevyMGQ==
+  version "18.11.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.6.tgz#4f91b0b30d405fdf76e0029b11ef5df6a0da4261"
+  integrity sha512-j3CEDa2vd96K0AXF8Wur7UucACvnjkk8hYyQAHhUNciabZLDl9nfAEVUSwmh245OOZV15bRA3Y590Gi5jUcDJg==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -2219,7 +2219,12 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001400, caniuse-lite@^1.0.30001407:
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001400:
+  version "1.0.30001425"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001425.tgz#52917791a453eb3265143d2cd08d80629e82c735"
+  integrity sha512-/pzFv0OmNG6W0ym80P3NtapU0QEiDS3VuYAZMGoLLqiC7f6FJFe1MjpQDREGApeenD9wloeytmVDj+JLXPC6qw==
+
+caniuse-lite@^1.0.30001407:
   version "1.0.30001423"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001423.tgz#57176d460aa8cd85ee1a72016b961eb9aca55d91"
   integrity sha512-09iwWGOlifvE1XuHokFMP7eR38a0JnajoyL3/i87c8ZjRWRrdKo1fqjNfugfBD0UDBIOz0U+jtNhJ0EPm1VleQ==
@@ -6445,9 +6450,9 @@ webidl-conversions@^3.0.0:
   integrity sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==
 
 webpack-bundle-analyzer@^4.4.1:
-  version "4.6.1"
-  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-4.6.1.tgz#bee2ee05f4ba4ed430e4831a319126bb4ed9f5a6"
-  integrity sha512-oKz9Oz9j3rUciLNfpGFjOb49/jEpXNmWdVH8Ls//zNcnLlQdTGXQQMsBbb/gR7Zl8WNLxVCq+0Hqbx3zv6twBw==
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-4.7.0.tgz#33c1c485a7fcae8627c547b5c3328b46de733c66"
+  integrity sha512-j9b8ynpJS4K+zfO5GGwsAcQX4ZHpWV+yRiHDiL+bE0XHJ8NiPYLTNVQdlFYWxtpg9lfAQNlwJg16J9AJtFSXRg==
   dependencies:
     acorn "^8.0.4"
     acorn-walk "^8.0.0"
