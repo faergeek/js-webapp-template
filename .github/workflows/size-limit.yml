@@ -6,20 +6,13 @@ jobs:
     env:
       CI_JOB_NUMBER: 1
     steps:
-      - name: Check out the code
-        uses: actions/checkout@v3
-      - name: Restore dependencies cache
-        uses: actions/cache@v3
-        id: yarn-cache
+      - uses: styfle/cancel-workflow-action@0.11.0
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          path: |
-            ~/.cache/yarn
-            node_modules
-      - name: Compare bundle sizes with base branch
-        uses: andresz1/size-limit-action@v1
+          cache: yarn
+          node-version-file: .nvmrc
+      - uses: andresz1/size-limit-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           clean_script: cleanup
