@@ -19,7 +19,7 @@ jobs:
             ~/.cache/yarn
             node_modules
       - name: Compare bundle sizes with base branch
-        uses: faergeek/size-limit-action@extended
+        uses: andresz1/size-limit-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           clean_script: cleanup
