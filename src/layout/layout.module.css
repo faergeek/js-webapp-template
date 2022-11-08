@@ -1,0 +1,64 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  min-height: 100%;
+}
+
+.root::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  bottom: auto;
+  height: 3px;
+  box-shadow: 0 1px 2px var(--color-accent-alt);
+  background: var(--color-accent);
+  transform: scaleX(1);
+  transform-origin: left;
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: 400ms, 200ms;
+  transition-timing-function: ease-out;
+}
+
+.root_loading::after {
+  transform: scaleX(0.3);
+  opacity: 1;
+  transition-property: none;
+}
+
+.headerInner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding-top: 1em;
+}
+
+.searchForm {
+  flex: 0 1 400px;
+  min-width: 0;
+}
+
+.searchInput {
+  width: 100%;
+}
+
+.main {
+  flex: 1 1 0;
+}
+
+.footer {
+  margin: 0 1em;
+  border-top: 1px solid;
+  padding: 0 0.5em;
+  color: var(--color-muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+  padding: 0 1em;
+  max-width: var(--container-width);
+}

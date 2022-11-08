@@ -1,13 +1,40 @@
-import * as compression from 'compression';
-import * as express from 'express';
-import { readFile } from 'fs/promises';
-import * as path from 'path';
-import renderToString from 'preact-render-to-string';
+import { readFile } from 'node:fs/promises';
+import * as path from 'node:path';
 
-import { App } from './app';
+import {
+  AgnosticRouteObject,
+  unstable_createStaticHandler as createStaticHandler,
+} from '@remix-run/router';
+import * as bodyParser from 'body-parser';
+import * as express from 'express';
+import * as nocache from 'nocache';
+import { renderToPipeableStream } from 'react-dom/server';
+import { RouteObject } from 'react-router-dom';
+import {
+  unstable_createStaticRouter as createStaticRouter,
+  unstable_StaticRouterProvider as StaticRouterProvider,
+} from 'react-router-dom/server';
+import invariant from 'tiny-invariant';
+
+import { EntryProvider } from './entryContext';
+import { routes } from './routes';
+
+function convertRoute(route: RouteObject): AgnosticRouteObject {
+  const hasErrorBoundary = route.errorElement != null;
+
+  return route.index
+    ? {
+        ...route,
+        hasErrorBoundary,
+      }
+    : {
+        ...route,
+        hasErrorBoundary,
+        children: route.children?.map(convertRoute),
+      };
+}
 
 export const requestHandler = express()
-  .use(compression())
   .use(express.static(path.resolve('public')))
   .use(
     express.static(path.resolve('build', 'public'), {
@@ -15,30 +42,104 @@ export const requestHandler = express()
       maxAge: import.meta.webpackHot ? undefined : '1 year',
     })
   )
-  .get('/', async (_req, res, next) => {
+  .use(bodyParser.urlencoded({ extended: false }))
+  .use(nocache())
+  .use(async (req, res, next) => {
     try {
       const { main }: { main: { css: string[]; js: string[] } } = JSON.parse(
         await readFile(path.resolve(__dirname, 'webpack-assets.json'), 'utf-8')
       );
 
-      res.set('Content-Type', 'text/html').send(
-        `<!doctype html>${renderToString(
-          <html lang="en">
-            <meta charSet="utf-8" />
-            <title>JS WebApp Template</title>
-            <meta
-              name="viewport"
-              content="width=device-width,initial-scale=1"
-            />
-            {main.css.map(href => (
-              <link key={href} rel="stylesheet" href={href} />
-            ))}
-            {main.js.map(src => (
-              <script key={src} defer src={src} />
-            ))}
-            <App />
-          </html>
-        )}`
+      const abortController = new AbortController();
+
+      req.on('close', () => {
+        abortController.abort();
+      });
+
+      const origin = `${req.protocol}://${req.get('host')}`;
+
+      let body: BodyInit | undefined;
+      switch (req.headers['content-type']) {
+        case 'application/x-www-form-urlencoded': {
+          const searchParams = new URLSearchParams();
+
+          Object.entries(req.body).forEach(([key, value]) => {
+            if (Array.isArray(value)) {
+              value.forEach(v => {
+                searchParams.append(key, v);
+              });
+            } else if (typeof value === 'string') {
+              searchParams.append(key, value);
+            }
+          });
+
+          body = searchParams.toString();
+          break;
+        }
+      }
+
+      const request = new Request(new URL(req.originalUrl, origin), {
+        signal: abortController.signal,
+        method: req.method,
+        headers: new Headers(
+          Object.entries(req.headers).flatMap(
+            ([key, value]): Array<[string, string]> => {
+              if (!value) {
+                return [];
+              }
+
+              if (Array.isArray(value)) {
+                return value.map(v => [key, v]);
+              }
+
+              return [[key, value]];
+            }
+          )
+        ),
+        body,
+      });
+
+      const { query } = createStaticHandler(routes.map(convertRoute));
+      const context = await query(request);
+
+      if (context instanceof Response) {
+        if (context.status >= 300 && context.status < 400) {
+          const location = context.headers.get('Location');
+          invariant(
+            location,
+            'Received response 3xx status, but without location'
+          );
+          res.redirect(context.status, location);
+          return;
+        }
+
+        throw context;
+      }
+
+      const stream = renderToPipeableStream(
+        <EntryProvider
+          css={main.css}
+          js={main.js}
+          hydrationState={{
+            actionData: context.actionData,
+            errors: context.errors,
+            loaderData: context.loaderData,
+          }}
+        >
+          <StaticRouterProvider
+            context={context}
+            hydrate={false}
+            router={createStaticRouter(routes, context)}
+          />
+        </EntryProvider>,
+        {
+          onShellReady() {
+            res.status(context.statusCode).set('Content-Type', 'text/html');
+
+            stream.pipe(res);
+          },
+          onError: next,
+        }
       );
     } catch (err) {
       next(err);

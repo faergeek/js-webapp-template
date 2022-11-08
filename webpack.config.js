@@ -6,10 +6,6 @@ module.exports = (env, argv) => {
   const watch = env.WEBPACK_WATCH;
 
   return makeWebpackConfig({
-    alias: {
-      react: 'preact/compat',
-      'react-dom': 'preact/compat',
-    },
     analyze: !dev,
     dev,
     entry: {
@@ -21,7 +17,7 @@ module.exports = (env, argv) => {
       public: path.resolve('build', 'public'),
       src: path.resolve('src'),
     },
-    prefresh: true,
+    reactRefresh: true,
     watch,
   });
 };

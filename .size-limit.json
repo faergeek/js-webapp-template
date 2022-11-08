@@ -1,0 +1,12 @@
+[
+  {
+    "name": "css",
+    "path": "build/public/*.css",
+    "limit": 2151
+  },
+  {
+    "name": "js",
+    "path": "build/public/*.js",
+    "limit": 72510
+  }
+]

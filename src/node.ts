@@ -1,6 +1,7 @@
 import 'dotenv-flow/config';
 
-import { createServer } from 'http';
+import { createServer } from 'node:http';
+
 import invariant from 'tiny-invariant';
 
 import { requestHandler } from './nodeRequestHandler';
