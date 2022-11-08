@@ -1,18 +1,5 @@
 {
-  "extends": ["config:base", ":prHourlyLimitNone"],
+  "extends": ["config:base", ":semanticCommitsDisabled"],
   "lockFileMaintenance": { "enabled": true },
-  "packageRules": [
-    {
-      "automerge": true,
-      "packagePatterns": [
-        "^@babel/",
-        "^@faergeek/eslint-config",
-        "^@types/",
-        "^@typescript-eslint/",
-        "^eslint",
-        "^prettier$"
-      ]
-    }
-  ],
   "rangeStrategy": "update-lockfile"
 }

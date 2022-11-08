@@ -1,0 +1,38 @@
+.imageAndForm {
+  display: grid;
+  gap: 1em;
+}
+
+@media (min-width: 600px) {
+  .imageAndForm {
+    grid-template-columns: 300px 1fr;
+    align-items: start;
+  }
+}
+
+.image {
+  justify-self: center;
+  height: 200px;
+  object-fit: contain;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.fieldLabel {
+  display: block;
+  padding-bottom: 0.5em;
+}
+
+.textInput {
+  min-height: calc(3 * 1.2em);
+  width: 100%;
+  line-height: 1.2;
+}
+
+.select {
+  width: 100%;
+}

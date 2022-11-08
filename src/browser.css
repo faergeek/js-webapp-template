@@ -1,31 +1,106 @@
 @import 'normalize.css';
 
 :root {
+  --container-width: 800px;
+  --color-fg: #000;
+  --color-bg: #fff;
+  --color-accent: #96c;
+  --color-accent-alt: #639;
+  --color-muted: #ccc;
+  min-width: 320px;
   font: 1em system-ui;
 }
 
-::selection {
-  background: white;
-  color: rebeccapurple;
-}
-
-:any-link {
-  color: inherit;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-fg: #fff;
+    --color-bg: #000;
+    color-scheme: dark;
+  }
 }
 
 html {
   box-sizing: border-box;
-  padding: 24px;
-  min-width: 320px;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rebeccapurple;
-  color: white;
-  text-align: center;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  background: var(--color-bg);
+  color: var(--color-fg);
 }
 
 body {
   margin: 0;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+:any-link {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+:any-link:hover,
+:any-link:focus-visible {
+  color: var(--color-accent-alt);
+  text-decoration: underline;
+}
+
+:any-link:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 2px 2px var(--color-accent);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button:disabled,
+input:disabled,
+textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+label,
+button,
+select {
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid var(--color-accent);
+  padding: 0.5em;
+  border-radius: 8px;
+  background: none;
+  color: var(--color-fg);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 0;
+  box-shadow: 0 0 2px 2px var(--color-accent);
+}
+
+textarea {
+  resize: vertical;
 }

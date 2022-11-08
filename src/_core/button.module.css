@@ -1,0 +1,19 @@
+.btn {
+  border: 1px solid transparent;
+  padding: 0.5em 0.5em;
+  border-radius: 8px;
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.btn:not(:disabled):hover,
+.btn:not(:disabled):focus-visible {
+  background: var(--color-accent-alt);
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):focus-visible {
+  outline: 0;
+  box-shadow: 0 0 2px 2px var(--color-accent);
+}

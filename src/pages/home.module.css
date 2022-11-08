@@ -1,0 +1,6 @@
+.templatesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, min(50% - 0.5em, 200px));
+  justify-content: center;
+  gap: 1em;
+}

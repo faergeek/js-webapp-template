@@ -5,13 +5,3 @@ declare module '*.module.css' {
   const css: { [key: string]: string };
   export = css;
 }
-
-declare module '*.module.sass' {
-  const css: { [key: string]: string };
-  export = css;
-}
-
-declare module '*.module.scss' {
-  const css: { [key: string]: string };
-  export = css;
-}

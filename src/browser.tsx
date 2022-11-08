@@ -1,7 +1,19 @@
 import './browser.css';
-__DEV__ && require('preact/debug');
-import { hydrate } from 'preact';
 
-import { App } from './app';
+import { hydrateRoot, Root } from 'react-dom/client';
 
-hydrate(<App />, document.body);
+import { BrowserRoot } from './browserRoot';
+
+interface HotData {
+  root: Root;
+}
+
+const root =
+  (import.meta.webpackHot?.data as HotData | undefined)?.root ??
+  hydrateRoot(document, <BrowserRoot />);
+
+import.meta.webpackHot?.accept();
+
+import.meta.webpackHot?.dispose(data => {
+  (data as HotData).root = root;
+});

@@ -2,6 +2,7 @@
   "private": true,
   "main": "build/main.js",
   "scripts": {
+    "cleanup": "rimraf build",
     "prettier": "prettier --write .",
     "prettier:check": "prettier --list-different .",
     "lint": "eslint --max-warnings 0 .",
@@ -9,67 +10,20 @@
     "dev": "webpack watch --node-env=development",
     "build": "webpack --node-env=production",
     "build:analyze": "webpack watch --node-env=production",
-    "cleanup": "rimraf build",
     "start": "node --enable-source-maps ."
   },
-  "prettier": {
-    "arrowParens": "avoid",
-    "singleQuote": true
-  },
-  "eslintConfig": {
-    "root": true,
-    "extends": "@faergeek",
-    "overrides": [
-      {
-        "files": "*",
-        "extends": "@faergeek/eslint-config/node"
-      },
-      {
-        "files": "src/**/*",
-        "extends": "@faergeek/eslint-config/preact"
-      },
-      {
-        "files": "**/*.ts?(x)",
-        "extends": "@faergeek/eslint-config/typescript"
-      }
-    ]
-  },
-  "postcss": {
-    "plugins": [
-      "postcss-preset-env",
-      "postcss-normalize"
-    ]
-  },
-  "browserslist": [
-    "> 1%",
-    "not IE <= 11",
-    "not OperaMini all",
-    "not dead"
-  ],
-  "size-limit": [
-    {
-      "name": "css",
-      "path": "build/public/*.css",
-      "limit": 1003
-    },
-    {
-      "name": "js",
-      "path": [
-        "build/public/*.js",
-        "!build/public/hot.js",
-        "!**/*.hot-update.js"
-      ],
-      "limit": 4141
-    }
-  ],
   "dependencies": {
     "@babel/runtime": "^7.7.4",
-    "compression": "^1.7.4",
-    "core-js": "^3.2.1",
+    "@remix-run/router": "^1.0.3",
+    "body-parser": "^1.20.1",
+    "clsx": "^1.2.1",
     "dotenv-flow": "^3.2.0",
     "express": "^4.17.1",
-    "preact": "^10.5.13",
-    "preact-render-to-string": "^5.1.19",
+    "nocache": "^3.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3",
+    "serialize-javascript": "^6.0.0",
     "tiny-invariant": "^1.1.0"
   },
   "devDependencies": {
@@ -81,8 +35,9 @@
     "@faergeek/eslint-config": "^5.0.0",
     "@faergeek/make-webpack-config": "^16.0.0",
     "@size-limit/preset-app": "^8.0.0",
-    "@types/compression": "^1.7.0",
     "@types/express": "^4.17.12",
+    "@types/react-dom": "^18.0.8",
+    "@types/serialize-javascript": "^5.0.2",
     "browserslist": "^4.16.6",
     "eslint": "^8.0.0",
     "postcss": "^8.3.0",
