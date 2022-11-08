@@ -1134,9 +1134,9 @@
     eslint-plugin-simple-import-sort "^8.0.0"
 
 "@faergeek/make-webpack-config@^16.0.0":
-  version "16.1.7"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-16.1.7.tgz#75f5d1baad4883a1742ead0219c6ff3063037518"
-  integrity sha512-bbuYkFItdEomD9qcAg83OCFabXNdoNJqzSLZoL7raWfBsQRX89+0Qb6dFfWCQEprEjgvhmNsohNoBoRQVsKXrw==
+  version "16.1.8"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-16.1.8.tgz#6a005059528f0abd46451d82acbc271b47d16f60"
+  integrity sha512-X6R3Lk7bKHrfw6r9ARAfJGNnTlWD1OHS6m+OPseKyvV/r8wcKuRZJVN703kB6YGjkLlyw/uqFs3YvAOyYqgDvg==
   dependencies:
     "@faergeek/tiny-browser-hmr-webpack-plugin" "^1.0.1"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.5.0"
@@ -3977,9 +3977,9 @@ jest-worker@^27.4.5:
     supports-color "^8.0.0"
 
 jest-worker@^29.1.2:
-  version "29.2.1"
-  resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-29.2.1.tgz#8ba68255438252e1674f990f0180c54dfa26a3b1"
-  integrity sha512-ROHTZ+oj7sBrgtv46zZ84uWky71AoYi0vEV9CdEtc1FQunsoAGe5HbQmW76nI5QWdvECVPrSi1MCVUmizSavMg==
+  version "29.3.0"
+  resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-29.3.0.tgz#240a1cd731c7d6645e8bcc37a3d584f122afb44a"
+  integrity sha512-rP8LYClB5NCWW0p8GdQT9vRmZNrDmjypklEYZuGCIU5iNviVWCZK5MILS3rQwD0FY1u96bY7b+KoU17DdZy6Ww==
   dependencies:
     "@types/node" "*"
     jest-util "^29.2.1"
