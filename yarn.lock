@@ -1134,9 +1134,9 @@
     eslint-plugin-simple-import-sort "^8.0.0"
 
 "@faergeek/make-webpack-config@^16.0.0":
-  version "16.1.9"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-16.1.9.tgz#65a3d6c873d06eab3a7a140aa7f48c2874a7fe5a"
-  integrity sha512-ahQJSFhXsb8EjQjQnybpcNBDQVh1UuqtcEF3goS6NltWxVGyP86MukgXWtknCTB+d23/TLk/bED0ZQPbO/A6Jg==
+  version "16.1.10"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-16.1.10.tgz#9273630be655f6c7321ffd47d3b9459cafa1d741"
+  integrity sha512-A48lK+s2Z4vgz3kxcT63YrdvbjVKoQEG4FaePMcPmNtnZqqL/c+rBAVrRwjPvRnULo+6U1u6u0wx8WRAha+ONw==
   dependencies:
     "@faergeek/tiny-browser-hmr-webpack-plugin" "^1.0.1"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.5.0"
@@ -5636,9 +5636,9 @@ sass-graph@^4.0.1:
     yargs "^17.2.1"
 
 sass-loader@^13.0.0:
-  version "13.1.0"
-  resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-13.1.0.tgz#e5b9acf14199a9bc6eaed7a0b8b23951c2cebf6f"
-  integrity sha512-tZS1RJQ2n2+QNyf3CCAo1H562WjL/5AM6Gi8YcPVVoNxQX8d19mx8E+8fRrMWsyc93ZL6Q8vZDSM0FHVTJaVnQ==
+  version "13.2.0"
+  resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-13.2.0.tgz#80195050f58c9aac63b792fa52acb6f5e0f6bdc3"
+  integrity sha512-JWEp48djQA4nbZxmgC02/Wh0eroSUutulROUusYJO9P9zltRbNN80JCBHqRGzjd4cmZCa/r88xgfkjGD0TXsHg==
   dependencies:
     klona "^2.0.4"
     neo-async "^2.6.2"
