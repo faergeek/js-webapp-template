@@ -11,7 +11,10 @@ invariant(isFinite(PORT));
 
 const server = createServer(
   import.meta.webpackHot ? (...args) => requestHandler(...args) : requestHandler
-).listen(PORT);
+).listen(PORT, () => {
+  // eslint-disable-next-line no-console
+  console.log(`server is listening on port ${PORT}`);
+});
 
 if (import.meta.webpackHot) {
   import.meta.webpackHot.accept('./nodeRequestHandler');
