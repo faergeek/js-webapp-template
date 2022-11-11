@@ -5,6 +5,7 @@ import invariant from 'tiny-invariant';
 interface EntryContext {
   css: string[];
   js: string[];
+  nonce: string;
   routerState: HydrationState;
 }
 
@@ -14,10 +15,11 @@ interface ProviderProps {
   children: React.ReactNode;
   css: string[];
   js: string[];
+  nonce: string;
   router: Router;
 }
 
-export function Entry({ children, css, js, router }: ProviderProps) {
+export function Entry({ children, css, js, nonce, router }: ProviderProps) {
   const [{ actionData, errors, loaderData }, setRouterState] = useState(
     router.state
   );
@@ -30,9 +32,10 @@ export function Entry({ children, css, js, router }: ProviderProps) {
     (): EntryContext => ({
       css,
       routerState: { actionData, errors, loaderData },
+      nonce,
       js,
     }),
-    [actionData, css, errors, js, loaderData]
+    [actionData, css, errors, js, loaderData, nonce]
   );
 
   return (

@@ -8,7 +8,9 @@ import { routes } from './routes';
 const { __ENTRY_CONTEXT__ } = window;
 invariant(__ENTRY_CONTEXT__);
 
-const { css, js, routerState } = __ENTRY_CONTEXT__;
+const { css, js, nonce, routerState } = __ENTRY_CONTEXT__;
+
+__webpack_nonce__ = nonce;
 
 const router = createBrowserRouter(routes, {
   hydrationData: {
@@ -28,7 +30,7 @@ const router = createBrowserRouter(routes, {
 
 export function BrowserRoot() {
   return (
-    <Entry css={css} js={js} router={router}>
+    <Entry css={css} js={js} nonce={nonce} router={router}>
       <RouterProvider router={router} />
     </Entry>
   );

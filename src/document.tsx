@@ -5,7 +5,7 @@ import { BrowserGlobal } from './browserGlobal';
 import { useEntryContext } from './entry';
 
 export function Document({ children }: { children: React.ReactNode }) {
-  const { css, js, routerState } = useEntryContext();
+  const { css, js, nonce, routerState } = useEntryContext();
 
   return (
     <StrictMode>
@@ -21,7 +21,13 @@ export function Document({ children }: { children: React.ReactNode }) {
           ))}
 
           {js.map(src => (
-            <script key={src} defer src={src} />
+            <script
+              key={src}
+              defer
+              nonce={nonce}
+              src={src}
+              suppressHydrationWarning
+            />
           ))}
         </head>
 
@@ -30,7 +36,8 @@ export function Document({ children }: { children: React.ReactNode }) {
 
           <BrowserGlobal
             name="__ENTRY_CONTEXT__"
-            value={{ css, js, routerState }}
+            nonce={nonce}
+            value={{ css, js, nonce, routerState }}
           />
         </body>
       </html>

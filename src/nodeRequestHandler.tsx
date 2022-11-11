@@ -8,6 +8,8 @@ import {
 } from '@remix-run/router';
 import * as bodyParser from 'body-parser';
 import * as express from 'express';
+import helmet from 'helmet';
+import { nanoid } from 'nanoid';
 import * as nocache from 'nocache';
 import { renderToNodeStream } from 'react-dom/server';
 import { RouteObject } from 'react-router-dom';
@@ -35,7 +37,42 @@ function convertRoute(route: RouteObject): AgnosticRouteObject {
       };
 }
 
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace Express {
+    interface Request {
+      nonce: string;
+    }
+  }
+}
+
 export const requestHandler = express()
+  .use((req, _res, next) => {
+    // req.nonce = Buffer.from(nanoid()).toString('base64');
+    req.nonce = nanoid();
+    next();
+  })
+  .use(
+    helmet({
+      crossOriginEmbedderPolicy: false,
+      contentSecurityPolicy: {
+        directives: {
+          connectSrc: ["'self'", 'https://api.memegen.link'].concat(
+            import.meta.webpackHot ? ['ws://localhost:8000'] : []
+          ),
+          imgSrc: ["'self'", 'data:', 'https://api.memegen.link'],
+          requireTrustedTypesFor: ["'script'"],
+          scriptSrc: [
+            "'strict-dynamic'",
+            req => `'nonce-${(req as unknown as Express.Request).nonce}'`,
+            "'unsafe-inline'",
+            'https:',
+          ],
+          scriptSrcAttr: null,
+        },
+      },
+    })
+  )
   .use(express.static(path.resolve('public')))
   .use(
     express.static(path.resolve('build', 'public'), {
@@ -120,7 +157,7 @@ export const requestHandler = express()
       const router = createStaticRouter(routes, context);
 
       const stream = renderToNodeStream(
-        <Entry css={main.css} js={main.js} router={router}>
+        <Entry css={main.css} js={main.js} nonce={req.nonce} router={router}>
           <StaticRouterProvider
             context={context}
             hydrate={false}

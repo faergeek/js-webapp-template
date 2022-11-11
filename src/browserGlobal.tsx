@@ -5,6 +5,7 @@ type BrowserGlobals = Partial<{
   __ENTRY_CONTEXT__: {
     css: string[];
     js: string[];
+    nonce: string;
     routerState: HydrationState;
   };
 }>;
@@ -16,11 +17,13 @@ declare global {
 
 interface Props<K extends keyof BrowserGlobals> {
   name: K;
+  nonce: string;
   value: BrowserGlobals[K];
 }
 
 export function BrowserGlobal<K extends keyof BrowserGlobals>({
   name,
+  nonce,
   value,
 }: Props<K>) {
   return (
@@ -29,6 +32,8 @@ export function BrowserGlobal<K extends keyof BrowserGlobals>({
       dangerouslySetInnerHTML={{
         __html: `${name}=${serializeJavascript(value, { isJSON: true })}`,
       }}
+      nonce={nonce}
+      suppressHydrationWarning
     />
   );
 }
