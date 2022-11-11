@@ -36,7 +36,7 @@
     "@faergeek/make-webpack-config": "^16.0.0",
     "@size-limit/preset-app": "^8.0.0",
     "@types/express": "^4.17.12",
-    "@types/react-dom": "^17.0.18",
+    "@types/react-dom": "^18.0.0",
     "@types/serialize-javascript": "^5.0.2",
     "browserslist": "^4.16.6",
     "eslint": "^8.0.0",
