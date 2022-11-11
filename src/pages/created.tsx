@@ -42,8 +42,6 @@ export function CreatedPage() {
         <Button as="a" download href={url} rel="noopener" target="_blank">
           Download
         </Button>
-
-        <Button>Share</Button>
       </div>
     </Container>
   );
