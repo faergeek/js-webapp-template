@@ -1,51 +1,55 @@
-import { ErrorResponse, invariant } from '@remix-run/router';
-import { RouteData } from '@remix-run/router/dist/utils';
+import { ErrorResponse } from '@remix-run/router';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import invariant from 'tiny-invariant';
 
-import { EntryProvider } from './entryContext';
+import { Entry } from './entry';
 import { routes } from './routes';
 
 const { __ENTRY_CONTEXT__ } = window;
-
 invariant(__ENTRY_CONTEXT__);
 
-const { css, hydrationState, js } = __ENTRY_CONTEXT__;
-
-function hydrateErrors(errors: RouteData | null | undefined) {
-  return (
-    errors &&
-    Object.fromEntries(
-      Object.entries(errors).map(([key, value]) => [
-        key,
-        value && 'data' in value && 'status' in value && 'statusText' in value
-          ? new ErrorResponse(value.status, value.statusText, value.data)
-          : value,
-      ])
-    )
-  );
-}
+const { css, js, routerState } = __ENTRY_CONTEXT__;
 
 const router = createBrowserRouter(routes, {
   hydrationData: {
-    ...hydrationState,
-    errors: hydrateErrors(hydrationState.errors),
+    ...routerState,
+    errors:
+      routerState.errors &&
+      Object.fromEntries(
+        Object.entries(routerState.errors).map(([key, value]) => [
+          key,
+          value && 'data' in value && 'status' in value && 'statusText' in value
+            ? new ErrorResponse(value.status, value.statusText, value.data)
+            : value,
+        ])
+      ),
   },
 });
 
-import.meta.webpackHot?.dispose(() => {
-  __ENTRY_CONTEXT__.hydrationState = router.state;
-});
-
 export function BrowserRoot() {
-  const { actionData, errors, loaderData } = router.state;
-
   return (
-    <EntryProvider
-      css={css}
-      hydrationState={{ actionData, errors, loaderData }}
-      js={js}
-    >
+    <Entry css={css} js={js} router={router}>
       <RouterProvider router={router} />
-    </EntryProvider>
+    </Entry>
   );
+}
+
+if (import.meta.webpackHot) {
+  interface HotData {
+    shouldRevalidate?: boolean;
+  }
+
+  const hotData: HotData | undefined = import.meta.webpackHot.data;
+
+  if (hotData?.shouldRevalidate) {
+    router.revalidate();
+  }
+
+  import.meta.webpackHot.accept(() => {
+    __ENTRY_CONTEXT__.routerState = router.state;
+  });
+
+  import.meta.webpackHot.dispose((data: HotData) => {
+    data.shouldRevalidate = true;
+  });
 }

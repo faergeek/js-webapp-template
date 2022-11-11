@@ -5,6 +5,7 @@ import {
   useLoaderData,
 } from 'react-router-dom';
 
+import { MetaDescriptor, MetaFunctionArgs } from '../_core/meta';
 import { fetchTemplates, getTemplateImageUrl } from '../api';
 import * as css from './home.module.css';
 
@@ -20,11 +21,26 @@ export function homeLoader({ request }: LoaderFunctionArgs) {
   return fetchTemplates(q);
 }
 
+type LoaderData = Awaited<ReturnType<typeof homeLoader>>;
+
+export function homeMeta({ location }: MetaFunctionArgs<LoaderData>) {
+  const searchParams = new URLSearchParams(location.search);
+  const q = searchParams.get('q');
+
+  const meta: MetaDescriptor = {};
+
+  if (q) {
+    meta.title = `Search results for "${q}"`;
+  }
+
+  return meta;
+}
+
 const GRID_IMAGE_WIDTH = 200;
 const GRID_IMAGE_HEIGHT = GRID_IMAGE_WIDTH;
 
 export function HomePage() {
-  const templates = useLoaderData() as Awaited<ReturnType<typeof homeLoader>>;
+  const templates = useLoaderData() as LoaderData;
 
   return (
     <section className={css.templatesGrid}>

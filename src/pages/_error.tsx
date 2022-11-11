@@ -1,23 +1,34 @@
 import { isRouteErrorResponse, useRouteError } from 'react-router-dom';
 
+import { MetaFunctionArgs } from '../_core/meta';
 import { Container } from '../layout/layout';
 
-export function ErrorPage() {
-  const err = useRouteError();
-
+function formatErrorMessage(error: unknown) {
   let status = 500;
   let statusText = 'Internal Server Error';
 
-  if (isRouteErrorResponse(err)) {
-    status = err.status;
-    statusText = err.statusText;
+  if (isRouteErrorResponse(error)) {
+    status = error.status;
+    statusText = error.statusText;
   }
+
+  return `${status}: ${statusText}`;
+}
+
+export function errorMeta({ error }: MetaFunctionArgs) {
+  if (!error) return;
+
+  return {
+    title: formatErrorMessage(error),
+  };
+}
+
+export function ErrorPage() {
+  const error = useRouteError();
 
   return (
     <Container>
-      <h1>
-        {status}: {statusText}
-      </h1>
+      <h1>{formatErrorMessage(error)}</h1>
     </Container>
   );
 }

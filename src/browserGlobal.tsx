@@ -4,8 +4,8 @@ import * as serializeJavascript from 'serialize-javascript';
 type BrowserGlobals = Partial<{
   __ENTRY_CONTEXT__: {
     css: string[];
-    hydrationState: HydrationState;
     js: string[];
+    routerState: HydrationState;
   };
 }>;
 

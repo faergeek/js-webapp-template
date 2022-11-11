@@ -1,5 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import * as path from 'node:path';
+import { finished } from 'node:stream/promises';
 
 import {
   AgnosticRouteObject,
@@ -8,7 +9,7 @@ import {
 import * as bodyParser from 'body-parser';
 import * as express from 'express';
 import * as nocache from 'nocache';
-import { renderToPipeableStream } from 'react-dom/server';
+import { renderToNodeStream } from 'react-dom/server';
 import { RouteObject } from 'react-router-dom';
 import {
   unstable_createStaticRouter as createStaticRouter,
@@ -16,7 +17,7 @@ import {
 } from 'react-router-dom/server';
 import invariant from 'tiny-invariant';
 
-import { EntryProvider } from './entryContext';
+import { Entry } from './entry';
 import { routes } from './routes';
 
 function convertRoute(route: RouteObject): AgnosticRouteObject {
@@ -56,8 +57,6 @@ export const requestHandler = express()
         abortController.abort();
       });
 
-      const origin = `${req.protocol}://${req.get('host')}`;
-
       let body: BodyInit | undefined;
       switch (req.headers['content-type']) {
         case 'application/x-www-form-urlencoded': {
@@ -77,6 +76,8 @@ export const requestHandler = express()
           break;
         }
       }
+
+      const origin = `${req.protocol}://${req.get('host')}`;
 
       const request = new Request(new URL(req.originalUrl, origin), {
         signal: abortController.signal,
@@ -116,31 +117,26 @@ export const requestHandler = express()
         throw context;
       }
 
-      const stream = renderToPipeableStream(
-        <EntryProvider
-          css={main.css}
-          js={main.js}
-          hydrationState={{
-            actionData: context.actionData,
-            errors: context.errors,
-            loaderData: context.loaderData,
-          }}
-        >
+      const router = createStaticRouter(routes, context);
+
+      const stream = renderToNodeStream(
+        <Entry css={main.css} js={main.js} router={router}>
           <StaticRouterProvider
             context={context}
             hydrate={false}
-            router={createStaticRouter(routes, context)}
+            router={router}
           />
-        </EntryProvider>,
-        {
-          onShellReady() {
-            res.status(context.statusCode).set('Content-Type', 'text/html');
-
-            stream.pipe(res);
-          },
-          onError: next,
-        }
+        </Entry>
       );
+
+      res
+        .status(context.statusCode)
+        .set('Content-Type', 'text/html')
+        .write('<!DOCTYPE html>');
+
+      stream.pipe(res);
+
+      await finished(stream);
     } catch (err) {
       next(err);
     }

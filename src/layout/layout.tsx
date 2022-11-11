@@ -3,7 +3,6 @@ import { useEffect, useRef } from 'react';
 import {
   Form,
   Link,
-  Outlet,
   ScrollRestoration,
   useNavigation,
   useSearchParams,
@@ -11,7 +10,7 @@ import {
 
 import * as css from './layout.module.css';
 
-export function Layout() {
+export function Layout({ children }: { children: React.ReactNode }) {
   const [searchParams] = useSearchParams();
   const navigation = useNavigation();
   const searchInputRef = useRef<HTMLInputElement | null>(null);
@@ -61,9 +60,7 @@ export function Layout() {
           </Container>
         </header>
 
-        <main className={css.main}>
-          <Outlet />
-        </main>
+        <main className={css.main}>{children}</main>
 
         <footer className={css.footer}>
           <Container>
@@ -117,11 +114,12 @@ export function Layout() {
   );
 }
 
-interface ContainerProps {
+export function Container({
+  children,
+  className,
+}: {
   children: React.ReactNode;
   className?: string;
-}
-
-export function Container({ children, className }: ContainerProps) {
+}) {
   return <div className={clsx(className, css.container)}>{children}</div>;
 }

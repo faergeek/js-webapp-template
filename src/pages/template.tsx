@@ -10,6 +10,7 @@ import {
 import invariant from 'tiny-invariant';
 
 import { Button } from '../_core/button';
+import { MetaFunctionArgs } from '../_core/meta';
 import {
   createMeme,
   fetchTemplateById,
@@ -24,6 +25,14 @@ export function templateLoader({ params }: LoaderFunctionArgs) {
   invariant(params.templateId);
 
   return fetchTemplateById(params.templateId);
+}
+
+type LoaderData = Awaited<ReturnType<typeof templateLoader>>;
+
+export function templateMeta({ data }: MetaFunctionArgs<LoaderData>) {
+  return {
+    title: data.name,
+  };
 }
 
 export async function templateAction({ params, request }: ActionFunctionArgs) {
@@ -41,10 +50,7 @@ export async function templateAction({ params, request }: ActionFunctionArgs) {
   );
 
   invariant(params.templateId);
-  const { url } = await createMeme(params.templateId, {
-    extension,
-    text,
-  });
+  const { url } = await createMeme(params.templateId, { extension, text });
 
   const searchParams = new URLSearchParams();
   searchParams.set('url', url);
@@ -54,11 +60,7 @@ export async function templateAction({ params, request }: ActionFunctionArgs) {
 
 export function TemplatePage() {
   const navigation = useNavigation();
-
-  const template = useLoaderData() as Awaited<
-    ReturnType<typeof templateLoader>
-  >;
-
+  const template = useLoaderData() as LoaderData;
   const [text, setText] = useState(template.example.text);
 
   return (

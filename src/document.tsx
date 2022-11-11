@@ -1,20 +1,20 @@
 import { StrictMode } from 'react';
-import { Outlet } from 'react-router-dom';
 
+import { Meta } from './_core/meta';
 import { BrowserGlobal } from './browserGlobal';
-import { useEntryContext } from './entryContext';
+import { useEntryContext } from './entry';
 
-export function Document() {
-  const { css, hydrationState, js } = useEntryContext();
+export function Document({ children }: { children: React.ReactNode }) {
+  const { css, js, routerState } = useEntryContext();
 
   return (
     <StrictMode>
-      <html lang="en">
-        <head>
+      <html lang="en" suppressHydrationWarning>
+        <head suppressHydrationWarning>
           <meta charSet="utf-8" />
-          <title>JS WebApp Template</title>
           <meta name="viewport" content="width=device-width,initial-scale=1" />
           <meta name="theme-color" content="#96c" />
+          <Meta />
 
           {css.map(href => (
             <link key={href} rel="stylesheet" href={href} />
@@ -25,12 +25,12 @@ export function Document() {
           ))}
         </head>
 
-        <body>
-          <Outlet />
+        <body suppressHydrationWarning>
+          {children}
 
           <BrowserGlobal
             name="__ENTRY_CONTEXT__"
-            value={{ css, hydrationState, js }}
+            value={{ css, js, routerState }}
           />
         </body>
       </html>

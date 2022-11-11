@@ -6,6 +6,7 @@ import {
 import invariant from 'tiny-invariant';
 
 import { Button } from '../_core/button';
+import { MetaDescriptor } from '../_core/meta';
 import { Container } from '../layout/layout';
 import * as css from './created.module.css';
 
@@ -18,6 +19,10 @@ export function createdLoader({ request }: LoaderFunctionArgs) {
 
   return null;
 }
+
+export const createdMeta: MetaDescriptor = {
+  title: 'You successfully created your own meme!!!',
+};
 
 export function CreatedPage() {
   const [searchParams] = useSearchParams();
