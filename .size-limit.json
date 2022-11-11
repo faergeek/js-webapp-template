@@ -2,11 +2,11 @@
   {
     "name": "css",
     "path": "build/public/*.css",
-    "limit": 2151
+    "limit": 2066
   },
   {
     "name": "js",
     "path": "build/public/*.js",
-    "limit": 70007
+    "limit": 70050
   }
 ]
