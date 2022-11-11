@@ -63,7 +63,6 @@ export const requestHandler = express()
             import.meta.webpackHot ? ['ws://localhost:8000'] : []
           ),
           imgSrc: ["'self'", 'data:', 'https://api.memegen.link'],
-          requireTrustedTypesFor: ["'script'"],
           scriptSrc: [
             "'strict-dynamic'",
             req => `'nonce-${(req as unknown as Express.Request).nonce}'`,
