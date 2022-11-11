@@ -9,6 +9,7 @@ import {
 import * as bodyParser from 'body-parser';
 import * as express from 'express';
 import helmet from 'helmet';
+import * as morgan from 'morgan';
 import { nanoid } from 'nanoid';
 import * as nocache from 'nocache';
 import { renderToNodeStream } from 'react-dom/server';
@@ -47,6 +48,7 @@ declare global {
 }
 
 export const requestHandler = express()
+  .use(morgan(__DEV__ ? 'dev' : 'combined'))
   .use((req, _res, next) => {
     // req.nonce = Buffer.from(nanoid()).toString('base64');
     req.nonce = nanoid();
