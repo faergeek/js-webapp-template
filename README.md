@@ -34,6 +34,22 @@ Then you need to start the built server:
 yarn start
 ```
 
+# Docker
+
+You can also build a docker image:
+
+```sh
+docker build -t js-webapp-template .
+```
+
+And then run it:
+
+```sh
+docker run -it --rm -p 8080:8080 js-webapp-template
+```
+
+Or most probably deploy it somewhere.
+
 ## Environment Variables
 
 dotenv-flow reads files like `.env`, `env.local` to setup environment
