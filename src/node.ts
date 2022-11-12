@@ -19,5 +19,10 @@ const server = createServer(
 if (import.meta.webpackHot) {
   import.meta.webpackHot.accept('./nodeRequestHandler');
   import.meta.webpackHot.accept();
-  import.meta.webpackHot.dispose(() => server.close());
+
+  import.meta.webpackHot.dispose(() => {
+    // eslint-disable-next-line no-console
+    console.log('HMR bubbled to the entry, closing server...');
+    server.close();
+  });
 }
