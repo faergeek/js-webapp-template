@@ -1,7 +1,7 @@
 name: Size Limit
 on: [pull_request]
 jobs:
-  build:
+  size-limit:
     runs-on: ubuntu-latest
     env:
       CI_JOB_NUMBER: 1
