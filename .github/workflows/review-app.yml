@@ -1,0 +1,26 @@
+name: Review App
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, closed]
+env:
+  FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+jobs:
+  review-app:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: pr-${{ github.event.number }}
+    environment:
+      name: pr-${{ github.event.number }}
+      url: ${{ steps.deploy.outputs.url }}
+    steps:
+      - uses: styfle/cancel-workflow-action@0.11.0
+      - uses: actions/checkout@v3
+      - uses: superfly/fly-pr-review-apps@1.0.0
+        id: deploy
+        with:
+          name: js-webapp-template-pr-${{ github.event.number }}
+      - uses: strumwolf/delete-deployment-environment@v2
+        if: ${{ github.event.action == 'closed' }}
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          environment: pr-${{ github.event.number }}
