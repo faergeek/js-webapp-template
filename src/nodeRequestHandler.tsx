@@ -40,7 +40,9 @@ function convertRoute(route: RouteObject): AgnosticRouteObject {
       };
 }
 
-const require = createRequire(import.meta.url);
+const require = createRequire(
+  new URL(path.resolve('build', 'main.cjs'), 'file://')
+);
 
 async function getAssets() {
   let assets: { main: { css: string[]; js: string[] } };
