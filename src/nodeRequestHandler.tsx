@@ -1,4 +1,5 @@
 import { readFile } from 'node:fs/promises';
+import * as http from 'node:http';
 import * as path from 'node:path';
 import { finished } from 'node:stream/promises';
 
@@ -58,27 +59,44 @@ export const requestHandler = express()
       crossOriginEmbedderPolicy: false,
       contentSecurityPolicy: {
         directives: {
-          connectSrc: ["'self'", 'https://api.memegen.link'].concat(
-            import.meta.webpackHot ? ['ws://localhost:8000'] : []
-          ),
+          connectSrc: [
+            "'self'",
+            'https://api.memegen.link',
+            ...(__DEV__
+              ? [
+                  (req: http.IncomingMessage) => {
+                    const url = new URL(`ws://${req.headers.host}`);
+                    url.port = '8000';
+                    return url.origin;
+                  },
+                ]
+              : []),
+          ],
           imgSrc: ["'self'", 'data:', 'https://api.memegen.link'],
           scriptSrc: [
             "'strict-dynamic'",
-            req => `'nonce-${(req as unknown as Express.Request).nonce}'`,
+            req => `'nonce-${(req as unknown as express.Request).nonce}'`,
             "'unsafe-inline'",
             'https:',
           ],
           scriptSrcAttr: null,
+          upgradeInsecureRequests: __DEV__ ? null : [],
         },
       },
+      hsts: !__DEV__,
     })
   )
   .use(express.static(path.resolve('public')))
   .use(
-    express.static(path.resolve('build', 'public'), {
-      immutable: !import.meta.webpackHot,
-      maxAge: import.meta.webpackHot ? undefined : '1 year',
-    })
+    express.static(
+      path.resolve('build', 'public'),
+      __DEV__
+        ? undefined
+        : {
+            immutable: true,
+            maxAge: '1 year',
+          }
+    )
   )
   .use(bodyParser.urlencoded({ extended: false }))
   .use(nocache())
