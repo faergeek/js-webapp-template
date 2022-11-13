@@ -50,7 +50,6 @@ declare global {
 export const requestHandler = express()
   .use(morgan(__DEV__ ? 'dev' : 'combined'))
   .use((req, _res, next) => {
-    // req.nonce = Buffer.from(nanoid()).toString('base64');
     req.nonce = nanoid();
     next();
   })
