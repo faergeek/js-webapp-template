@@ -1,5 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import * as http from 'node:http';
+import { createRequire } from 'node:module';
 import * as path from 'node:path';
 import { finished } from 'node:stream/promises';
 
@@ -37,6 +38,22 @@ function convertRoute(route: RouteObject): AgnosticRouteObject {
         hasErrorBoundary,
         children: route.children?.map(convertRoute),
       };
+}
+
+const require = createRequire(import.meta.url);
+
+async function getAssets() {
+  let assets: { main: { css: string[]; js: string[] } };
+
+  if (__DEV__) {
+    assets = JSON.parse(
+      await readFile(path.resolve('build', 'webpack-assets.json'), 'utf-8')
+    );
+  } else {
+    assets = require('../build/webpack-assets.json');
+  }
+
+  return assets;
 }
 
 declare global {
@@ -102,9 +119,7 @@ export const requestHandler = express()
   .use(nocache())
   .use(async (req, res, next) => {
     try {
-      const { main }: { main: { css: string[]; js: string[] } } = JSON.parse(
-        await readFile(path.resolve(__dirname, 'webpack-assets.json'), 'utf-8')
-      );
+      const { main } = await getAssets();
 
       const abortController = new AbortController();
 
