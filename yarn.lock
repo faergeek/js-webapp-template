@@ -1134,9 +1134,9 @@
     eslint-plugin-simple-import-sort "^8.0.0"
 
 "@faergeek/make-webpack-config@^18.0.0":
-  version "18.0.1"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-18.0.1.tgz#1caf17f34219a4e94e8346275f0359ff3032fdb2"
-  integrity sha512-Wgobo4vFPbqTNy3mBAtrhwYT9bgYXk9A7Wlv6Ze37zeef+5T3017SnkXrHnmvKt91DKTpkwnh6thaSnitvJZSw==
+  version "18.1.1"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-18.1.1.tgz#6dc1b6959baa7f8d42d6420b6216b794118dbfb7"
+  integrity sha512-scwBzBnxeFlZKFi58St+kda9CnPM2YjFFlqCux69AMLladWn/ls6D/bdPrqJEozp/9mg5liUNBecESl3dCY6lw==
   dependencies:
     "@faergeek/tiny-browser-hmr-webpack-plugin" "^1.0.1"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.5.0"
@@ -2225,9 +2225,9 @@ chrome-trace-event@^1.0.2:
   integrity sha512-p3KULyQg4S7NIHixdwbGX+nFHkoBiA4YQmyWtjb8XngSKV124nJmRysgAeujbUVb15vh+RvFUfCPqU7rXk+hZg==
 
 ci-info@^3.2.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-3.5.0.tgz#bfac2a29263de4c829d806b1ab478e35091e171f"
-  integrity sha512-yH4RezKOGlOhxkmhbeNuC4eYZKAUsEaGtBuBzDDP1eFUKiccDWzBABxBfOx31IDwDIXMTxWuwAxUGModvkbuVw==
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-3.6.0.tgz#d37ad22393e808cd62937a3f9be726f801654857"
+  integrity sha512-RfY02LtqkzB/aiyTrh0TtDS0rQnQY3kyvkVkdBnPTUbkiGbkkCJhS7Oj8b37Qa/5eGiMilF3kH+/Km1EZxpuyQ==
 
 ci-job-number@^1.2.2:
   version "1.2.2"
