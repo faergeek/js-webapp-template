@@ -15,7 +15,7 @@ COPY src ./src/
 COPY .browserslistrc babel.config.cjs postcss.config.cjs webpack.config.js ./
 RUN yarn run build
 
-FROM node:18-slim
+FROM node:19-slim
 WORKDIR /usr/src/app
 
 COPY --from=builder /tini /
