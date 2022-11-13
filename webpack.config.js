@@ -1,7 +1,8 @@
-const makeWebpackConfig = require('@faergeek/make-webpack-config');
-const path = require('path');
+import * as path from 'node:path';
 
-module.exports = (env, argv) => {
+import makeWebpackConfig from '@faergeek/make-webpack-config';
+
+export default function webpackConfig(env, argv) {
   const dev = argv.nodeEnv === 'development';
   const watch = env.WEBPACK_WATCH;
 
@@ -20,4 +21,4 @@ module.exports = (env, argv) => {
     reactRefresh: true,
     watch,
   });
-};
+}
