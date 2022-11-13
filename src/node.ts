@@ -1,4 +1,5 @@
 import 'dotenv-flow/config';
+import './nodePolyfill';
 
 import { createServer } from 'node:http';
 
