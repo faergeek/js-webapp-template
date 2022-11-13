@@ -8,6 +8,7 @@ export default function webpackConfig(env, argv) {
 
   return makeWebpackConfig({
     analyze: !dev,
+    cache: true,
     dev,
     entry: {
       browser: './src/browser',
