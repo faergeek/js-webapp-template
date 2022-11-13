@@ -1,6 +1,7 @@
 {
   "include": ["src"],
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "module": "esnext",
