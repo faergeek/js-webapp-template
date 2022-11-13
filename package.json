@@ -1,6 +1,7 @@
 {
   "private": true,
-  "main": "build/main.js",
+  "type": "module",
+  "main": "build/main.cjs",
   "scripts": {
     "cleanup": "rimraf build",
     "prettier": "prettier --write .",

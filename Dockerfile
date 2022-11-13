@@ -14,7 +14,7 @@ COPY package.json yarn.lock ./
 RUN yarn --frozen-lockfile
 
 COPY src ./src/
-COPY .browserslistrc babel.config.js postcss.config.js webpack.config.js ./
+COPY .browserslistrc babel.config.cjs postcss.config.cjs webpack.config.js ./
 
 RUN yarn run build
 RUN yarn --frozen-lockfile --production
