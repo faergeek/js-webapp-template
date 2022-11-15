@@ -1133,10 +1133,10 @@
     eslint-plugin-react-hooks "^4.2.0"
     eslint-plugin-simple-import-sort "^8.0.0"
 
-"@faergeek/make-webpack-config@^18.0.0":
-  version "18.1.1"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-18.1.1.tgz#6dc1b6959baa7f8d42d6420b6216b794118dbfb7"
-  integrity sha512-scwBzBnxeFlZKFi58St+kda9CnPM2YjFFlqCux69AMLladWn/ls6D/bdPrqJEozp/9mg5liUNBecESl3dCY6lw==
+"@faergeek/make-webpack-config@^19.0.0":
+  version "19.0.0"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-19.0.0.tgz#280c435e08ead418e331b81e27470c926b2dfe85"
+  integrity sha512-fs1yAPnaJ2pVYPYj2QsQzxwkAS64FJ0bhhCRV6phsIsGEuoURAGxpaJ1aMT0BWfHe/XkxcHmoOrisEDvhfbSYQ==
   dependencies:
     "@faergeek/tiny-browser-hmr-webpack-plugin" "^1.0.1"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.5.0"
