@@ -1134,9 +1134,9 @@
     eslint-plugin-simple-import-sort "^8.0.0"
 
 "@faergeek/make-webpack-config@^19.0.0":
-  version "19.0.1"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-19.0.1.tgz#37f66ae936d4cdca1e781bfc8e0f026246322a13"
-  integrity sha512-5ldyBffepD+XijKrW829lWrk3p4kbNDO+T8aP844dMufwX+1JSi8y+4MPJka9vbMJBvtNzJFHDldYDo5i5HTPA==
+  version "19.0.2"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-19.0.2.tgz#62bac3ac703bcce1d899836115b905ec223c6b67"
+  integrity sha512-DVDLNNxfyYU7Yb329DWmE+eEfSzhXZQdQ5ICy46dT6M4yFBQ6JtjUwQVi5jMrxHmHGGDP4RwIUthdrGa7CxtDA==
   dependencies:
     "@faergeek/tiny-browser-hmr-webpack-plugin" "^1.0.1"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.5.0"
@@ -3857,9 +3857,9 @@ mime@1.6.0:
   integrity sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==
 
 mini-css-extract-plugin@^2.0.0:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/mini-css-extract-plugin/-/mini-css-extract-plugin-2.6.1.tgz#9a1251d15f2035c342d99a468ab9da7a0451b71e"
-  integrity sha512-wd+SD57/K6DiV7jIR34P+s3uckTRuQvx0tKPcvjFlrEylk6P4mQ2KSWk1hblj1Kxaqok7LogKOieygXqBczNlg==
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/mini-css-extract-plugin/-/mini-css-extract-plugin-2.7.0.tgz#d7d9ba0c5b596d155e36e2b174082fc7f010dd64"
+  integrity sha512-auqtVo8KhTScMsba7MbijqZTfibbXiBNlPAQbsVt7enQfcDYLdgG57eGxMqwVU3mfeWANY4F1wUg+rMF+ycZgw==
   dependencies:
     schema-utils "^4.0.0"
 
