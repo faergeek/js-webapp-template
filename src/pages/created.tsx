@@ -87,7 +87,13 @@ export function CreatedPage() {
           </Button>
         )}
 
-        <Button as="a" download href={url} rel="noopener" target="_blank">
+        <Button
+          as="a"
+          download="meme.jpg"
+          href={`/download?${new URLSearchParams({ url })}`}
+          rel="noopener"
+          target="_blank"
+        >
           Download
         </Button>
       </p>
