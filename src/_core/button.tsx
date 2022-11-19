@@ -7,6 +7,7 @@ type Props = {
   | {
       as?: 'button' | undefined;
       type?: 'button' | 'reset' | 'submit';
+      onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
     }
   | {
       as: 'a';
@@ -14,6 +15,7 @@ type Props = {
       href: string;
       rel?: string;
       target?: string;
+      onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
     }
 );
 
