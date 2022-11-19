@@ -1,8 +1,5 @@
 name: Checks
-on:
-  push:
-    branches:
-      - '**'
+on: [pull_request]
 jobs:
   checks:
     runs-on: ubuntu-latest
