@@ -11,7 +11,7 @@ type Props = {
     }
   | {
       as: 'a';
-      download?: boolean;
+      download?: boolean | string;
       href: string;
       rel?: string;
       target?: string;

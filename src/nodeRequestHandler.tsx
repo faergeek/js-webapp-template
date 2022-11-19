@@ -117,6 +117,18 @@ export const requestHandler = express()
           }
     )
   )
+  .use('/download', async (req, res, next) => {
+    const url = req.query.url;
+
+    if (typeof url !== 'string') {
+      next();
+      return;
+    }
+
+    const response = await fetch(url);
+    res.set('content-type', response.headers.get('content-type') ?? undefined);
+    res.send(Buffer.from(await response.arrayBuffer()));
+  })
   .use(bodyParser.urlencoded({ extended: false }))
   .use(nocache())
   .use(async (req, res, next) => {
@@ -203,7 +215,7 @@ export const requestHandler = express()
 
       res
         .status(context.statusCode)
-        .set('Content-Type', 'text/html')
+        .set('content-type', 'text/html')
         .write('<!DOCTYPE html>');
 
       stream.pipe(res);
