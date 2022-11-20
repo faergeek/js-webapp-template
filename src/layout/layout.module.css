@@ -29,15 +29,25 @@
 
 .headerInner {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 1em;
   padding-top: 1em;
 }
 
+.headerNav {
+  display: flex;
+  align-items: inherit;
+  gap: inherit;
+}
+
 .searchForm {
-  flex: 0 1 400px;
-  min-width: 0;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em;
+  min-width: 280px;
 }
 
 .searchInput {

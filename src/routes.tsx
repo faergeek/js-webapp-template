@@ -35,12 +35,15 @@ function convertRoutes(routes: AppRouteObject[], parentPath: number[] = []) {
     const treePath = [...parentPath, index];
     const id = treePath.join('-');
 
+    const hasErrorBoundary = route.errorElement != null;
+
     if (route.index) {
-      return { ...route, id };
+      return { ...route, hasErrorBoundary, id };
     }
 
     const pathOrLayoutRoute: AppNonIndexRouteObject & { id: string } = {
       ...route,
+      hasErrorBoundary,
       id,
       children: route.children
         ? convertRoutes(route.children, treePath)
@@ -58,7 +61,7 @@ export const routes = convertRoutes([
   {
     path: '/',
     meta: {
-      'application-name': 'Memes',
+      'application-name': 'JS WebApp Template',
       title,
       description,
       'og:title': title,
@@ -115,7 +118,7 @@ export const routes = convertRoutes([
           {
             path: '*',
             loader: () => {
-              throw new Response('', {
+              throw new Response("The page you're looking for doesn't exist.", {
                 status: 404,
                 statusText: 'Page Not Found',
               });

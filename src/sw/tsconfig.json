@@ -1,0 +1,7 @@
+{
+  "extends": "../../tsconfig",
+  "include": ["../global.d.ts", "sw.tsx"],
+  "compilerOptions": {
+    "skipDefaultLibCheck": true
+  }
+}

@@ -54,53 +54,55 @@ export function CreatedPage() {
     <Container>
       <h1>You successfully created your own meme!!!</h1>
 
-      <p className={css.share}>
-        <span>Share:</span>
-
-        <Button
-          as="a"
-          download
-          href={telegramShareUrl.toString()}
-          rel="noopener"
-          target="_blank"
-        >
-          Telegram
-        </Button>
-
-        <Button
-          as="a"
-          download
-          href={twitterShareUrl.toString()}
-          rel="noopener"
-          target="_blank"
-        >
-          Twitter
-        </Button>
-
-        {isShareSupported && (
-          <Button
-            onClick={() => {
-              navigator.share(shareData);
-            }}
-          >
-            More
-          </Button>
-        )}
-
-        <Button
-          as="a"
-          download="meme.jpg"
-          href={`/download?${new URLSearchParams({ url })}`}
-          rel="noopener"
-          target="_blank"
-        >
-          Download
-        </Button>
-      </p>
-
       <div className={css.imageWrapper}>
-        <img src={url} alt="Your new meme" />
+        <img className={css.image} src={url} alt="Your new meme" />
       </div>
+
+      <p className={css.share}>
+        <span>Go ahead and share it:</span>
+
+        <span className={css.shareButtons}>
+          <Button
+            as="a"
+            download
+            href={telegramShareUrl.toString()}
+            rel="noopener"
+            target="_blank"
+          >
+            Telegram
+          </Button>
+
+          <Button
+            as="a"
+            download
+            href={twitterShareUrl.toString()}
+            rel="noopener"
+            target="_blank"
+          >
+            Twitter
+          </Button>
+
+          {isShareSupported && (
+            <Button
+              onClick={() => {
+                navigator.share(shareData);
+              }}
+            >
+              More
+            </Button>
+          )}
+
+          <Button
+            as="a"
+            download="meme.jpg"
+            href={`/download?${new URLSearchParams({ url })}`}
+            rel="noopener"
+            target="_blank"
+          >
+            Download
+          </Button>
+        </span>
+      </p>
     </Container>
   );
 }

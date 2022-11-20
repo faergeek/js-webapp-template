@@ -1,12 +1,24 @@
-.share {
-  margin-top: 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1em;
-}
-
 .imageWrapper {
   margin-bottom: 1em;
   text-align: center;
+}
+
+.image {
+  aspect-ratio: 1;
+}
+
+.share {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.shareButtons {
+  display: flex;
+  flex-wrap: inherit;
+  gap: inherit;
 }

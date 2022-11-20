@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import * as css from './button.module.css';
 
 type Props = {
@@ -17,6 +19,11 @@ type Props = {
       target?: string;
       onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
     }
+  | {
+      as: typeof Link;
+      to: string;
+      onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
+    }
 );
 
 export function Button(props: Props) {
@@ -26,6 +33,12 @@ export function Button(props: Props) {
   };
 
   switch (allProps.as) {
+    case Link: {
+      const { as, ...otherProps } = allProps;
+
+      // eslint-disable-next-line react/jsx-no-target-blank
+      return <Link {...otherProps} role="button" />;
+    }
     case 'a': {
       const { as, ...otherProps } = allProps;
 
@@ -33,10 +46,16 @@ export function Button(props: Props) {
       return <a {...otherProps} role="button" />;
     }
     case 'button':
-    default: {
+    case undefined: {
       const { as, type = 'button', ...otherProps } = allProps;
 
       return <button {...otherProps} type={type} />;
     }
+    default:
+      throw new Error(
+        `Unexpected 'as' prop value: ${
+          typeof allProps.as === 'string' ? allProps.as : allProps.as.name
+        }`
+      );
   }
 }

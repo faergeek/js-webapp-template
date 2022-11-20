@@ -36,28 +36,47 @@ export function homeMeta({ location }: MetaFunctionArgs<LoaderData>) {
   return meta;
 }
 
-const GRID_IMAGE_WIDTH = 200;
+const GRID_IMAGE_WIDTH = 177;
 const GRID_IMAGE_HEIGHT = GRID_IMAGE_WIDTH;
 
 export function HomePage() {
   const templates = useLoaderData() as LoaderData;
 
-  return (
+  return !templates.length ? (
+    <p className={css.noResultsMessage}>Nothing matched your query :-(</p>
+  ) : (
     <section className={css.templatesGrid}>
       {templates.map(template => (
-        <Link key={template.id} to={`/template/${template.id}`}>
+        <Link
+          key={template.id}
+          aria-label={template.name}
+          title={template.name}
+          to={`/template/${template.id}`}
+        >
           <img
+            alt=""
+            width={GRID_IMAGE_WIDTH}
+            height={GRID_IMAGE_HEIGHT}
+            decoding="async"
             src={getTemplateImageUrl(template, {
               extension: 'jpg',
               width: GRID_IMAGE_WIDTH,
               height: GRID_IMAGE_HEIGHT,
             }).toString()}
-            alt=""
-            title={template.name}
-            width={GRID_IMAGE_WIDTH}
-            height={GRID_IMAGE_HEIGHT}
-            decoding="async"
-            loading="lazy"
+            srcSet={Array.from(Array(3), (_, i) => i + 1)
+              .map(scale => {
+                const size = GRID_IMAGE_WIDTH * scale;
+
+                return [
+                  `${getTemplateImageUrl(template, {
+                    extension: 'jpg',
+                    width: size,
+                    height: size,
+                  })} ${size}w`,
+                ];
+              })
+              .join(', ')}
+            sizes={`${GRID_IMAGE_WIDTH}px`}
           />
         </Link>
       ))}
