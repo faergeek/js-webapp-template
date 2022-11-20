@@ -1,6 +1,11 @@
+.noResultsMessage {
+  color: var(--color-muted);
+  text-align: center;
+}
+
 .templatesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, min(50% - 0.5em, 200px));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   justify-content: center;
   gap: 1em;
 }

@@ -1,13 +1,9 @@
-import { readFile } from 'node:fs/promises';
 import * as http from 'node:http';
-import { createRequire } from 'node:module';
 import * as path from 'node:path';
 import { finished } from 'node:stream/promises';
 
-import {
-  AgnosticRouteObject,
-  unstable_createStaticHandler as createStaticHandler,
-} from '@remix-run/router';
+import { unstable_createStaticHandler as createStaticHandler } from '@remix-run/router';
+import assets from 'assets.json';
 import * as bodyParser from 'body-parser';
 import * as express from 'express';
 import helmet from 'helmet';
@@ -15,7 +11,6 @@ import * as morgan from 'morgan';
 import { nanoid } from 'nanoid';
 import * as nocache from 'nocache';
 import { renderToNodeStream } from 'react-dom/server';
-import { RouteObject } from 'react-router-dom';
 import {
   unstable_createStaticRouter as createStaticRouter,
   unstable_StaticRouterProvider as StaticRouterProvider,
@@ -24,39 +19,6 @@ import invariant from 'tiny-invariant';
 
 import { Entry } from './entry';
 import { routes } from './routes';
-
-function convertRoute(route: RouteObject): AgnosticRouteObject {
-  const hasErrorBoundary = route.errorElement != null;
-
-  return route.index
-    ? {
-        ...route,
-        hasErrorBoundary,
-      }
-    : {
-        ...route,
-        hasErrorBoundary,
-        children: route.children?.map(convertRoute),
-      };
-}
-
-const require = createRequire(
-  new URL(path.resolve('build', 'main.cjs'), 'file://')
-);
-
-async function getAssets() {
-  let assets: { main: { css: string[]; js: string[] } };
-
-  if (__DEV__) {
-    assets = JSON.parse(
-      await readFile(path.resolve('build', 'webpack-assets.json'), 'utf-8')
-    );
-  } else {
-    assets = require('../build/webpack-assets.json');
-  }
-
-  return assets;
-}
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
@@ -97,8 +59,15 @@ export const requestHandler = express()
             req => `'nonce-${(req as unknown as express.Request).nonce}'`,
             "'unsafe-inline'",
             'https:',
+            ...(__DEV__ ? ['http:'] : []),
           ],
           scriptSrcAttr: null,
+          styleSrc: [
+            "'self'",
+            "'unsafe-inline'",
+            'https:',
+            ...(__DEV__ ? ['http:'] : []),
+          ],
           upgradeInsecureRequests: __DEV__ ? null : [],
         },
       },
@@ -133,8 +102,6 @@ export const requestHandler = express()
   .use(nocache())
   .use(async (req, res, next) => {
     try {
-      const { main } = await getAssets();
-
       const abortController = new AbortController();
 
       req.on('close', () => {
@@ -184,7 +151,7 @@ export const requestHandler = express()
         body,
       });
 
-      const { query } = createStaticHandler(routes.map(convertRoute));
+      const { query } = createStaticHandler(routes);
       const context = await query(request);
 
       if (context instanceof Response) {
@@ -204,7 +171,12 @@ export const requestHandler = express()
       const router = createStaticRouter(routes, context);
 
       const stream = renderToNodeStream(
-        <Entry css={main.css} js={main.js} nonce={req.nonce} router={router}>
+        <Entry
+          css={assets.main.css}
+          js={assets.main.js}
+          nonce={req.nonce}
+          router={router}
+        >
           <StaticRouterProvider
             context={context}
             hydrate={false}

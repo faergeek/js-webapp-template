@@ -1,3 +1,5 @@
+import { handleFetchError } from './_core/fetch';
+
 const BASE_URL = 'https://api.memegen.link';
 
 interface MemeTemplateExample {
@@ -24,14 +26,10 @@ export async function fetchTemplates(filter?: string | null) {
     url.searchParams.set('filter', filter);
   }
 
-  const response = await fetch(url);
+  const response = await fetch(url).catch(handleFetchError);
 
   if (!response.ok) {
-    throw new Error(
-      `Could not fetch all templates: [${response.status} ${
-        response.statusText
-      }] ${await response.text()}`
-    );
+    throw response;
   }
 
   const json: MemeTemplate[] = await response.json();
@@ -40,21 +38,19 @@ export async function fetchTemplates(filter?: string | null) {
 }
 
 export async function fetchTemplateById(templateId: string) {
-  const response = await fetch(new URL(`/templates/${templateId}`, BASE_URL));
+  const response = await fetch(
+    new URL(`/templates/${templateId}`, BASE_URL)
+  ).catch(handleFetchError);
 
   if (!response.ok) {
     if (response.status === 404) {
-      throw new Response('', {
-        status: 404,
-        statusText: 'Meme Template Not Found',
+      throw new Response("Sorry, this meme template doesn't seem to exist.", {
+        status: response.status,
+        statusText: response.statusText,
       });
     }
 
-    throw new Error(
-      `Could not fetch template by id: [${response.status} ${
-        response.statusText
-      }] ${await response.text()}`
-    );
+    throw response;
   }
 
   const json: MemeTemplate = await response.json();
@@ -84,14 +80,10 @@ export async function createMeme(
       'content-type': 'application/json',
     },
     body: JSON.stringify({ extension, text }),
-  });
+  }).catch(handleFetchError);
 
   if (!response.ok) {
-    throw new Error(
-      `Could not create meme: [${response.status} ${
-        response.statusText
-      }] ${await response.text()}`
-    );
+    throw response;
   }
 
   const json: CreateMemeResponse = await response.json();

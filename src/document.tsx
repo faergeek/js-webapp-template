@@ -1,4 +1,5 @@
 import { StrictMode } from 'react';
+import { ScrollRestoration } from 'react-router-dom';
 
 import { Meta } from './_core/meta';
 import { BrowserGlobal } from './browserGlobal';
@@ -13,7 +14,11 @@ export function Document({ children }: { children: React.ReactNode }) {
         <head suppressHydrationWarning>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width,initial-scale=1" />
-          <meta name="theme-color" content="#96c" />
+          <meta name="theme-color" content="#639" />
+          <link rel="icon" href="/favicon.ico" sizes="any" />
+          <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+          <link rel="manifest" href="/manifest.json" />
           <Meta />
 
           {css.map(href => (
@@ -33,6 +38,8 @@ export function Document({ children }: { children: React.ReactNode }) {
 
         <body suppressHydrationWarning>
           {children}
+
+          {typeof window !== 'undefined' && <ScrollRestoration />}
 
           <BrowserGlobal
             name="__ENTRY_CONTEXT__"

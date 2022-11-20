@@ -8,11 +8,17 @@ export default function webpackConfig(env, argv) {
 
   return makeWebpackConfig({
     analyze: !dev,
-    cache: true,
+    cache: {
+      type: 'filesystem',
+      buildDependencies: {
+        config: [new URL(import.meta.url).pathname],
+      },
+    },
     dev,
     entry: {
       browser: './src/browser',
       node: './src/node',
+      serviceWorker: './src/sw/sw',
     },
     paths: {
       build: path.resolve('build'),

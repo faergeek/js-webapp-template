@@ -4,9 +4,9 @@
   --container-width: 800px;
   --color-fg: #000;
   --color-bg: #fff;
-  --color-accent: #96c;
-  --color-accent-alt: #639;
-  --color-muted: #ccc;
+  --color-accent: #639;
+  --color-accent-alt: #96c;
+  --color-muted: #555;
   min-width: 320px;
   font: 1em system-ui;
 }
@@ -15,6 +15,9 @@
   :root {
     --color-fg: #fff;
     --color-bg: #000;
+    --color-accent: #96c;
+    --color-accent-alt: #639;
+    --color-muted: #ccc;
     color-scheme: dark;
   }
 }
@@ -92,6 +95,11 @@ select {
   border-radius: 8px;
   background: none;
   color: var(--color-fg);
+}
+
+select {
+  appearance: none;
+  background: url(./chevron.svg?inline) no-repeat right center;
 }
 
 input:focus,

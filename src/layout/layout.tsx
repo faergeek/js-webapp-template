@@ -1,13 +1,8 @@
 import clsx from 'clsx';
-import { useEffect, useRef } from 'react';
-import {
-  Form,
-  Link,
-  ScrollRestoration,
-  useNavigation,
-  useSearchParams,
-} from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
+import { Form, Link, useNavigation, useSearchParams } from 'react-router-dom';
 
+import { Button } from '../_core/button';
 import * as css from './layout.module.css';
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -27,90 +22,123 @@ export function Layout({ children }: { children: React.ReactNode }) {
     searchInput.value = q;
   }, [q]);
 
+  const [beforeInstallPrompt, setBeforeInstallPrompt] =
+    useState<BeforeInstallPromptEvent | null>(null);
+
+  useEffect(() => {
+    const handleBeforeInstallPrompt = (event: BeforeInstallPromptEvent) => {
+      event.preventDefault();
+      setBeforeInstallPrompt(event);
+    };
+
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+
+    return () => {
+      window.removeEventListener(
+        'beforeinstallprompt',
+        handleBeforeInstallPrompt
+      );
+    };
+  }, []);
+
   return (
-    <>
-      {!__NODE__ && <ScrollRestoration />}
-
-      <div
-        className={clsx(css.root, {
-          [css.root_loading]: navigation.state !== 'idle',
-        })}
-      >
-        <header>
-          <Container>
-            <div className={css.headerInner}>
-              <nav>
-                <Link to="/" title="Go to the home page">
-                  🏠
-                </Link>
-              </nav>
-
-              <Form className={css.searchForm}>
-                <input
-                  ref={searchInputRef}
-                  className={css.searchInput}
-                  defaultValue={searchParams.get('q') ?? ''}
-                  id="search"
-                  name="q"
-                  placeholder="Search for a meme template..."
-                  type="search"
+    <div
+      className={clsx(css.root, {
+        [css.root_loading]: navigation.state !== 'idle',
+      })}
+    >
+      <header>
+        <Container>
+          <div className={css.headerInner}>
+            <nav className={css.headerNav}>
+              <Link to="/" title="Go to the home page">
+                <img
+                  src="/icon.svg"
+                  alt="JS WebApp Template logo"
+                  width={37}
+                  height={37}
                 />
-              </Form>
-            </div>
-          </Container>
-        </header>
+              </Link>
 
-        <main className={css.main}>{children}</main>
+              {beforeInstallPrompt && (
+                <Button
+                  onClick={() => {
+                    setBeforeInstallPrompt(null);
 
-        <footer className={css.footer}>
-          <Container>
-            <p>
-              Go ahead,{' '}
-              <a
-                href="https://github.com/faergeek/js-webapp-template"
-                rel="noopener"
-                target="_blank"
-              >
-                check out the repo
-              </a>{' '}
-              or{' '}
-              <a
-                href="https://github.com/faergeek/js-webapp-template/generate"
-                rel="noopener"
-                target="_blank"
-              >
-                use it as a template
-              </a>{' '}
-              for your own project.
-            </p>
+                    beforeInstallPrompt.prompt();
+                  }}
+                >
+                  Install
+                </Button>
+              )}
+            </nav>
 
-            <p>
-              Powered by the awesome{' '}
-              <a href="https://memegen.link/" rel="noopener" target="_blank">
-                Memegen.link
-              </a>{' '}
-              and{' '}
-              <a href="https://reactrouter.com" rel="noopener" target="_blank">
-                React Router
-              </a>
-              .
-            </p>
+            <Form className={css.searchForm}>
+              <label htmlFor="search">Search:</label>
 
-            <p>
-              ©{' '}
-              <a
-                href="https://github.com/faergeek"
-                rel="noopener"
-                target="_blank"
-              >
-                Sergey Slipchenko
-              </a>
-              .
-            </p>
-          </Container>
-        </footer>
-      </div>
-    </>
+              <input
+                ref={searchInputRef}
+                className={css.searchInput}
+                defaultValue={searchParams.get('q') ?? ''}
+                id="search"
+                name="q"
+                placeholder="Do you want ants?"
+                type="search"
+              />
+            </Form>
+          </div>
+        </Container>
+      </header>
+
+      <main className={css.main}>{children}</main>
+
+      <footer className={css.footer}>
+        <Container>
+          <p>
+            <a
+              href="https://github.com/faergeek/js-webapp-template"
+              rel="noopener"
+              target="_blank"
+            >
+              Check out the repo
+            </a>{' '}
+            or{' '}
+            <a
+              href="https://github.com/faergeek/js-webapp-template/generate"
+              rel="noopener"
+              target="_blank"
+            >
+              use it as a template
+            </a>{' '}
+            for your own project.
+          </p>
+
+          <p>
+            Powered by the awesome{' '}
+            <a href="https://memegen.link/" rel="noopener" target="_blank">
+              Memegen.link
+            </a>{' '}
+            and{' '}
+            <a href="https://reactrouter.com" rel="noopener" target="_blank">
+              React Router
+            </a>
+            .
+          </p>
+
+          <p>
+            ©{' '}
+            <a
+              href="https://github.com/faergeek"
+              rel="noopener"
+              target="_blank"
+            >
+              Sergey Slipchenko
+            </a>
+            .
+          </p>
+        </Container>
+      </footer>
+    </div>
   );
 }
 
