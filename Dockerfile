@@ -25,6 +25,7 @@ COPY package.json yarn.lock ./
 RUN yarn --frozen-lockfile --production
 
 COPY --from=builder /usr/src/app/build ./build
+COPY public ./public/
 
 ENV NODE_ENV=production
 ENV PORT=8080
