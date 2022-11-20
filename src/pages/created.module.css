@@ -3,10 +3,6 @@
   text-align: center;
 }
 
-.image {
-  aspect-ratio: 1;
-}
-
 .share {
   margin-top: 0;
   display: flex;

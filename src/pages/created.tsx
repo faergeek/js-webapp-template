@@ -55,7 +55,7 @@ export function CreatedPage() {
       <h1>You successfully created your own meme!!!</h1>
 
       <div className={css.imageWrapper}>
-        <img className={css.image} src={url} alt="Your new meme" />
+        <img src={url} alt="Your new meme" />
       </div>
 
       <p className={css.share}>
