@@ -1,8 +1,7 @@
 import clsx from 'clsx';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { Form, Link, useNavigation, useSearchParams } from 'react-router-dom';
 
-import { Button } from '../_core/button';
 import * as css from './layout.module.css';
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -22,25 +21,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
     searchInput.value = q;
   }, [q]);
 
-  const [beforeInstallPrompt, setBeforeInstallPrompt] =
-    useState<BeforeInstallPromptEvent | null>(null);
-
-  useEffect(() => {
-    const handleBeforeInstallPrompt = (event: BeforeInstallPromptEvent) => {
-      event.preventDefault();
-      setBeforeInstallPrompt(event);
-    };
-
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-
-    return () => {
-      window.removeEventListener(
-        'beforeinstallprompt',
-        handleBeforeInstallPrompt
-      );
-    };
-  }, []);
-
   return (
     <div
       className={clsx(css.root, {
@@ -50,7 +30,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <header>
         <Container>
           <div className={css.headerInner}>
-            <nav className={css.headerNav}>
+            <nav>
               <Link to="/" title="Go to the home page">
                 <img
                   src="/icon.svg"
@@ -59,18 +39,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   height={37}
                 />
               </Link>
-
-              {beforeInstallPrompt && (
-                <Button
-                  onClick={() => {
-                    setBeforeInstallPrompt(null);
-
-                    beforeInstallPrompt.prompt();
-                  }}
-                >
-                  Install
-                </Button>
-              )}
             </nav>
 
             <Form className={css.searchForm}>
