@@ -10,11 +10,3 @@ declare module 'assets.json' {
   const assets: { main: { auxiliary: string[]; css: string[]; js: string[] } };
   export default assets;
 }
-
-interface WindowEventMap {
-  beforeinstallprompt: BeforeInstallPromptEvent;
-}
-
-interface BeforeInstallPromptEvent extends Event {
-  prompt(): Promise<void>;
-}

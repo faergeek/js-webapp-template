@@ -36,12 +36,6 @@
   padding-top: 1em;
 }
 
-.headerNav {
-  display: flex;
-  align-items: inherit;
-  gap: inherit;
-}
-
 .searchForm {
   flex: 1 1 auto;
   display: flex;
