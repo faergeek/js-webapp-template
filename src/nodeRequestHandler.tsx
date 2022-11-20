@@ -74,7 +74,17 @@ export const requestHandler = express()
       hsts: !__DEV__,
     })
   )
-  .use(express.static(path.resolve('public')))
+  .use(
+    express.static(
+      path.resolve('public'),
+      __DEV__
+        ? undefined
+        : {
+            immutable: true,
+            maxAge: '1 year',
+          }
+    )
+  )
   .use(
     express.static(
       path.resolve('build', 'public'),
