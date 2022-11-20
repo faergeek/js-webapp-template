@@ -20,6 +20,9 @@ const MEMEGEN_CACHE_KEY = 'memegen';
 const ALL_CACHE_KEYS = [ASSETS_CACHE_KEY, MEMEGEN_CACHE_KEY];
 
 const assetUrls = Object.entries(assets).flatMap(([_entryKey, entry]) => [
+  '/apple-touch-icon.png',
+  '/favicon.ico',
+  '/icon.svg',
   ...Object.values(entry.auxiliary),
   ...(__DEV__ ? [] : Object.values(entry.css)),
   ...Object.values(entry.js),
