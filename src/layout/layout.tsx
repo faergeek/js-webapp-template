@@ -27,35 +27,35 @@ export function Layout({ children }: { children: React.ReactNode }) {
         [css.root_loading]: navigation.state !== 'idle',
       })}
     >
-      <header>
-        <Container>
-          <div className={css.headerInner}>
-            <nav>
-              <Link to="/" title="Go to the home page">
-                <img
-                  src="/icon.svg"
-                  alt="JS WebApp Template logo"
-                  width={37}
-                  height={37}
-                />
-              </Link>
-            </nav>
+      <div className={css.header_placeholder} />
 
-            <Form className={css.searchForm}>
-              <label htmlFor="search">Search:</label>
-
-              <input
-                ref={searchInputRef}
-                className={css.searchInput}
-                defaultValue={searchParams.get('q') ?? ''}
-                id="search"
-                name="q"
-                placeholder="Do you want ants?"
-                type="search"
+      <header className={css.header}>
+        <div className={css.headerInner}>
+          <nav>
+            <Link to="/" title="Go to the home page">
+              <img
+                src={new URL('../../public/icon.svg', import.meta.url).pathname}
+                alt="JS WebApp Template logo"
+                width={37}
+                height={37}
               />
-            </Form>
-          </div>
-        </Container>
+            </Link>
+          </nav>
+
+          <Form className={css.searchForm}>
+            <label htmlFor="search">Search</label>
+
+            <input
+              ref={searchInputRef}
+              className={css.searchInput}
+              defaultValue={searchParams.get('q') ?? ''}
+              id="search"
+              name="q"
+              placeholder="Do you want ants?"
+              type="search"
+            />
+          </Form>
+        </div>
       </header>
 
       <main className={css.main}>{children}</main>
@@ -110,12 +110,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function Container({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
-  return <div className={clsx(className, css.container)}>{children}</div>;
+export function Container({ children }: { children: React.ReactNode }) {
+  return <div className={css.container}>{children}</div>;
 }

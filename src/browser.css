@@ -1,5 +1,9 @@
 @import 'normalize.css';
 
+::selection {
+  background: #c29bea;
+}
+
 :root {
   --container-width: 800px;
   --color-fg: #000;
@@ -52,6 +56,10 @@ img {
   height: auto;
 }
 
+h1:first-child {
+  margin-top: 0;
+}
+
 :any-link {
   color: var(--color-accent);
   text-decoration: none;
@@ -94,7 +102,7 @@ select {
   padding: 0.5em;
   border-radius: 8px;
   background: none;
-  color: var(--color-fg);
+  color: inherit;
 }
 
 select {
