@@ -13,6 +13,7 @@ RUN yarn --frozen-lockfile
 
 COPY src ./src/
 COPY .browserslistrc babel.config.cjs postcss.config.cjs webpack.config.js ./
+COPY public ./public/
 RUN yarn run build
 
 FROM node:19-slim
