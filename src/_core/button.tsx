@@ -54,7 +54,10 @@ export function Button(props: Props) {
     default:
       throw new Error(
         `Unexpected 'as' prop value: ${
-          typeof allProps.as === 'string' ? allProps.as : allProps.as.name
+          typeof allProps.as === 'string'
+            ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              (allProps as any).as
+            : allProps.as.name
         }`
       );
   }
