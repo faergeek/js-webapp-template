@@ -10,6 +10,7 @@ import helmet from 'helmet';
 import * as morgan from 'morgan';
 import { nanoid } from 'nanoid';
 import * as nocache from 'nocache';
+import { StrictMode } from 'react';
 import { renderToNodeStream } from 'react-dom/server';
 import {
   unstable_createStaticRouter as createStaticRouter,
@@ -181,18 +182,20 @@ export const requestHandler = express()
       const router = createStaticRouter(routes, context);
 
       const stream = renderToNodeStream(
-        <Entry
-          css={assets.main.css}
-          js={assets.main.js}
-          nonce={req.nonce}
-          router={router}
-        >
-          <StaticRouterProvider
-            context={context}
-            hydrate={false}
+        <StrictMode>
+          <Entry
+            css={assets.main.css}
+            js={assets.main.js}
+            nonce={req.nonce}
             router={router}
-          />
-        </Entry>
+          >
+            <StaticRouterProvider
+              context={context}
+              hydrate={false}
+              router={router}
+            />
+          </Entry>
+        </StrictMode>
       );
 
       res
