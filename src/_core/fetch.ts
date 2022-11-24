@@ -1,5 +1,7 @@
+import { isAbortError } from './errors';
+
 export function handleFetchError(err: unknown) {
-  if (err instanceof DOMException && err.name === 'AbortError') {
+  if (isAbortError(err)) {
     throw err;
   }
 
