@@ -94,7 +94,7 @@ export function CreatedPage() {
 
           <Button
             as="a"
-            download="meme.jpg"
+            download={`meme.${url.split('.').at(-1)}`}
             href={`/download?${new URLSearchParams({ url })}`}
             rel="noopener"
             target="_blank"
