@@ -30,7 +30,7 @@ export function homeMeta({ location }: MetaFunctionArgs<LoaderData>) {
   const meta: MetaDescriptor = {};
 
   if (q) {
-    meta.title = `Search results for "${q}"`;
+    meta.title = meta['og:title'] = `Search results for "${q}"`;
   }
 
   return meta;

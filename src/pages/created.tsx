@@ -22,6 +22,7 @@ export function createdLoader({ request }: LoaderFunctionArgs) {
 type LoaderData = Awaited<ReturnType<typeof createdLoader>>;
 
 export const createdMeta: MetaDescriptor = {
+  'og:title': 'You successfully created your own meme!!!',
   title: 'You successfully created your own meme!!!',
 };
 
