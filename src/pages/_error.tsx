@@ -27,6 +27,7 @@ export function errorMeta({ error }: MetaFunctionArgs) {
 
   return {
     title: response.statusText,
+    'og:title': response.statusText,
   };
 }
 

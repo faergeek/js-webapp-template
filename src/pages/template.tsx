@@ -37,6 +37,7 @@ export function templateMeta({ data }: MetaFunctionArgs<LoaderData>) {
   return {
     'og:image': imageUrl.toString(),
     title: data.name,
+    'og:title': data.name,
   };
 }
 
