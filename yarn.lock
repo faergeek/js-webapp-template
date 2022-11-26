@@ -1121,9 +1121,9 @@
     strip-json-comments "^3.1.1"
 
 "@faergeek/eslint-config@^5.0.0":
-  version "5.0.145"
-  resolved "https://registry.yarnpkg.com/@faergeek/eslint-config/-/eslint-config-5.0.145.tgz#de4f6d7e994f993518bcaeacf58029c4af811cf4"
-  integrity sha512-L1gT9bEJW/JdPYapXJzYRs4mD1ERs7YIjdacTVLBvaPoUFLm/Z/ZSqK//fFLsxjwsMThmicLPzTXV6nCLEsrVg==
+  version "5.0.146"
+  resolved "https://registry.yarnpkg.com/@faergeek/eslint-config/-/eslint-config-5.0.146.tgz#da151301a6a93a5a83a97c865edb02214ed19dc0"
+  integrity sha512-240WAb3HTDp2P7/0eKheF1gDrZLUjBTQVUVulxjcFQNMPki1B5/jd+BGpCoR2ryO/R3aqgFkHwmcJv8VTEETqQ==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.0.0"
     "@typescript-eslint/parser" "^5.0.0"
