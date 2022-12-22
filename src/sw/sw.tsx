@@ -1,12 +1,12 @@
 /// <reference lib="dom" />
 /// <reference lib="webworker" />
 /// <reference lib="webworker.iterable" />
-import { unstable_createStaticHandler as createStaticHandler } from '@remix-run/router';
+import { createStaticHandler } from '@remix-run/router';
 import assets from 'assets.json';
 import { renderToString } from 'react-dom/server';
 import {
-  unstable_createStaticRouter as createStaticRouter,
-  unstable_StaticRouterProvider as StaticRouterProvider,
+  createStaticRouter,
+  StaticRouterProvider,
 } from 'react-router-dom/server';
 
 import { handleFetchError } from '../_core/fetch';

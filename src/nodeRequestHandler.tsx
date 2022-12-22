@@ -2,7 +2,7 @@ import * as http from 'node:http';
 import * as path from 'node:path';
 import { finished } from 'node:stream/promises';
 
-import { unstable_createStaticHandler as createStaticHandler } from '@remix-run/router';
+import { createStaticHandler } from '@remix-run/router';
 import assets from 'assets.json';
 import * as bodyParser from 'body-parser';
 import * as express from 'express';
@@ -13,8 +13,8 @@ import * as nocache from 'nocache';
 import { StrictMode } from 'react';
 import { renderToNodeStream } from 'react-dom/server';
 import {
-  unstable_createStaticRouter as createStaticRouter,
-  unstable_StaticRouterProvider as StaticRouterProvider,
+  createStaticRouter,
+  StaticRouterProvider,
 } from 'react-router-dom/server';
 import invariant from 'tiny-invariant';
 
