@@ -1137,9 +1137,9 @@
     eslint-plugin-simple-import-sort "^8.0.0"
 
 "@faergeek/make-webpack-config@^21.0.0":
-  version "21.1.9"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-21.1.9.tgz#fca6517a25c83691f3e50b8643ed628ff13c0601"
-  integrity sha512-5MpOv4uu1JLpCJo78XpAx99vrm+1/bNeD/tQtBeh5hqVs/p9RjCCDNGznH0UrRgQzThAQNy7ACv+KpRLJg+UMg==
+  version "21.1.10"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-21.1.10.tgz#27c7dba2fbc8f92341f7efe78cee9b33c7f8de9a"
+  integrity sha512-BQY021aivPuABOemKt+4rRcXCNm9aGFUVwfATLrfSu+n+hTxzlV5DW0ukdza3Mzvs6bjiu+1a4c7oEGVU8J7lA==
   dependencies:
     "@faergeek/tiny-browser-hmr-webpack-plugin" "^1.0.1"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.5.0"
@@ -1411,9 +1411,9 @@
     "@types/node" "*"
 
 "@types/node@*":
-  version "18.11.17"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.17.tgz#5c009e1d9c38f4a2a9d45c0b0c493fe6cdb4bcb5"
-  integrity sha512-HJSUJmni4BeDHhfzn6nF0sVmd1SMezP7/4F0Lq+aXzmp2xm9O7WXrUtHW/CHlYVtZUbByEvWidHqRtcJXGF2Ng==
+  version "18.11.18"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.18.tgz#8dfb97f0da23c2293e554c5a50d61ef134d7697f"
+  integrity sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
