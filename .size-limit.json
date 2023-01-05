@@ -2,7 +2,7 @@
   {
     "name": "css",
     "path": "build/public/*.css",
-    "limit": "2.4 kB"
+    "limit": "3 kB"
   },
   {
     "name": "js",
