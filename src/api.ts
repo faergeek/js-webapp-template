@@ -59,7 +59,7 @@ export async function fetchTemplateById(templateId: string) {
 }
 
 export const MEME_IMAGE_EXTENSIONS = ['gif', 'jpg', 'png'] as const;
-export type MemeImageExtension = typeof MEME_IMAGE_EXTENSIONS[number];
+export type MemeImageExtension = (typeof MEME_IMAGE_EXTENSIONS)[number];
 
 interface CreateMemeParams {
   extension: MemeImageExtension;
