@@ -1,4 +1,3 @@
-import { ErrorResponse } from '@remix-run/router';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import invariant from 'tiny-invariant';
 
@@ -13,19 +12,7 @@ const { css, js, nonce, routerState } = __ENTRY_CONTEXT__;
 __webpack_nonce__ = nonce;
 
 const router = createBrowserRouter(routes, {
-  hydrationData: {
-    ...routerState,
-    errors:
-      routerState.errors &&
-      Object.fromEntries(
-        Object.entries(routerState.errors).map(([key, value]) => [
-          key,
-          value && 'data' in value && 'status' in value && 'statusText' in value
-            ? new ErrorResponse(value.status, value.statusText, value.data)
-            : value,
-        ])
-      ),
-  },
+  hydrationData: routerState,
 });
 
 export function BrowserRoot() {
