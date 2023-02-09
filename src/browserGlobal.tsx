@@ -1,4 +1,4 @@
-import { HydrationState } from '@remix-run/router';
+import { type HydrationState } from '@remix-run/router';
 import * as serializeJavascript from 'serialize-javascript';
 
 type BrowserGlobals = Partial<{

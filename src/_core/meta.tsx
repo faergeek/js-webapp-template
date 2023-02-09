@@ -1,5 +1,10 @@
 import { useMemo } from 'react';
-import { Location, matchRoutes, Params, useLocation } from 'react-router-dom';
+import {
+  type Location,
+  matchRoutes,
+  type Params,
+  useLocation,
+} from 'react-router-dom';
 
 import { useEntryContext } from '../entry';
 import { routes } from '../routes';

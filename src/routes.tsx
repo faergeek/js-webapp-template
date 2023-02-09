@@ -1,10 +1,10 @@
 import {
-  IndexRouteObject,
-  NonIndexRouteObject,
+  type IndexRouteObject,
+  type NonIndexRouteObject,
   Outlet,
 } from 'react-router-dom';
 
-import { MetaDescriptor, MetaFunctionArgs } from './_core/meta';
+import { type MetaDescriptor, type MetaFunctionArgs } from './_core/meta';
 import { Document } from './document';
 import { Layout } from './layout/layout';
 import { errorMeta, ErrorPage } from './pages/_error';

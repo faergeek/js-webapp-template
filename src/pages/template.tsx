@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import {
-  ActionFunctionArgs,
+  type ActionFunctionArgs,
   Form,
-  LoaderFunctionArgs,
+  type LoaderFunctionArgs,
   redirect,
   useLoaderData,
   useNavigation,
@@ -10,13 +10,13 @@ import {
 import invariant from 'tiny-invariant';
 
 import { Button } from '../_core/button';
-import { MetaFunctionArgs } from '../_core/meta';
+import { type MetaFunctionArgs } from '../_core/meta';
 import {
   createMeme,
   fetchTemplateById,
   getPreviewImageUrl,
   MEME_IMAGE_EXTENSIONS,
-  MemeImageExtension,
+  type MemeImageExtension,
 } from '../api';
 import { Container } from '../layout/layout';
 import * as css from './template.module.css';
