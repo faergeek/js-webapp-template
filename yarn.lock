@@ -1232,9 +1232,9 @@
     eslint-plugin-simple-import-sort "^10.0.0"
 
 "@faergeek/make-webpack-config@^21.0.0":
-  version "21.1.17"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-21.1.17.tgz#d3954a49d430c0ef09dcb99e0944017c5672488e"
-  integrity sha512-lMhI/zG5LJEQq5uWkkE2gK8UifobSV78d9W4nuOeImVCbb1fnNZGsL67ex2gGS60tglkmrYZH9Ezk3/vBUzR/g==
+  version "21.1.18"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-21.1.18.tgz#4fd45c7221fb5f89e098bbce991426cf9ef1ddb9"
+  integrity sha512-7Q/UpnMaIwMnDsTzAH47R10qz6Go8zoKU0mm2IxCHqzkezi1ZxV7HXzHAS36ifvOtdVtBWzBm3t5vAeOrBdLYA==
   dependencies:
     "@faergeek/tiny-browser-hmr-webpack-plugin" "^1.0.1"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.5.0"
@@ -1251,9 +1251,9 @@
     webpack-bundle-analyzer "^4.4.1"
 
 "@faergeek/tiny-browser-hmr-webpack-plugin@^1.0.1":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@faergeek/tiny-browser-hmr-webpack-plugin/-/tiny-browser-hmr-webpack-plugin-1.0.5.tgz#9a543e992e1f642f6004a583d12c776a7e04a514"
-  integrity sha512-tukWOEJu/HFMJ//julXi5wNmCeBtS+3h+9YWZgwtC4gJbF0yIPINqdBQEQDsw39irAzMsGmpt7VPHnxlaEFZKw==
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@faergeek/tiny-browser-hmr-webpack-plugin/-/tiny-browser-hmr-webpack-plugin-1.0.6.tgz#d074667e9fbe34080cafd977b912abdff42cdb28"
+  integrity sha512-e7IySKRTDK4bKMsSS1IU7NR27Pt4pZ2rZDOoNFXZsyfVqTV99gBsT9pmEInqwODUJBu9gid8NF+/5bwVuDkvmA==
   dependencies:
     ws "^8.10.0"
   optionalDependencies:
@@ -1506,9 +1506,9 @@
     "@types/node" "*"
 
 "@types/node@*":
-  version "18.15.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.15.0.tgz#286a65e3fdffd691e170541e6ecb0410b16a38be"
-  integrity sha512-z6nr0TTEOBGkzLGmbypWOGnpSpSIBorEhC4L+4HeQ2iezKCi4f77kyslRwvHeNitymGQ+oFyIWGP96l/DPSV9w==
+  version "18.15.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.15.1.tgz#41dc2bf78e8085a250d4670d95edb7fba621dd29"
+  integrity sha512-U2TWca8AeHSmbpi314QBESRk7oPjSZjDsR+c+H4ECC1l+kFgpZf8Ydhv3SJpPy51VyZHHqxlb6mTTqYNNRVAIw==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -2172,7 +2172,12 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001449, caniuse-lite@^1.0.30001464:
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001449:
+  version "1.0.30001465"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001465.tgz#c1b715bbb4ff6fdc20a4827e0afe9f4374fca217"
+  integrity sha512-HvjgL3MYAJjceTDCcjRnQGjwUz/5qec9n7JPOzUursUoOTIsYCSDOb1l7RsnZE8mjbxG78zVRCKfrBXyvChBag==
+
+caniuse-lite@^1.0.30001464:
   version "1.0.30001464"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001464.tgz#888922718df48ce5e33dcfe1a2af7d42676c5eb7"
   integrity sha512-oww27MtUmusatpRpCGSOneQk2/l5czXANDSFvsc7VuOQ86s3ANhZetpwXNf1zY/zdfP63Xvjz325DAdAoES13g==
@@ -2332,9 +2337,9 @@ core-js-compat@^3.25.1:
     browserslist "^4.21.5"
 
 core-js-pure@^3.23.3:
-  version "3.29.0"
-  resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.29.0.tgz#0e1ac889214398641ea4bb1c6cf25ff0959ec1d2"
-  integrity sha512-v94gUjN5UTe1n0yN/opTihJ8QBWD2O8i19RfTZR7foONPWArnjB96QA/wk5ozu1mm6ja3udQCzOzwQXTxi3xOQ==
+  version "3.29.1"
+  resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.29.1.tgz#1be6ca2b8772f6b4df7fc4621743286e676c6162"
+  integrity sha512-4En6zYVi0i0XlXHVz/bi6l1XDjCqkKRq765NXuX+SnaIatlE96Odt5lMLjdxUiNI1v9OXI5DSLWYPlmTfkTktg==
 
 cosmiconfig@^7.0.0:
   version "7.1.0"
