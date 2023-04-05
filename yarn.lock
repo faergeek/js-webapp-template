@@ -1283,9 +1283,9 @@
     eslint-plugin-simple-import-sort "^10.0.0"
 
 "@faergeek/make-webpack-config@^21.0.0":
-  version "21.1.23"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-21.1.23.tgz#a4a8c4cf2485c3a08cc69bfa3a85ac8c5ff0e9b2"
-  integrity sha512-OOe9qon1pFSnMbyPXtHSVnUQY4SqX6owyx8gnc6ROxZYjyKyh45DSsJHEMvvreB2VmINzv7xvPEQtRIo9XJ6Xw==
+  version "21.1.24"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-21.1.24.tgz#046fd08ead7b5b026b0c08122e993cf2f4f0fcf7"
+  integrity sha512-Vb8vqUvy9/Pw3lQotc0x5TJ7ohx0C0BegCq7/xW2p6lvdiTvZkYiZnntf7WkzRhOylPcoSAviZXXnJThKuFHGQ==
   dependencies:
     "@faergeek/tiny-browser-hmr-webpack-plugin" "^1.0.1"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.5.0"
@@ -2681,9 +2681,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.4.284:
-  version "1.4.349"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.349.tgz#c65a4378cea805accfe6f585730ce2a3afe07f1d"
-  integrity sha512-34LBfVDiL6byWorSmQOPwq4gD5wpN8Mhh5yPGQr67FbcxsfUS0BDJP9y6RykSgeWVUfSkN/2dChywnsrmKVyUg==
+  version "1.4.352"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.352.tgz#be96bd7c2f4b980deebc9338a49a67430a33ed73"
+  integrity sha512-ikFUEyu5/q+wJpMOxWxTaEVk2M1qKqTGKKyfJmod1CPZxKfYnxVS41/GCBQg21ItBpZybyN8sNpRqCUGm+Zc4Q==
 
 emojis-list@^3.0.0:
   version "3.0.0"
@@ -4435,9 +4435,9 @@ postcss-lab-function@^5.2.0:
     "@csstools/postcss-progressive-custom-properties" "^2.0.0"
 
 postcss-loader@^7.0.0:
-  version "7.2.3"
-  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-7.2.3.tgz#c2d491a769102e0aac228d53fb1ad376cc158bb2"
-  integrity sha512-H/PIjgbn2q7zFnmUMPvEupIFnOAg+fYWC/4F6DugK8uPITVYyEflnSjLFV0u20B3Qi88PzPiAlzn8hBSu3f8oA==
+  version "7.2.4"
+  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-7.2.4.tgz#2884f4ca172de633b2cf1f93dc852968f0632ba9"
+  integrity sha512-F88rpxxNspo5hatIc+orYwZDtHFaVFOSIVAx+fBfJC1GmhWbVmPWtmg2gXKE1OxJbneOSGn8PWdIwsZFcruS+w==
   dependencies:
     cosmiconfig "^8.1.3"
     cosmiconfig-typescript-loader "^4.3.0"
