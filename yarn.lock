@@ -3324,9 +3324,9 @@ has@^1.0.3:
     function-bind "^1.1.1"
 
 helmet@^6.0.0:
-  version "6.1.2"
-  resolved "https://registry.yarnpkg.com/helmet/-/helmet-6.1.2.tgz#063af3d2c7fa25c09f377aaede7b8a9dffbbe761"
-  integrity sha512-n39kcD7ntw83PMeqqjSOPrY/VpIH+XniLoxFXLfK6UCgTTN9XkOGp2YWKB/zfgZS+zRQdiHo3fgNmy0l5xoFPg==
+  version "6.1.5"
+  resolved "https://registry.yarnpkg.com/helmet/-/helmet-6.1.5.tgz#2153387f6d73cce6efdfd85d3a65417cfb7db80c"
+  integrity sha512-UgAvdoG0BhF9vcCh/j0bWtElo2ZHHk6OzC98NLCM6zK03DEVSM0vUAtT7iR+oTo2Mi6sGelAH3tL6B/uUWxV4g==
 
 html-entities@^2.1.0:
   version "2.3.3"
