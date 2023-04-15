@@ -11,7 +11,7 @@ import * as morgan from 'morgan';
 import { nanoid } from 'nanoid';
 import * as nocache from 'nocache';
 import { StrictMode } from 'react';
-import { renderToNodeStream } from 'react-dom/server';
+import { renderToPipeableStream } from 'react-dom/server';
 import {
   createStaticRouter,
   StaticRouterProvider,
@@ -181,31 +181,29 @@ export const requestHandler = express()
 
       const router = createStaticRouter(routes, context);
 
-      const stream = renderToNodeStream(
-        <StrictMode>
-          <Entry
-            css={assets.main.css}
-            js={assets.main.js}
-            nonce={req.nonce}
-            router={router}
-          >
-            <StaticRouterProvider
-              context={context}
-              hydrate={false}
-              router={router}
-            />
-          </Entry>
-        </StrictMode>
-      );
-
       res
         .status(context.statusCode)
         .set('content-type', 'text/html')
         .write('<!DOCTYPE html>');
 
-      stream.pipe(res);
-
-      await finished(stream);
+      await finished(
+        renderToPipeableStream(
+          <StrictMode>
+            <Entry
+              css={assets.main.css}
+              js={assets.main.js}
+              nonce={req.nonce}
+              router={router}
+            >
+              <StaticRouterProvider
+                context={context}
+                hydrate={false}
+                router={router}
+              />
+            </Entry>
+          </StrictMode>
+        ).pipe(res)
+      );
     } catch (err) {
       next(err);
     }

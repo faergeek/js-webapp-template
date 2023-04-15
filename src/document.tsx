@@ -8,8 +8,8 @@ export function Document({ children }: { children: React.ReactNode }) {
   const { css, js, nonce, routerState } = useEntryContext();
 
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head suppressHydrationWarning>
+    <html lang="en">
+      <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="theme-color" content="#639" />
@@ -34,7 +34,7 @@ export function Document({ children }: { children: React.ReactNode }) {
         ))}
       </head>
 
-      <body suppressHydrationWarning>
+      <body>
         {children}
 
         {typeof window !== 'undefined' && <ScrollRestoration />}
