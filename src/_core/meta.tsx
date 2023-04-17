@@ -10,7 +10,7 @@ import { useEntryContext } from '../entry';
 import { routes } from '../routes';
 
 export interface MetaFunctionArgs<T = unknown> {
-  data: T;
+  data: T | undefined;
   error: unknown;
   params: Params;
   location: Location;

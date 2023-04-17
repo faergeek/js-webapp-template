@@ -30,6 +30,8 @@ export function templateLoader({ params }: LoaderFunctionArgs) {
 type LoaderData = Awaited<ReturnType<typeof templateLoader>>;
 
 export function templateMeta({ data }: MetaFunctionArgs<LoaderData>) {
+  if (!data) return;
+
   const imageUrl = new URL(data.example.url);
   imageUrl.searchParams.set('width', '1200');
   imageUrl.searchParams.set('height', '630');

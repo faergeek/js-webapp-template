@@ -1,5 +1,5 @@
 declare const __DEV__: boolean;
-declare const __NODE__: boolean;
+declare const __ENTRY_TARGET__: 'webPage' | 'node' | 'serviceWorker';
 
 declare module '*.module.css' {
   const css: { [key: string]: string };
@@ -7,6 +7,21 @@ declare module '*.module.css' {
 }
 
 declare module 'assets.json' {
-  const assets: { main: { auxiliary: string[]; css: string[]; js: string[] } };
+  interface Asset {
+    path: string;
+    immutable: boolean;
+  }
+
+  interface AssetRecord {
+    auxiliary: Asset[];
+    css: Asset[];
+    js: Asset[];
+  }
+
+  const assets: {
+    initial: Record<'main', AssetRecord>;
+    async: Partial<Record<string, AssetRecord>>;
+  };
+
   export default assets;
 }

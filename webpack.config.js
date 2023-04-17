@@ -16,7 +16,7 @@ export default function webpackConfig(env, argv) {
     },
     dev,
     entry: {
-      browser: './src/browser',
+      webPage: './src/browser',
       node: './src/node',
       serviceWorker: './src/sw/sw',
     },
