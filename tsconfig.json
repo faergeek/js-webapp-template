@@ -1,10 +1,11 @@
 {
-  "include": ["src/browser.tsx", "src/global.d.ts", "src/node.ts"],
+  "include": ["src"],
+  "exclude": ["src/sw"],
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "lib": ["esnext"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,

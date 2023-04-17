@@ -1,7 +1,9 @@
 {
   "extends": "../../tsconfig",
   "include": ["../global.d.ts", "sw.tsx"],
+  "exclude": [],
   "compilerOptions": {
+    "lib": ["DOM", "ESNext", "WebWorker", "Webworker.Iterable"],
     "skipDefaultLibCheck": true
   }
 }
