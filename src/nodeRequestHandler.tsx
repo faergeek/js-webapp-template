@@ -184,8 +184,8 @@ export const requestHandler = express()
       const stream = renderToNodeStream(
         <StrictMode>
           <Entry
-            css={assets.main.css}
-            js={assets.main.js}
+            css={assets.initial.main.css.map(asset => asset.path)}
+            js={assets.initial.main.js.map(asset => asset.path)}
             nonce={req.nonce}
             router={router}
           >
