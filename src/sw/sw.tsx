@@ -1,6 +1,3 @@
-/// <reference lib="dom" />
-/// <reference lib="webworker" />
-/// <reference lib="webworker.iterable" />
 import { createStaticHandler } from '@remix-run/router';
 import assets from 'assets.json';
 import { renderToString } from 'react-dom/server';

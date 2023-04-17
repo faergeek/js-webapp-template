@@ -1,5 +1,3 @@
-/// <reference lib="dom" />
-/// <reference lib="dom.iterable" />
 import './browser.css';
 
 import { StrictMode } from 'react';
