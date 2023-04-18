@@ -1,15 +1,15 @@
 import './browser.css';
 
 import { StrictMode } from 'react';
-import { hydrate } from 'react-dom';
+import { hydrateRoot } from 'react-dom/client';
 
 import { BrowserRoot } from './browserRoot';
 
-hydrate(
+hydrateRoot(
+  document,
   <StrictMode>
     <BrowserRoot />
-  </StrictMode>,
-  document
+  </StrictMode>
 );
 
 if (navigator.serviceWorker) {
