@@ -39,21 +39,12 @@ export function Meta() {
         let routeMeta: MetaDescriptor | void;
 
         if (typeof route.meta === 'function') {
-          if (loaderData && route.id in loaderData) {
-            routeMeta = route.meta({
-              data: loaderData[route.id],
-              error: undefined,
-              location,
-              params,
-            });
-          } else if (errors && route.id in errors) {
-            routeMeta = route.meta({
-              data: loaderData?.[route.id],
-              error: errors[route.id],
-              location,
-              params,
-            });
-          }
+          routeMeta = route.meta({
+            data: loaderData?.[route.id],
+            error: errors?.[route.id],
+            location,
+            params,
+          });
         } else {
           routeMeta = route.meta;
         }
