@@ -35,15 +35,12 @@ function convertRoutes(routes: AppRouteObject[], parentPath: number[] = []) {
     const treePath = [...parentPath, index];
     const id = treePath.join('-');
 
-    const hasErrorBoundary = route.errorElement != null;
-
     if (route.index) {
-      return { ...route, hasErrorBoundary, id };
+      return { ...route, id };
     }
 
     const pathOrLayoutRoute: AppNonIndexRouteObject & { id: string } = {
       ...route,
-      hasErrorBoundary,
       id,
       children: route.children
         ? convertRoutes(route.children, treePath)

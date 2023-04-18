@@ -1,7 +1,6 @@
 import type * as http from 'node:http';
 import * as path from 'node:path';
 
-import { createStaticHandler } from '@remix-run/router';
 import assets from 'assets.json';
 import * as bodyParser from 'body-parser';
 import * as express from 'express';
@@ -12,6 +11,7 @@ import * as nocache from 'nocache';
 import { StrictMode } from 'react';
 import { renderToPipeableStream } from 'react-dom/server';
 import {
+  createStaticHandler,
   createStaticRouter,
   StaticRouterProvider,
 } from 'react-router-dom/server';
