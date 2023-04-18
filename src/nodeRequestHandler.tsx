@@ -1,6 +1,5 @@
 import type * as http from 'node:http';
 import * as path from 'node:path';
-import { finished } from 'node:stream/promises';
 
 import { createStaticHandler } from '@remix-run/router';
 import assets from 'assets.json';
@@ -11,7 +10,7 @@ import * as morgan from 'morgan';
 import { nanoid } from 'nanoid';
 import * as nocache from 'nocache';
 import { StrictMode } from 'react';
-import { renderToNodeStream } from 'react-dom/server';
+import { renderToPipeableStream } from 'react-dom/server';
 import {
   createStaticRouter,
   StaticRouterProvider,
@@ -181,7 +180,7 @@ export const requestHandler = express()
 
       const router = createStaticRouter(routes, context);
 
-      const stream = renderToNodeStream(
+      const { pipe } = renderToPipeableStream(
         <StrictMode>
           <Entry
             css={assets.initial.main.css.map(asset => asset.path)}
@@ -195,17 +194,16 @@ export const requestHandler = express()
               router={router}
             />
           </Entry>
-        </StrictMode>
+        </StrictMode>,
+        {
+          nonce: req.nonce,
+          onShellError: next,
+          onShellReady: () => {
+            res.status(context.statusCode).set('content-type', 'text/html');
+            pipe(res);
+          },
+        }
       );
-
-      res
-        .status(context.statusCode)
-        .set('content-type', 'text/html')
-        .write('<!DOCTYPE html>');
-
-      stream.pipe(res);
-
-      await finished(stream);
     } catch (err) {
       next(err);
     }
