@@ -37,7 +37,6 @@ export const requestHandler = express()
   })
   .use(
     helmet({
-      crossOriginEmbedderPolicy: false,
       contentSecurityPolicy: {
         directives: {
           connectSrc: [
