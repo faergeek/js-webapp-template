@@ -11,7 +11,10 @@ export default function webpackConfig(env, argv) {
     cache: {
       type: 'filesystem',
       buildDependencies: {
-        config: [new URL(import.meta.url).pathname],
+        config: [
+          new URL(import.meta.url).pathname,
+          new URL('.browserslistrc', import.meta.url).pathname,
+        ],
       },
     },
     dev,
