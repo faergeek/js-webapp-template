@@ -1335,9 +1335,9 @@
     eslint-plugin-simple-import-sort "^10.0.0"
 
 "@faergeek/make-webpack-config@^22.0.0":
-  version "22.0.9"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-22.0.9.tgz#8f21c4311a014345a0a861aecdc7078bb42943fd"
-  integrity sha512-fN7getNRZ1MsWjZcExUiGbn3/LCeTCP80djVyPzf7k8g0aV7gW+jUkasbxUGTiNjvlTV9f6pGin6C0Tvt8BxDA==
+  version "22.0.10"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-22.0.10.tgz#fce85b299a17636fe2ce4ef83450b496af2ce36f"
+  integrity sha512-wRX13mTELJE2+A/E0yKCxMA2vlkBZvwnzSipIhJYaPpmOIQRKFH0gsvReShC/N+qazEBur34CW9k/yimWc+6pw==
   dependencies:
     "@faergeek/tiny-browser-hmr-webpack-plugin" "^1.0.1"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.5.0"
