@@ -23,7 +23,7 @@
     "express": "^4.17.1",
     "helmet": "^7.0.0",
     "morgan": "^1.10.0",
-    "nocache": "^3.0.4",
+    "nocache": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.3",
