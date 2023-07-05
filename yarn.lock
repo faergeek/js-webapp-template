@@ -1365,9 +1365,9 @@
     eslint-plugin-simple-import-sort "^10.0.0"
 
 "@faergeek/make-webpack-config@^22.0.0":
-  version "22.0.20"
-  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-22.0.20.tgz#9de01ff59f8eae0e48ff315055037af8ea4756f1"
-  integrity sha512-R8cIfp2GkmIDK+D33+lmULtvO8P4CSLW0lHZy/GBQC2WSk9gCEQOcowMVe1HbGNWP7zjQ4LasvbYUill3M7F7w==
+  version "22.0.21"
+  resolved "https://registry.yarnpkg.com/@faergeek/make-webpack-config/-/make-webpack-config-22.0.21.tgz#de5f16c1aedcbbe9ef4c79ab607974dbf02bcecd"
+  integrity sha512-KXKBA5qNS0XHL1vDUWEPevRVvVZpudlUfwAAVqoKUjMyvnbD9HFKxxNa74cYxGzVZ4Y0s6t/I8ySxt94K3SkmQ==
   dependencies:
     "@faergeek/tiny-browser-hmr-webpack-plugin" "^1.0.1"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.5.0"
@@ -1425,19 +1425,19 @@
     wrap-ansi "^8.1.0"
     wrap-ansi-cjs "npm:wrap-ansi@^7.0.0"
 
-"@jest/schemas@^29.4.3":
-  version "29.4.3"
-  resolved "https://registry.yarnpkg.com/@jest/schemas/-/schemas-29.4.3.tgz#39cf1b8469afc40b6f5a2baaa146e332c4151788"
-  integrity sha512-VLYKXQmtmuEz6IxJsrZwzG9NvtkQsWNnWMsKxqWNu3+CnfzJQhp0WDDKWLVV9hLKr0l3SLLFRqcYHjhtyuDVxg==
+"@jest/schemas@^29.6.0":
+  version "29.6.0"
+  resolved "https://registry.yarnpkg.com/@jest/schemas/-/schemas-29.6.0.tgz#0f4cb2c8e3dca80c135507ba5635a4fd755b0040"
+  integrity sha512-rxLjXyJBTL4LQeJW3aKo0M/+GkCOXsO+8i9Iu7eDb6KwtP65ayoDsitrdPBtujxQ88k4wI2FNYfa6TOGwSn6cQ==
   dependencies:
-    "@sinclair/typebox" "^0.25.16"
+    "@sinclair/typebox" "^0.27.8"
 
-"@jest/types@^29.5.0":
-  version "29.5.0"
-  resolved "https://registry.yarnpkg.com/@jest/types/-/types-29.5.0.tgz#f59ef9b031ced83047c67032700d8c807d6e1593"
-  integrity sha512-qbu7kN6czmVRc3xWFQcAN03RAUamgppVUdXrvl1Wr3jlNF93o9mJbGcDWrwGB6ht44u7efB1qCFgVQmca24Uog==
+"@jest/types@^29.6.0":
+  version "29.6.0"
+  resolved "https://registry.yarnpkg.com/@jest/types/-/types-29.6.0.tgz#717646103c5715394d78c011a08b3cbb83d738e8"
+  integrity sha512-8XCgL9JhqbJTFnMRjEAO+TuW251+MoMd5BSzLiE3vvzpQ8RlBxy8NoyNkDhs3K3OL3HeVinlOl9or5p7GTeOLg==
   dependencies:
-    "@jest/schemas" "^29.4.3"
+    "@jest/schemas" "^29.6.0"
     "@types/istanbul-lib-coverage" "^2.0.0"
     "@types/istanbul-reports" "^3.0.0"
     "@types/node" "*"
@@ -1542,10 +1542,10 @@
   resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.7.1.tgz#fea7ac35ae4014637c130011f59428f618730498"
   integrity sha512-bgVQM4ZJ2u2CM8k1ey70o1ePFXsEzYVZoWghh6WjM8p59jQ7HxzbHW4SbnWFG7V9ig9chLawQxDTZ3xzOF8MkQ==
 
-"@sinclair/typebox@^0.25.16":
-  version "0.25.24"
-  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.25.24.tgz#8c7688559979f7079aacaf31aa881c3aa410b718"
-  integrity sha512-XJfwUVUKDHF5ugKwIcxEgc9k8b7HbznCp6eUfWgu710hMPNIO4aw4/zB5RogDQz8nd6gyCDpU9O/m6qYEWY6yQ==
+"@sinclair/typebox@^0.27.8":
+  version "0.27.8"
+  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.27.8.tgz#6667fac16c436b5434a387a34dedb013198f6e6e"
+  integrity sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==
 
 "@size-limit/file@^8.1.0":
   version "8.2.6"
@@ -1999,7 +1999,12 @@ acorn-walk@^8.0.0:
   resolved "https://registry.yarnpkg.com/acorn-walk/-/acorn-walk-8.2.0.tgz#741210f2e2426454508853a2f44d0ab83b7f69c1"
   integrity sha512-k+iyHEuPgSw6SbuDpGQM+06HQUa04DZ3o+F6CSzXMvvI5KMvnaEqXe+YVe555R9nn6GPt404fos4wcgpw12SDA==
 
-acorn@^8.0.4, acorn@^8.7.1, acorn@^8.8.2, acorn@^8.9.0:
+acorn@^8.0.4:
+  version "8.10.0"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.10.0.tgz#8be5b3907a67221a81ab23c7889c4c5526b62ec5"
+  integrity sha512-F0SAmZ8iUtS//m8DmCTA0jlh6TDKkHQyK6xc6V4KDTyZKA9dnvX9/3sRTVQrWm79glUAZbnmmNcdYwUIHWVybw==
+
+acorn@^8.7.1, acorn@^8.8.2, acorn@^8.9.0:
   version "8.9.0"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.9.0.tgz#78a16e3b2bcc198c10822786fa6679e245db5b59"
   integrity sha512-jaVNAFBHNLXspO543WnNNPZFRtavh3skAkITqD0/2aeMkKZTN+254PyhwxFYrk3vQ1xfY+2wbesJMs/JC8/PwQ==
@@ -2815,9 +2820,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.4.431:
-  version "1.4.449"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.449.tgz#79ffe4514c81c35d4eb13030a63ff3383a8cc655"
-  integrity sha512-TxLRpRUj/107ATefeP8VIUWNOv90xJxZZbCW/eIbSZQiuiFANCx2b7u+GbVc9X4gU+xnbvypNMYVM/WArE1DNQ==
+  version "1.4.450"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.450.tgz#df232c961ee9bf4e8980f86e96a6e9f291720138"
+  integrity sha512-BLG5HxSELlrMx7dJ2s+8SFlsCtJp37Zpk2VAxyC6CZtbc+9AJeZHfYHbrlSgdXp6saQ8StMqOTEDaBKgA7u1sw==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -3759,12 +3764,12 @@ jackspeak@^2.0.3:
   optionalDependencies:
     "@pkgjs/parseargs" "^0.11.0"
 
-jest-util@^29.5.0:
-  version "29.5.0"
-  resolved "https://registry.yarnpkg.com/jest-util/-/jest-util-29.5.0.tgz#24a4d3d92fc39ce90425311b23c27a6e0ef16b8f"
-  integrity sha512-RYMgG/MTadOr5t8KdhejfvUU82MxsCu5MF6KuDUHl+NuwzUt+Sm6jJWxTJVrDR1j5M/gJVCPKQEpWXY+yIQ6lQ==
+jest-util@^29.6.0:
+  version "29.6.0"
+  resolved "https://registry.yarnpkg.com/jest-util/-/jest-util-29.6.0.tgz#4071050c5d70f5d4d48105e8883773f3a6b94f8d"
+  integrity sha512-S0USx9YwcvEm4pQ5suisVm/RVxBmi0GFR7ocJhIeaCuW5AXnAnffXbaVKvIFodyZNOc9ygzVtTxmBf40HsHXaA==
   dependencies:
-    "@jest/types" "^29.5.0"
+    "@jest/types" "^29.6.0"
     "@types/node" "*"
     chalk "^4.0.0"
     ci-info "^3.2.0"
@@ -3781,19 +3786,19 @@ jest-worker@^27.4.5:
     supports-color "^8.0.0"
 
 jest-worker@^29.4.3:
-  version "29.5.0"
-  resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-29.5.0.tgz#bdaefb06811bd3384d93f009755014d8acb4615d"
-  integrity sha512-NcrQnevGoSp4b5kg+akIpthoAFHxPBcb5P6mYPY0fUNT+sSvmtu6jlkEle3anczUKIKEbMxFimk9oTP/tpIPgA==
+  version "29.6.0"
+  resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-29.6.0.tgz#e0c40226d073fdb8f0dfe87d7f90f8fd987d8ba3"
+  integrity sha512-oiQHH1SnKmZIwwPnpOrXTq4kHBk3lKGY/07DpnH0sAu+x7J8rXlbLDROZsU6vy9GwB0hPiZeZpu6YlJ48QoKcA==
   dependencies:
     "@types/node" "*"
-    jest-util "^29.5.0"
+    jest-util "^29.6.0"
     merge-stream "^2.0.0"
     supports-color "^8.0.0"
 
 jiti@^1.18.2:
-  version "1.18.2"
-  resolved "https://registry.yarnpkg.com/jiti/-/jiti-1.18.2.tgz#80c3ef3d486ebf2450d9335122b32d121f2a83cd"
-  integrity sha512-QAdOptna2NYiSSpv0O/BwoHBSmz4YhpzJHyi+fnMRTXFjp7B8i/YG5Z8IfusxB1ufjcD2Sre1F3R+nX3fvy7gg==
+  version "1.19.1"
+  resolved "https://registry.yarnpkg.com/jiti/-/jiti-1.19.1.tgz#fa99e4b76a23053e0e7cde098efe1704a14c16f1"
+  integrity sha512-oVhqoRDaBXf7sjkll95LHVS6Myyyb1zaunVwk4Z0+WPSW4gjS0pl01zYKHScTuyEhQsFxV5L4DR5r+YqSyqyyg==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
@@ -3865,61 +3870,61 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
-lightningcss-darwin-arm64@1.21.4:
-  version "1.21.4"
-  resolved "https://registry.yarnpkg.com/lightningcss-darwin-arm64/-/lightningcss-darwin-arm64-1.21.4.tgz#90e5dd4fa371dd309aa5a2510db91a3c9cf55d50"
-  integrity sha512-xqiS2QamPoecdTARl29JwjgrWYTlpQifKuIv40mEgpRaufC1oIPygVQ9P16tIYtZ1vyLBoWclAsbfsNFQnMv2A==
+lightningcss-darwin-arm64@1.21.5:
+  version "1.21.5"
+  resolved "https://registry.yarnpkg.com/lightningcss-darwin-arm64/-/lightningcss-darwin-arm64-1.21.5.tgz#d4d2a235da382311779afd44936f05f0d470bf12"
+  integrity sha512-z05hyLX85WY0UfhkFUOrWEFqD69lpVAmgl3aDzMKlIZJGygbhbegqb4PV8qfUrKKNBauut/qVNPKZglhTaDDxA==
 
-lightningcss-darwin-x64@1.21.4:
-  version "1.21.4"
-  resolved "https://registry.yarnpkg.com/lightningcss-darwin-x64/-/lightningcss-darwin-x64-1.21.4.tgz#d934feef6b1ac7346c75341e12201b48f181e085"
-  integrity sha512-R6TfDHzl+kuZdrCfQWKhGf5b4K6XtVDfwQkMzncSimykchFwPzLe1QGKH3Cr45glBD265+2Hwmo4V6DYCiVcPQ==
+lightningcss-darwin-x64@1.21.5:
+  version "1.21.5"
+  resolved "https://registry.yarnpkg.com/lightningcss-darwin-x64/-/lightningcss-darwin-x64-1.21.5.tgz#b9b2306809306635afee8a9981f93e7668ecb8e8"
+  integrity sha512-MSJhmej/U9MrdPxDk7+FWhO8+UqVoZUHG4VvKT5RQ4RJtqtANTiWiI97LvoVNMtdMnHaKs1Pkji6wHUFxjJsHQ==
 
-lightningcss-linux-arm-gnueabihf@1.21.4:
-  version "1.21.4"
-  resolved "https://registry.yarnpkg.com/lightningcss-linux-arm-gnueabihf/-/lightningcss-linux-arm-gnueabihf-1.21.4.tgz#2fd1df003d20b895c4333440474bd7dae1b1a311"
-  integrity sha512-fUYdxqr/Zmk2lbRKRP6HqUFxVPp12A+mU5v8DVgiwnbTmJn5vRvNUUPKEA+trCvyZ+pbSM4ikOS1OsPz8zeKyg==
+lightningcss-linux-arm-gnueabihf@1.21.5:
+  version "1.21.5"
+  resolved "https://registry.yarnpkg.com/lightningcss-linux-arm-gnueabihf/-/lightningcss-linux-arm-gnueabihf-1.21.5.tgz#dcc78522f5297d18fbbe142a509bee3305f90907"
+  integrity sha512-xN6+5/JsMrbZHL1lPl+MiNJ3Xza12ueBKPepiyDCFQzlhFRTj7D0LG+cfNTzPBTO8KcYQynLpl1iBB8LGp3Xtw==
 
-lightningcss-linux-arm64-gnu@1.21.4:
-  version "1.21.4"
-  resolved "https://registry.yarnpkg.com/lightningcss-linux-arm64-gnu/-/lightningcss-linux-arm64-gnu-1.21.4.tgz#12ba164ad3054f8ad028c9eb7a032a0e34324124"
-  integrity sha512-rQmbEQzXoQK3/O8YuJyri3RreATpQ9mscODpYHLwG3behk021u4OCNyVL7m2GL4fL+6SZuwCccjiHp1e0WeM6A==
+lightningcss-linux-arm64-gnu@1.21.5:
+  version "1.21.5"
+  resolved "https://registry.yarnpkg.com/lightningcss-linux-arm64-gnu/-/lightningcss-linux-arm64-gnu-1.21.5.tgz#1aa64cf3c4013a82012cd15b1ef0f97d08bc9bfd"
+  integrity sha512-KfzFNhC4XTbmG3ma/xcTs/IhCwieW89XALIusKmnV0N618ZDXEB0XjWOYQRCXeK9mfqPdbTBpurEHV/XZtkniQ==
 
-lightningcss-linux-arm64-musl@1.21.4:
-  version "1.21.4"
-  resolved "https://registry.yarnpkg.com/lightningcss-linux-arm64-musl/-/lightningcss-linux-arm64-musl-1.21.4.tgz#a3dc50ce586bcfaa9499335fe17317bb1823d69b"
-  integrity sha512-qfGAOBXUatU1rSpGep3FvsgHqRY5vsjEPXylYuDVhdc/VoWFshTEC8W1pfgHBwGvl9S8HmHGHFPZATuidUHxKw==
+lightningcss-linux-arm64-musl@1.21.5:
+  version "1.21.5"
+  resolved "https://registry.yarnpkg.com/lightningcss-linux-arm64-musl/-/lightningcss-linux-arm64-musl-1.21.5.tgz#6dd43b3436432efdadb58949fb3821d4206044e9"
+  integrity sha512-bc0GytQO5Mn9QM6szaZ+31fQHNdidgpM1sSCwzPItz8hg3wOvKl8039rU0veMJV3ZgC9z0ypNRceLrSHeRHmXw==
 
-lightningcss-linux-x64-gnu@1.21.4:
-  version "1.21.4"
-  resolved "https://registry.yarnpkg.com/lightningcss-linux-x64-gnu/-/lightningcss-linux-x64-gnu-1.21.4.tgz#9d78fcc63a78892866b832c589215886d723ede5"
-  integrity sha512-W5MJoozn3NE/9LEqbWQYGy1ZQoAordG0h/pSyv44+8eeDY1ufZK5LAw0+iFGYRcblcFDF69DElvLDEi59piCTg==
+lightningcss-linux-x64-gnu@1.21.5:
+  version "1.21.5"
+  resolved "https://registry.yarnpkg.com/lightningcss-linux-x64-gnu/-/lightningcss-linux-x64-gnu-1.21.5.tgz#7af13989f720fbd434bcc9e629ca3e5797acb979"
+  integrity sha512-JwMbgypPQgc2kW2av3OwzZ8cbrEuIiDiXPJdXRE6aVxu67yHauJawQLqJKTGUhiAhy6iLDG8Wg0a3/ziL+m+Kw==
 
-lightningcss-linux-x64-musl@1.21.4:
-  version "1.21.4"
-  resolved "https://registry.yarnpkg.com/lightningcss-linux-x64-musl/-/lightningcss-linux-x64-musl-1.21.4.tgz#ef6697f3e29a1c3278417f1d141bf96ce72b2844"
-  integrity sha512-R/fT1c8g8xrrCeU1fSErUb31OBMR38KcEDmrwCmxzsSntJ7o9YkZdbVx1FWRqBy8A8tNHm3MyQqZzU/owTJszw==
+lightningcss-linux-x64-musl@1.21.5:
+  version "1.21.5"
+  resolved "https://registry.yarnpkg.com/lightningcss-linux-x64-musl/-/lightningcss-linux-x64-musl-1.21.5.tgz#cde2e9e1958cc7782264622983a2433312526b55"
+  integrity sha512-Ib8b6IQ/OR/VrPU6YBgy4T3QnuHY7DUa95O+nz+cwrTkMSN6fuHcTcIaz4t8TJ6HI5pl3uxUOZjmtls2pyQWow==
 
-lightningcss-win32-x64-msvc@1.21.4:
-  version "1.21.4"
-  resolved "https://registry.yarnpkg.com/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.21.4.tgz#db83d354965059fabda6a4479260dfb3c1aed3d5"
-  integrity sha512-2G3X2GTLNwz4mLG60J8ala9FcN9hKy9aAaCImou69UeowjFCt0OMWlzNuwcZARDId0BVZRQn4vNFvRGqCPwMxA==
+lightningcss-win32-x64-msvc@1.21.5:
+  version "1.21.5"
+  resolved "https://registry.yarnpkg.com/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.21.5.tgz#f75d25f7db9853d98c9253025eb8854335b31051"
+  integrity sha512-A8cSi8lUpBeVmoF+DqqW7cd0FemDbCuKr490IXdjyeI+KL8adpSKUs8tcqO0OXPh1EoDqK7JNkD/dELmd4Iz5g==
 
 lightningcss@^1.16.1:
-  version "1.21.4"
-  resolved "https://registry.yarnpkg.com/lightningcss/-/lightningcss-1.21.4.tgz#f6e9c4cddef5cfd950d02126246d0bc44aef0e0b"
-  integrity sha512-/MhQpBRQgs5j35eC1ZMqOOQqDZyNCUKZRoMp3ftprEOb4vVkjfe1VoknD9BKskCT+bbqBf3Yt9XglJLXXZ+pfA==
+  version "1.21.5"
+  resolved "https://registry.yarnpkg.com/lightningcss/-/lightningcss-1.21.5.tgz#1a175329048912f6480c1703ff2957aad0dcedb4"
+  integrity sha512-/pEUPeih2EwIx9n4T82aOG6CInN83tl/mWlw6B5gWLf36UplQi1L+5p3FUHsdt4fXVfOkkh9KIaM3owoq7ss8A==
   dependencies:
     detect-libc "^1.0.3"
   optionalDependencies:
-    lightningcss-darwin-arm64 "1.21.4"
-    lightningcss-darwin-x64 "1.21.4"
-    lightningcss-linux-arm-gnueabihf "1.21.4"
-    lightningcss-linux-arm64-gnu "1.21.4"
-    lightningcss-linux-arm64-musl "1.21.4"
-    lightningcss-linux-x64-gnu "1.21.4"
-    lightningcss-linux-x64-musl "1.21.4"
-    lightningcss-win32-x64-msvc "1.21.4"
+    lightningcss-darwin-arm64 "1.21.5"
+    lightningcss-darwin-x64 "1.21.5"
+    lightningcss-linux-arm-gnueabihf "1.21.5"
+    lightningcss-linux-arm64-gnu "1.21.5"
+    lightningcss-linux-arm64-musl "1.21.5"
+    lightningcss-linux-x64-gnu "1.21.5"
+    lightningcss-linux-x64-musl "1.21.5"
+    lightningcss-win32-x64-msvc "1.21.5"
 
 lilconfig@^2.1.0:
   version "2.1.0"
