@@ -21,7 +21,7 @@ interface ProviderProps {
 
 export function Entry({ children, css, js, nonce, router }: ProviderProps) {
   const [{ actionData, errors, loaderData }, setRouterState] = useState(
-    router.state
+    router.state,
   );
 
   useEffect(() => {
@@ -35,7 +35,7 @@ export function Entry({ children, css, js, nonce, router }: ProviderProps) {
       nonce,
       js,
     }),
-    [actionData, css, errors, js, loaderData, nonce]
+    [actionData, css, errors, js, loaderData, nonce],
   );
 
   return (

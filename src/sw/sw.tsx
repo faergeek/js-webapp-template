@@ -22,19 +22,19 @@ const assetsByUrl = Object.fromEntries(
       Object.values(assetRecords)
         .filter(
           (assetRecord): assetRecord is NonNullable<typeof assetRecord> =>
-            assetRecord != null
+            assetRecord != null,
         )
         .flatMap(assetRecord => [
           ...assetRecord.auxiliary,
           ...assetRecord.css,
           ...assetRecord.js,
-        ])
+        ]),
     )
     .map(asset => ({
       immutable: asset.immutable,
       url: new URL(asset.path, origin).href,
     }))
-    .map(asset => [asset.url, asset])
+    .map(asset => [asset.url, asset]),
 );
 
 self.addEventListener('install', event => {
@@ -43,12 +43,12 @@ self.addEventListener('install', event => {
       .then(([assetsCache, memegenCache]) =>
         Promise.all([
           assetsCache.addAll(
-            Object.values(assetsByUrl).map(asset => asset.url)
+            Object.values(assetsByUrl).map(asset => asset.url),
           ),
           memegenCache.addAll(['https://api.memegen.link/templates']),
-        ])
+        ]),
       )
-      .then(() => self.skipWaiting())
+      .then(() => self.skipWaiting()),
   );
 });
 
@@ -61,10 +61,10 @@ self.addEventListener('activate', event => {
           keys.map(key =>
             !ALL_CACHE_KEYS.includes(key)
               ? caches.delete(key)
-              : Promise.resolve()
-          )
-        )
-      )
+              : Promise.resolve(),
+          ),
+        ),
+      ),
   );
 });
 
@@ -82,7 +82,7 @@ function handleFetchRequest(request: Request): Promise<Response> | void {
           return assetsCachePromise.then(assetsCache =>
             assetsCache
               .match(request)
-              .then(cachedResponse => cachedResponse ?? realFetch(request))
+              .then(cachedResponse => cachedResponse ?? realFetch(request)),
           );
         } else {
           return realFetch(request).then(
@@ -99,8 +99,10 @@ function handleFetchRequest(request: Request): Promise<Response> | void {
               assetsCachePromise.then(assetsCache =>
                 assetsCache
                   .match(request)
-                  .then(cachedResponse => cachedResponse ?? Promise.reject(err))
-              )
+                  .then(
+                    cachedResponse => cachedResponse ?? Promise.reject(err),
+                  ),
+              ),
           );
         }
       } else if (request.destination === 'document') {
@@ -137,7 +139,7 @@ function handleFetchRequest(request: Request): Promise<Response> | void {
                   hydrate={false}
                   router={router}
                 />
-              </Entry>
+              </Entry>,
             )}`;
 
             return new Response(html, {
@@ -146,7 +148,7 @@ function handleFetchRequest(request: Request): Promise<Response> | void {
                 'content-type': 'text/html',
               },
             });
-          }
+          },
         );
       }
       break;
@@ -161,7 +163,7 @@ function handleFetchRequest(request: Request): Promise<Response> | void {
             }, handleFetchError);
 
             return cachedResponse ?? fetchPromise;
-          })
+          }),
         );
       }
       break;

@@ -10,6 +10,6 @@ export function handleFetchError(err: unknown) {
     {
       status: 408,
       statusText: 'Offline',
-    }
+    },
   );
 }

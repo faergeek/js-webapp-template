@@ -49,12 +49,12 @@ export async function templateAction({ params, request }: ActionFunctionArgs) {
   const textData = formData.getAll('text');
 
   invariant(
-    MEME_IMAGE_EXTENSIONS.includes(extensionData as MemeImageExtension)
+    MEME_IMAGE_EXTENSIONS.includes(extensionData as MemeImageExtension),
   );
   const extension = extensionData as MemeImageExtension;
 
   const text = textData.filter(
-    (item): item is string => typeof item === 'string'
+    (item): item is string => typeof item === 'string',
   );
 
   invariant(params.templateId);
@@ -111,7 +111,7 @@ export function TemplatePage() {
                     const newValue = event.currentTarget.value;
 
                     setText(prevState =>
-                      prevState.map((l, i) => (i === index ? newValue : l))
+                      prevState.map((l, i) => (i === index ? newValue : l)),
                     );
                   }}
                 />

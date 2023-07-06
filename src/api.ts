@@ -39,7 +39,7 @@ export async function fetchTemplates(filter?: string | null) {
 
 export async function fetchTemplateById(templateId: string) {
   const response = await fetch(
-    new URL(`/templates/${templateId}`, BASE_URL)
+    new URL(`/templates/${templateId}`, BASE_URL),
   ).catch(handleFetchError);
 
   if (!response.ok) {
@@ -72,7 +72,7 @@ interface CreateMemeResponse {
 
 export async function createMeme(
   templateId: string,
-  { extension, text }: CreateMemeParams
+  { extension, text }: CreateMemeParams,
 ) {
   const response = await fetch(new URL(`/templates/${templateId}`, BASE_URL), {
     method: 'post',
@@ -116,13 +116,13 @@ interface GetTemplateImageUrlParams {
 
 export function getTemplateImageUrl(
   template: MemeTemplate,
-  { extension = 'jpg', width, height }: GetTemplateImageUrlParams = {}
+  { extension = 'jpg', width, height }: GetTemplateImageUrlParams = {},
 ) {
   const url = new URL(
     `/images/${template.id}/${template.example.text
       .map(encodeTextForUrl)
       .join('/')}.${extension}`,
-    BASE_URL
+    BASE_URL,
   );
 
   if (width != null) {

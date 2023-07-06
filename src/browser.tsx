@@ -9,7 +9,7 @@ hydrateRoot(
   document,
   <StrictMode>
     <BrowserRoot />
-  </StrictMode>
+  </StrictMode>,
 );
 
 if (navigator.serviceWorker) {

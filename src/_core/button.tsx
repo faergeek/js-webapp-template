@@ -58,7 +58,7 @@ export function Button(props: Props) {
             ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
               (allProps as any).as
             : allProps.as.name
-        }`
+        }`,
       );
   }
 }
