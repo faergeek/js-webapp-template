@@ -71,7 +71,7 @@ export const requestHandler = express()
         },
       },
       hsts: !__DEV__,
-    })
+    }),
   )
   .use(
     express.static(
@@ -81,8 +81,8 @@ export const requestHandler = express()
         : {
             immutable: true,
             maxAge: '1 year',
-          }
-    )
+          },
+    ),
   )
   .use(
     express.static(
@@ -92,8 +92,8 @@ export const requestHandler = express()
         : {
             immutable: true,
             maxAge: '1 year',
-          }
-    )
+          },
+    ),
   )
   .use('/download', async (req, res, next) => {
     const url = req.query.url;
@@ -154,8 +154,8 @@ export const requestHandler = express()
               }
 
               return [[key, value]];
-            }
-          )
+            },
+          ),
         ),
         body,
       });
@@ -168,7 +168,7 @@ export const requestHandler = express()
           const location = context.headers.get('Location');
           invariant(
             location,
-            'Received response 3xx status, but without location'
+            'Received response 3xx status, but without location',
           );
           res.redirect(context.status, location);
           return;
@@ -201,7 +201,7 @@ export const requestHandler = express()
             res.status(context.statusCode).set('content-type', 'text/html');
             pipe(res);
           },
-        }
+        },
       );
     } catch (err) {
       next(err);

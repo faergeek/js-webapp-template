@@ -16,7 +16,7 @@ function convertErrorToErrorResponse(error: unknown) {
     : new ErrorResponse(
         500,
         'Internal Server Error',
-        'Something went terribly wrong on our side.'
+        'Something went terribly wrong on our side.',
       );
 }
 

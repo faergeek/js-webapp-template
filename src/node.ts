@@ -10,7 +10,9 @@ const PORT = parseInt(String(process.env.PORT), 10);
 invariant(isFinite(PORT));
 
 const server = createServer(
-  import.meta.webpackHot ? (...args) => requestHandler(...args) : requestHandler
+  import.meta.webpackHot
+    ? (...args) => requestHandler(...args)
+    : requestHandler,
 ).listen(PORT, () => {
   // eslint-disable-next-line no-console
   console.log(`server is listening on port ${PORT}`);

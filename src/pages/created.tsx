@@ -38,14 +38,14 @@ export function CreatedPage() {
     () => ({
       url,
     }),
-    [url]
+    [url],
   );
 
   useEffect(() => {
     setIsShareSupported(
       typeof navigator.canShare === 'function' &&
         typeof navigator.share === 'function' &&
-        navigator.canShare(shareData)
+        navigator.canShare(shareData),
     );
   }, [shareData]);
 
