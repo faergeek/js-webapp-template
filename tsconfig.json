@@ -14,7 +14,6 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "pretty": true,
     "resolveJsonModule": true,
     "strict": true,
     "target": "esnext",
