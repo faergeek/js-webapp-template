@@ -1,4 +1,3 @@
-import { ErrorResponse } from '@remix-run/router';
 import {
   isRouteErrorResponse,
   Link,
@@ -12,12 +11,16 @@ import { Container } from '../layout/layout';
 
 function convertErrorToErrorResponse(error: unknown) {
   return isRouteErrorResponse(error)
-    ? error
-    : new ErrorResponse(
-        500,
-        'Internal Server Error',
-        'Something went terribly wrong on our side.',
-      );
+    ? {
+        status: error.status,
+        statusText: error.statusText,
+        data: typeof error.data === 'string' ? error.data : undefined,
+      }
+    : {
+        status: 500,
+        statusText: 'Internal Server Error',
+        data: 'Something went terribly wrong on our side.',
+      };
 }
 
 export function errorMeta({ error }: MetaFunctionArgs) {
@@ -41,7 +44,7 @@ export function ErrorPage() {
       <h1>{errorResponse.statusText ?? 'Error'}</h1>
 
       <div>
-        <p>{errorResponse.data}</p>
+        {errorResponse.data && <p>{errorResponse.data}</p>}
 
         {errorResponse.status !== 404 && (
           <>
