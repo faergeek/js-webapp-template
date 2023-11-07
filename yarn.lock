@@ -1696,14 +1696,14 @@
     "@types/node" "*"
 
 "@types/serialize-javascript@^5.0.2":
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/@types/serialize-javascript/-/serialize-javascript-5.0.3.tgz#daee5bc238195d2db6f0bb3a6e99b0ccb2448bfc"
-  integrity sha512-jz2WlMFHH85UD+SH9soACEO7v4I6kThWb7RcbT6aSCJ4hXsxOwZxwFkmXCC2ZpIjzaRKRfxVw+DvRtvqE8Ntig==
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@types/serialize-javascript/-/serialize-javascript-5.0.4.tgz#7a7c32248e207a0d29afed88e5ee3e921999c73d"
+  integrity sha512-Z2R7UKFuNWCP8eoa2o9e5rkD3hmWxx/1L0CYz0k2BZzGh0PhEVMp9kfGiqEml/0IglwNERXZ2hwNzIrSz/KHTA==
 
 "@types/serve-static@*":
-  version "1.15.4"
-  resolved "https://registry.yarnpkg.com/@types/serve-static/-/serve-static-1.15.4.tgz#44b5895a68ca637f06c229119e1c774ca88f81b2"
-  integrity sha512-aqqNfs1XTF0HDrFdlY//+SGUxmdSUbjeRXb5iaZc3x0/vMbYmdw9qvOgHWOyyLFxSSRnUuP5+724zBgfw8/WAw==
+  version "1.15.5"
+  resolved "https://registry.yarnpkg.com/@types/serve-static/-/serve-static-1.15.5.tgz#15e67500ec40789a1e8c9defc2d32a896f05b033"
+  integrity sha512-PDRk21MnK70hja/YF8AHfC7yIsiQHn1rcXx7ijCFBX/k+XQJhQT/gw3xekXKJvx+5SXaMMS8oqQy09Mzvz2TuQ==
   dependencies:
     "@types/http-errors" "*"
     "@types/mime" "*"
@@ -5664,6 +5664,7 @@ statuses@2.0.1:
   integrity sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==
 
 "string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
