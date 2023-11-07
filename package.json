@@ -4,8 +4,8 @@
   "main": "build/main.cjs",
   "scripts": {
     "cleanup": "rimraf build",
-    "prettier": "prettier --write .",
-    "prettier:check": "prettier --list-different .",
+    "format": "prettier --write .",
+    "format:check": "prettier --list-different .",
     "lint": "eslint --max-warnings 0 .",
     "typecheck": "tsc && tsc -p src/sw",
     "dev": "webpack watch --define-process-env-node-env=development",
