@@ -16,3 +16,5 @@ jobs:
       - run: yarn run format:check
       - run: yarn run lint
       - run: yarn run typecheck
+      - run: yarn run build
+      - run: yarn run check-size-limits
