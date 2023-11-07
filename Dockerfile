@@ -1,4 +1,4 @@
-FROM node:20 AS builder
+FROM node:21 AS builder
 WORKDIR /usr/src/app
 
 ENV TINI_VERSION v0.19.0
@@ -16,7 +16,7 @@ COPY .browserslistrc babel.config.cjs postcss.config.cjs webpack.config.js ./
 COPY public ./public/
 RUN yarn run build
 
-FROM node:20-slim
+FROM node:21-slim
 WORKDIR /usr/src/app
 
 COPY --from=builder /tini /
