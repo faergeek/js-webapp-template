@@ -13,6 +13,6 @@ jobs:
           cache: yarn
           node-version-file: .nvmrc
       - run: yarn --frozen-lockfile
-      - run: yarn run prettier:check
+      - run: yarn run format:check
       - run: yarn run lint
       - run: yarn run typecheck
