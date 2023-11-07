@@ -11,6 +11,7 @@
     "dev": "webpack watch --define-process-env-node-env=development",
     "build": "webpack --define-process-env-node-env=production",
     "build:analyze": "webpack watch --define-process-env-node-env=production",
+    "check-size-limits": "size-limit --highlight-less",
     "start": "node --enable-source-maps ."
   },
   "dependencies": {
