@@ -1345,9 +1345,9 @@
   integrity sha512-qQfo2mxH5yVom1kacMtZZJFVdW+E70mqHMJvVg6WTLo+VBuQJ4TojZlfWBjK0ve5BdEeNAVxOsl/nvNMpJOaJA==
 
 "@faergeek/eslint-config@^5.0.0":
-  version "5.1.59"
-  resolved "https://registry.yarnpkg.com/@faergeek/eslint-config/-/eslint-config-5.1.59.tgz#bd631242df59e486707cb9296f608abf1906e2e1"
-  integrity sha512-t9nXECQ/SsYUctRk8IQuxJ2IHigLscNbklAToc55wky4P/Ed/daRxtt4+klZLXp2vlWV3PyqtI44fe+qUGHr5A==
+  version "5.1.60"
+  resolved "https://registry.yarnpkg.com/@faergeek/eslint-config/-/eslint-config-5.1.60.tgz#131da1736df147d853c836e5ebe2ad105f855fb5"
+  integrity sha512-dlx8UMAmkWN8b4Dt43Krp1rTVrwtorjzaQp3BPZV3uZwUmneV95W0dZmAtJJhc8CXvxV+CJED9wtxiRqMQ/k+g==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^6.0.0"
     "@typescript-eslint/parser" "^6.0.0"
@@ -5666,6 +5666,7 @@ statuses@2.0.1:
   integrity sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==
 
 "string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
