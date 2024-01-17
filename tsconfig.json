@@ -17,6 +17,6 @@
     "resolveJsonModule": true,
     "strict": true,
     "target": "esnext",
-    "types": ["webpack/module"]
-  }
+    "types": ["webpack/module"],
+  },
 }
