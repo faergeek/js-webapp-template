@@ -4,6 +4,6 @@
   "exclude": [],
   "compilerOptions": {
     "lib": ["DOM", "ESNext", "WebWorker", "Webworker.Iterable"],
-    "skipDefaultLibCheck": true
-  }
+    "skipDefaultLibCheck": true,
+  },
 }
