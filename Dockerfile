@@ -5,6 +5,7 @@ RUN apk add tini
 WORKDIR /home/node
 
 COPY package.json pnpm-lock.yaml ./
+RUN corepack enable && corepack install
 RUN pnpm install --frozen-lockfile
 
 COPY src ./src/
