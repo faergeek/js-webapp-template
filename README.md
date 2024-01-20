@@ -5,7 +5,7 @@
 Install packages:
 
 ```sh
-yarn
+pnpm install
 ```
 
 ## Development
@@ -13,7 +13,7 @@ yarn
 Launch app in dev mode:
 
 ```sh
-yarn run dev
+pnpm run dev
 ```
 
 ## Production
@@ -21,7 +21,7 @@ yarn run dev
 Build assets for production:
 
 ```sh
-yarn run build
+pnpm run build
 ```
 
 After that, you'll find all build artifacts in the build directory.
@@ -29,7 +29,7 @@ After that, you'll find all build artifacts in the build directory.
 Then you need to start the built server:
 
 ```sh
-yarn start
+pnpm start
 ```
 
 # Docker

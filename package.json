@@ -14,6 +14,7 @@
     "check-size-limits": "size-limit --highlight-less",
     "start": "node --enable-source-maps ."
   },
+  "packageManager": "pnpm@8.14.1+sha256.2df78e65d433d7693b9d3fbdaf431b2d96bb4f96a2ffecd51a50efe16e50a6a8",
   "dependencies": {
     "@babel/runtime": "^7.7.4",
     "@remix-run/router": "^1.0.3",
@@ -40,8 +41,10 @@
     "@faergeek/eslint-config": "^5.0.0",
     "@faergeek/make-webpack-config": "^22.0.0",
     "@size-limit/file": "^11.0.0",
+    "@types/body-parser": "^1.19.5",
     "@types/express": "^4.17.12",
     "@types/morgan": "^1.9.3",
+    "@types/react": "^18.2.48",
     "@types/react-dom": "^18.0.11",
     "@types/serialize-javascript": "^5.0.2",
     "browserslist": "^4.16.6",

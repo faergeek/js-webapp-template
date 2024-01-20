@@ -8,13 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
       - uses: actions/setup-node@v4
         with:
-          cache: yarn
+          cache: pnpm
           node-version-file: .nvmrc
-      - run: yarn --frozen-lockfile
-      - run: yarn run format:check
-      - run: yarn run lint
-      - run: yarn run typecheck
-      - run: yarn run build
-      - run: yarn run check-size-limits
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run format:check
+      - run: pnpm run lint
+      - run: pnpm run typecheck
+      - run: pnpm run build
+      - run: pnpm run check-size-limits

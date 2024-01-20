@@ -4,16 +4,16 @@ RUN apk add tini
 
 WORKDIR /home/node
 
-COPY package.json yarn.lock ./
-RUN yarn --frozen-lockfile
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile
 
 COPY src ./src/
 COPY public ./public/
 COPY .browserslistrc babel.config.cjs postcss.config.cjs webpack.config.js ./
-RUN yarn run build
+RUN pnpm run build
 
 ENV NODE_ENV=production PORT=8080
 EXPOSE $PORT
 USER node
 ENTRYPOINT ["tini", "--"]
-CMD ["yarn", "start"]
+CMD ["pnpm", "start"]
