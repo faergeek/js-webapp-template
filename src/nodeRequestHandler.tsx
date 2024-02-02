@@ -160,7 +160,12 @@ export const requestHandler = express()
         body,
       });
 
-      const { query } = createStaticHandler(routes);
+      const { query } = createStaticHandler(routes, {
+        future: {
+          v7_throwAbortReason: true,
+        },
+      });
+
       const context = await query(request);
 
       if (context instanceof Response) {
@@ -204,6 +209,10 @@ export const requestHandler = express()
         },
       );
     } catch (err) {
+      if (err instanceof DOMException && err.name === 'AbortError') {
+        return;
+      }
+
       next(err);
     }
   });
