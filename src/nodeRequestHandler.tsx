@@ -113,60 +113,61 @@ export const requestHandler = express()
     try {
       const abortController = new AbortController();
 
-      req.on('close', () => {
+      res.on('close', () => {
         abortController.abort();
       });
 
-      let body: BodyInit | undefined;
-      switch (req.headers['content-type']) {
-        case 'application/x-www-form-urlencoded': {
-          const searchParams = new URLSearchParams();
+      const request = new Request(
+        new URL(req.originalUrl, `${req.protocol}://${req.get('host')}`),
+        {
+          signal: abortController.signal,
+          method: req.method,
+          headers: new Headers(
+            Object.entries(req.headers).flatMap(
+              ([key, value]): Array<[string, string]> => {
+                if (!value) {
+                  return [];
+                }
 
-          Object.entries(req.body).forEach(([key, value]) => {
-            if (Array.isArray(value)) {
-              value.forEach(v => {
-                searchParams.append(key, v);
-              });
-            } else if (typeof value === 'string') {
-              searchParams.append(key, value);
-            }
-          });
+                if (Array.isArray(value)) {
+                  return value.map(v => [key, v]);
+                }
 
-          body = searchParams.toString();
-          break;
-        }
-      }
-
-      const origin = `${req.protocol}://${req.get('host')}`;
-
-      const request = new Request(new URL(req.originalUrl, origin), {
-        signal: abortController.signal,
-        method: req.method,
-        headers: new Headers(
-          Object.entries(req.headers).flatMap(
-            ([key, value]): Array<[string, string]> => {
-              if (!value) {
-                return [];
-              }
-
-              if (Array.isArray(value)) {
-                return value.map(v => [key, v]);
-              }
-
-              return [[key, value]];
-            },
+                return [[key, value]];
+              },
+            ),
           ),
-        ),
-        body,
-      });
+          body: (() => {
+            switch (req.headers['content-type']) {
+              case 'application/x-www-form-urlencoded': {
+                const searchParams = new URLSearchParams();
 
-      const { query } = createStaticHandler(routes, {
+                Object.entries(req.body).forEach(([key, value]) => {
+                  if (Array.isArray(value)) {
+                    value.forEach(v => {
+                      searchParams.append(key, v);
+                    });
+                  } else if (typeof value === 'string') {
+                    searchParams.append(key, value);
+                  }
+                });
+
+                return searchParams;
+              }
+              default:
+                return undefined;
+            }
+          })(),
+        },
+      );
+
+      const staticHandler = createStaticHandler(routes, {
         future: {
           v7_throwAbortReason: true,
         },
       });
 
-      const context = await query(request);
+      const context = await staticHandler.query(request);
 
       if (context instanceof Response) {
         if (context.status >= 300 && context.status < 400) {
