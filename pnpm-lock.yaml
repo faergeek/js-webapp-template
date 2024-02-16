@@ -68,8 +68,8 @@ devDependencies:
     specifier: ^7.13.0
     version: 7.23.3(@babel/core@7.23.9)
   '@faergeek/eslint-config':
-    specifier: ^6.0.0
-    version: 6.0.0(eslint@8.56.0)(typescript@5.3.3)
+    specifier: ^6.0.1
+    version: 6.0.1(eslint@8.56.0)(typescript@5.3.3)
   '@faergeek/make-webpack-config':
     specifier: ^22.0.0
     version: 22.0.49(@babel/core@7.23.9)(postcss@8.4.35)(typescript@5.3.3)(webpack@5.90.1)
@@ -1863,8 +1863,8 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@faergeek/eslint-config@6.0.0(eslint@8.56.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-0SwcMHn+n2bS4L8BmDiUAQiw+PkA89vw/oSnT1N5ooDL+pXDHNvto7kmcaH1qs3Otpg71cEqohhw1aCgFIYB/Q==}
+  /@faergeek/eslint-config@6.0.1(eslint@8.56.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-s8WV4mBmbmChJ/urSNgDOJ59BY4Ize+k93acZ6HPSwnij71i4IBkgK9XEV8n9RJEGxIxCXxdDdF/xYVRCpV5MA==}
     peerDependencies:
       eslint: ^8.56.0
     dependencies:

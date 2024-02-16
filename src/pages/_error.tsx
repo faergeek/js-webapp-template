@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 
 import { Button } from '../_core/button';
-import { type MetaFunctionArgs } from '../_core/meta';
+import type { MetaFunctionArgs } from '../_core/meta';
 import { Container } from '../layout/layout';
 
 function convertErrorToErrorResponse(error: unknown) {

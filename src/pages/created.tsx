@@ -1,12 +1,9 @@
 import { useEffect, useMemo, useState } from 'react';
-import {
-  type LoaderFunctionArgs,
-  redirect,
-  useLoaderData,
-} from 'react-router-dom';
+import type { LoaderFunctionArgs } from 'react-router-dom';
+import { redirect, useLoaderData } from 'react-router-dom';
 
 import { Button } from '../_core/button';
-import { type MetaDescriptor } from '../_core/meta';
+import type { MetaDescriptor } from '../_core/meta';
 import { Container } from '../layout/layout';
 import * as css from './created.module.css';
 

@@ -1,4 +1,4 @@
-import { type HydrationState, type Router } from '@remix-run/router';
+import type { HydrationState, Router } from '@remix-run/router';
 import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import invariant from 'tiny-invariant';
 

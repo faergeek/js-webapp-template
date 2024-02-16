@@ -1,7 +1,8 @@
 import './browser.css';
 
 import { StrictMode } from 'react';
-import { hydrateRoot, type Root } from 'react-dom/client';
+import type { Root } from 'react-dom/client';
+import { hydrateRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import invariant from 'tiny-invariant';
 
