@@ -1,22 +1,16 @@
 import { useState } from 'react';
-import {
-  type ActionFunctionArgs,
-  Form,
-  type LoaderFunctionArgs,
-  redirect,
-  useLoaderData,
-  useNavigation,
-} from 'react-router-dom';
+import type { ActionFunctionArgs, LoaderFunctionArgs } from 'react-router-dom';
+import { Form, redirect, useLoaderData, useNavigation } from 'react-router-dom';
 import invariant from 'tiny-invariant';
 
 import { Button } from '../_core/button';
-import { type MetaFunctionArgs } from '../_core/meta';
+import type { MetaFunctionArgs } from '../_core/meta';
+import type { MemeImageExtension } from '../api';
 import {
   createMeme,
   fetchTemplateById,
   getPreviewImageUrl,
   MEME_IMAGE_EXTENSIONS,
-  type MemeImageExtension,
 } from '../api';
 import { Container } from '../layout/layout';
 import * as css from './template.module.css';

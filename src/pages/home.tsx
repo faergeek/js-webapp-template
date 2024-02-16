@@ -1,11 +1,7 @@
-import {
-  Link,
-  type LoaderFunctionArgs,
-  redirect,
-  useLoaderData,
-} from 'react-router-dom';
+import type { LoaderFunctionArgs } from 'react-router-dom';
+import { Link, redirect, useLoaderData } from 'react-router-dom';
 
-import { type MetaDescriptor, type MetaFunctionArgs } from '../_core/meta';
+import type { MetaDescriptor, MetaFunctionArgs } from '../_core/meta';
 import { fetchTemplates, getTemplateImageUrl } from '../api';
 import * as css from './home.module.css';
 
