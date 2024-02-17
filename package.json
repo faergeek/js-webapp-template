@@ -5,7 +5,7 @@
   "scripts": {
     "cleanup": "rimraf build",
     "format": "prettier --write .",
-    "format:check": "prettier --list-different .",
+    "format:check": "prettier --check .",
     "lint": "eslint --max-warnings 0 .",
     "typecheck": "tsc && tsc -p src/sw",
     "dev": "webpack watch --define-process-env-node-env=development",
