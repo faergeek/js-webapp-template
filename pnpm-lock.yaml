@@ -72,7 +72,7 @@ devDependencies:
     version: 6.0.1(eslint@8.56.0)(typescript@5.3.3)
   '@faergeek/make-webpack-config':
     specifier: ^22.0.0
-    version: 22.0.49(@babel/core@7.23.9)(postcss@8.4.35)(typescript@5.3.3)(webpack@5.90.2)
+    version: 22.0.50(@babel/core@7.23.9)(postcss@8.4.35)(typescript@5.3.3)(webpack@5.90.2)
   '@size-limit/file':
     specifier: ^11.0.0
     version: 11.0.2(size-limit@11.0.2)
@@ -1880,8 +1880,8 @@ packages:
       - typescript
     dev: true
 
-  /@faergeek/make-webpack-config@22.0.49(@babel/core@7.23.9)(postcss@8.4.35)(typescript@5.3.3)(webpack@5.90.2):
-    resolution: {integrity: sha512-RY1p10Fbf8YYy8zzwK2jXY8NuHjPNRpHLB7pmbI5dM50jP0Ig8t3eL2BkhSj2Os03/gAMqv+ZD+PseyffamOFA==}
+  /@faergeek/make-webpack-config@22.0.50(@babel/core@7.23.9)(postcss@8.4.35)(typescript@5.3.3)(webpack@5.90.2):
+    resolution: {integrity: sha512-HWBN10+Hhae/yseI21N0DWnjYRPTI54byvZHU2CHA+OBQGdvhLG0tJvEy2dW6HS7MJyyYGKEa68ndGFMFHL28w==}
     peerDependencies:
       '@babel/core': ^7.14.3
       postcss: ^8.3.0
