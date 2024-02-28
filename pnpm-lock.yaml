@@ -72,7 +72,7 @@ devDependencies:
     version: 6.0.3(eslint@8.57.0)(typescript@5.3.3)
   '@faergeek/make-webpack-config':
     specifier: ^22.0.0
-    version: 22.0.50(@babel/core@7.23.9)(postcss@8.4.35)(typescript@5.3.3)(webpack@5.90.3)
+    version: 22.0.51(@babel/core@7.23.9)(postcss@8.4.35)(typescript@5.3.3)(webpack@5.90.3)
   '@size-limit/file':
     specifier: ^11.0.0
     version: 11.0.2(size-limit@11.0.2)
@@ -1913,8 +1913,8 @@ packages:
       - typescript
     dev: true
 
-  /@faergeek/make-webpack-config@22.0.50(@babel/core@7.23.9)(postcss@8.4.35)(typescript@5.3.3)(webpack@5.90.3):
-    resolution: {integrity: sha512-HWBN10+Hhae/yseI21N0DWnjYRPTI54byvZHU2CHA+OBQGdvhLG0tJvEy2dW6HS7MJyyYGKEa68ndGFMFHL28w==}
+  /@faergeek/make-webpack-config@22.0.51(@babel/core@7.23.9)(postcss@8.4.35)(typescript@5.3.3)(webpack@5.90.3):
+    resolution: {integrity: sha512-DiKM/HxD5JF0hMSA0TbCdpp5GlEA6akhkq3yL1woH/EOR7QJR5DLKj/N9ku4mDGvdAwpzEwWERVhnYn8i+kHUw==}
     peerDependencies:
       '@babel/core': ^7.14.3
       postcss: ^8.3.0
@@ -1929,7 +1929,7 @@ packages:
       css-minimizer-webpack-plugin: 6.0.0(lightningcss@1.24.0)(webpack@5.90.3)
       escape-string-regexp: 5.0.0
       lightningcss: 1.24.0
-      mini-css-extract-plugin: 2.8.0(webpack@5.90.3)
+      mini-css-extract-plugin: 2.8.1(webpack@5.90.3)
       mini-svg-data-uri: 1.4.4
       postcss: 8.4.35
       postcss-loader: 8.1.0(postcss@8.4.35)(typescript@5.3.3)(webpack@5.90.3)
@@ -2013,7 +2013,7 @@ packages:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 20.11.20
+      '@types/node': 20.11.21
       '@types/yargs': 17.0.32
       chalk: 4.1.2
     dev: true
@@ -2243,6 +2243,12 @@ packages:
 
   /@types/node@20.11.20:
     resolution: {integrity: sha512-7/rR21OS+fq8IyHTgtLkDK949uzsa6n8BkziAKtPVpugIkO6D+/ooXMvzXxDnZrmtXVfjb1bKQafYpb8s89LOg==}
+    dependencies:
+      undici-types: 5.26.5
+    dev: true
+
+  /@types/node@20.11.21:
+    resolution: {integrity: sha512-/ySDLGscFPNasfqStUuWWPfL78jompfIoVzLJPVVAHBh6rpG68+pI2Gk+fNLeI8/f1yPYL4s46EleVIc20F1Ow==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -2811,7 +2817,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.23.0
-      caniuse-lite: 1.0.30001589
+      caniuse-lite: 1.0.30001591
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -3022,13 +3028,17 @@ packages:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
       browserslist: 4.23.0
-      caniuse-lite: 1.0.30001589
+      caniuse-lite: 1.0.30001591
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: true
 
   /caniuse-lite@1.0.30001589:
     resolution: {integrity: sha512-vNQWS6kI+q6sBlHbh71IIeC+sRwK2N3EDySc/updIGhIee2x5z00J4c1242/5/d6EpEMdOnk/m+6tuk4/tcsqg==}
+    dev: true
+
+  /caniuse-lite@1.0.30001591:
+    resolution: {integrity: sha512-PCzRMei/vXjJyL5mJtzNiUCKP59dm8Apqc3PH8gJkMnMXZGox93RbE76jHsmLwmIo6/3nsYIpJtx0O7u5PqFuQ==}
     dev: true
 
   /chalk@2.4.2:
@@ -4602,7 +4612,7 @@ packages:
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 20.11.20
+      '@types/node': 20.11.21
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
@@ -4613,7 +4623,7 @@ packages:
     resolution: {integrity: sha512-7vuh85V5cdDofPyxn58nrPjBktZo0u9x1g8WtjQol+jZDaE+fhN+cIvTj11GndBnMnyfrUOG1sZQxCdjKh+DKg==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 20.11.20
+      '@types/node': 20.11.21
       merge-stream: 2.0.0
       supports-color: 8.1.1
     dev: true
@@ -4622,7 +4632,7 @@ packages:
     resolution: {integrity: sha512-eIz2msL/EzL9UFTFFx7jBTkeZfku0yUAyZZZmJ93H2TYEiroIx2PQjEXcwYtYl8zXCxb+PAmA2hLIt/6ZEkPHw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
-      '@types/node': 20.11.20
+      '@types/node': 20.11.21
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
@@ -4946,8 +4956,8 @@ packages:
     hasBin: true
     dev: false
 
-  /mini-css-extract-plugin@2.8.0(webpack@5.90.3):
-    resolution: {integrity: sha512-CxmUYPFcTgET1zImteG/LZOy/4T5rTojesQXkSNBiquhydn78tfbCE9sjIjnJ/UcjNjOC1bphTCCW5rrS7cXAg==}
+  /mini-css-extract-plugin@2.8.1(webpack@5.90.3):
+    resolution: {integrity: sha512-/1HDlyFRxWIZPI1ZpgqlZ8jMw/1Dp/dl3P0L1jtZ+zVcHqwPhGwaJwKL00WVgfnBy6PWCde9W65or7IIETImuA==}
     engines: {node: '>= 12.13.0'}
     peerDependencies:
       webpack: ^5.0.0
