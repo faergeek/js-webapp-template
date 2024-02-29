@@ -72,7 +72,7 @@ devDependencies:
     version: 6.0.3(eslint@8.57.0)(typescript@5.3.3)
   '@faergeek/make-webpack-config':
     specifier: ^22.0.0
-    version: 22.0.51(@babel/core@7.24.0)(postcss@8.4.35)(typescript@5.3.3)(webpack@5.90.3)
+    version: 22.0.52(@babel/core@7.24.0)(postcss@8.4.35)(typescript@5.3.3)(webpack@5.90.3)
   '@size-limit/file':
     specifier: ^11.0.0
     version: 11.0.2(size-limit@11.0.2)
@@ -1927,8 +1927,8 @@ packages:
       - typescript
     dev: true
 
-  /@faergeek/make-webpack-config@22.0.51(@babel/core@7.24.0)(postcss@8.4.35)(typescript@5.3.3)(webpack@5.90.3):
-    resolution: {integrity: sha512-DiKM/HxD5JF0hMSA0TbCdpp5GlEA6akhkq3yL1woH/EOR7QJR5DLKj/N9ku4mDGvdAwpzEwWERVhnYn8i+kHUw==}
+  /@faergeek/make-webpack-config@22.0.52(@babel/core@7.24.0)(postcss@8.4.35)(typescript@5.3.3)(webpack@5.90.3):
+    resolution: {integrity: sha512-uA+/yXeaURYxIfkIQ1ehTa5LU+EI0x+MvCqVMhsraPl//pxzcDxGDnPo3qTTfNq+RGGLGO1RC1o0rGlXacQMkA==}
     peerDependencies:
       '@babel/core': ^7.14.3
       postcss: ^8.3.0
@@ -1946,7 +1946,7 @@ packages:
       mini-css-extract-plugin: 2.8.1(webpack@5.90.3)
       mini-svg-data-uri: 1.4.4
       postcss: 8.4.35
-      postcss-loader: 8.1.0(postcss@8.4.35)(typescript@5.3.3)(webpack@5.90.3)
+      postcss-loader: 8.1.1(postcss@8.4.35)(typescript@5.3.3)(webpack@5.90.3)
       react-refresh: 0.14.0
       source-map-loader: 5.0.0(webpack@5.90.3)
       webpack: 5.90.3(webpack-cli@5.1.4)
@@ -2027,7 +2027,7 @@ packages:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 20.11.21
+      '@types/node': 20.11.22
       '@types/yargs': 17.0.32
       chalk: 4.1.2
     dev: true
@@ -2261,8 +2261,8 @@ packages:
       undici-types: 5.26.5
     dev: true
 
-  /@types/node@20.11.21:
-    resolution: {integrity: sha512-/ySDLGscFPNasfqStUuWWPfL78jompfIoVzLJPVVAHBh6rpG68+pI2Gk+fNLeI8/f1yPYL4s46EleVIc20F1Ow==}
+  /@types/node@20.11.22:
+    resolution: {integrity: sha512-/G+IxWxma6V3E+pqK1tSl2Fo1kl41pK1yeCyDsgkF9WlVAme4j5ISYM2zR11bgLFJGLN5sVK40T4RJNuiZbEjA==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -4626,7 +4626,7 @@ packages:
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 20.11.21
+      '@types/node': 20.11.22
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
@@ -4637,7 +4637,7 @@ packages:
     resolution: {integrity: sha512-7vuh85V5cdDofPyxn58nrPjBktZo0u9x1g8WtjQol+jZDaE+fhN+cIvTj11GndBnMnyfrUOG1sZQxCdjKh+DKg==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 20.11.21
+      '@types/node': 20.11.22
       merge-stream: 2.0.0
       supports-color: 8.1.1
     dev: true
@@ -4646,7 +4646,7 @@ packages:
     resolution: {integrity: sha512-eIz2msL/EzL9UFTFFx7jBTkeZfku0yUAyZZZmJ93H2TYEiroIx2PQjEXcwYtYl8zXCxb+PAmA2hLIt/6ZEkPHw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
-      '@types/node': 20.11.21
+      '@types/node': 20.11.22
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
@@ -5600,8 +5600,8 @@ packages:
       postcss: 8.4.35
     dev: true
 
-  /postcss-loader@8.1.0(postcss@8.4.35)(typescript@5.3.3)(webpack@5.90.3):
-    resolution: {integrity: sha512-AbperNcX3rlob7Ay7A/HQcrofug1caABBkopoFeOQMspZBqcqj6giYn1Bwey/0uiOPAcR+NQD0I2HC7rXzk91w==}
+  /postcss-loader@8.1.1(postcss@8.4.35)(typescript@5.3.3)(webpack@5.90.3):
+    resolution: {integrity: sha512-0IeqyAsG6tYiDRCYKQJLAmgQr47DX6N7sFSWvQxt6AcupX8DIdmykuk/o/tx0Lze3ErGHJEp5OSRxrelC6+NdQ==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
       '@rspack/core': 0.x || 1.x
