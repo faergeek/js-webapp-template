@@ -1,4 +1,4 @@
-FROM node:21.7.0-alpine
+FROM node:21.7.1-alpine
 
 RUN apk add tini
 
