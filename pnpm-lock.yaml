@@ -75,7 +75,7 @@ devDependencies:
     version: 22.0.52(@babel/core@7.24.0)(postcss@8.4.35)(typescript@5.4.2)(webpack@5.90.3)
   '@size-limit/file':
     specifier: ^11.0.0
-    version: 11.0.3(size-limit@11.0.3)
+    version: 11.0.3(size-limit@11.1.0)
   '@types/body-parser':
     specifier: ^1.19.5
     version: 1.19.5
@@ -120,7 +120,7 @@ devDependencies:
     version: 5.0.5
   size-limit:
     specifier: ^11.0.0
-    version: 11.0.3
+    version: 11.1.0
   typescript:
     specifier: ^5.0.0
     version: 5.4.2
@@ -2164,13 +2164,13 @@ packages:
     engines: {node: '>=18'}
     dev: true
 
-  /@size-limit/file@11.0.3(size-limit@11.0.3):
+  /@size-limit/file@11.0.3(size-limit@11.1.0):
     resolution: {integrity: sha512-fuVZG+dZLLMaEi1siHHK5gU8Vfc4pvjZBxrefwZt9gOinbOgGONauEPZYipaE1tYTZPeJo8o9PuJ8Obbub+MLA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       size-limit: 11.0.3
     dependencies:
-      size-limit: 11.0.3
+      size-limit: 11.1.0
     dev: true
 
   /@trysound/sax@0.2.0:
@@ -6502,14 +6502,15 @@ packages:
       totalist: 3.0.1
     dev: true
 
-  /size-limit@11.0.3:
-    resolution: {integrity: sha512-opXC+dOlwaKMyCx89WQq5J+LE+WdqtAFwaNwKNJv8xTCNMq6NIIY5LdayTRuRWWdsQM7hvI27afjtofN/m0gIw==}
+  /size-limit@11.1.0:
+    resolution: {integrity: sha512-HvqVEUDJ3y/XL69pR3vxTavPr6s4S9ScJhHjLEjpctF0Ymgo1StmHgFeQoyQYb/1ip7olkWxJG3wRcZk1hZcPg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     dependencies:
       bytes-iec: 3.1.1
       chokidar: 3.6.0
       globby: 14.0.1
+      jiti: 1.21.0
       lilconfig: 3.1.1
       nanospinner: 1.1.0
       picocolors: 1.0.0
