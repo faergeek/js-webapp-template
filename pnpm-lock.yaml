@@ -75,7 +75,7 @@ devDependencies:
     version: 22.0.53(@babel/core@7.24.0)(postcss@8.4.35)(typescript@5.4.2)(webpack@5.90.3)
   '@size-limit/file':
     specifier: ^11.0.0
-    version: 11.1.0(size-limit@11.1.0)
+    version: 11.1.0(size-limit@11.1.1)
   '@types/body-parser':
     specifier: ^1.19.5
     version: 1.19.5
@@ -120,7 +120,7 @@ devDependencies:
     version: 5.0.5
   size-limit:
     specifier: ^11.0.0
-    version: 11.1.0
+    version: 11.1.1
   typescript:
     specifier: ^5.0.0
     version: 5.4.2
@@ -2164,13 +2164,13 @@ packages:
     engines: {node: '>=18'}
     dev: true
 
-  /@size-limit/file@11.1.0(size-limit@11.1.0):
+  /@size-limit/file@11.1.0(size-limit@11.1.1):
     resolution: {integrity: sha512-C7Tr9dvw8Jx8If2xyGt0OprB+t03tAf259QJYi4WSl3IRMxH7l8k9qyITa/KCFcmH7tVBduNRSnHAL8Cf90EfQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       size-limit: 11.1.0
     dependencies:
-      size-limit: 11.1.0
+      size-limit: 11.1.1
     dev: true
 
   /@trysound/sax@0.2.0:
@@ -2938,8 +2938,8 @@ packages:
     resolution: {integrity: sha512-vyL2OymJxmarO8gxMr0mhChsO9QGwhynfuu4+MHTAW6czfq9humCB7rKpUjDd9YUiDPU4mzpyupFSvOClAwbmQ==}
     dev: true
 
-  /binary-extensions@2.2.0:
-    resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
+  /binary-extensions@2.3.0:
+    resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
     engines: {node: '>=8'}
     dev: true
 
@@ -4515,7 +4515,7 @@ packages:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
     engines: {node: '>=8'}
     dependencies:
-      binary-extensions: 2.2.0
+      binary-extensions: 2.3.0
     dev: true
 
   /is-boolean-object@1.1.2:
@@ -6586,8 +6586,8 @@ packages:
       totalist: 3.0.1
     dev: true
 
-  /size-limit@11.1.0:
-    resolution: {integrity: sha512-HvqVEUDJ3y/XL69pR3vxTavPr6s4S9ScJhHjLEjpctF0Ymgo1StmHgFeQoyQYb/1ip7olkWxJG3wRcZk1hZcPg==}
+  /size-limit@11.1.1:
+    resolution: {integrity: sha512-0d06gwp+hBuhNQyAyewalfMLhGCnjt15MyDxqouzxN4+85vjAUdRKSNuR1kcyxaS9Ml98q120U0PgRPocPJWiw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     dependencies:
