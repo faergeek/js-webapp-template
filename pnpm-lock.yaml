@@ -72,7 +72,7 @@ devDependencies:
     version: 6.0.11(eslint@8.57.0)(typescript@5.4.4)
   '@faergeek/make-webpack-config':
     specifier: ^22.0.0
-    version: 22.0.54(@babel/core@7.24.4)(postcss@8.4.38)(typescript@5.4.4)(webpack@5.91.0)
+    version: 22.0.55(@babel/core@7.24.4)(postcss@8.4.38)(typescript@5.4.4)(webpack@5.91.0)
   '@size-limit/file':
     specifier: ^11.0.0
     version: 11.1.2(size-limit@11.1.2)
@@ -1934,8 +1934,8 @@ packages:
       - typescript
     dev: true
 
-  /@faergeek/make-webpack-config@22.0.54(@babel/core@7.24.4)(postcss@8.4.38)(typescript@5.4.4)(webpack@5.91.0):
-    resolution: {integrity: sha512-YALPx9BcDAFg6tDabUh+3vig6ECi9G1HZI+Sd7AP0OXc5L/f2HnbEYkj1v0E9mJK7KwrH91rb53mixrwm5bYSA==}
+  /@faergeek/make-webpack-config@22.0.55(@babel/core@7.24.4)(postcss@8.4.38)(typescript@5.4.4)(webpack@5.91.0):
+    resolution: {integrity: sha512-rneSghWvd0gUZilVf0IUr8DybRsrc9kuk2Fsp+6y/VU1zpqkK9jW8M6vdq3tlKQglhMgdGV7FDN/DmrlNM27aQ==}
     peerDependencies:
       '@babel/core': ^7.14.3
       postcss: ^8.3.0
@@ -1946,7 +1946,7 @@ packages:
       '@pmmmwh/react-refresh-webpack-plugin': 0.5.11(react-refresh@0.14.0)(webpack@5.91.0)
       babel-loader: 9.1.3(@babel/core@7.24.4)(webpack@5.91.0)
       browserslist: 4.23.0
-      css-loader: 6.11.0(webpack@5.91.0)
+      css-loader: 7.0.0(webpack@5.91.0)
       css-minimizer-webpack-plugin: 6.0.0(lightningcss@1.24.1)(webpack@5.91.0)
       escape-string-regexp: 5.0.0
       lightningcss: 1.24.1
@@ -3238,12 +3238,12 @@ packages:
       postcss-value-parser: 4.2.0
     dev: true
 
-  /css-loader@6.11.0(webpack@5.91.0):
-    resolution: {integrity: sha512-CTJ+AEQJjq5NzLga5pE39qdiSV56F8ywCIsqNIRF0r7BDgWsN25aazToqAFg7ZrtA/U016xudB3ffgweORxX7g==}
-    engines: {node: '>= 12.13.0'}
+  /css-loader@7.0.0(webpack@5.91.0):
+    resolution: {integrity: sha512-WrO4FVoamxt5zY9CauZjoJgXRi/LZKIk+Ta7YvpSGr5r/eMYPNp5/T9ODlMe4/1rF5DYlycG1avhV4g3A/tiAw==}
+    engines: {node: '>= 18.12.0'}
     peerDependencies:
       '@rspack/core': 0.x || 1.x
-      webpack: ^5.0.0
+      webpack: ^5.27.0
     peerDependenciesMeta:
       '@rspack/core':
         optional: true
