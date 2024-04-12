@@ -17,4 +17,4 @@ ENV NODE_ENV=production PORT=8080
 EXPOSE $PORT
 USER node
 ENTRYPOINT ["tini", "--"]
-CMD ["pnpm", "start"]
+CMD ["npm", "start"]
