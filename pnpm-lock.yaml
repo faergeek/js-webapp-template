@@ -69,7 +69,7 @@ devDependencies:
     version: 7.24.1(@babel/core@7.24.4)
   '@faergeek/eslint-config':
     specifier: ^6.0.1
-    version: 6.0.12(eslint@8.57.0)(typescript@5.4.5)
+    version: 6.0.13(eslint@8.57.0)(typescript@5.4.5)
   '@faergeek/make-webpack-config':
     specifier: ^22.0.0
     version: 22.0.58(@babel/core@7.24.4)(postcss@8.4.38)(typescript@5.4.5)(webpack@5.91.0)
@@ -1917,8 +1917,8 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@faergeek/eslint-config@6.0.12(eslint@8.57.0)(typescript@5.4.5):
-    resolution: {integrity: sha512-lx8dfPTN2GJd29IRgmDyEuzLHohKvEll0UXGEflzUabJ65nMOwVWNTAApd4Vf52PTrvpT/Wh5V7HqGJDbYY7SA==}
+  /@faergeek/eslint-config@6.0.13(eslint@8.57.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-pYfOLUAR7svbPwDl4XbtBBsN3oMboFBiGC2U33geqjRSkCCwK0ItJ565MJSvAZeaQu7g30soNoQS1rFlyZ9RMA==}
     peerDependencies:
       eslint: ^8.56.0
     dependencies:
@@ -1928,7 +1928,7 @@ packages:
       eslint-config-prettier: 9.1.0(eslint@8.57.0)
       eslint-plugin-react: 7.34.1(eslint@8.57.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@8.57.0)
-      eslint-plugin-simple-import-sort: 12.0.0(eslint@8.57.0)
+      eslint-plugin-simple-import-sort: 12.1.0(eslint@8.57.0)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -3833,8 +3833,8 @@ packages:
       string.prototype.matchall: 4.0.11
     dev: true
 
-  /eslint-plugin-simple-import-sort@12.0.0(eslint@8.57.0):
-    resolution: {integrity: sha512-8o0dVEdAkYap0Cn5kNeklaKcT1nUsa3LITWEuFk3nJifOoD+5JQGoyDUW2W/iPWwBsNBJpyJS9y4je/BgxLcyQ==}
+  /eslint-plugin-simple-import-sort@12.1.0(eslint@8.57.0):
+    resolution: {integrity: sha512-Y2fqAfC11TcG/WP3TrI1Gi3p3nc8XJyEOJYHyEPEGI/UAgNx6akxxlX74p7SbAQdLcgASKhj8M0GKvH3vq/+ig==}
     peerDependencies:
       eslint: '>=5.0.0'
     dependencies:
