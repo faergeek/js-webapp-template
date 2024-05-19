@@ -15,56 +15,45 @@ import {
 } from './pages/template';
 
 interface AppRouteParams {
-  meta?: // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  ((args: MetaFunctionArgs<any>) => MetaDescriptor | void) | MetaDescriptor;
+  handle?: {
+    meta:
+      | ((
+          args: // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          MetaFunctionArgs<any>,
+        ) => MetaDescriptor | void)
+      | MetaDescriptor;
+  };
 }
 
 type AppIndexRouteObject = IndexRouteObject & AppRouteParams;
 
-type AppNonIndexRouteObject = Omit<NonIndexRouteObject, 'children' | 'id'> & {
+type AppNonIndexRouteObject = Omit<NonIndexRouteObject, 'children'> & {
   children?: AppRouteObject[];
 } & AppRouteParams;
 
 type AppRouteObject = AppIndexRouteObject | AppNonIndexRouteObject;
 
-function convertRoutes(routes: AppRouteObject[], parentPath: number[] = []) {
-  return routes.map((route, index) => {
-    const treePath = [...parentPath, index];
-    const id = treePath.join('-');
-
-    if (route.index) {
-      return { ...route, id };
-    }
-
-    const pathOrLayoutRoute: AppNonIndexRouteObject & { id: string } = {
-      ...route,
-      id,
-      children: route.children
-        ? convertRoutes(route.children, treePath)
-        : undefined,
-    };
-
-    return pathOrLayoutRoute;
-  });
-}
-
-const title = 'Memes';
-const description = 'Generate memes from provided templates';
-
-export const routes = convertRoutes([
+export const routes: AppRouteObject[] = [
   {
     path: '/',
-    meta: {
-      'application-name': 'JS WebApp Template',
-      title,
-      description,
-      'og:title': title,
-      'og:description': description,
-      'og:image':
-        'https://api.memegen.link/images/buzz/memes/memes_everywhere.jpg?width=1200&height=630',
-      'og:image:width': '1200',
-      'og:image:height': '630',
-      'twitter:card': 'summary_large_image',
+    handle: {
+      meta() {
+        const title = 'Memes';
+        const description = 'Generate memes from provided templates';
+
+        return {
+          'application-name': 'JS WebApp Template',
+          title,
+          description,
+          'og:title': title,
+          'og:description': description,
+          'og:image':
+            'https://api.memegen.link/images/buzz/memes/memes_everywhere.jpg?width=1200&height=630',
+          'og:image:width': '1200',
+          'og:image:height': '630',
+          'twitter:card': 'summary_large_image',
+        };
+      },
     },
     element: (
       <Document>
@@ -78,7 +67,9 @@ export const routes = convertRoutes([
     ),
     children: [
       {
-        meta: errorMeta,
+        handle: {
+          meta: errorMeta,
+        },
         element: (
           <Layout>
             <Outlet />
@@ -93,25 +84,31 @@ export const routes = convertRoutes([
           {
             index: true,
             loader: homeLoader,
-            meta: homeMeta,
+            handle: {
+              meta: homeMeta,
+            },
             element: <HomePage />,
           },
           {
             path: 'template/:templateId',
             loader: templateLoader,
-            meta: templateMeta,
+            handle: {
+              meta: templateMeta,
+            },
             action: templateAction,
             element: <TemplatePage />,
           },
           {
             path: 'created',
             loader: createdLoader,
-            meta: createdMeta,
+            handle: {
+              meta: createdMeta,
+            },
             element: <CreatedPage />,
           },
           {
             path: '*',
-            loader: () => {
+            loader() {
               throw new Response("The page you're looking for doesn't exist.", {
                 status: 404,
                 statusText: 'Page Not Found',
@@ -123,4 +120,4 @@ export const routes = convertRoutes([
       },
     ],
   },
-]);
+];
