@@ -74,7 +74,7 @@ importers:
         version: 6.0.20(eslint@8.57.0)(typescript@5.4.5)
       '@faergeek/make-webpack-config':
         specifier: ^22.0.0
-        version: 22.0.65(@babel/core@7.24.5)(bufferutil@4.0.8)(postcss@8.4.38)(type-fest@0.20.2)(typescript@5.4.5)(utf-8-validate@6.0.4)(webpack@5.91.0(webpack-cli@5.1.4))
+        version: 22.0.66(@babel/core@7.24.5)(bufferutil@4.0.8)(postcss@8.4.38)(type-fest@0.20.2)(typescript@5.4.5)(utf-8-validate@6.0.4)(webpack@5.91.0(webpack-cli@5.1.4))
       '@size-limit/file':
         specifier: ^11.0.0
         version: 11.1.4(size-limit@11.1.4)
@@ -1039,8 +1039,8 @@ packages:
     peerDependencies:
       eslint: ^8.56.0
 
-  '@faergeek/make-webpack-config@22.0.65':
-    resolution: {integrity: sha512-VMBO4/AIFcvt3JOV+2afy8A9a6701OCMU/RXPSh64dNPJ3RKMiQZqp5JEAypJ3NP2iqcL8/uYvp5EJXTLqtjlg==}
+  '@faergeek/make-webpack-config@22.0.66':
+    resolution: {integrity: sha512-MDGDFSDjhZlCb0osepuy1FsabiIIOwA2sXjZ5QWt3yFEsszNV4gbkdor/mork7YDy46RDkLL8D8XTCys5TtrJA==}
     peerDependencies:
       '@babel/core': ^7.14.3
       postcss: ^8.3.0
@@ -1593,6 +1593,9 @@ packages:
   caniuse-lite@1.0.30001620:
     resolution: {integrity: sha512-WJvYsOjd1/BYUY6SNGUosK9DUidBPDTnOARHp3fSmFO1ekdxaY6nKRttEVrfMmYi80ctS0kz1wiWmm14fVc3ew==}
 
+  caniuse-lite@1.0.30001621:
+    resolution: {integrity: sha512-+NLXZiviFFKX0fk8Piwv3PfLPGtRqJeq2TiNoUff/qB5KJgwecJTvCXDpmlyP/eCI/GUEmp/h/y5j0yckiiZrA==}
+
   chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
     engines: {node: '>=4'}
@@ -1712,8 +1715,8 @@ packages:
     peerDependencies:
       postcss: ^8.4
 
-  css-loader@7.1.1:
-    resolution: {integrity: sha512-OxIR5P2mjO1PSXk44bWuQ8XtMK4dpEqpIyERCx3ewOo3I8EmbcxMPUc5ScLtQfgXtOojoMv57So4V/C02HQLsw==}
+  css-loader@7.1.2:
+    resolution: {integrity: sha512-6WvYYn7l/XEGN8Xu2vWFt9nVzrCn39vKyTEFf/ExEyoksJjjSZV/0/35XPlMbpnr6VGhZIUg5yJrL8tGfes/FA==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
       '@rspack/core': 0.x || 1.x
@@ -3259,6 +3262,10 @@ packages:
 
   postcss-selector-parser@6.0.16:
     resolution: {integrity: sha512-A0RVJrX+IUkVZbW3ClroRWurercFhieevHB38sr2+l9eUClMqome3LmEmnhlNy+5Mr2EYN6B2Kaw9wYdd+VHiw==}
+    engines: {node: '>=4'}
+
+  postcss-selector-parser@6.1.0:
+    resolution: {integrity: sha512-UMz42UD0UY0EApS0ZL9o1XnLhSTtvvvLe5Dc2H2O56fvRZi+KulDyf5ctDhhtYJBGKStV2FL1fy6253cmLgqVQ==}
     engines: {node: '>=4'}
 
   postcss-svgo@7.0.0:
@@ -4930,14 +4937,14 @@ snapshots:
       - supports-color
       - typescript
 
-  '@faergeek/make-webpack-config@22.0.65(@babel/core@7.24.5)(bufferutil@4.0.8)(postcss@8.4.38)(type-fest@0.20.2)(typescript@5.4.5)(utf-8-validate@6.0.4)(webpack@5.91.0(webpack-cli@5.1.4))':
+  '@faergeek/make-webpack-config@22.0.66(@babel/core@7.24.5)(bufferutil@4.0.8)(postcss@8.4.38)(type-fest@0.20.2)(typescript@5.4.5)(utf-8-validate@6.0.4)(webpack@5.91.0(webpack-cli@5.1.4))':
     dependencies:
       '@babel/core': 7.24.5
       '@faergeek/tiny-browser-hmr-webpack-plugin': 1.0.13(webpack@5.91.0(webpack-cli@5.1.4))
       '@pmmmwh/react-refresh-webpack-plugin': 0.5.13(react-refresh@0.14.2)(type-fest@0.20.2)(webpack@5.91.0(webpack-cli@5.1.4))
       babel-loader: 9.1.3(@babel/core@7.24.5)(webpack@5.91.0(webpack-cli@5.1.4))
       browserslist: 4.23.0
-      css-loader: 7.1.1(webpack@5.91.0(webpack-cli@5.1.4))
+      css-loader: 7.1.2(webpack@5.91.0(webpack-cli@5.1.4))
       css-minimizer-webpack-plugin: 7.0.0(lightningcss@1.25.0)(webpack@5.91.0(webpack-cli@5.1.4))
       escape-string-regexp: 5.0.0
       lightningcss: 1.25.0
@@ -5603,11 +5610,13 @@ snapshots:
   caniuse-api@3.0.0:
     dependencies:
       browserslist: 4.23.0
-      caniuse-lite: 1.0.30001620
+      caniuse-lite: 1.0.30001621
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
 
   caniuse-lite@1.0.30001620: {}
+
+  caniuse-lite@1.0.30001621: {}
 
   chalk@2.4.2:
     dependencies:
@@ -5719,7 +5728,7 @@ snapshots:
       postcss-selector-parser: 6.0.16
       postcss-value-parser: 4.2.0
 
-  css-loader@7.1.1(webpack@5.91.0(webpack-cli@5.1.4)):
+  css-loader@7.1.2(webpack@5.91.0(webpack-cli@5.1.4)):
     dependencies:
       icss-utils: 5.1.0(postcss@8.4.38)
       postcss: 8.4.38
@@ -6973,7 +6982,7 @@ snapshots:
   postcss-calc@10.0.0(postcss@8.4.38):
     dependencies:
       postcss: 8.4.38
-      postcss-selector-parser: 6.0.16
+      postcss-selector-parser: 6.1.0
       postcss-value-parser: 4.2.0
 
   postcss-clamp@4.1.0(postcss@8.4.38):
@@ -7130,7 +7139,7 @@ snapshots:
       caniuse-api: 3.0.0
       cssnano-utils: 5.0.0(postcss@8.4.38)
       postcss: 8.4.38
-      postcss-selector-parser: 6.0.16
+      postcss-selector-parser: 6.1.0
 
   postcss-minify-font-values@7.0.0(postcss@8.4.38):
     dependencies:
@@ -7154,7 +7163,7 @@ snapshots:
   postcss-minify-selectors@7.0.0(postcss@8.4.38):
     dependencies:
       postcss: 8.4.38
-      postcss-selector-parser: 6.0.16
+      postcss-selector-parser: 6.1.0
 
   postcss-modules-extract-imports@3.1.0(postcss@8.4.38):
     dependencies:
@@ -7164,13 +7173,13 @@ snapshots:
     dependencies:
       icss-utils: 5.1.0(postcss@8.4.38)
       postcss: 8.4.38
-      postcss-selector-parser: 6.0.16
+      postcss-selector-parser: 6.1.0
       postcss-value-parser: 4.2.0
 
   postcss-modules-scope@3.2.0(postcss@8.4.38):
     dependencies:
       postcss: 8.4.38
-      postcss-selector-parser: 6.0.16
+      postcss-selector-parser: 6.1.0
 
   postcss-modules-values@4.0.0(postcss@8.4.38):
     dependencies:
@@ -7355,6 +7364,11 @@ snapshots:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
+  postcss-selector-parser@6.1.0:
+    dependencies:
+      cssesc: 3.0.0
+      util-deprecate: 1.0.2
+
   postcss-svgo@7.0.0(postcss@8.4.38):
     dependencies:
       postcss: 8.4.38
@@ -7364,7 +7378,7 @@ snapshots:
   postcss-unique-selectors@7.0.0(postcss@8.4.38):
     dependencies:
       postcss: 8.4.38
-      postcss-selector-parser: 6.0.16
+      postcss-selector-parser: 6.1.0
 
   postcss-value-parser@4.2.0: {}
 
@@ -7733,7 +7747,7 @@ snapshots:
     dependencies:
       browserslist: 4.23.0
       postcss: 8.4.38
-      postcss-selector-parser: 6.0.16
+      postcss-selector-parser: 6.1.0
 
   supports-color@5.5.0:
     dependencies:
