@@ -6,9 +6,9 @@ import {
   StaticRouterProvider,
 } from 'react-router-dom/server';
 
-import { handleFetchError } from '../_core/fetch';
-import { Entry } from '../entry';
-import { routes } from '../routes';
+import { handleFetchError } from './_core/fetch';
+import { Entry } from './entry';
+import { routes } from './routes';
 
 declare const self: ServiceWorkerGlobalScope & typeof globalThis;
 

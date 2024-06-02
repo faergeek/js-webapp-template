@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "composite": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "noErrorTruncation": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "./build/tsc/web",
+    "resolveJsonModule": true,
+    "strict": true,
+    "target": "esnext",
+    "types": ["webpack/module"]
+  },
+  "exclude": ["./src/serviceWorker.tsx"],
+  "include": ["./src"]
+}

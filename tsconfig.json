@@ -1,22 +1,7 @@
 {
-  "include": ["src"],
-  "exclude": ["src/sw"],
-  "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "noEmit": true,
-    "noErrorTruncation": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "resolveJsonModule": true,
-    "strict": true,
-    "target": "esnext",
-    "types": ["webpack/module"]
-  }
+  "include": [],
+  "references": [
+    { "path": "./tsconfig.serviceWorker.json" },
+    { "path": "./tsconfig.web.json" }
+  ]
 }
