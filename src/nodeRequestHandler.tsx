@@ -29,7 +29,7 @@ declare global {
   }
 }
 
-export const requestHandler = express()
+export const requestHandler: http.RequestListener = express()
   .use(morgan(__DEV__ ? 'dev' : 'combined'))
   .use((req, _res, next) => {
     req.nonce = nanoid();

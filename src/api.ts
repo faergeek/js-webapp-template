@@ -7,7 +7,7 @@ interface MemeTemplateExample {
   url: string;
 }
 
-interface MemeTemplate {
+export interface MemeTemplate {
   _self: string;
   blank: string;
   example: MemeTemplateExample;

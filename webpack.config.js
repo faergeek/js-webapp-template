@@ -21,7 +21,7 @@ export default function webpackConfig(env, argv) {
     entry: {
       webPage: './src/browser',
       node: './src/node',
-      serviceWorker: './src/sw/sw',
+      serviceWorker: './src/serviceWorker',
     },
     paths: {
       build: path.resolve('build'),
