@@ -4,7 +4,7 @@
   "references": [{ "path": "./tsconfig.web.json" }],
   "compilerOptions": {
     "lib": ["dom", "esnext", "webworker", "webworker.iterable"],
-    "outDir": "./build/tsc/sw",
+    "outDir": "./node_modules/.cache/tsc-out/serviceWorker",
     "skipDefaultLibCheck": true
   }
 }
