@@ -8,25 +8,21 @@ export function Button<
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     | React.ComponentType<any> = 'button',
 >(
-  props: ({ as?: 'button' } | { as: T }) & {
+  props: {
     [K in keyof React.ComponentProps<T>]: React.ComponentProps<T>[K];
+  } & {
+    as?: T;
   },
 ) {
-  let propsCopy = props;
-
-  if (typeof propsCopy.as === 'string') {
-    propsCopy = { ...props };
-
-    if (propsCopy.as === 'button') {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (propsCopy as any).type = 'button';
+  if (typeof props.as === 'string') {
+    if (props.as === 'button') {
+      props = { ...props, type: 'button' };
     } else {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (propsCopy as any).role = 'button';
+      props = { ...props, role: 'button' };
     }
   }
 
-  const { as: As = 'button', className, ...otherProps } = propsCopy;
+  const { as: As = 'button', className, ...otherProps } = props;
 
   return <As {...otherProps} className={clsx(className, css.btn)} />;
 }
