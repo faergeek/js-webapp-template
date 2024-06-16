@@ -71,7 +71,7 @@ importers:
         version: 7.24.7(@babel/core@7.24.7)
       '@faergeek/eslint-config':
         specifier: ^6.0.1
-        version: 6.0.24(eslint@8.57.0)(typescript@5.4.5)
+        version: 6.1.1(eslint@8.57.0)(typescript@5.4.5)
       '@faergeek/make-webpack-config':
         specifier: ^22.0.0
         version: 22.0.70(@babel/core@7.24.7)(bufferutil@4.0.8)(postcss@8.4.38)(type-fest@0.20.2)(typescript@5.4.5)(utf-8-validate@6.0.4)(webpack@5.92.0(webpack-cli@5.1.4))
@@ -1034,8 +1034,8 @@ packages:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@faergeek/eslint-config@6.0.24':
-    resolution: {integrity: sha512-RqnXHH+U/mXKApvZ+J2bQ3a+RbPaadmhSFP8NXKh6SpICWI2ljPRPtC40gvBl6zwjRtqebjAVMEgoafg7ajF4g==}
+  '@faergeek/eslint-config@6.1.1':
+    resolution: {integrity: sha512-NfqOmz+wdMUpz5Itl2fbd+thxIthXUD1go6iMm/QTwl0i1Ez4CTiFYjZAJLA9gqlFypWDJEQUAOG7gvBA3GySg==}
     peerDependencies:
       eslint: ^8.56.0
 
@@ -2019,6 +2019,19 @@ packages:
     resolution: {integrity: sha512-Y2fqAfC11TcG/WP3TrI1Gi3p3nc8XJyEOJYHyEPEGI/UAgNx6akxxlX74p7SbAQdLcgASKhj8M0GKvH3vq/+ig==}
     peerDependencies:
       eslint: '>=5.0.0'
+
+  eslint-plugin-vitest@0.5.4:
+    resolution: {integrity: sha512-um+odCkccAHU53WdKAw39MY61+1x990uXjSPguUCq3VcEHdqJrOb8OTMrbYlY6f9jAKx7x98kLVlIe3RJeJqoQ==}
+    engines: {node: ^18.0.0 || >= 20.0.0}
+    peerDependencies:
+      '@typescript-eslint/eslint-plugin': '*'
+      eslint: ^8.57.0 || ^9.0.0
+      vitest: '*'
+    peerDependenciesMeta:
+      '@typescript-eslint/eslint-plugin':
+        optional: true
+      vitest:
+        optional: true
 
   eslint-scope@5.1.1:
     resolution: {integrity: sha512-2NxwbF/hZ0KpepYN0cNbo+FN6XoK7GaHlQhgx/hIZl6Va0bF45RQOOwhLIy8lQDbuCiadSLCBnH2CFYquit5bw==}
@@ -4992,7 +5005,7 @@ snapshots:
 
   '@eslint/js@8.57.0': {}
 
-  '@faergeek/eslint-config@6.0.24(eslint@8.57.0)(typescript@5.4.5)':
+  '@faergeek/eslint-config@6.1.1(eslint@8.57.0)(typescript@5.4.5)':
     dependencies:
       '@typescript-eslint/eslint-plugin': 7.13.0(@typescript-eslint/parser@7.13.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
       '@typescript-eslint/parser': 7.13.0(eslint@8.57.0)(typescript@5.4.5)
@@ -5001,9 +5014,11 @@ snapshots:
       eslint-plugin-react: 7.34.2(eslint@8.57.0)
       eslint-plugin-react-hooks: 4.6.2(eslint@8.57.0)
       eslint-plugin-simple-import-sort: 12.1.0(eslint@8.57.0)
+      eslint-plugin-vitest: 0.5.4(@typescript-eslint/eslint-plugin@7.13.0(@typescript-eslint/parser@7.13.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
     transitivePeerDependencies:
       - supports-color
       - typescript
+      - vitest
 
   '@faergeek/make-webpack-config@22.0.70(@babel/core@7.24.7)(bufferutil@4.0.8)(postcss@8.4.38)(type-fest@0.20.2)(typescript@5.4.5)(utf-8-validate@6.0.4)(webpack@5.92.0(webpack-cli@5.1.4))':
     dependencies:
@@ -6153,6 +6168,16 @@ snapshots:
   eslint-plugin-simple-import-sort@12.1.0(eslint@8.57.0):
     dependencies:
       eslint: 8.57.0
+
+  eslint-plugin-vitest@0.5.4(@typescript-eslint/eslint-plugin@7.13.0(@typescript-eslint/parser@7.13.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5):
+    dependencies:
+      '@typescript-eslint/utils': 7.13.0(eslint@8.57.0)(typescript@5.4.5)
+      eslint: 8.57.0
+    optionalDependencies:
+      '@typescript-eslint/eslint-plugin': 7.13.0(@typescript-eslint/parser@7.13.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
 
   eslint-scope@5.1.1:
     dependencies:
