@@ -20,10 +20,7 @@ const assetsByUrl = Object.fromEntries(
   Object.values(assets)
     .flatMap(assetRecords =>
       Object.values(assetRecords)
-        .filter(
-          (assetRecord): assetRecord is NonNullable<typeof assetRecord> =>
-            assetRecord != null,
-        )
+        .filter(assetRecord => assetRecord != null)
         .flatMap(assetRecord => [
           ...assetRecord.auxiliary,
           ...assetRecord.css,

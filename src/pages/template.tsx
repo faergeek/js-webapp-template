@@ -47,9 +47,7 @@ export async function templateAction({ params, request }: ActionFunctionArgs) {
   );
   const extension = extensionData as MemeImageExtension;
 
-  const text = textData.filter(
-    (item): item is string => typeof item === 'string',
-  );
+  const text = textData.filter(item => typeof item === 'string');
 
   invariant(params.templateId);
   const { url } = await createMeme(params.templateId, { extension, text });
