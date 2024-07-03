@@ -71,7 +71,7 @@ importers:
         version: 7.24.7(@babel/core@7.24.7)
       '@faergeek/eslint-config':
         specifier: ^6.0.1
-        version: 6.1.5(eslint@8.57.0)(typescript@5.5.3)
+        version: 6.1.6(eslint@8.57.0)(typescript@5.5.3)
       '@faergeek/make-webpack-config':
         specifier: ^22.0.0
         version: 22.0.71(@babel/core@7.24.7)(bufferutil@4.0.8)(postcss@8.4.39)(type-fest@0.20.2)(typescript@5.5.3)(utf-8-validate@6.0.4)(webpack@5.92.1(webpack-cli@5.1.4))
@@ -1034,8 +1034,8 @@ packages:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@faergeek/eslint-config@6.1.5':
-    resolution: {integrity: sha512-UP+30jxn7wC0BAb4YhyAcR50q+NSqLzEH/RnTsxWIAxBCxn/TuNgwjG+D61foBCJPqRAZS3K+5mj0VwUMyz4Zg==}
+  '@faergeek/eslint-config@6.1.6':
+    resolution: {integrity: sha512-q4HTLQOirbFmVIlEPOLUvLqHlJNgSS9nXKfiCpNuZm+WHfXbpS4CnSXGKgc7olzXMKQNHBM20eYzMzMTI9yahA==}
     peerDependencies:
       eslint: ^8.56.0
 
@@ -2015,8 +2015,8 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
 
-  eslint-plugin-simple-import-sort@12.1.0:
-    resolution: {integrity: sha512-Y2fqAfC11TcG/WP3TrI1Gi3p3nc8XJyEOJYHyEPEGI/UAgNx6akxxlX74p7SbAQdLcgASKhj8M0GKvH3vq/+ig==}
+  eslint-plugin-simple-import-sort@12.1.1:
+    resolution: {integrity: sha512-6nuzu4xwQtE3332Uz0to+TxDQYRLTKRESSc2hefVT48Zc8JthmN23Gx9lnYhu0FtkRSL1oxny3kJ2aveVhmOVA==}
     peerDependencies:
       eslint: '>=5.0.0'
 
@@ -5010,7 +5010,7 @@ snapshots:
 
   '@eslint/js@8.57.0': {}
 
-  '@faergeek/eslint-config@6.1.5(eslint@8.57.0)(typescript@5.5.3)':
+  '@faergeek/eslint-config@6.1.6(eslint@8.57.0)(typescript@5.5.3)':
     dependencies:
       '@typescript-eslint/eslint-plugin': 7.15.0(@typescript-eslint/parser@7.15.0(eslint@8.57.0)(typescript@5.5.3))(eslint@8.57.0)(typescript@5.5.3)
       '@typescript-eslint/parser': 7.15.0(eslint@8.57.0)(typescript@5.5.3)
@@ -5018,7 +5018,7 @@ snapshots:
       eslint-config-prettier: 9.1.0(eslint@8.57.0)
       eslint-plugin-react: 7.34.3(eslint@8.57.0)
       eslint-plugin-react-hooks: 4.6.2(eslint@8.57.0)
-      eslint-plugin-simple-import-sort: 12.1.0(eslint@8.57.0)
+      eslint-plugin-simple-import-sort: 12.1.1(eslint@8.57.0)
       eslint-plugin-vitest: 0.5.4(@typescript-eslint/eslint-plugin@7.15.0(@typescript-eslint/parser@7.15.0(eslint@8.57.0)(typescript@5.5.3))(eslint@8.57.0)(typescript@5.5.3))(eslint@8.57.0)(typescript@5.5.3)
     transitivePeerDependencies:
       - supports-color
@@ -6172,7 +6172,7 @@ snapshots:
       semver: 6.3.1
       string.prototype.matchall: 4.0.11
 
-  eslint-plugin-simple-import-sort@12.1.0(eslint@8.57.0):
+  eslint-plugin-simple-import-sort@12.1.1(eslint@8.57.0):
     dependencies:
       eslint: 8.57.0
 
