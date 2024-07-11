@@ -74,7 +74,7 @@ importers:
         version: 6.1.7(eslint@8.57.0)(typescript@5.5.3)
       '@faergeek/make-webpack-config':
         specifier: ^22.0.0
-        version: 22.0.72(@babel/core@7.24.7)(bufferutil@4.0.8)(postcss@8.4.39)(type-fest@0.20.2)(typescript@5.5.3)(utf-8-validate@6.0.4)(webpack@5.92.1(webpack-cli@5.1.4))
+        version: 22.0.73(@babel/core@7.24.7)(bufferutil@4.0.8)(postcss@8.4.39)(type-fest@0.20.2)(typescript@5.5.3)(utf-8-validate@6.0.4)(webpack@5.92.1(webpack-cli@5.1.4))
       '@size-limit/file':
         specifier: ^11.0.0
         version: 11.1.4(size-limit@11.1.4)
@@ -1045,8 +1045,8 @@ packages:
     peerDependencies:
       eslint: ^8.56.0
 
-  '@faergeek/make-webpack-config@22.0.72':
-    resolution: {integrity: sha512-uQD1qsARejPz3l9QVM1BsoF7PIkKlaL8+tp4NZNg/kTRG2r09LVek0VHl+d7lu5cjW0bsKeato6Nwn1xGTcktA==}
+  '@faergeek/make-webpack-config@22.0.73':
+    resolution: {integrity: sha512-InV/M4JDL36tobrZU641SiBF80jSU45QZjye219utoIRjalybLu0e0CaWYLKfdENhobaGbyROndHx37P+P0yWA==}
     peerDependencies:
       '@babel/core': ^7.14.3
       postcss: ^8.3.0
@@ -1601,6 +1601,9 @@ packages:
 
   caniuse-lite@1.0.30001640:
     resolution: {integrity: sha512-lA4VMpW0PSUrFnkmVuEKBUovSWKhj7puyCg8StBChgu298N1AtuF1sKWEvfDuimSEDbhlb/KqPKC3fs1HbuQUA==}
+
+  caniuse-lite@1.0.30001641:
+    resolution: {integrity: sha512-Phv5thgl67bHYo1TtMY/MurjkHhV4EDaCosezRXgZ8jzA/Ub+wjxAvbGvjoFENStinwi5kCyOYV3mi5tOGykwA==}
 
   chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -5043,7 +5046,7 @@ snapshots:
       - typescript
       - vitest
 
-  '@faergeek/make-webpack-config@22.0.72(@babel/core@7.24.7)(bufferutil@4.0.8)(postcss@8.4.39)(type-fest@0.20.2)(typescript@5.5.3)(utf-8-validate@6.0.4)(webpack@5.92.1(webpack-cli@5.1.4))':
+  '@faergeek/make-webpack-config@22.0.73(@babel/core@7.24.7)(bufferutil@4.0.8)(postcss@8.4.39)(type-fest@0.20.2)(typescript@5.5.3)(utf-8-validate@6.0.4)(webpack@5.92.1(webpack-cli@5.1.4))':
     dependencies:
       '@babel/core': 7.24.7
       '@faergeek/tiny-browser-hmr-webpack-plugin': 1.0.15(webpack@5.92.1(webpack-cli@5.1.4))
@@ -5718,11 +5721,13 @@ snapshots:
   caniuse-api@3.0.0:
     dependencies:
       browserslist: 4.23.2
-      caniuse-lite: 1.0.30001640
+      caniuse-lite: 1.0.30001641
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
 
   caniuse-lite@1.0.30001640: {}
+
+  caniuse-lite@1.0.30001641: {}
 
   chalk@2.4.2:
     dependencies:
