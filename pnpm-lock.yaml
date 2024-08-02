@@ -74,7 +74,7 @@ importers:
         version: 6.1.12(eslint@8.57.0)(typescript@5.5.4)
       '@faergeek/make-webpack-config':
         specifier: ^22.0.0
-        version: 22.0.73(@babel/core@7.25.2)(bufferutil@4.0.8)(postcss@8.4.40)(type-fest@0.20.2)(typescript@5.5.4)(utf-8-validate@6.0.4)(webpack@5.93.0(webpack-cli@5.1.4))
+        version: 22.0.74(@babel/core@7.25.2)(bufferutil@4.0.8)(postcss@8.4.40)(type-fest@0.20.2)(typescript@5.5.4)(utf-8-validate@6.0.4)(webpack@5.93.0(webpack-cli@5.1.4))
       '@size-limit/file':
         specifier: ^11.0.0
         version: 11.1.4(size-limit@11.1.4)
@@ -1050,8 +1050,8 @@ packages:
     peerDependencies:
       eslint: ^8.56.0
 
-  '@faergeek/make-webpack-config@22.0.73':
-    resolution: {integrity: sha512-InV/M4JDL36tobrZU641SiBF80jSU45QZjye219utoIRjalybLu0e0CaWYLKfdENhobaGbyROndHx37P+P0yWA==}
+  '@faergeek/make-webpack-config@22.0.74':
+    resolution: {integrity: sha512-tJu5qjwnKScEL+kS6hiPJ7HhxxOgzWBuKDy7jU43fD2gAofJj48jkZENWiG7zJJ9C1Qcg6CSz6QQTu6eJ6fu7g==}
     peerDependencies:
       '@babel/core': ^7.14.3
       postcss: ^8.3.0
@@ -1218,6 +1218,9 @@ packages:
 
   '@types/node@22.0.0':
     resolution: {integrity: sha512-VT7KSYudcPOzP5Q0wfbowyNLaVR8QWUdw+088uFWwfvpY6uCWaXpqV6ieLAu9WBcnTa7H4Z5RLK8I5t2FuOcqw==}
+
+  '@types/node@22.0.2':
+    resolution: {integrity: sha512-yPL6DyFwY5PiMVEwymNeqUTKsDczQBJ/5T7W/46RwLU/VH+AA8aT5TZkvBviLKLbbm0hlfftEkGrNzfRk/fofQ==}
 
   '@types/prop-types@15.7.12':
     resolution: {integrity: sha512-5zvhXYtRNRluoE/jAp4GVsSduVUzNWKkOZrCDBWYtE7biZywwdC2AcEzg+cSMLFRfVgeAFqpfNabiPjxFddV1Q==}
@@ -5057,7 +5060,7 @@ snapshots:
       - typescript
       - vitest
 
-  '@faergeek/make-webpack-config@22.0.73(@babel/core@7.25.2)(bufferutil@4.0.8)(postcss@8.4.40)(type-fest@0.20.2)(typescript@5.5.4)(utf-8-validate@6.0.4)(webpack@5.93.0(webpack-cli@5.1.4))':
+  '@faergeek/make-webpack-config@22.0.74(@babel/core@7.25.2)(bufferutil@4.0.8)(postcss@8.4.40)(type-fest@0.20.2)(typescript@5.5.4)(utf-8-validate@6.0.4)(webpack@5.93.0(webpack-cli@5.1.4))':
     dependencies:
       '@babel/core': 7.25.2
       '@faergeek/tiny-browser-hmr-webpack-plugin': 1.0.15(webpack@5.93.0(webpack-cli@5.1.4))
@@ -5131,7 +5134,7 @@ snapshots:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 22.0.0
+      '@types/node': 22.0.2
       '@types/yargs': 17.0.32
       chalk: 4.1.2
 
@@ -5256,6 +5259,10 @@ snapshots:
       '@types/node': 22.0.0
 
   '@types/node@22.0.0':
+    dependencies:
+      undici-types: 6.11.1
+
+  '@types/node@22.0.2':
     dependencies:
       undici-types: 6.11.1
 
@@ -6722,7 +6729,7 @@ snapshots:
   jest-util@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 22.0.0
+      '@types/node': 22.0.2
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
@@ -6736,7 +6743,7 @@ snapshots:
 
   jest-worker@29.7.0:
     dependencies:
-      '@types/node': 22.0.0
+      '@types/node': 22.0.2
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
