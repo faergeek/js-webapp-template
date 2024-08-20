@@ -74,7 +74,7 @@ importers:
         version: 6.1.16(eslint@8.57.0)(typescript@5.5.4)
       '@faergeek/make-webpack-config':
         specifier: ^22.0.0
-        version: 22.0.75(@babel/core@7.25.2)(bufferutil@4.0.8)(postcss@8.4.41)(type-fest@0.20.2)(typescript@5.5.4)(utf-8-validate@6.0.4)(webpack@5.93.0(webpack-cli@5.1.4))
+        version: 22.0.76(@babel/core@7.25.2)(bufferutil@4.0.8)(postcss@8.4.41)(type-fest@0.20.2)(typescript@5.5.4)(utf-8-validate@6.0.4)(webpack@5.93.0(webpack-cli@5.1.4))
       '@size-limit/file':
         specifier: ^11.0.0
         version: 11.1.4(size-limit@11.1.4)
@@ -1041,8 +1041,8 @@ packages:
     peerDependencies:
       eslint: ^8.56.0
 
-  '@faergeek/make-webpack-config@22.0.75':
-    resolution: {integrity: sha512-7aQsb5TEW8IzTY98aYZDKMdhkz8SCju3EFLPknJRLW7TrkSJ49/C/cn+V3up7/HY1oIATnHCijIv2Tye5TTxAQ==}
+  '@faergeek/make-webpack-config@22.0.76':
+    resolution: {integrity: sha512-WEUykK2Hj9kI2yrldCNnSEQ3rp4RcAibW0TFDMQjpvyjP+N06hC0AmcGtyEvvTidG5ji78CYilkmUz0i6ofdSw==}
     peerDependencies:
       '@babel/core': ^7.14.3
       postcss: ^8.3.0
@@ -1209,6 +1209,9 @@ packages:
 
   '@types/node@22.2.0':
     resolution: {integrity: sha512-bm6EG6/pCpkxDf/0gDNDdtDILMOHgaQBVOJGdwsqClnxA3xL6jtMv76rLBc006RVMWbmaf0xbmom4Z/5o2nRkQ==}
+
+  '@types/node@22.4.1':
+    resolution: {integrity: sha512-1tbpb9325+gPnKK0dMm+/LMriX0vKxf6RnB0SZUqfyVkQ4fMgUSySqhxE/y8Jvs4NyF1yHzTfG9KlnkIODxPKg==}
 
   '@types/prop-types@15.7.12':
     resolution: {integrity: sha512-5zvhXYtRNRluoE/jAp4GVsSduVUzNWKkOZrCDBWYtE7biZywwdC2AcEzg+cSMLFRfVgeAFqpfNabiPjxFddV1Q==}
@@ -2730,8 +2733,8 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
 
-  mini-css-extract-plugin@2.9.0:
-    resolution: {integrity: sha512-Zs1YsZVfemekSZG+44vBsYTLQORkPMwnlv+aehcxK/NLKC+EGhDB39/YePYYqx/sTk6NnYpuqikhSn7+JIevTA==}
+  mini-css-extract-plugin@2.9.1:
+    resolution: {integrity: sha512-+Vyi+GCCOHnrJ2VPS+6aPoXN2k2jgUzDRhTFLjjTBn23qyXJXkjUWQgTL+mXpF5/A8ixLdCc6kWsoeOjKGejKQ==}
     engines: {node: '>= 12.13.0'}
     peerDependencies:
       webpack: ^5.0.0
@@ -2977,8 +2980,8 @@ packages:
       browserslist: '>=4'
       postcss: '>=8'
 
-  postcss-calc@10.0.1:
-    resolution: {integrity: sha512-pp1Z3FxtxA+xHAoWXcOXgnBN1WPu4ZiJ5LWGjKyf9MMreagAsaTUtnqFK1y1sHhyJddAkYTPu6XSuLgb3oYCjw==}
+  postcss-calc@10.0.2:
+    resolution: {integrity: sha512-DT/Wwm6fCKgpYVI7ZEWuPJ4az8hiEHtCUeYjZXqU7Ou4QqYh1Df2yCQ7Ca6N7xqKPFkxN3fhf+u9KSoOCJNAjg==}
     engines: {node: ^18.12 || ^20.9 || >=22.0}
     peerDependencies:
       postcss: ^8.4.38
@@ -3769,6 +3772,9 @@ packages:
 
   undici-types@6.13.0:
     resolution: {integrity: sha512-xtFJHudx8S2DSoujjMd1WeWvn7KKWFRESZTMeL1RptAYERu29D6jphMjjY+vn96jvN3kVPDNxU/E13VTaXj6jg==}
+
+  undici-types@6.19.8:
+    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
 
   unicode-canonical-property-names-ecmascript@2.0.0:
     resolution: {integrity: sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ==}
@@ -5068,7 +5074,7 @@ snapshots:
       - typescript
       - vitest
 
-  '@faergeek/make-webpack-config@22.0.75(@babel/core@7.25.2)(bufferutil@4.0.8)(postcss@8.4.41)(type-fest@0.20.2)(typescript@5.5.4)(utf-8-validate@6.0.4)(webpack@5.93.0(webpack-cli@5.1.4))':
+  '@faergeek/make-webpack-config@22.0.76(@babel/core@7.25.2)(bufferutil@4.0.8)(postcss@8.4.41)(type-fest@0.20.2)(typescript@5.5.4)(utf-8-validate@6.0.4)(webpack@5.93.0(webpack-cli@5.1.4))':
     dependencies:
       '@babel/core': 7.25.2
       '@faergeek/tiny-browser-hmr-webpack-plugin': 1.0.15(webpack@5.93.0(webpack-cli@5.1.4))
@@ -5079,7 +5085,7 @@ snapshots:
       css-minimizer-webpack-plugin: 7.0.0(lightningcss@1.26.0)(webpack@5.93.0(webpack-cli@5.1.4))
       escape-string-regexp: 5.0.0
       lightningcss: 1.26.0
-      mini-css-extract-plugin: 2.9.0(webpack@5.93.0(webpack-cli@5.1.4))
+      mini-css-extract-plugin: 2.9.1(webpack@5.93.0(webpack-cli@5.1.4))
       mini-svg-data-uri: 1.4.4
       postcss: 8.4.41
       postcss-loader: 8.1.1(postcss@8.4.41)(typescript@5.5.4)(webpack@5.93.0(webpack-cli@5.1.4))
@@ -5142,7 +5148,7 @@ snapshots:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 22.2.0
+      '@types/node': 22.4.1
       '@types/yargs': 17.0.33
       chalk: 4.1.2
 
@@ -5269,6 +5275,10 @@ snapshots:
   '@types/node@22.2.0':
     dependencies:
       undici-types: 6.13.0
+
+  '@types/node@22.4.1':
+    dependencies:
+      undici-types: 6.19.8
 
   '@types/prop-types@15.7.12': {}
 
@@ -5949,7 +5959,7 @@ snapshots:
       css-declaration-sorter: 7.2.0(postcss@8.4.41)
       cssnano-utils: 5.0.0(postcss@8.4.41)
       postcss: 8.4.41
-      postcss-calc: 10.0.1(postcss@8.4.41)
+      postcss-calc: 10.0.2(postcss@8.4.41)
       postcss-colormin: 7.0.2(postcss@8.4.41)
       postcss-convert-values: 7.0.3(postcss@8.4.41)
       postcss-discard-comments: 7.0.2(postcss@8.4.41)
@@ -6773,7 +6783,7 @@ snapshots:
   jest-util@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 22.2.0
+      '@types/node': 22.4.1
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
@@ -6787,7 +6797,7 @@ snapshots:
 
   jest-worker@29.7.0:
     dependencies:
-      '@types/node': 22.2.0
+      '@types/node': 22.4.1
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
@@ -6948,7 +6958,7 @@ snapshots:
 
   mime@1.6.0: {}
 
-  mini-css-extract-plugin@2.9.0(webpack@5.93.0(webpack-cli@5.1.4)):
+  mini-css-extract-plugin@2.9.1(webpack@5.93.0(webpack-cli@5.1.4)):
     dependencies:
       schema-utils: 4.2.0
       tapable: 2.2.1
@@ -7160,7 +7170,7 @@ snapshots:
       browserslist: 4.23.3
       postcss: 8.4.41
 
-  postcss-calc@10.0.1(postcss@8.4.41):
+  postcss-calc@10.0.2(postcss@8.4.41):
     dependencies:
       postcss: 8.4.41
       postcss-selector-parser: 6.1.2
@@ -8047,6 +8057,8 @@ snapshots:
       which-boxed-primitive: 1.0.2
 
   undici-types@6.13.0: {}
+
+  undici-types@6.19.8: {}
 
   unicode-canonical-property-names-ecmascript@2.0.0: {}
 
