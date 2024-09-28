@@ -71,7 +71,7 @@ importers:
         version: 7.24.7(@babel/core@7.25.2)
       '@faergeek/eslint-config':
         specifier: ^6.0.1
-        version: 6.1.25(eslint@8.57.1)(typescript@5.6.2)
+        version: 6.1.27(eslint@8.57.1)(typescript@5.6.2)
       '@faergeek/make-webpack-config':
         specifier: ^22.0.0
         version: 22.0.79(@babel/core@7.25.2)(bufferutil@4.0.8)(postcss@8.4.47)(type-fest@0.20.2)(typescript@5.6.2)(utf-8-validate@6.0.4)(webpack@5.95.0(webpack-cli@5.1.4))
@@ -1036,8 +1036,8 @@ packages:
     resolution: {integrity: sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@faergeek/eslint-config@6.1.25':
-    resolution: {integrity: sha512-p91ZSRJOXfFxv3FsKNBredhU0s98nbfNTu1qVUrI7Td0S/FggLIywkNXjbd/ClGoBwsoqkHvMoTLLD1ZOR6KEg==}
+  '@faergeek/eslint-config@6.1.27':
+    resolution: {integrity: sha512-RiMHmVt9fDlob3jHzyus4iwZ4LPdOG/2UxEHs+hyRuqfiBH1ybrmKFUzkX1R0wC/kNpWOtZ6WrYOATKOBaXrLQ==}
     peerDependencies:
       eslint: ^8.56.0
 
@@ -2037,8 +2037,8 @@ packages:
     peerDependencies:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0
 
-  eslint-plugin-react@7.36.1:
-    resolution: {integrity: sha512-/qwbqNXZoq+VP30s1d4Nc1C5GTxjJQjk4Jzs4Wq2qzxFM7dSmuG2UkIjg2USMLh3A/aVcUNrK7v0J5U1XEGGwA==}
+  eslint-plugin-react@7.37.0:
+    resolution: {integrity: sha512-IHBePmfWH5lKhJnJ7WB1V+v/GolbB0rjS8XYVCSQCZKaQCAUhMoVoOEn1Ef8Z8Wf0a7l8KTJvuZg5/e4qrZ6nA==}
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7
@@ -5049,13 +5049,13 @@ snapshots:
 
   '@eslint/js@8.57.1': {}
 
-  '@faergeek/eslint-config@6.1.25(eslint@8.57.1)(typescript@5.6.2)':
+  '@faergeek/eslint-config@6.1.27(eslint@8.57.1)(typescript@5.6.2)':
     dependencies:
       '@typescript-eslint/eslint-plugin': 8.7.0(@typescript-eslint/parser@8.7.0(eslint@8.57.1)(typescript@5.6.2))(eslint@8.57.1)(typescript@5.6.2)
       '@typescript-eslint/parser': 8.7.0(eslint@8.57.1)(typescript@5.6.2)
       eslint: 8.57.1
       eslint-config-prettier: 9.1.0(eslint@8.57.1)
-      eslint-plugin-react: 7.36.1(eslint@8.57.1)
+      eslint-plugin-react: 7.37.0(eslint@8.57.1)
       eslint-plugin-react-hooks: 4.6.2(eslint@8.57.1)
       eslint-plugin-simple-import-sort: 12.1.1(eslint@8.57.1)
       eslint-plugin-vitest: 0.5.4(@typescript-eslint/eslint-plugin@8.7.0(@typescript-eslint/parser@8.7.0(eslint@8.57.1)(typescript@5.6.2))(eslint@8.57.1)(typescript@5.6.2))(eslint@8.57.1)(typescript@5.6.2)
@@ -6220,7 +6220,7 @@ snapshots:
     dependencies:
       eslint: 8.57.1
 
-  eslint-plugin-react@7.36.1(eslint@8.57.1):
+  eslint-plugin-react@7.37.0(eslint@8.57.1):
     dependencies:
       array-includes: 3.1.8
       array.prototype.findlast: 1.2.5
