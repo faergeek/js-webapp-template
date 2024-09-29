@@ -30,8 +30,8 @@ importers:
         specifier: ^4.17.1
         version: 4.21.0
       helmet:
-        specifier: ^7.0.0
-        version: 7.2.0
+        specifier: ^8.0.0
+        version: 8.0.0
       morgan:
         specifier: ^1.10.0
         version: 1.10.0
@@ -2311,9 +2311,9 @@ packages:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
 
-  helmet@7.2.0:
-    resolution: {integrity: sha512-ZRiwvN089JfMXokizgqEPXsl2Guk094yExfoDXR0cBYWxtBbaSww/w+vT4WEJsBW2iTUi1GgZ6swmoug3Oy4Xw==}
-    engines: {node: '>=16.0.0'}
+  helmet@8.0.0:
+    resolution: {integrity: sha512-VyusHLEIIO5mjQPUI1wpOAEu+wl6Q0998jzTxqUYGE45xCIcAxy3MsbEK/yyJUJ3ADeMoB6MornPH6GMWAf+Pw==}
+    engines: {node: '>=18.0.0'}
 
   html-entities@2.5.2:
     resolution: {integrity: sha512-K//PSRMQk4FZ78Kyau+mZurHn3FH0Vwr+H36eE0rPbeYkRRi9YxceYPhuN60UwWorxyKHhqoAJl2OFKa4BVtaA==}
@@ -6576,7 +6576,7 @@ snapshots:
     dependencies:
       function-bind: 1.1.2
 
-  helmet@7.2.0: {}
+  helmet@8.0.0: {}
 
   html-entities@2.5.2: {}
 
