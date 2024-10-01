@@ -77,7 +77,7 @@ importers:
         version: 22.0.79(@babel/core@7.25.2)(bufferutil@4.0.8)(postcss@8.4.47)(type-fest@0.20.2)(typescript@5.6.2)(utf-8-validate@6.0.4)(webpack@5.95.0(webpack-cli@5.1.4))
       '@size-limit/file':
         specifier: ^11.0.0
-        version: 11.1.5(size-limit@11.1.6)
+        version: 11.1.6(size-limit@11.1.6)
       '@types/body-parser':
         specifier: ^1.19.5
         version: 1.19.5
@@ -1147,11 +1147,11 @@ packages:
   '@sinclair/typebox@0.27.8':
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
 
-  '@size-limit/file@11.1.5':
-    resolution: {integrity: sha512-oz/XBVUJh95GpzDb9/f4sEQD/ACJ9zEKSRgBtvMUTN0c+O/9uq+RzvFeXFN2Kjpx3Dmur1ta+oZsp3zQFxlb3Q==}
+  '@size-limit/file@11.1.6':
+    resolution: {integrity: sha512-ojzzJMrTfcSECRnaTjGy0wNIolTCRdyqZTSWG9sG5XEoXG6PNgHXDDS6gf6YNxnqb+rWfCfVe93u6aKi3wEocQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
-      size-limit: 11.1.5
+      size-limit: 11.1.6
 
   '@trysound/sax@0.2.0':
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
@@ -5166,7 +5166,7 @@ snapshots:
 
   '@sinclair/typebox@0.27.8': {}
 
-  '@size-limit/file@11.1.5(size-limit@11.1.6)':
+  '@size-limit/file@11.1.6(size-limit@11.1.6)':
     dependencies:
       size-limit: 11.1.6
 
