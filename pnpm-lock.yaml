@@ -74,7 +74,7 @@ importers:
         version: 6.1.35(@typescript-eslint/utils@8.11.0(eslint@8.57.1)(typescript@5.6.3))(eslint@8.57.1)(typescript@5.6.3)
       '@faergeek/make-webpack-config':
         specifier: ^22.0.0
-        version: 22.0.79(@babel/core@7.25.9)(bufferutil@4.0.8)(postcss@8.4.47)(type-fest@0.20.2)(typescript@5.6.3)(utf-8-validate@6.0.4)(webpack@5.95.0)
+        version: 22.0.80(@babel/core@7.25.9)(bufferutil@4.0.8)(postcss@8.4.47)(type-fest@0.20.2)(typescript@5.6.3)(utf-8-validate@6.0.4)(webpack@5.95.0)
       '@size-limit/file':
         specifier: ^11.0.0
         version: 11.1.6(size-limit@11.1.6)
@@ -960,8 +960,8 @@ packages:
     peerDependencies:
       eslint: ^8.56.0
 
-  '@faergeek/make-webpack-config@22.0.79':
-    resolution: {integrity: sha512-SZdBYRkYIp3p5Ibweu8OcTpO9ijy10rtFZPmBeq8/k27cF1aZcg1iYxbUnWZvZUR+rQzooZt6mXpPcUR83kg1w==}
+  '@faergeek/make-webpack-config@22.0.80':
+    resolution: {integrity: sha512-5Zit5PDg9/UIWbRhq1SMw7YNJ50EDf0Zeff5fYUbdMJ8AyzEXxMwVV5+8WQYrq6fpSa4DbWvPE3cMJQTPjW7xg==}
     peerDependencies:
       '@babel/core': ^7.14.3
       postcss: ^8.3.0
@@ -4799,7 +4799,7 @@ snapshots:
       - typescript
       - vitest
 
-  '@faergeek/make-webpack-config@22.0.79(@babel/core@7.25.9)(bufferutil@4.0.8)(postcss@8.4.47)(type-fest@0.20.2)(typescript@5.6.3)(utf-8-validate@6.0.4)(webpack@5.95.0)':
+  '@faergeek/make-webpack-config@22.0.80(@babel/core@7.25.9)(bufferutil@4.0.8)(postcss@8.4.47)(type-fest@0.20.2)(typescript@5.6.3)(utf-8-validate@6.0.4)(webpack@5.95.0)':
     dependencies:
       '@babel/core': 7.25.9
       '@faergeek/tiny-browser-hmr-webpack-plugin': 1.0.15(webpack@5.95.0)
