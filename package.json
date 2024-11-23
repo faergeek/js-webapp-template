@@ -28,7 +28,7 @@
     "nocache": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.0",
+    "react-router-dom": "^7.0.0",
     "serialize-javascript": "^6.0.0",
     "tiny-invariant": "^1.1.0"
   },
