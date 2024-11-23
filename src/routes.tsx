@@ -1,5 +1,5 @@
-import type { IndexRouteObject, NonIndexRouteObject } from 'react-router-dom';
-import { Outlet } from 'react-router-dom';
+import type { IndexRouteObject, NonIndexRouteObject } from 'react-router';
+import { Outlet } from 'react-router';
 
 import type { MetaDescriptor, MetaFunctionArgs } from './_core/meta';
 import { Document } from './document';

@@ -1,5 +1,5 @@
-import type { LoaderFunctionArgs } from 'react-router-dom';
-import { Link, redirect, useLoaderData } from 'react-router-dom';
+import type { LoaderFunctionArgs } from 'react-router';
+import { Link, redirect, useLoaderData } from 'react-router';
 
 import type { MetaDescriptor, MetaFunctionArgs } from '../_core/meta';
 import { fetchTemplates, getTemplateImageUrl } from '../api';

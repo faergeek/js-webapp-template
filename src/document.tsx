@@ -1,4 +1,4 @@
-import { ScrollRestoration } from 'react-router-dom';
+import { ScrollRestoration } from 'react-router';
 
 import { Meta } from './_core/meta';
 import { BrowserGlobal } from './browserGlobal';

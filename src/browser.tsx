@@ -3,7 +3,7 @@ import './browser.css';
 import { StrictMode } from 'react';
 import type { Root } from 'react-dom/client';
 import { hydrateRoot } from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router';
 import invariant from 'tiny-invariant';
 
 import { Entry } from './entry';

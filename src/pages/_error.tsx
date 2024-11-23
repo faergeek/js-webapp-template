@@ -3,7 +3,7 @@ import {
   Link,
   useLocation,
   useRouteError,
-} from 'react-router-dom';
+} from 'react-router';
 
 import { Button } from '../_core/button';
 import type { MetaFunctionArgs } from '../_core/meta';
