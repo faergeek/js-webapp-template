@@ -1,7 +1,5 @@
 FROM node:22.11.0-alpine
-
-RUN apk add tini
-
+RUN apk add --no-cache tini
 WORKDIR /home/node
 
 COPY package.json pnpm-lock.yaml ./

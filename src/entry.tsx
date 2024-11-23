@@ -1,5 +1,5 @@
-import type { HydrationState, Router } from '@remix-run/router';
 import { createContext, useContext, useEffect, useMemo, useState } from 'react';
+import type { createBrowserRouter, HydrationState } from 'react-router';
 import invariant from 'tiny-invariant';
 
 interface EntryContext {
@@ -16,7 +16,7 @@ interface ProviderProps {
   css: string[];
   js: string[];
   nonce: string;
-  router: Router;
+  router: ReturnType<typeof createBrowserRouter>;
 }
 
 export function Entry({ children, css, js, nonce, router }: ProviderProps) {

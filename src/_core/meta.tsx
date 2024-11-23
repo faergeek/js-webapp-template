@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
-import type { Location, Params } from 'react-router-dom';
-import { useLocation, useMatches } from 'react-router-dom';
+import type { Location, Params } from 'react-router';
+import { useLocation, useMatches } from 'react-router';
 
 import { useEntryContext } from '../entry';
 

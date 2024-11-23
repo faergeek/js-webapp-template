@@ -4,7 +4,7 @@ import {
   createStaticHandler,
   createStaticRouter,
   StaticRouterProvider,
-} from 'react-router-dom/server';
+} from 'react-router';
 
 import { handleFetchError } from './_core/fetch';
 import { Entry } from './entry';

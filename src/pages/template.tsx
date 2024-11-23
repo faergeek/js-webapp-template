@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import type { ActionFunctionArgs, LoaderFunctionArgs } from 'react-router-dom';
-import { Form, redirect, useLoaderData, useNavigation } from 'react-router-dom';
+import type { ActionFunctionArgs, LoaderFunctionArgs } from 'react-router';
+import { Form, redirect, useLoaderData, useNavigation } from 'react-router';
 import invariant from 'tiny-invariant';
 
 import { Button } from '../_core/button';

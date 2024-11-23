@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { useEffect, useRef } from 'react';
-import { Form, Link, useNavigation, useSearchParams } from 'react-router-dom';
+import { Form, Link, useNavigation, useSearchParams } from 'react-router';
 
 import * as css from './layout.module.css';
 

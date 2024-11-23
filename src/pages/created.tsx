@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
-import type { LoaderFunctionArgs } from 'react-router-dom';
-import { redirect, useLoaderData } from 'react-router-dom';
+import type { LoaderFunctionArgs } from 'react-router';
+import { redirect, useLoaderData } from 'react-router';
 
 import { Button } from '../_core/button';
 import type { MetaDescriptor } from '../_core/meta';

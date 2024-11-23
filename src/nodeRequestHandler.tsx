@@ -14,7 +14,7 @@ import {
   createStaticHandler,
   createStaticRouter,
   StaticRouterProvider,
-} from 'react-router-dom/server';
+} from 'react-router';
 import invariant from 'tiny-invariant';
 
 import { Entry } from './entry';
@@ -161,11 +161,7 @@ export const requestHandler: http.RequestListener = express()
         },
       );
 
-      const staticHandler = createStaticHandler(routes, {
-        future: {
-          v7_throwAbortReason: true,
-        },
-      });
+      const staticHandler = createStaticHandler(routes);
 
       const context = await staticHandler.query(request);
 
