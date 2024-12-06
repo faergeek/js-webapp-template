@@ -71,7 +71,7 @@ importers:
         version: 6.1.50(@typescript-eslint/utils@8.17.0(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1)(typescript@5.7.2)
       '@faergeek/make-webpack-config':
         specifier: ^22.0.0
-        version: 22.0.83(@babel/core@7.26.0)(bufferutil@4.0.8)(postcss@8.4.49)(type-fest@0.20.2)(typescript@5.7.2)(utf-8-validate@6.0.5)(webpack@5.97.0)
+        version: 22.0.83(@babel/core@7.26.0)(bufferutil@4.0.8)(postcss@8.4.49)(type-fest@0.20.2)(typescript@5.7.2)(utf-8-validate@6.0.5)(webpack@5.97.1)
       '@size-limit/file':
         specifier: ^11.0.0
         version: 11.1.6(size-limit@11.1.6)
@@ -125,10 +125,10 @@ importers:
         version: 5.7.2
       webpack:
         specifier: ^5.64.3
-        version: 5.97.0(webpack-cli@5.1.4)
+        version: 5.97.1(webpack-cli@5.1.4)
       webpack-cli:
         specifier: ^5.0.0
-        version: 5.1.4(webpack@5.97.0)
+        version: 5.1.4(webpack@5.97.1)
 
 packages:
 
@@ -3546,8 +3546,8 @@ packages:
       uglify-js:
         optional: true
 
-  terser@5.36.0:
-    resolution: {integrity: sha512-IYV9eNMuFAV4THUspIRXkLakHnV6XO7FEdtKjf/mDyrnqUg9LnlOn6/RwRvM9SZjR4GUq8Nk8zj67FzVARr74w==}
+  terser@5.37.0:
+    resolution: {integrity: sha512-B8wRRkmre4ERucLM/uXx4MOV5cbnOlVAqUst+1+iLKPI0dOgFO28f84ptoQt9HEI537PMzfYa/d+GEPKTRXmYA==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -3699,8 +3699,8 @@ packages:
     resolution: {integrity: sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==}
     engines: {node: '>=10.13.0'}
 
-  webpack@5.97.0:
-    resolution: {integrity: sha512-CWT8v7ShSfj7tGs4TLRtaOLmOCPWhoKEvp+eA7FVx8Xrjb3XfT0aXdxDItnRZmE8sHcH+a8ayDrJCOjXKxVFfQ==}
+  webpack@5.97.1:
+    resolution: {integrity: sha512-EksG6gFY3L1eFMROS/7Wzgrii5mBAFe4rIr3r2BTfo7bcc+DWwFZ4OJ/miOuHJO/A85HwyI4eQ0F6IKXesO7Fg==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     peerDependencies:
@@ -4832,24 +4832,24 @@ snapshots:
       - typescript
       - vitest
 
-  '@faergeek/make-webpack-config@22.0.83(@babel/core@7.26.0)(bufferutil@4.0.8)(postcss@8.4.49)(type-fest@0.20.2)(typescript@5.7.2)(utf-8-validate@6.0.5)(webpack@5.97.0)':
+  '@faergeek/make-webpack-config@22.0.83(@babel/core@7.26.0)(bufferutil@4.0.8)(postcss@8.4.49)(type-fest@0.20.2)(typescript@5.7.2)(utf-8-validate@6.0.5)(webpack@5.97.1)':
     dependencies:
       '@babel/core': 7.26.0
-      '@faergeek/tiny-browser-hmr-webpack-plugin': 1.0.15(webpack@5.97.0)
-      '@pmmmwh/react-refresh-webpack-plugin': 0.5.15(react-refresh@0.14.2)(type-fest@0.20.2)(webpack@5.97.0)
-      babel-loader: 9.2.1(@babel/core@7.26.0)(webpack@5.97.0)
+      '@faergeek/tiny-browser-hmr-webpack-plugin': 1.0.15(webpack@5.97.1)
+      '@pmmmwh/react-refresh-webpack-plugin': 0.5.15(react-refresh@0.14.2)(type-fest@0.20.2)(webpack@5.97.1)
+      babel-loader: 9.2.1(@babel/core@7.26.0)(webpack@5.97.1)
       browserslist: 4.24.2
-      css-loader: 7.1.2(webpack@5.97.0)
-      css-minimizer-webpack-plugin: 7.0.0(lightningcss@1.28.2)(webpack@5.97.0)
+      css-loader: 7.1.2(webpack@5.97.1)
+      css-minimizer-webpack-plugin: 7.0.0(lightningcss@1.28.2)(webpack@5.97.1)
       escape-string-regexp: 5.0.0
       lightningcss: 1.28.2
-      mini-css-extract-plugin: 2.9.2(webpack@5.97.0)
+      mini-css-extract-plugin: 2.9.2(webpack@5.97.1)
       mini-svg-data-uri: 1.4.4
       postcss: 8.4.49
-      postcss-loader: 8.1.1(postcss@8.4.49)(typescript@5.7.2)(webpack@5.97.0)
+      postcss-loader: 8.1.1(postcss@8.4.49)(typescript@5.7.2)(webpack@5.97.1)
       react-refresh: 0.14.2
-      source-map-loader: 5.0.0(webpack@5.97.0)
-      webpack: 5.97.0(webpack-cli@5.1.4)
+      source-map-loader: 5.0.0(webpack@5.97.1)
+      webpack: 5.97.1(webpack-cli@5.1.4)
       webpack-bundle-analyzer: 4.10.2(bufferutil@4.0.8)(utf-8-validate@6.0.5)
     transitivePeerDependencies:
       - '@parcel/css'
@@ -4868,9 +4868,9 @@ snapshots:
       - webpack-hot-middleware
       - webpack-plugin-serve
 
-  '@faergeek/tiny-browser-hmr-webpack-plugin@1.0.15(webpack@5.97.0)':
+  '@faergeek/tiny-browser-hmr-webpack-plugin@1.0.15(webpack@5.97.1)':
     dependencies:
-      webpack: 5.97.0(webpack-cli@5.1.4)
+      webpack: 5.97.1(webpack-cli@5.1.4)
       ws: 8.18.0(bufferutil@4.0.8)(utf-8-validate@6.0.5)
     optionalDependencies:
       bufferutil: 4.0.8
@@ -4944,7 +4944,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  '@pmmmwh/react-refresh-webpack-plugin@0.5.15(react-refresh@0.14.2)(type-fest@0.20.2)(webpack@5.97.0)':
+  '@pmmmwh/react-refresh-webpack-plugin@0.5.15(react-refresh@0.14.2)(type-fest@0.20.2)(webpack@5.97.1)':
     dependencies:
       ansi-html: 0.0.9
       core-js-pure: 3.39.0
@@ -4954,7 +4954,7 @@ snapshots:
       react-refresh: 0.14.2
       schema-utils: 4.2.0
       source-map: 0.7.4
-      webpack: 5.97.0(webpack-cli@5.1.4)
+      webpack: 5.97.1(webpack-cli@5.1.4)
     optionalDependencies:
       type-fest: 0.20.2
 
@@ -5230,20 +5230,20 @@ snapshots:
       '@webassemblyjs/ast': 1.14.1
       '@xtuc/long': 4.2.2
 
-  '@webpack-cli/configtest@2.1.1(webpack-cli@5.1.4)(webpack@5.97.0)':
+  '@webpack-cli/configtest@2.1.1(webpack-cli@5.1.4)(webpack@5.97.1)':
     dependencies:
-      webpack: 5.97.0(webpack-cli@5.1.4)
-      webpack-cli: 5.1.4(webpack@5.97.0)
+      webpack: 5.97.1(webpack-cli@5.1.4)
+      webpack-cli: 5.1.4(webpack@5.97.1)
 
-  '@webpack-cli/info@2.0.2(webpack-cli@5.1.4)(webpack@5.97.0)':
+  '@webpack-cli/info@2.0.2(webpack-cli@5.1.4)(webpack@5.97.1)':
     dependencies:
-      webpack: 5.97.0(webpack-cli@5.1.4)
-      webpack-cli: 5.1.4(webpack@5.97.0)
+      webpack: 5.97.1(webpack-cli@5.1.4)
+      webpack-cli: 5.1.4(webpack@5.97.1)
 
-  '@webpack-cli/serve@2.0.5(webpack-cli@5.1.4)(webpack@5.97.0)':
+  '@webpack-cli/serve@2.0.5(webpack-cli@5.1.4)(webpack@5.97.1)':
     dependencies:
-      webpack: 5.97.0(webpack-cli@5.1.4)
-      webpack-cli: 5.1.4(webpack@5.97.0)
+      webpack: 5.97.1(webpack-cli@5.1.4)
+      webpack-cli: 5.1.4(webpack@5.97.1)
 
   '@xtuc/ieee754@1.2.0': {}
 
@@ -5377,12 +5377,12 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.0.0
 
-  babel-loader@9.2.1(@babel/core@7.26.0)(webpack@5.97.0):
+  babel-loader@9.2.1(@babel/core@7.26.0)(webpack@5.97.1):
     dependencies:
       '@babel/core': 7.26.0
       find-cache-dir: 4.0.0
       schema-utils: 4.2.0
-      webpack: 5.97.0(webpack-cli@5.1.4)
+      webpack: 5.97.1(webpack-cli@5.1.4)
 
   babel-plugin-polyfill-corejs2@0.4.12(@babel/core@7.26.0):
     dependencies:
@@ -5584,7 +5584,7 @@ snapshots:
       postcss-selector-parser: 7.0.0
       postcss-value-parser: 4.2.0
 
-  css-loader@7.1.2(webpack@5.97.0):
+  css-loader@7.1.2(webpack@5.97.1):
     dependencies:
       icss-utils: 5.1.0(postcss@8.4.49)
       postcss: 8.4.49
@@ -5595,9 +5595,9 @@ snapshots:
       postcss-value-parser: 4.2.0
       semver: 7.6.3
     optionalDependencies:
-      webpack: 5.97.0(webpack-cli@5.1.4)
+      webpack: 5.97.1(webpack-cli@5.1.4)
 
-  css-minimizer-webpack-plugin@7.0.0(lightningcss@1.28.2)(webpack@5.97.0):
+  css-minimizer-webpack-plugin@7.0.0(lightningcss@1.28.2)(webpack@5.97.1):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       cssnano: 7.0.6(postcss@8.4.49)
@@ -5605,7 +5605,7 @@ snapshots:
       postcss: 8.4.49
       schema-utils: 4.2.0
       serialize-javascript: 6.0.2
-      webpack: 5.97.0(webpack-cli@5.1.4)
+      webpack: 5.97.1(webpack-cli@5.1.4)
     optionalDependencies:
       lightningcss: 1.28.2
 
@@ -6610,11 +6610,11 @@ snapshots:
 
   mime@1.6.0: {}
 
-  mini-css-extract-plugin@2.9.2(webpack@5.97.0):
+  mini-css-extract-plugin@2.9.2(webpack@5.97.1):
     dependencies:
       schema-utils: 4.2.0
       tapable: 2.2.1
-      webpack: 5.97.0(webpack-cli@5.1.4)
+      webpack: 5.97.1(webpack-cli@5.1.4)
 
   mini-svg-data-uri@1.4.4: {}
 
@@ -6949,14 +6949,14 @@ snapshots:
       '@csstools/utilities': 2.0.0(postcss@8.4.49)
       postcss: 8.4.49
 
-  postcss-loader@8.1.1(postcss@8.4.49)(typescript@5.7.2)(webpack@5.97.0):
+  postcss-loader@8.1.1(postcss@8.4.49)(typescript@5.7.2)(webpack@5.97.1):
     dependencies:
       cosmiconfig: 9.0.0(typescript@5.7.2)
       jiti: 1.21.6
       postcss: 8.4.49
       semver: 7.6.3
     optionalDependencies:
-      webpack: 5.97.0(webpack-cli@5.1.4)
+      webpack: 5.97.1(webpack-cli@5.1.4)
     transitivePeerDependencies:
       - typescript
 
@@ -7507,11 +7507,11 @@ snapshots:
 
   source-map-js@1.2.1: {}
 
-  source-map-loader@5.0.0(webpack@5.97.0):
+  source-map-loader@5.0.0(webpack@5.97.1):
     dependencies:
       iconv-lite: 0.6.3
       source-map-js: 1.2.1
-      webpack: 5.97.0(webpack-cli@5.1.4)
+      webpack: 5.97.1(webpack-cli@5.1.4)
 
   source-map-support@0.5.21:
     dependencies:
@@ -7615,16 +7615,16 @@ snapshots:
 
   tapable@2.2.1: {}
 
-  terser-webpack-plugin@5.3.10(webpack@5.97.0):
+  terser-webpack-plugin@5.3.10(webpack@5.97.1):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       jest-worker: 27.5.1
       schema-utils: 3.3.0
       serialize-javascript: 6.0.2
-      terser: 5.36.0
-      webpack: 5.97.0(webpack-cli@5.1.4)
+      terser: 5.37.0
+      webpack: 5.97.1(webpack-cli@5.1.4)
 
-  terser@5.36.0:
+  terser@5.37.0:
     dependencies:
       '@jridgewell/source-map': 0.3.6
       acorn: 8.14.0
@@ -7766,12 +7766,12 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  webpack-cli@5.1.4(webpack@5.97.0):
+  webpack-cli@5.1.4(webpack@5.97.1):
     dependencies:
       '@discoveryjs/json-ext': 0.5.7
-      '@webpack-cli/configtest': 2.1.1(webpack-cli@5.1.4)(webpack@5.97.0)
-      '@webpack-cli/info': 2.0.2(webpack-cli@5.1.4)(webpack@5.97.0)
-      '@webpack-cli/serve': 2.0.5(webpack-cli@5.1.4)(webpack@5.97.0)
+      '@webpack-cli/configtest': 2.1.1(webpack-cli@5.1.4)(webpack@5.97.1)
+      '@webpack-cli/info': 2.0.2(webpack-cli@5.1.4)(webpack@5.97.1)
+      '@webpack-cli/serve': 2.0.5(webpack-cli@5.1.4)(webpack@5.97.1)
       colorette: 2.0.20
       commander: 10.0.1
       cross-spawn: 7.0.6
@@ -7780,7 +7780,7 @@ snapshots:
       import-local: 3.2.0
       interpret: 3.1.1
       rechoir: 0.8.0
-      webpack: 5.97.0(webpack-cli@5.1.4)
+      webpack: 5.97.1(webpack-cli@5.1.4)
       webpack-merge: 5.10.0
 
   webpack-merge@5.10.0:
@@ -7791,7 +7791,7 @@ snapshots:
 
   webpack-sources@3.2.3: {}
 
-  webpack@5.97.0(webpack-cli@5.1.4):
+  webpack@5.97.1(webpack-cli@5.1.4):
     dependencies:
       '@types/eslint-scope': 3.7.7
       '@types/estree': 1.0.6
@@ -7813,11 +7813,11 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 3.3.0
       tapable: 2.2.1
-      terser-webpack-plugin: 5.3.10(webpack@5.97.0)
+      terser-webpack-plugin: 5.3.10(webpack@5.97.1)
       watchpack: 2.4.2
       webpack-sources: 3.2.3
     optionalDependencies:
-      webpack-cli: 5.1.4(webpack@5.97.0)
+      webpack-cli: 5.1.4(webpack@5.97.1)
     transitivePeerDependencies:
       - '@swc/core'
       - esbuild
