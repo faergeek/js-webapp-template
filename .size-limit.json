@@ -7,6 +7,6 @@
   {
     "name": "js",
     "path": ["build/public/*.js", "!build/public/sw.js"],
-    "limit": "74 kB"
+    "limit": "84 kB"
   }
 ]
