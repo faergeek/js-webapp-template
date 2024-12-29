@@ -68,7 +68,7 @@ importers:
         version: 7.26.0(@babel/core@7.26.0)
       '@faergeek/eslint-config':
         specifier: ^6.0.1
-        version: 6.1.60(@typescript-eslint/utils@8.18.2(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1)(typescript@5.7.2)
+        version: 6.1.61(@typescript-eslint/utils@8.18.2(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1)(typescript@5.7.2)
       '@faergeek/make-webpack-config':
         specifier: ^22.0.0
         version: 22.0.85(@babel/core@7.26.0)(bufferutil@4.0.8)(postcss@8.4.49)(type-fest@0.20.2)(typescript@5.7.2)(utf-8-validate@6.0.5)(webpack@5.97.1)
@@ -958,8 +958,8 @@ packages:
     resolution: {integrity: sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@faergeek/eslint-config@6.1.60':
-    resolution: {integrity: sha512-tKwKbE0xo0PEwFswISnH7z4+4JKJzvH7CWd5PaJ1u3nNY0ADM6GcQkpN0C6h0uJsVjjH54wrRtHIfCjorzLSjw==}
+  '@faergeek/eslint-config@6.1.61':
+    resolution: {integrity: sha512-X/YaQNwuJVltPzgwdBDeQ9VrDRralVxYMgv1o92ceSUIFsR2ExrXO7zeWPBBed5ubwUnzGtCGkKbH4523HL9wg==}
     peerDependencies:
       eslint: ^8.56.0
 
@@ -1202,8 +1202,8 @@ packages:
   '@ungap/structured-clone@1.2.1':
     resolution: {integrity: sha512-fEzPV3hSkSMltkw152tJKNARhOupqbH96MZWyRjNaYZOMIzbrTeQDG+MTc6Mr2pgzFQzFxAfmhGDNP5QK++2ZA==}
 
-  '@vitest/eslint-plugin@1.1.20':
-    resolution: {integrity: sha512-2eLsgUm+GVOpDfNyH2do//MiNO/WZkXrPi+EjDmXEdUt6Jwnziq4H221L8vJE0aJys+l1FRfSkm4QbaIyDCfBg==}
+  '@vitest/eslint-plugin@1.1.21':
+    resolution: {integrity: sha512-gIpmafm7WSwXGHq413q3fC26+nER5mQtM7Lqi7UusY5bSzeQIJmViC+G6CfPo06U0CfgZ+rt7FPaskpkZ2f6gg==}
     peerDependencies:
       '@typescript-eslint/utils': '>= 8.0'
       eslint: '>= 8.57.0'
@@ -4805,11 +4805,11 @@ snapshots:
 
   '@eslint/js@8.57.1': {}
 
-  '@faergeek/eslint-config@6.1.60(@typescript-eslint/utils@8.18.2(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1)(typescript@5.7.2)':
+  '@faergeek/eslint-config@6.1.61(@typescript-eslint/utils@8.18.2(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1)(typescript@5.7.2)':
     dependencies:
       '@typescript-eslint/eslint-plugin': 8.18.2(@typescript-eslint/parser@8.18.2(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1)(typescript@5.7.2)
       '@typescript-eslint/parser': 8.18.2(eslint@8.57.1)(typescript@5.7.2)
-      '@vitest/eslint-plugin': 1.1.20(@typescript-eslint/utils@8.18.2(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1)(typescript@5.7.2)
+      '@vitest/eslint-plugin': 1.1.21(@typescript-eslint/utils@8.18.2(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1)(typescript@5.7.2)
       eslint: 8.57.1
       eslint-config-prettier: 9.1.0(eslint@8.57.1)
       eslint-plugin-react: 7.37.3(eslint@8.57.1)
@@ -5128,7 +5128,7 @@ snapshots:
 
   '@ungap/structured-clone@1.2.1': {}
 
-  '@vitest/eslint-plugin@1.1.20(@typescript-eslint/utils@8.18.2(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1)(typescript@5.7.2)':
+  '@vitest/eslint-plugin@1.1.21(@typescript-eslint/utils@8.18.2(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1)(typescript@5.7.2)':
     dependencies:
       '@typescript-eslint/utils': 8.18.2(eslint@8.57.1)(typescript@5.7.2)
       eslint: 8.57.1
