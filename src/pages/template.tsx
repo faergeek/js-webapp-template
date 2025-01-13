@@ -55,7 +55,7 @@ export async function templateAction({ params, request }: ActionFunctionArgs) {
   const searchParams = new URLSearchParams();
   searchParams.set('url', url);
 
-  return redirect(`/created?${searchParams}`);
+  throw redirect(`/created?${searchParams}`);
 }
 
 export function TemplatePage() {
