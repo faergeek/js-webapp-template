@@ -8,9 +8,9 @@
     "format:check": "prettier --check .",
     "lint": "eslint --max-warnings 0 .",
     "typecheck": "tsc --build",
-    "dev": "webpack watch --define-process-env-node-env=development",
-    "build": "webpack --define-process-env-node-env=production",
-    "build:analyze": "webpack watch --define-process-env-node-env=production",
+    "dev": "webpack watch --config-node-env=development",
+    "build": "webpack --config-node-env=production",
+    "build:analyze": "webpack watch --config-node-env=production",
     "check-size-limits": "size-limit --highlight-less",
     "start": "node --enable-source-maps ."
   },

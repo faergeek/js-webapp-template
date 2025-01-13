@@ -3,7 +3,7 @@ import * as path from 'node:path';
 import makeWebpackConfig from '@faergeek/make-webpack-config';
 
 export default function webpackConfig(env, argv) {
-  const dev = argv.defineProcessEnvNodeEnv === 'development';
+  const dev = argv.configNodeEnv === 'development';
   const watch = env.WEBPACK_WATCH;
 
   return makeWebpackConfig({
