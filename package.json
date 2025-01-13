@@ -8,9 +8,9 @@
     "format:check": "prettier --check .",
     "lint": "eslint --max-warnings 0 .",
     "typecheck": "tsc --build",
-    "dev": "webpack watch --define-process-env-node-env=development",
-    "build": "webpack --define-process-env-node-env=production",
-    "build:analyze": "webpack watch --define-process-env-node-env=production",
+    "dev": "webpack watch --config-node-env=development",
+    "build": "webpack --config-node-env=production",
+    "build:analyze": "webpack watch --config-node-env=production",
     "check-size-limits": "size-limit --highlight-less",
     "start": "node --enable-source-maps ."
   },
@@ -57,6 +57,6 @@
     "size-limit": "^11.0.0",
     "typescript": "^5.0.0",
     "webpack": "^5.64.3",
-    "webpack-cli": "^5.0.0"
+    "webpack-cli": "^6.0.0"
   }
 }
