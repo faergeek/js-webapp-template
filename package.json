@@ -18,7 +18,6 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "bufferutil",
-      "core-js-pure",
       "utf-8-validate"
     ]
   },
