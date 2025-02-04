@@ -15,6 +15,13 @@
     "start": "node --enable-source-maps ."
   },
   "packageManager": "pnpm@10.2.0",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "bufferutil",
+      "core-js-pure",
+      "utf-8-validate"
+    ]
+  },
   "dependencies": {
     "@babel/runtime": "^7.7.4",
     "body-parser": "^1.20.1",
