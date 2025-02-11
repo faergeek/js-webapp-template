@@ -19,6 +19,9 @@
     "onlyBuiltDependencies": [
       "bufferutil",
       "utf-8-validate"
+    ],
+    "ignoredBuiltDependencies": [
+      "core-js-pure"
     ]
   },
   "dependencies": {
