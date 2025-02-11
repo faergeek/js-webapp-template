@@ -14,11 +14,14 @@
     "check-size-limits": "size-limit --highlight-less",
     "start": "node --enable-source-maps ."
   },
-  "packageManager": "pnpm@10.2.1",
+  "packageManager": "pnpm@10.3.0",
   "pnpm": {
     "onlyBuiltDependencies": [
       "bufferutil",
       "utf-8-validate"
+    ],
+    "ignoredBuiltDependencies": [
+      "core-js-pure"
     ]
   },
   "dependencies": {
