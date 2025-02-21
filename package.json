@@ -57,7 +57,7 @@
     "@types/serialize-javascript": "^5.0.2",
     "browserslist": "^4.16.6",
     "eslint": "^9.9.1",
-    "globals": "^15.14.0",
+    "globals": "^16.0.0",
     "nanoid": "^5.0.0",
     "postcss": "^8.3.0",
     "postcss-normalize": "^13.0.0",
