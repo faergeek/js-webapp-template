@@ -68,7 +68,7 @@ importers:
         version: 7.26.0(@babel/core@7.26.9)
       '@faergeek/eslint-config':
         specifier: ^7.0.1
-        version: 7.0.17(@typescript-eslint/utils@8.25.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2)
+        version: 7.0.18(@typescript-eslint/utils@8.25.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2)
       '@faergeek/make-webpack-config':
         specifier: ^22.0.0
         version: 22.0.90(@babel/core@7.26.9)(bufferutil@4.0.9)(postcss@8.5.3)(typescript@5.8.2)(utf-8-validate@6.0.5)(webpack@5.98.0)
@@ -981,8 +981,8 @@ packages:
     resolution: {integrity: sha512-JubJ5B2pJ4k4yGxaNLdbjrnk9d/iDz6/q8wOilpIowd6PJPgaxCuHBnBszq7Ce2TyMrywm5r4PnKm6V3iiZF+g==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@faergeek/eslint-config@7.0.17':
-    resolution: {integrity: sha512-kuuWs1svQsLM4Hd3n0vTxUD0kgKjHBU/q1Aq4pK51KBOh30NwIQ9mu/wDxl9Fw7BZS3V7PnEZ1qdcg3gdeooTg==}
+  '@faergeek/eslint-config@7.0.18':
+    resolution: {integrity: sha512-ZkhRBuE/sdcsJb5OqtAAwhP5skWNElmIf+yHQ8+RqcKCId7Zu+RODL7DBXTX5604lVmgVjLz1FFoQb73FnSdCQ==}
     peerDependencies:
       eslint: ^9.0.0
 
@@ -1919,8 +1919,8 @@ packages:
     resolution: {integrity: sha512-/veY75JbMK4j1yjvuUxuVsiS/hr/4iHs9FTT6cgTexxdE0Ly/glccBAkloH/DofkjRbZU3bnoj38mOmhkZ0lHw==}
     engines: {node: '>=12'}
 
-  eslint-plugin-react-hooks@5.1.0:
-    resolution: {integrity: sha512-mpJRtPgHN2tNAvZ35AMfqeB3Xqeo273QxrHJsbBEPWODRM4r0yB6jfoROqKEYrOn27UtRPpcpHc2UqyBSuUNTw==}
+  eslint-plugin-react-hooks@5.2.0:
+    resolution: {integrity: sha512-+f15FfK64YQwZdJNELETdn5ibXEUQmW1DZL6KXhNnc2heoy/sg9VJJeT7n8TlMWouzWqSWavFkIhHyIbIAEapg==}
     engines: {node: '>=10'}
     peerDependencies:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
@@ -4798,12 +4798,12 @@ snapshots:
       '@eslint/core': 0.12.0
       levn: 0.4.1
 
-  '@faergeek/eslint-config@7.0.17(@typescript-eslint/utils@8.25.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2)':
+  '@faergeek/eslint-config@7.0.18(@typescript-eslint/utils@8.25.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2)':
     dependencies:
       '@vitest/eslint-plugin': 1.1.36(@typescript-eslint/utils@8.25.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2)
       eslint: 9.21.0(jiti@2.4.2)
       eslint-plugin-react: 7.37.4(eslint@9.21.0(jiti@2.4.2))
-      eslint-plugin-react-hooks: 5.1.0(eslint@9.21.0(jiti@2.4.2))
+      eslint-plugin-react-hooks: 5.2.0(eslint@9.21.0(jiti@2.4.2))
       eslint-plugin-simple-import-sort: 12.1.1(eslint@9.21.0(jiti@2.4.2))
       globals: 16.0.0
       typescript-eslint: 8.25.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2)
@@ -5897,7 +5897,7 @@ snapshots:
 
   escape-string-regexp@5.0.0: {}
 
-  eslint-plugin-react-hooks@5.1.0(eslint@9.21.0(jiti@2.4.2)):
+  eslint-plugin-react-hooks@5.2.0(eslint@9.21.0(jiti@2.4.2)):
     dependencies:
       eslint: 9.21.0(jiti@2.4.2)
 
