@@ -71,7 +71,7 @@ importers:
         version: 7.0.19(@typescript-eslint/utils@8.26.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2)
       '@faergeek/make-webpack-config':
         specifier: ^22.0.0
-        version: 22.0.92(@babel/core@7.26.9)(bufferutil@4.0.9)(postcss@8.5.3)(typescript@5.8.2)(utf-8-validate@6.0.5)(webpack@5.98.0)
+        version: 22.0.93(@babel/core@7.26.9)(bufferutil@4.0.9)(postcss@8.5.3)(typescript@5.8.2)(utf-8-validate@6.0.5)(webpack@5.98.0)
       '@size-limit/file':
         specifier: ^11.0.0
         version: 11.2.0(size-limit@11.2.0)
@@ -986,8 +986,8 @@ packages:
     peerDependencies:
       eslint: ^9.0.0
 
-  '@faergeek/make-webpack-config@22.0.92':
-    resolution: {integrity: sha512-wXYu1xm8I3PYVa7m4c+/6Dn423U+8ZFOMmc8V89luQhfPTYM4c0M+gBH/Cy060oX197sFpQzqMAEY9zmddA6Sw==}
+  '@faergeek/make-webpack-config@22.0.93':
+    resolution: {integrity: sha512-7LVTdeIVkhsC3QaOgFsfXgAAylsYH0jsWQdhveT+d084793/R4fISr5EEW1Z1D6DLTVZNoggNn5rzs8lLr6Iig==}
     peerDependencies:
       '@babel/core': ^7.14.3
       postcss: ^8.3.0
@@ -1660,8 +1660,8 @@ packages:
       webpack:
         optional: true
 
-  css-minimizer-webpack-plugin@7.0.1:
-    resolution: {integrity: sha512-L0XZFcGEPBZm0lJ8EjqifudRTvNAd7YuU7Ny5KAmeMbVh3ArtaOaiQTr5KhINEVhHpFZiTpUEdtTWE7ICA2hMA==}
+  css-minimizer-webpack-plugin@7.0.2:
+    resolution: {integrity: sha512-nBRWZtI77PBZQgcXMNqiIXVshiQOVLGSf2qX/WZfG8IQfMbeHUMXaBWQmiiSTmPJUflQxHjZjzAmuyO7tpL2Jg==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
       '@parcel/css': '*'
@@ -4820,7 +4820,7 @@ snapshots:
       - typescript
       - vitest
 
-  '@faergeek/make-webpack-config@22.0.92(@babel/core@7.26.9)(bufferutil@4.0.9)(postcss@8.5.3)(typescript@5.8.2)(utf-8-validate@6.0.5)(webpack@5.98.0)':
+  '@faergeek/make-webpack-config@22.0.93(@babel/core@7.26.9)(bufferutil@4.0.9)(postcss@8.5.3)(typescript@5.8.2)(utf-8-validate@6.0.5)(webpack@5.98.0)':
     dependencies:
       '@babel/core': 7.26.9
       '@faergeek/tiny-browser-hmr-webpack-plugin': 1.0.16(webpack@5.98.0)
@@ -4828,7 +4828,7 @@ snapshots:
       babel-loader: 10.0.0(@babel/core@7.26.9)(webpack@5.98.0)
       browserslist: 4.24.4
       css-loader: 7.1.2(webpack@5.98.0)
-      css-minimizer-webpack-plugin: 7.0.1(lightningcss@1.29.2)(webpack@5.98.0)
+      css-minimizer-webpack-plugin: 7.0.2(lightningcss@1.29.2)(webpack@5.98.0)
       escape-string-regexp: 5.0.0
       lightningcss: 1.29.2
       mini-css-extract-plugin: 2.9.2(webpack@5.98.0)
@@ -5593,7 +5593,7 @@ snapshots:
     optionalDependencies:
       webpack: 5.98.0(webpack-cli@6.0.1)
 
-  css-minimizer-webpack-plugin@7.0.1(lightningcss@1.29.2)(webpack@5.98.0):
+  css-minimizer-webpack-plugin@7.0.2(lightningcss@1.29.2)(webpack@5.98.0):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       cssnano: 7.0.6(postcss@8.5.3)
