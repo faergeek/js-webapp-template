@@ -71,7 +71,7 @@ importers:
         version: 7.0.24(@typescript-eslint/utils@8.28.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2)
       '@faergeek/make-webpack-config':
         specifier: ^22.0.0
-        version: 22.0.95(@babel/core@7.26.10)(bufferutil@4.0.9)(postcss@8.5.3)(typescript@5.8.2)(utf-8-validate@6.0.5)(webpack@5.98.0)
+        version: 22.0.96(@babel/core@7.26.10)(bufferutil@4.0.9)(postcss@8.5.3)(typescript@5.8.2)(utf-8-validate@6.0.5)(webpack@5.98.0)
       '@size-limit/file':
         specifier: ^11.0.0
         version: 11.2.0(size-limit@11.2.0)
@@ -1017,8 +1017,8 @@ packages:
     peerDependencies:
       eslint: ^9.0.0
 
-  '@faergeek/make-webpack-config@22.0.95':
-    resolution: {integrity: sha512-di0tzsW9BC9KDteEj0EBDDYgPosEbIPkz2I57OE1qklxTYAdJyhxWfNpe9CVmrFdJHttPTuM0Fsvgs7g/zVMDA==}
+  '@faergeek/make-webpack-config@22.0.96':
+    resolution: {integrity: sha512-dQXBcnwGIdzZpBhiDAGpohv+OTXuAEbUCZghJLwvda0Fp1dq1HXTfBaLoyO7OqoofMZkaIHB244y8wxHMBZJsg==}
     peerDependencies:
       '@babel/core': ^7.14.3
       postcss: ^8.3.0
@@ -1094,8 +1094,8 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@pmmmwh/react-refresh-webpack-plugin@0.5.15':
-    resolution: {integrity: sha512-LFWllMA55pzB9D34w/wXUCf8+c+IYKuJDgxiZ3qMhl64KRMBHYM1I3VdGaD2BV5FNPV2/S2596bppxHbv2ZydQ==}
+  '@pmmmwh/react-refresh-webpack-plugin@0.5.16':
+    resolution: {integrity: sha512-kLQc9xz6QIqd2oIYyXRUiAp79kGpFBm3fEM9ahfG1HI0WI5gdZ2OVHWdmZYnwODt7ISck+QuQ6sBPrtvUBML7Q==}
     engines: {node: '>= 10.13'}
     peerDependencies:
       '@types/webpack': 4.x || 5.x
@@ -2211,8 +2211,8 @@ packages:
     resolution: {integrity: sha512-jOiHyAZsmnr8LqoPGmCjYAaiuWwjAPLgY8ZX2XrmHawt99/u1y6RgrZMTeoPfpUbV96HOalYgz1qzkRbw54Pmg==}
     engines: {node: '>=18.0.0'}
 
-  html-entities@2.5.5:
-    resolution: {integrity: sha512-24CG9o869vSa86BGCf7x65slrAztzFTU5VBQzEIwqjhKuB4zCC7xlH/7NCcZ1EN5MdmGx9lUqugfutuT6J+jKQ==}
+  html-entities@2.6.0:
+    resolution: {integrity: sha512-kig+rMn/QOVRvr7c86gQ8lWXq+Hkv6CbAH1hLu+RG338StTpE8Z0b44SDVaqVu7HGKf27frdmUYEs9hTUX/cLQ==}
 
   html-escaper@2.0.2:
     resolution: {integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==}
@@ -4916,11 +4916,11 @@ snapshots:
       - typescript
       - vitest
 
-  '@faergeek/make-webpack-config@22.0.95(@babel/core@7.26.10)(bufferutil@4.0.9)(postcss@8.5.3)(typescript@5.8.2)(utf-8-validate@6.0.5)(webpack@5.98.0)':
+  '@faergeek/make-webpack-config@22.0.96(@babel/core@7.26.10)(bufferutil@4.0.9)(postcss@8.5.3)(typescript@5.8.2)(utf-8-validate@6.0.5)(webpack@5.98.0)':
     dependencies:
       '@babel/core': 7.26.10
       '@faergeek/tiny-browser-hmr-webpack-plugin': 1.0.16(webpack@5.98.0)
-      '@pmmmwh/react-refresh-webpack-plugin': 0.5.15(react-refresh@0.17.0)(webpack@5.98.0)
+      '@pmmmwh/react-refresh-webpack-plugin': 0.5.16(react-refresh@0.17.0)(webpack@5.98.0)
       babel-loader: 10.0.0(@babel/core@7.26.10)(webpack@5.98.0)
       browserslist: 4.24.4
       css-loader: 7.1.2(webpack@5.98.0)
@@ -5029,12 +5029,12 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.19.1
 
-  '@pmmmwh/react-refresh-webpack-plugin@0.5.15(react-refresh@0.17.0)(webpack@5.98.0)':
+  '@pmmmwh/react-refresh-webpack-plugin@0.5.16(react-refresh@0.17.0)(webpack@5.98.0)':
     dependencies:
       ansi-html: 0.0.9
       core-js-pure: 3.41.0
       error-stack-parser: 2.1.4
-      html-entities: 2.5.5
+      html-entities: 2.6.0
       loader-utils: 2.0.4
       react-refresh: 0.17.0
       schema-utils: 4.3.0
@@ -6336,7 +6336,7 @@ snapshots:
 
   helmet@8.1.0: {}
 
-  html-entities@2.5.5: {}
+  html-entities@2.6.0: {}
 
   html-escaper@2.0.2: {}
 
