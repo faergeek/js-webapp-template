@@ -86,10 +86,10 @@ importers:
         version: 1.9.9
       '@types/react':
         specifier: ^19.0.0
-        version: 19.1.0
+        version: 19.1.1
       '@types/react-dom':
         specifier: ^19.0.0
-        version: 19.1.2(@types/react@19.1.0)
+        version: 19.1.2(@types/react@19.1.1)
       '@types/serialize-javascript':
         specifier: ^5.0.2
         version: 5.0.4
@@ -1422,8 +1422,8 @@ packages:
     peerDependencies:
       '@types/react': ^19.0.0
 
-  '@types/react@19.1.0':
-    resolution: {integrity: sha512-UaicktuQI+9UKyA4njtDOGBD/67t8YEBt2xdfqu8+gP9hqPUPsiXlNPcpS2gVdjmis5GKPG3fCxbQLVgxsQZ8w==}
+  '@types/react@19.1.1':
+    resolution: {integrity: sha512-ePapxDL7qrgqSF67s0h9m412d9DbXyC1n59O2st+9rjuuamWsZuD2w55rqY12CbzsZ7uVXb5Nw0gEp9Z8MMutQ==}
 
   '@types/send@0.17.4':
     resolution: {integrity: sha512-x2EM6TJOybec7c52BX0ZspPodMsQUd5L6PRwOunVyVUhXiBSKf3AezDL8Dgvgt5o0UfKNfuA0eMLr2wLT4AiBA==}
@@ -5585,11 +5585,11 @@ snapshots:
 
   '@types/range-parser@1.2.7': {}
 
-  '@types/react-dom@19.1.2(@types/react@19.1.0)':
+  '@types/react-dom@19.1.2(@types/react@19.1.1)':
     dependencies:
-      '@types/react': 19.1.0
+      '@types/react': 19.1.1
 
-  '@types/react@19.1.0':
+  '@types/react@19.1.1':
     dependencies:
       csstype: 3.1.3
 
