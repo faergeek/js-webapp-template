@@ -19,6 +19,7 @@ export default [
     ...config,
     files: ['src/**/*'],
     settings: {
+      ...config.settings,
       linkComponents: [
         { name: 'Button', linkAttribute: ['href', 'to'] },
         { name: 'Link', linkAttribute: 'to' },
