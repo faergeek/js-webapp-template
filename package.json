@@ -6,7 +6,7 @@
     "cleanup": "rimraf build",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "lint": "eslint --max-warnings 0 .",
+    "lint": "eslint --max-warnings 0",
     "typecheck": "tsc --build",
     "dev": "webpack watch --config-node-env=development",
     "build": "webpack --config-node-env=production",
