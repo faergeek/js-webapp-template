@@ -68,7 +68,7 @@ importers:
         version: 7.27.1(@babel/core@7.27.1)
       '@faergeek/eslint-config':
         specifier: ^7.0.1
-        version: 7.0.35(@typescript-eslint/utils@8.32.0(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)
+        version: 7.0.36(@typescript-eslint/utils@8.32.0(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)
       '@faergeek/make-webpack-config':
         specifier: ^22.0.0
         version: 22.0.98(@babel/core@7.27.1)(bufferutil@4.0.9)(postcss@8.5.3)(typescript@5.8.3)(utf-8-validate@6.0.5)(webpack@5.99.8)
@@ -998,8 +998,8 @@ packages:
     resolution: {integrity: sha512-ZAoA40rNMPwSm+AeHpCq8STiNAwzWLJuP8Xv4CHIc9wv/PSuExjMrmjfYNj682vW0OOiZ1HKxzvjQr9XZIisQA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@faergeek/eslint-config@7.0.35':
-    resolution: {integrity: sha512-SBy/jie8AhhY9Y3gIKHsDeIdNMhRKQIF4yB1x6IisiY1MRXoqmVVazppH2qhX4eQ4sg6meeD/DFPyGkXaPhvDA==}
+  '@faergeek/eslint-config@7.0.36':
+    resolution: {integrity: sha512-cWXe0UREZWsw5Pf4iJTrZL6k372X/ynBdURVfsF2SCWcoRya6Oha9MVbX8uuKWY7MLPA79jtk8mdQDYYSUk1OA==}
     peerDependencies:
       eslint: ^9.0.0
 
@@ -4835,7 +4835,7 @@ snapshots:
       '@eslint/core': 0.13.0
       levn: 0.4.1
 
-  '@faergeek/eslint-config@7.0.35(@typescript-eslint/utils@8.32.0(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)':
+  '@faergeek/eslint-config@7.0.36(@typescript-eslint/utils@8.32.0(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)':
     dependencies:
       '@vitest/eslint-plugin': 1.1.44(@typescript-eslint/utils@8.32.0(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)
       eslint: 9.26.0(jiti@2.4.2)
