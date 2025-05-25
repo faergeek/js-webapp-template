@@ -43,7 +43,7 @@ importers:
         version: 19.1.0(react@19.1.0)
       react-router:
         specifier: ^7.0.1
-        version: 7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        version: 7.6.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       serialize-javascript:
         specifier: ^6.0.0
         version: 6.0.2
@@ -68,7 +68,7 @@ importers:
         version: 7.27.1(@babel/core@7.27.1)
       '@faergeek/eslint-config':
         specifier: ^7.0.1
-        version: 7.0.39(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
+        version: 7.0.40(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
       '@faergeek/make-webpack-config':
         specifier: ^22.0.0
         version: 22.0.100(@babel/core@7.27.1)(bufferutil@4.0.9)(postcss@8.5.3)(typescript@5.8.3)(utf-8-validate@6.0.5)(webpack@5.99.9)
@@ -101,7 +101,7 @@ importers:
         version: 9.27.0(jiti@2.4.2)
       globals:
         specifier: ^16.0.0
-        version: 16.1.0
+        version: 16.2.0
       nanoid:
         specifier: ^5.0.0
         version: 5.1.5
@@ -985,8 +985,8 @@ packages:
     resolution: {integrity: sha512-0J+zgWxHN+xXONWIyPWKFMgVuJoZuGiIFu8yxk7RJjxkzpGmyja5wRFqZIVtjDVOQpV+Rw0iOAjYPE2eQyjr0w==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@faergeek/eslint-config@7.0.39':
-    resolution: {integrity: sha512-i2DhU+xZqenkNIZiHw8W5I0HG2H4nz1afrPeejSR7Y7GmRFMa7k3bEpKeoJq8nMXpNfPfcqixwkvR9bvp/Vv6w==}
+  '@faergeek/eslint-config@7.0.40':
+    resolution: {integrity: sha512-LrbYzWhubVTu+cd/k0HH/IiTDMblVMpeowXVx0Jf+bTmylE9Pt8Xb1ZnsWNXK2Hx97J6JyKeeT6BnK9AnykrSg==}
     peerDependencies:
       eslint: ^9.0.0
 
@@ -2101,8 +2101,8 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
-  globals@16.1.0:
-    resolution: {integrity: sha512-aibexHNbb/jiUSObBgpHLj+sIuUmJnYcgXBlrfsiDZ9rt4aF2TFRbyLgZ2iFQuVZ1K5Mx3FVkbKRSgKrbK3K2g==}
+  globals@16.2.0:
+    resolution: {integrity: sha512-O+7l9tPdHCU320IigZZPj5zmRCFG9xHmx9cU8FqU2Rp+JN714seHV+2S9+JslCpY4gJwU2vOGox0wzgae/MCEg==}
     engines: {node: '>=18'}
 
   globalthis@1.0.4:
@@ -3199,8 +3199,8 @@ packages:
     resolution: {integrity: sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ==}
     engines: {node: '>=0.10.0'}
 
-  react-router@7.6.0:
-    resolution: {integrity: sha512-GGufuHIVCJDbnIAXP3P9Sxzq3UUsddG3rrI3ut1q6m0FI6vxVBF3JoPQ38+W/blslLH4a5Yutp8drkEpXoddGQ==}
+  react-router@7.6.1:
+    resolution: {integrity: sha512-hPJXXxHJZEsPFNVbtATH7+MMX43UDeOauz+EAU4cgqTn7ojdI9qQORqS8Z0qmDlL1TclO/6jLRYUEtbWidtdHQ==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
@@ -4763,14 +4763,14 @@ snapshots:
       '@eslint/core': 0.14.0
       levn: 0.4.1
 
-  '@faergeek/eslint-config@7.0.39(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)':
+  '@faergeek/eslint-config@7.0.40(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)':
     dependencies:
       '@vitest/eslint-plugin': 1.2.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
       eslint: 9.27.0(jiti@2.4.2)
       eslint-plugin-react: 7.37.5(eslint@9.27.0(jiti@2.4.2))
       eslint-plugin-react-hooks: 5.2.0(eslint@9.27.0(jiti@2.4.2))
       eslint-plugin-simple-import-sort: 12.1.1(eslint@9.27.0(jiti@2.4.2))
-      globals: 16.1.0
+      globals: 16.2.0
       typescript-eslint: 8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
     transitivePeerDependencies:
       - supports-color
@@ -6119,7 +6119,7 @@ snapshots:
 
   globals@14.0.0: {}
 
-  globals@16.1.0: {}
+  globals@16.2.0: {}
 
   globalthis@1.0.4:
     dependencies:
@@ -7172,7 +7172,7 @@ snapshots:
 
   react-refresh@0.17.0: {}
 
-  react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  react-router@7.6.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       cookie: 1.0.2
       react: 19.1.0
