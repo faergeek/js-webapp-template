@@ -77,7 +77,7 @@ importers:
         version: 11.2.0(size-limit@11.2.0)
       '@types/body-parser':
         specifier: ^1.19.5
-        version: 1.19.5
+        version: 1.19.6
       '@types/express':
         specifier: ^5.0.0
         version: 5.0.2
@@ -1115,8 +1115,8 @@ packages:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
     engines: {node: '>=10.13.0'}
 
-  '@types/body-parser@1.19.5':
-    resolution: {integrity: sha512-fB3Zu92ucau0iQ0JMCFQE7b/dv8Ot07NI3KaZIkIUNXq82k4eBAqUaneXfleGY9JWskeS9y+u0nXMyspcuQrCg==}
+  '@types/body-parser@1.19.6':
+    resolution: {integrity: sha512-HLFeCYgz89uk22N5Qg3dvGvsv46B8GLvKKo1zKG4NybA8U2DiEO3w9lqGg29t/tfLRJpJ6iQxnVw4OnB7MoM9g==}
 
   '@types/connect@3.4.38':
     resolution: {integrity: sha512-K6uROf1LD88uDQqJCktA4yzL1YYAK6NgfsI0v/mTgyPKWsX1CnJ0XPSDhViejru1GcRkLWb8RlzFYJRqGUbaug==}
@@ -1159,6 +1159,9 @@ packages:
 
   '@types/node@22.15.29':
     resolution: {integrity: sha512-LNdjOkUDlU1RZb8e1kOIUpN1qQUlzGkEtbVNo53vbrwDg5om6oduhm4SiUaPW5ASTXhAiP0jInWG8Qx9fVlOeQ==}
+
+  '@types/node@22.15.30':
+    resolution: {integrity: sha512-6Q7lr06bEHdlfplU6YRbgG1SFBdlsfNC4/lX+SkhiTs0cpJkOElmWls8PxDFv4yY/xKb8Y6SO0OmSX4wgqTZbA==}
 
   '@types/qs@6.14.0':
     resolution: {integrity: sha512-eOunJqu0K1923aExK6y8p6fsihYEn/BYuQ4g0CxAAgFc4b/ZLN4CrsRZ55srTdqoiLzU2B2evC+apEIxprEzkQ==}
@@ -4890,7 +4893,7 @@ snapshots:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 22.15.29
+      '@types/node': 22.15.30
       '@types/yargs': 17.0.33
       chalk: 4.1.2
 
@@ -4949,14 +4952,14 @@ snapshots:
 
   '@trysound/sax@0.2.0': {}
 
-  '@types/body-parser@1.19.5':
+  '@types/body-parser@1.19.6':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 22.15.29
+      '@types/node': 22.15.30
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 22.15.29
+      '@types/node': 22.15.30
 
   '@types/eslint-scope@3.7.7':
     dependencies:
@@ -4979,7 +4982,7 @@ snapshots:
 
   '@types/express@5.0.2':
     dependencies:
-      '@types/body-parser': 1.19.5
+      '@types/body-parser': 1.19.6
       '@types/express-serve-static-core': 5.0.6
       '@types/serve-static': 1.15.7
 
@@ -5004,6 +5007,10 @@ snapshots:
       '@types/node': 22.15.29
 
   '@types/node@22.15.29':
+    dependencies:
+      undici-types: 6.21.0
+
+  '@types/node@22.15.30':
     dependencies:
       undici-types: 6.21.0
 
@@ -6409,7 +6416,7 @@ snapshots:
   jest-util@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 22.15.29
+      '@types/node': 22.15.30
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
@@ -6417,13 +6424,13 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.15.29
+      '@types/node': 22.15.30
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
   jest-worker@29.7.0:
     dependencies:
-      '@types/node': 22.15.29
+      '@types/node': 22.15.30
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
