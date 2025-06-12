@@ -113,7 +113,7 @@ importers:
         version: 13.0.1(browserslist@4.25.0)(postcss@8.5.5)
       postcss-preset-env:
         specifier: ^10.0.0
-        version: 10.2.2(postcss@8.5.5)
+        version: 10.2.3(postcss@8.5.5)
       prettier:
         specifier: ^3.0.0
         version: 3.5.3
@@ -801,8 +801,8 @@ packages:
     peerDependencies:
       postcss: ^8.4
 
-  '@csstools/postcss-is-pseudo-class@5.0.2':
-    resolution: {integrity: sha512-ksUGH8Untwzo/qUwHlFZf2+vGi8sDe1WYDZrCFNVg8EvENhWQvtoPEbRTBmNzGzTJebmHIvaOH8s3B3QKUJV3g==}
+  '@csstools/postcss-is-pseudo-class@5.0.3':
+    resolution: {integrity: sha512-jS/TY4SpG4gszAtIg7Qnf3AS2pjcUM5SzxpApOrlndMeGhIbaTzWBzzP/IApXoNWEW7OhcjkRT48jnAUIFXhAQ==}
     engines: {node: '>=18'}
     peerDependencies:
       postcss: ^8.4
@@ -1531,6 +1531,9 @@ packages:
 
   caniuse-lite@1.0.30001721:
     resolution: {integrity: sha512-cOuvmUVtKrtEaoKiO0rSc29jcjwMwX5tOHDy4MgVFEWiUXj4uBMJkwI8MDySkgXidpMiHUcviogAvFi4pA2hDQ==}
+
+  caniuse-lite@1.0.30001722:
+    resolution: {integrity: sha512-DCQHBBZtiK6JVkAGw7drvAMK0Q0POD/xZvEmDp6baiMMP6QXXk9HpD6mNYBZWhOPG6LvIDb82ITqtWjhDckHCA==}
 
   chalk@4.1.2:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
@@ -3117,8 +3120,8 @@ packages:
     peerDependencies:
       postcss: ^8.4
 
-  postcss-preset-env@10.2.2:
-    resolution: {integrity: sha512-0w90xwitx3xQOkP1z0TPdt+8vhSAIkcOGmwZUywcWjBH/xI7ekJjZ0DYX1g6/fcpUEUsL7tCILUx4iYbwafxGQ==}
+  postcss-preset-env@10.2.3:
+    resolution: {integrity: sha512-zlQN1yYmA7lFeM1wzQI14z97mKoM8qGng+198w1+h6sCud/XxOjcKtApY9jWr7pXNS3yHDEafPlClSsWnkY8ow==}
     engines: {node: '>=18'}
     peerDependencies:
       postcss: ^8.4
@@ -4617,7 +4620,7 @@ snapshots:
     dependencies:
       postcss: 8.5.5
 
-  '@csstools/postcss-is-pseudo-class@5.0.2(postcss@8.5.5)':
+  '@csstools/postcss-is-pseudo-class@5.0.3(postcss@8.5.5)':
     dependencies:
       '@csstools/selector-specificity': 5.0.0(postcss-selector-parser@7.1.0)
       postcss: 8.5.5
@@ -5353,7 +5356,7 @@ snapshots:
   autoprefixer@10.4.21(postcss@8.5.5):
     dependencies:
       browserslist: 4.25.0
-      caniuse-lite: 1.0.30001721
+      caniuse-lite: 1.0.30001722
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.1.1
@@ -5476,11 +5479,13 @@ snapshots:
   caniuse-api@3.0.0:
     dependencies:
       browserslist: 4.25.0
-      caniuse-lite: 1.0.30001721
+      caniuse-lite: 1.0.30001722
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
 
   caniuse-lite@1.0.30001721: {}
+
+  caniuse-lite@1.0.30001722: {}
 
   chalk@4.1.2:
     dependencies:
@@ -7078,7 +7083,7 @@ snapshots:
       postcss: 8.5.5
       postcss-value-parser: 4.2.0
 
-  postcss-preset-env@10.2.2(postcss@8.5.5):
+  postcss-preset-env@10.2.3(postcss@8.5.5):
     dependencies:
       '@csstools/postcss-cascade-layers': 5.0.1(postcss@8.5.5)
       '@csstools/postcss-color-function': 4.0.10(postcss@8.5.5)
@@ -7092,7 +7097,7 @@ snapshots:
       '@csstools/postcss-hwb-function': 4.0.10(postcss@8.5.5)
       '@csstools/postcss-ic-unit': 4.0.2(postcss@8.5.5)
       '@csstools/postcss-initial': 2.0.1(postcss@8.5.5)
-      '@csstools/postcss-is-pseudo-class': 5.0.2(postcss@8.5.5)
+      '@csstools/postcss-is-pseudo-class': 5.0.3(postcss@8.5.5)
       '@csstools/postcss-light-dark-function': 2.0.9(postcss@8.5.5)
       '@csstools/postcss-logical-float-and-clear': 3.0.0(postcss@8.5.5)
       '@csstools/postcss-logical-overflow': 2.0.0(postcss@8.5.5)
