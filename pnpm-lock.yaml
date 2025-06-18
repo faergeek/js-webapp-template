@@ -68,7 +68,7 @@ importers:
         version: 7.27.1(@babel/core@7.27.4)
       '@faergeek/eslint-config':
         specifier: ^7.0.1
-        version: 7.0.47(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)
+        version: 7.0.48(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)
       '@faergeek/make-webpack-config':
         specifier: ^22.0.0
         version: 22.0.101(@babel/core@7.27.4)(bufferutil@4.0.9)(postcss@8.5.6)(typescript@5.8.3)(utf-8-validate@6.0.5)(webpack@5.99.9)
@@ -995,8 +995,8 @@ packages:
     resolution: {integrity: sha512-4SaFZCNfJqvk/kenHpI8xvN42DMaoycy4PzKc5otHxRswww1kAt82OlBuwRVLofCACCTZEcla2Ydxv8scMXaTg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@faergeek/eslint-config@7.0.47':
-    resolution: {integrity: sha512-+W4hzHhXr6o30rNfIoTyCzIFcKId2Con7syBo+2oM5OcVJ7YMlIgf7XZeD/VHknt1xHdq/cSPv2s3F/R2IocsQ==}
+  '@faergeek/eslint-config@7.0.48':
+    resolution: {integrity: sha512-+II/t1vWwKOPW54qZCl0t2ugEjV7w5qpi1wraO4gbbcGisWbIfSFogaE3FZfMGlA1ZagZr0apFerg6Ihe+syAA==}
     peerDependencies:
       eslint: ^9.0.0
 
@@ -4818,7 +4818,7 @@ snapshots:
       '@eslint/core': 0.15.0
       levn: 0.4.1
 
-  '@faergeek/eslint-config@7.0.47(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)':
+  '@faergeek/eslint-config@7.0.48(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)':
     dependencies:
       '@vitest/eslint-plugin': 1.2.7(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)
       eslint: 9.29.0(jiti@2.4.2)
