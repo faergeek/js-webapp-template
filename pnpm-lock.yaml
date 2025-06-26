@@ -71,7 +71,7 @@ importers:
         version: 7.0.49(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)
       '@faergeek/make-webpack-config':
         specifier: ^22.0.0
-        version: 22.0.101(@babel/core@7.27.4)(bufferutil@4.0.9)(postcss@8.5.6)(typescript@5.8.3)(utf-8-validate@6.0.5)(webpack@5.99.9)
+        version: 22.0.102(@babel/core@7.27.4)(bufferutil@4.0.9)(postcss@8.5.6)(typescript@5.8.3)(utf-8-validate@6.0.5)(webpack@5.99.9)
       '@size-limit/file':
         specifier: ^11.0.0
         version: 11.2.0(size-limit@11.2.0)
@@ -1000,8 +1000,8 @@ packages:
     peerDependencies:
       eslint: ^9.0.0
 
-  '@faergeek/make-webpack-config@22.0.101':
-    resolution: {integrity: sha512-DA8q/6dSgmM4Zodx7MyDa3Ap8BOJpbHly2aOCWchizLHXZXSqLGd5BA5wIAinNu7Y1ukorv3QiYv4KuBN/qd3Q==}
+  '@faergeek/make-webpack-config@22.0.102':
+    resolution: {integrity: sha512-GABkEUWx/dOVYpWDQmcaeVRw2IwBfY7WedRjF1Bl2nujJBjJPU+ypd6qtdvTwH5FCV8gk1jUbe5wSaxyC9MURA==}
     peerDependencies:
       '@babel/core': ^7.14.3
       postcss: ^8.3.0
@@ -1085,8 +1085,8 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@pmmmwh/react-refresh-webpack-plugin@0.6.0':
-    resolution: {integrity: sha512-AAc+QWfZ1KQ/e1C6OHWVlxU+ks6zFGOA44IJUlvju7RlDS8nsX6poPFOIlsg/rTofO9vKov12+WCjMhKkRKD5g==}
+  '@pmmmwh/react-refresh-webpack-plugin@0.6.1':
+    resolution: {integrity: sha512-95DXXJxNkpYu+sqmpDp7vbw9JCyiNpHuCsvuMuOgVFrKQlwEIn9Y1+NNIQJq+zFL+eWyxw6htthB5CtdwJupNA==}
     engines: {node: '>=18.12'}
     peerDependencies:
       '@types/webpack': 5.x
@@ -1171,6 +1171,9 @@ packages:
 
   '@types/node@24.0.3':
     resolution: {integrity: sha512-R4I/kzCYAdRLzfiCabn9hxWfbuHS573x+r0dJMkkzThEa7pbrcDWK+9zu3e7aBOouf+rQAciqPFMnxwr0aWgKg==}
+
+  '@types/node@24.0.4':
+    resolution: {integrity: sha512-ulyqAkrhnuNq9pB76DRBTkcS6YsmDALy6Ua63V8OhrOBgbcYt6IOdzpw5P1+dyRIyMerzLkeYWBeOXPpA9GMAA==}
 
   '@types/qs@6.14.0':
     resolution: {integrity: sha512-eOunJqu0K1923aExK6y8p6fsihYEn/BYuQ4g0CxAAgFc4b/ZLN4CrsRZ55srTdqoiLzU2B2evC+apEIxprEzkQ==}
@@ -1543,6 +1546,9 @@ packages:
 
   caniuse-lite@1.0.30001724:
     resolution: {integrity: sha512-WqJo7p0TbHDOythNTqYujmaJTvtYRZrjpP8TCvH6Vb9CYJerJNKamKzIWOM4BkQatWj9H2lYulpdAQNBe7QhNA==}
+
+  caniuse-lite@1.0.30001726:
+    resolution: {integrity: sha512-VQAUIUzBiZ/UnlM28fSp2CRF3ivUn1BWEvxMcVTNwpw91Py1pGbPIyIKtd+tzct9C3ouceCVdGAXxZOpZAsgdw==}
 
   chalk@4.1.2:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
@@ -4832,11 +4838,11 @@ snapshots:
       - typescript
       - vitest
 
-  '@faergeek/make-webpack-config@22.0.101(@babel/core@7.27.4)(bufferutil@4.0.9)(postcss@8.5.6)(typescript@5.8.3)(utf-8-validate@6.0.5)(webpack@5.99.9)':
+  '@faergeek/make-webpack-config@22.0.102(@babel/core@7.27.4)(bufferutil@4.0.9)(postcss@8.5.6)(typescript@5.8.3)(utf-8-validate@6.0.5)(webpack@5.99.9)':
     dependencies:
       '@babel/core': 7.27.4
       '@faergeek/tiny-browser-hmr-webpack-plugin': 1.0.17(webpack@5.99.9)
-      '@pmmmwh/react-refresh-webpack-plugin': 0.6.0(react-refresh@0.17.0)(webpack@5.99.9)
+      '@pmmmwh/react-refresh-webpack-plugin': 0.6.1(react-refresh@0.17.0)(webpack@5.99.9)
       babel-loader: 10.0.0(@babel/core@7.27.4)(webpack@5.99.9)
       browserslist: 4.25.0
       css-loader: 7.1.2(webpack@5.99.9)
@@ -4913,7 +4919,7 @@ snapshots:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 24.0.3
+      '@types/node': 24.0.4
       '@types/yargs': 17.0.33
       chalk: 4.1.2
 
@@ -4951,7 +4957,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.19.1
 
-  '@pmmmwh/react-refresh-webpack-plugin@0.6.0(react-refresh@0.17.0)(webpack@5.99.9)':
+  '@pmmmwh/react-refresh-webpack-plugin@0.6.1(react-refresh@0.17.0)(webpack@5.99.9)':
     dependencies:
       anser: 2.3.2
       core-js-pure: 3.43.0
@@ -5027,6 +5033,10 @@ snapshots:
       '@types/node': 24.0.3
 
   '@types/node@24.0.3':
+    dependencies:
+      undici-types: 7.8.0
+
+  '@types/node@24.0.4':
     dependencies:
       undici-types: 7.8.0
 
@@ -5494,11 +5504,13 @@ snapshots:
   caniuse-api@3.0.0:
     dependencies:
       browserslist: 4.25.0
-      caniuse-lite: 1.0.30001724
+      caniuse-lite: 1.0.30001726
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
 
   caniuse-lite@1.0.30001724: {}
+
+  caniuse-lite@1.0.30001726: {}
 
   chalk@4.1.2:
     dependencies:
@@ -6430,7 +6442,7 @@ snapshots:
   jest-util@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 24.0.3
+      '@types/node': 24.0.4
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
@@ -6444,7 +6456,7 @@ snapshots:
 
   jest-worker@29.7.0:
     dependencies:
-      '@types/node': 24.0.3
+      '@types/node': 24.0.4
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
