@@ -1007,8 +1007,8 @@ packages:
       postcss: ^8.3.0
       webpack: ^5.36.2
 
-  '@faergeek/tiny-browser-hmr-webpack-plugin@1.0.17':
-    resolution: {integrity: sha512-V7aiEiQy1rVTJysVa0m+m0jQyHViudJPFZpQbVrJpbMIy1uSoHJ5moq3mvL18UVJt+VlmSyUWiaz8KjeHcmiUA==}
+  '@faergeek/tiny-browser-hmr-webpack-plugin@1.0.18':
+    resolution: {integrity: sha512-PDLjUur3xDAwlf1+6eWkT3Nfaj79gYElc3O73a8TqrUPdEnrM152KgMDVpIszPE4x8oVacNChsfSmRnyjRjX4A==}
     peerDependencies:
       webpack: ^5.30.0
 
@@ -4836,7 +4836,7 @@ snapshots:
   '@faergeek/make-webpack-config@22.0.103(@babel/core@7.27.7)(bufferutil@4.0.9)(postcss@8.5.6)(typescript@5.8.3)(utf-8-validate@6.0.5)(webpack@5.99.9)':
     dependencies:
       '@babel/core': 7.27.7
-      '@faergeek/tiny-browser-hmr-webpack-plugin': 1.0.17(webpack@5.99.9)
+      '@faergeek/tiny-browser-hmr-webpack-plugin': 1.0.18(webpack@5.99.9)
       '@pmmmwh/react-refresh-webpack-plugin': 0.6.1(react-refresh@0.17.0)(webpack@5.99.9)
       babel-loader: 10.0.0(@babel/core@7.27.7)(webpack@5.99.9)
       browserslist: 4.25.1
@@ -4869,7 +4869,7 @@ snapshots:
       - webpack-hot-middleware
       - webpack-plugin-serve
 
-  '@faergeek/tiny-browser-hmr-webpack-plugin@1.0.17(webpack@5.99.9)':
+  '@faergeek/tiny-browser-hmr-webpack-plugin@1.0.18(webpack@5.99.9)':
     dependencies:
       webpack: 5.99.9(webpack-cli@6.0.1)
       ws: 8.18.3(bufferutil@4.0.9)(utf-8-validate@6.0.5)
