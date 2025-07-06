@@ -1,30 +1,30 @@
 import { base, node, react, typescript } from '@faergeek/eslint-config';
+import { defineConfig, globalIgnores } from 'eslint/config';
 import globals from 'globals';
 
-export default [
-  { ignores: ['build/'] },
-  ...base,
-  ...node.map(config => ({
-    ...config,
+export default defineConfig([
+  globalIgnores(['build/']),
+  base,
+  typescript,
+  {
     files: ['*.js'],
-  })),
-  ...node.map(config => ({
-    ...config,
+    extends: [node],
+  },
+  {
     files: ['*.cjs'],
+    extends: [node],
     languageOptions: {
       globals: globals.node,
     },
-  })),
-  ...react.map(config => ({
-    ...config,
+  },
+  {
     files: ['src/**/*'],
+    extends: [react],
     settings: {
-      ...config.settings,
       linkComponents: [
         { name: 'Button', linkAttribute: ['href', 'to'] },
         { name: 'Link', linkAttribute: 'to' },
       ],
     },
-  })),
-  ...typescript,
-];
+  },
+]);
