@@ -28,9 +28,8 @@
 }
 
 .textInput {
-  min-height: calc(3 * 1.2em);
+  min-height: 3.5em;
   width: 100%;
-  line-height: 1.2;
 }
 
 .select {

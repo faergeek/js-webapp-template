@@ -1,4 +1,4 @@
-@import 'normalize.css';
+@import 'modern-normalize';
 
 ::selection {
   background: #c29bea;
@@ -12,7 +12,6 @@
   --color-accent-alt: #96c;
   --color-muted: #555;
   min-width: 320px;
-  font: 1em system-ui;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,16 +25,6 @@
   }
 }
 
-html {
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
 html,
 body {
   height: 100%;
@@ -44,10 +33,6 @@ body {
 html {
   background: var(--color-bg);
   color: var(--color-fg);
-}
-
-body {
-  margin: 0;
 }
 
 img {
@@ -74,12 +59,6 @@ h1:first-child {
 :any-link:focus-visible {
   outline: 0;
   box-shadow: 0 0 2px 2px var(--color-accent);
-}
-
-button,
-input,
-textarea {
-  font: inherit;
 }
 
 button:disabled,

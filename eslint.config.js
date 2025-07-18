@@ -1,6 +1,5 @@
 import { base, node, react, typescript } from '@faergeek/eslint-config';
 import { defineConfig, globalIgnores } from 'eslint/config';
-import globals from 'globals';
 
 export default defineConfig([
   globalIgnores(['build/']),
@@ -9,13 +8,6 @@ export default defineConfig([
   {
     files: ['*.js'],
     extends: [node],
-  },
-  {
-    files: ['*.cjs'],
-    extends: [node],
-    languageOptions: {
-      globals: globals.node,
-    },
   },
   {
     files: ['src/**/*'],
