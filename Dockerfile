@@ -8,7 +8,7 @@ RUN --mount=type=cache,target=/root/.local/share/pnpm/store/v3 pnpm install --fr
 
 COPY src ./src/
 COPY public ./public/
-COPY .browserslistrc babel.config.cjs postcss.config.cjs webpack.config.js ./
+COPY .browserslistrc .swcrc webpack.config.js ./
 RUN --mount=type=cache,target=/home/node/node_modules/.cache pnpm run build
 
 ENV NODE_ENV=production PORT=8080
