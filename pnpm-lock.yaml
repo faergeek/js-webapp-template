@@ -56,7 +56,7 @@ importers:
         version: 7.0.56(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3)
       '@faergeek/make-webpack-config':
         specifier: ^23.0.0
-        version: 23.0.0(@swc/helpers@0.5.17)(bufferutil@4.0.9)(react-refresh@0.17.0)(webpack@5.100.2)
+        version: 23.0.1(@swc/helpers@0.5.17)(bufferutil@4.0.9)(react-refresh@0.17.0)(webpack@5.100.2)
       '@size-limit/file':
         specifier: ^11.0.0
         version: 11.2.0(size-limit@11.2.0)
@@ -165,8 +165,8 @@ packages:
     peerDependencies:
       eslint: ^9.0.0
 
-  '@faergeek/make-webpack-config@23.0.0':
-    resolution: {integrity: sha512-C5lla+stTI/9/hLxGYo6U62ndSM4OAsfeKCqR063r/VKWqBTMMsQDEkxaYUtwJOvWRtkP7nY23NDvc8nfdV7PA==}
+  '@faergeek/make-webpack-config@23.0.1':
+    resolution: {integrity: sha512-5+jQbdsYuDmYYqKZRgYcXzGHXaD3ArKJWVqOPUXUpX1InePg+QrzjFdjATTjAQ1wyiKrbVoeB0oYNrWjKtE9Eg==}
     peerDependencies:
       webpack: ^5.36.2
 
@@ -2249,10 +2249,6 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
-  utf-8-validate@5.0.10:
-    resolution: {integrity: sha512-Z6czzLq4u8fPOyx7TU6X3dvUZVvoJmxSQ+IcrlmagKhilxlhZgxPK6C5Jqbkw1IDUmFTM+cz9QDnnLTwDz/2gQ==}
-    engines: {node: '>=6.14.2'}
-
   utf-8-validate@6.0.5:
     resolution: {integrity: sha512-EYZR+OpIXp9Y1eG1iueg8KRsY8TuT8VNgnanZ0uA3STqhHQTLwbl+WX76/9X5OY12yQubymBpaBSmMPkSTQcKA==}
     engines: {node: '>=6.14.2'}
@@ -2436,7 +2432,7 @@ snapshots:
       - typescript
       - vitest
 
-  '@faergeek/make-webpack-config@23.0.0(@swc/helpers@0.5.17)(bufferutil@4.0.9)(react-refresh@0.17.0)(webpack@5.100.2)':
+  '@faergeek/make-webpack-config@23.0.1(@swc/helpers@0.5.17)(bufferutil@4.0.9)(react-refresh@0.17.0)(webpack@5.100.2)':
     dependencies:
       '@faergeek/tiny-browser-hmr-webpack-plugin': 1.0.18(webpack@5.100.2)
       '@pmmmwh/react-refresh-webpack-plugin': 0.6.1(react-refresh@0.17.0)(webpack@5.100.2)
@@ -2449,9 +2445,9 @@ snapshots:
       mini-svg-data-uri: 1.4.4
       source-map-loader: 5.0.0(webpack@5.100.2)
       swc-loader: 0.2.6(@swc/core@1.13.0(@swc/helpers@0.5.17))(webpack@5.100.2)
-      utf-8-validate: 5.0.10
+      utf-8-validate: 6.0.5
       webpack: 5.100.2(@swc/core@1.13.0(@swc/helpers@0.5.17))(webpack-cli@6.0.1)
-      webpack-bundle-analyzer: 4.10.2(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      webpack-bundle-analyzer: 4.10.2(bufferutil@4.0.9)(utf-8-validate@6.0.5)
     transitivePeerDependencies:
       - '@rspack/core'
       - '@swc/helpers'
@@ -4699,14 +4695,9 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  utf-8-validate@5.0.10:
-    dependencies:
-      node-gyp-build: 4.8.4
-
   utf-8-validate@6.0.5:
     dependencies:
       node-gyp-build: 4.8.4
-    optional: true
 
   util-deprecate@1.0.2: {}
 
@@ -4717,7 +4708,7 @@ snapshots:
       glob-to-regexp: 0.4.1
       graceful-fs: 4.2.11
 
-  webpack-bundle-analyzer@4.10.2(bufferutil@4.0.9)(utf-8-validate@5.0.10):
+  webpack-bundle-analyzer@4.10.2(bufferutil@4.0.9)(utf-8-validate@6.0.5):
     dependencies:
       '@discoveryjs/json-ext': 0.5.7
       acorn: 8.15.0
@@ -4730,7 +4721,7 @@ snapshots:
       opener: 1.5.2
       picocolors: 1.1.1
       sirv: 2.0.4
-      ws: 7.5.10(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      ws: 7.5.10(bufferutil@4.0.9)(utf-8-validate@6.0.5)
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -4857,10 +4848,10 @@ snapshots:
 
   wrappy@1.0.2: {}
 
-  ws@7.5.10(bufferutil@4.0.9)(utf-8-validate@5.0.10):
+  ws@7.5.10(bufferutil@4.0.9)(utf-8-validate@6.0.5):
     optionalDependencies:
       bufferutil: 4.0.9
-      utf-8-validate: 5.0.10
+      utf-8-validate: 6.0.5
 
   ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@6.0.5):
     optionalDependencies:
