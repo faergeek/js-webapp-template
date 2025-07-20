@@ -1,0 +1,9 @@
+{
+  "include": ["./webpack.config.js"],
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "outDir": "./node_modules/.cache/tsc-out/node"
+  }
+}

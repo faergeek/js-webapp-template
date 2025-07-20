@@ -2,6 +2,10 @@ import * as path from 'node:path';
 
 import makeWebpackConfig from '@faergeek/make-webpack-config';
 
+/**
+ * @param {NonNullable<import('webpack-cli').Argv['env']>} env
+ * @param {import('webpack-cli').Argv} argv
+ */
 export default function webpackConfig(env, argv) {
   const dev = argv.configNodeEnv === 'development';
   const watch = env.WEBPACK_WATCH;
