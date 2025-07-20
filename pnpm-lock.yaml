@@ -56,7 +56,7 @@ importers:
         version: 7.0.56(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3)
       '@faergeek/make-webpack-config':
         specifier: ^23.0.0
-        version: 23.0.2(@swc/helpers@0.5.17)(bufferutil@4.0.9)(react-refresh@0.17.0)(webpack@5.100.2)
+        version: 23.1.0(@swc/helpers@0.5.17)(bufferutil@4.0.9)(react-refresh@0.17.0)(webpack-cli@6.0.1)(webpack@5.100.2)
       '@size-limit/file':
         specifier: ^11.0.0
         version: 11.2.0(size-limit@11.2.0)
@@ -165,13 +165,13 @@ packages:
     peerDependencies:
       eslint: ^9.0.0
 
-  '@faergeek/make-webpack-config@23.0.2':
-    resolution: {integrity: sha512-Kg/RSGpJFYHf64pG+ytMvRI/hn0e4dbjBlYsbkgqDtsjdsEwOH7CBBo+H5hcoYNMfFvRznmJUP+CSq0CNtBqCQ==}
+  '@faergeek/make-webpack-config@23.1.0':
+    resolution: {integrity: sha512-y6LLY6YQZxr9BuiPV5XvIjPWhcgGsUbpO/DsPnFOv06t9hVQyAA6OEfxKkDi5uVKBGJxd/wisghNYOhPWe+9xQ==}
     peerDependencies:
       webpack: ^5.36.2
 
-  '@faergeek/tiny-browser-hmr-webpack-plugin@1.0.18':
-    resolution: {integrity: sha512-PDLjUur3xDAwlf1+6eWkT3Nfaj79gYElc3O73a8TqrUPdEnrM152KgMDVpIszPE4x8oVacNChsfSmRnyjRjX4A==}
+  '@faergeek/tiny-browser-hmr-webpack-plugin@1.1.0':
+    resolution: {integrity: sha512-uoLalRwBaz9/knR3kD08DyUNNJkbebyGnILsaeNNCmFHPbDPasWKqT426JM7hMnMzS8m50bKqjTgkybYZmigJw==}
     peerDependencies:
       webpack: ^5.30.0
 
@@ -384,6 +384,9 @@ packages:
   '@types/node@22.16.5':
     resolution: {integrity: sha512-bJFoMATwIGaxxx8VJPeM8TonI8t579oRvgAuT8zFugJsJZgzqv0Fu8Mhp68iecjzG7cnN3mO2dJQ5uUM2EFrgQ==}
 
+  '@types/node@24.0.15':
+    resolution: {integrity: sha512-oaeTSbCef7U/z7rDeJA138xpG3NuKc64/rZ2qmUFkFJmnMsAPaluIifqyWd8hSSMxyP9oie3dLAqYPblag9KgA==}
+
   '@types/qs@6.14.0':
     resolution: {integrity: sha512-eOunJqu0K1923aExK6y8p6fsihYEn/BYuQ4g0CxAAgFc4b/ZLN4CrsRZ55srTdqoiLzU2B2evC+apEIxprEzkQ==}
 
@@ -406,6 +409,12 @@ packages:
 
   '@types/serve-static@1.15.8':
     resolution: {integrity: sha512-roei0UY3LhpOJvjbIP6ZZFngyLKl5dskOtDhxY5THRSpO+ZI+nzJ+m5yUMzGrp89YRa7lvknKkMYjqQFGwA7Sg==}
+
+  '@types/webpack-bundle-analyzer@4.7.0':
+    resolution: {integrity: sha512-c5i2ThslSNSG8W891BRvOd/RoCjI2zwph8maD22b1adtSns20j+0azDDMCK06DiVrzTgnwiDl5Ntmu1YRJw8Sg==}
+
+  '@types/ws@8.18.1':
+    resolution: {integrity: sha512-ThVF6DCVhA8kUGy+aazFQ4kXQ7E1Ty7A3ypFOe0IcJV8O/M511G99AW24irKrW56Wt44yG9+ij8FaqoBGkuBXg==}
 
   '@typescript-eslint/eslint-plugin@8.37.0':
     resolution: {integrity: sha512-jsuVWeIkb6ggzB+wPCsR4e6loj+rM72ohW6IBn2C+5NCvfUVY8s33iFPySSVXqtm5Hu29Ne/9bnA0JmyLmgenA==}
@@ -2236,6 +2245,9 @@ packages:
   undici-types@6.21.0:
     resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
+  undici-types@7.8.0:
+    resolution: {integrity: sha512-9UJ2xGDvQ43tYyVMpuHlsgApydB8ZKfVYTsLDhXkFL/6gfkp+U8xTGdh8pMJv1SpZna0zxG1DwsKZsreLbXBxw==}
+
   unpipe@1.0.0:
     resolution: {integrity: sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==}
     engines: {node: '>= 0.8'}
@@ -2432,11 +2444,12 @@ snapshots:
       - typescript
       - vitest
 
-  '@faergeek/make-webpack-config@23.0.2(@swc/helpers@0.5.17)(bufferutil@4.0.9)(react-refresh@0.17.0)(webpack@5.100.2)':
+  '@faergeek/make-webpack-config@23.1.0(@swc/helpers@0.5.17)(bufferutil@4.0.9)(react-refresh@0.17.0)(webpack-cli@6.0.1)(webpack@5.100.2)':
     dependencies:
-      '@faergeek/tiny-browser-hmr-webpack-plugin': 1.0.18(webpack@5.100.2)
+      '@faergeek/tiny-browser-hmr-webpack-plugin': 1.1.0(webpack@5.100.2)
       '@pmmmwh/react-refresh-webpack-plugin': 0.6.1(react-refresh@0.17.0)(webpack@5.100.2)
       '@swc/core': 1.13.1(@swc/helpers@0.5.17)
+      '@types/webpack-bundle-analyzer': 4.7.0(@swc/core@1.13.1(@swc/helpers@0.5.17))(webpack-cli@6.0.1)
       css-loader: 7.1.2(webpack@5.100.2)
       escape-string-regexp: 5.0.0
       lightningcss: 1.30.1
@@ -2453,15 +2466,20 @@ snapshots:
       - '@swc/helpers'
       - '@types/webpack'
       - bufferutil
+      - esbuild
       - react-refresh
       - sockjs-client
       - type-fest
+      - uglify-js
+      - webpack-cli
       - webpack-dev-server
       - webpack-hot-middleware
       - webpack-plugin-serve
 
-  '@faergeek/tiny-browser-hmr-webpack-plugin@1.0.18(webpack@5.100.2)':
+  '@faergeek/tiny-browser-hmr-webpack-plugin@1.1.0(webpack@5.100.2)':
     dependencies:
+      '@types/node': 24.0.15
+      '@types/ws': 8.18.1
       webpack: 5.100.2(@swc/core@1.13.1(@swc/helpers@0.5.17))(webpack-cli@6.0.1)
       ws: 8.18.3(bufferutil@4.0.9)(utf-8-validate@6.0.5)
     optionalDependencies:
@@ -2649,6 +2667,10 @@ snapshots:
     dependencies:
       undici-types: 6.21.0
 
+  '@types/node@24.0.15':
+    dependencies:
+      undici-types: 7.8.0
+
   '@types/qs@6.14.0': {}
 
   '@types/range-parser@1.2.7': {}
@@ -2673,6 +2695,21 @@ snapshots:
       '@types/http-errors': 2.0.5
       '@types/node': 22.16.5
       '@types/send': 0.17.5
+
+  '@types/webpack-bundle-analyzer@4.7.0(@swc/core@1.13.1(@swc/helpers@0.5.17))(webpack-cli@6.0.1)':
+    dependencies:
+      '@types/node': 22.16.5
+      tapable: 2.2.2
+      webpack: 5.100.2(@swc/core@1.13.1(@swc/helpers@0.5.17))(webpack-cli@6.0.1)
+    transitivePeerDependencies:
+      - '@swc/core'
+      - esbuild
+      - uglify-js
+      - webpack-cli
+
+  '@types/ws@8.18.1':
+    dependencies:
+      '@types/node': 22.16.5
 
   '@typescript-eslint/eslint-plugin@8.37.0(@typescript-eslint/parser@8.37.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3)':
     dependencies:
@@ -4682,6 +4719,8 @@ snapshots:
       which-boxed-primitive: 1.1.1
 
   undici-types@6.21.0: {}
+
+  undici-types@7.8.0: {}
 
   unpipe@1.0.0: {}
 
