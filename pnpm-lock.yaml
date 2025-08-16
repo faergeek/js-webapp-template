@@ -56,7 +56,7 @@ importers:
         version: 7.0.59(eslint@9.33.0(jiti@2.5.1))(typescript@5.9.2)
       '@faergeek/make-webpack-config':
         specifier: ^23.2.7
-        version: 23.2.8(@swc/helpers@0.5.17)(@types/node@22.17.2)(bufferutil@4.0.9)(react-refresh@0.17.0)(webpack-cli@6.0.1)(webpack-dev-server@5.2.2)(webpack@5.101.2)
+        version: 23.3.0(@swc/helpers@0.5.17)(@types/node@22.17.2)(bufferutil@4.0.9)(react-refresh@0.17.0)(webpack-cli@6.0.1)(webpack-dev-server@5.2.2)(webpack@5.101.2)
       '@size-limit/file':
         specifier: ^11.0.0
         version: 11.2.0(size-limit@11.2.0)
@@ -171,8 +171,8 @@ packages:
     peerDependencies:
       eslint: ^9.0.0
 
-  '@faergeek/make-webpack-config@23.2.8':
-    resolution: {integrity: sha512-OLsgJFYwrXQptPnAvDFqOHt5YPN/LQ72P2VbNer/NyBZFm/gH9iyvAxE29zm+5JuN3MohMKFA87zKF1/D0o2Xg==}
+  '@faergeek/make-webpack-config@23.3.0':
+    resolution: {integrity: sha512-3Xbq2Kn5KfMKwdKzPCu+44j49dKYFxUaUlBAdPFgnBiDM3qrs6VRWX3E4bmX9/wloJdmFtqgrHTjc3tXWiDeEA==}
     peerDependencies:
       '@types/node': ^22.17.1
       webpack: ^5.36.2
@@ -2926,7 +2926,7 @@ snapshots:
       - typescript
       - vitest
 
-  '@faergeek/make-webpack-config@23.2.8(@swc/helpers@0.5.17)(@types/node@22.17.2)(bufferutil@4.0.9)(react-refresh@0.17.0)(webpack-cli@6.0.1)(webpack-dev-server@5.2.2)(webpack@5.101.2)':
+  '@faergeek/make-webpack-config@23.3.0(@swc/helpers@0.5.17)(@types/node@22.17.2)(bufferutil@4.0.9)(react-refresh@0.17.0)(webpack-cli@6.0.1)(webpack-dev-server@5.2.2)(webpack@5.101.2)':
     dependencies:
       '@faergeek/tiny-browser-hmr-webpack-plugin': 1.2.1(@types/node@22.17.2)(webpack@5.101.2)
       '@pmmmwh/react-refresh-webpack-plugin': 0.6.1(react-refresh@0.17.0)(webpack-dev-server@5.2.2)(webpack@5.101.2)
