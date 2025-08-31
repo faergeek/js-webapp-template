@@ -30,7 +30,6 @@ export default function webpackConfig(env, argv) {
     paths: {
       build: path.resolve('build'),
       public: path.resolve('build', 'public'),
-      src: path.resolve('src'),
     },
     reactRefresh: true,
     watch,
