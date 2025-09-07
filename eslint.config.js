@@ -1,17 +1,11 @@
-import { base, node, react, typescript } from '@faergeek/eslint-config';
+import { base, react, typescript } from '@faergeek/eslint-config';
 import { defineConfig, globalIgnores } from 'eslint/config';
+import globals from 'globals';
 
 export default defineConfig([
   globalIgnores(['build/']),
-  base,
-  typescript,
   {
-    files: ['*.js'],
-    extends: [node],
-  },
-  {
-    files: ['src/**/*'],
-    extends: [react],
+    extends: [base, react, typescript],
     settings: {
       linkComponents: [
         { name: 'Button', linkAttribute: ['href', 'to'] },
@@ -19,4 +13,5 @@ export default defineConfig([
       ],
     },
   },
+  { files: ['*.js'], languageOptions: { globals: globals.nodeBuiltin } },
 ]);
