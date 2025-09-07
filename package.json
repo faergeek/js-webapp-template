@@ -43,7 +43,7 @@
     "tiny-invariant": "^1.1.0"
   },
   "devDependencies": {
-    "@faergeek/eslint-config": "^7.0.1",
+    "@faergeek/eslint-config": "^8.0.0",
     "@faergeek/make-webpack-config": "^24.0.0",
     "@size-limit/file": "^11.0.0",
     "@types/body-parser": "^1.19.6",
