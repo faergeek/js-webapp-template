@@ -1,5 +1,5 @@
-name: Checks
-on: [pull_request]
+name: push
+on: push
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -11,8 +11,6 @@ jobs:
       - uses: asdf-vm/actions/install@v4
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v5
-        with:
-          cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm run format:check
       - run: pnpm run lint
