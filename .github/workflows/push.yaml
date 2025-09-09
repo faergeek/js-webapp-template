@@ -1,5 +1,5 @@
-name: Checks
-on: [pull_request]
+name: push
+on: push
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
