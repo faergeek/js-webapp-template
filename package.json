@@ -15,17 +15,6 @@
     "start": "node --enable-source-maps ."
   },
   "packageManager": "pnpm@10.15.1",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@swc/core",
-      "bufferutil",
-      "esbuild",
-      "utf-8-validate"
-    ],
-    "ignoredBuiltDependencies": [
-      "core-js-pure"
-    ]
-  },
   "dependencies": {
     "@swc/helpers": "^0.5.17",
     "body-parser": "^2.0.0",
