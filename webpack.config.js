@@ -1,18 +1,20 @@
 import * as path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { virtualRoutes } from '@faergeek/fs-routes';
 import makeWebpackConfig from '@faergeek/make-webpack-config';
-import { virtualRoutes } from '@workspace/virtual-routes';
 
 const routesDir = path.resolve('workspace', 'app', 'routes');
 
 /**
- * @param {NonNullable<import('webpack-cli').Argv['env']>} env
+ * @param {import('webpack-cli').Argv['env']} env
  * @param {import('webpack-cli').Argv} argv
+ *
+ * @returns {import('webpack').Configuration[]}
  */
 export default function webpackConfig(env, argv) {
   const dev = argv.configNodeEnv === 'development';
-  const watch = env.WEBPACK_WATCH;
+  const watch = env?.WEBPACK_WATCH;
 
   return makeWebpackConfig({
     analyze: !dev,
@@ -23,7 +25,6 @@ export default function webpackConfig(env, argv) {
           fileURLToPath(import.meta.url),
           './.browserslistrc',
           './.swcrc',
-          './workspace/virtual-routes/index.ts',
         ],
       },
     },

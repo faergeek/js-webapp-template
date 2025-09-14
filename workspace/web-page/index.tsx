@@ -1,5 +1,5 @@
+/// <reference types="@faergeek/fs-routes/types" />
 /// <reference types="@faergeek/make-webpack-config/module" />
-/// <reference types="@workspace/app/virtual-routes" />
 import '@workspace/app/setPublicPath';
 import './index.css';
 

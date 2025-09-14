@@ -4,7 +4,6 @@
     { "path": "./tsconfig.node.json" },
     { "path": "./workspace/node" },
     { "path": "./workspace/service-worker" },
-    { "path": "./workspace/virtual-routes" },
     { "path": "./workspace/web-page" }
   ]
 }

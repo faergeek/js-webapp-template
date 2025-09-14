@@ -1,4 +1,3 @@
-/// <reference types="@workspace/app/virtual-routes" />
 import {
   csrfTokenContext,
   isDataRequest,
@@ -18,7 +17,7 @@ import {
   StaticRouterProvider,
 } from 'react-router';
 import invariant from 'tiny-invariant';
-import children from 'virtual:routes';
+import children from 'virtual:@faergeek/fs-routes';
 
 export const commonHeaders = new Headers({
   'x-content-type-options': 'nosniff',

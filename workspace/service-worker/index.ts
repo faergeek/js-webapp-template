@@ -1,4 +1,4 @@
-/// <reference types="@workspace/app/virtual-routes" />
+/// <reference types="@faergeek/fs-routes/types" />
 /// <reference types="@faergeek/make-webpack-config/module" />
 import '@workspace/app/setPublicPath';
 
