@@ -1,0 +1,4 @@
+{
+  "extends": "@workspace/tsconfig/react",
+  "references": [{ "path": "../app" }, { "path": "../respond" }]
+}

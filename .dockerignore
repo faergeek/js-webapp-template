@@ -1,2 +1,6 @@
-/build
+/.env
+/.env.local
+/.env.*.local
 /node_modules
+/workspace/*/dist
+/workspace/*/node_modules

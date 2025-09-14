@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "type": "module",
+  "name": "@workspace/virtual-routes",
+  "exports": "./index.ts",
+  "sideEffects": false,
+  "dependencies": {
+    "tiny-invariant": "^1.1.0"
+  },
+  "devDependencies": {}
+}

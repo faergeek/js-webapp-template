@@ -1,9 +1,0 @@
-{
-  "include": ["./src"],
-  "exclude": ["./src/serviceWorker.tsx"],
-  "extends": "./tsconfig.base.json",
-  "compilerOptions": {
-    "noEmit": false,
-    "outDir": "./node_modules/.cache/tsc-out/web"
-  }
-}

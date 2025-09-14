@@ -1,5 +1,5 @@
 /.env.local
 /.env.*.local
-/.vscode
-/build
 /node_modules
+/workspace/*/dist
+/workspace/*/node_modules

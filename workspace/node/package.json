@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "type": "module",
+  "name": "@workspace/node",
+  "exports": "./index.ts",
+  "sideEffects": [
+    "./index.ts"
+  ],
+  "dependencies": {
+    "compression": "^1.8.1",
+    "dotenv-flow": "^4.0.0",
+    "express": "^5.0.0",
+    "morgan": "^1.10.0",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.8.1",
+    "@types/express": "^5.0.0",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^24.3.1",
+    "@workspace/app": "workspace:",
+    "@workspace/respond": "workspace:"
+  }
+}

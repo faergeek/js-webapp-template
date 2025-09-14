@@ -1,12 +1,12 @@
 [
   {
     "name": "css",
-    "path": "build/public/*.css",
-    "limit": "2 kB"
+    "path": "workspace/web-page/dist/public/*.css",
+    "limit": "3 kB"
   },
   {
     "name": "js",
-    "path": ["build/public/*.js", "!build/public/sw.js"],
-    "limit": "86 kB"
+    "path": ["workspace/web-page/dist/public/*.js"],
+    "limit": "83 kB"
   }
 ]

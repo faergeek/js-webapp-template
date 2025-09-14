@@ -1,0 +1,22 @@
+.noResultsMessage {
+  color: hsl(var(--color-muted));
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  justify-content: center;
+  gap: 1em;
+}
+
+.imgWrapper {
+  background: center/cover;
+}
+
+.img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  background: hsl(var(--color-bg) / 0.75);
+}

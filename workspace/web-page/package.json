@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "type": "module",
+  "name": "@workspace/web-page",
+  "exports": "./index.tsx",
+  "sideEffects": [
+    "./index.css",
+    "./index.tsx"
+  ],
+  "devDependencies": {
+    "@workspace/app": "workspace:",
+    "modern-normalize": "^3.0.1"
+  }
+}
