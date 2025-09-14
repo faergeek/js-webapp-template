@@ -1,4 +1,4 @@
-import { base, react, typescript, vitest } from '@faergeek/eslint-config';
+import { base, react, typescript } from '@faergeek/eslint-config';
 import { defineConfig, globalIgnores } from 'eslint/config';
 import globals from 'globals';
 
@@ -14,5 +14,4 @@ export default defineConfig([
     },
   },
   { files: ['*.js'], languageOptions: { globals: globals.nodeBuiltin } },
-  { files: ['**/*.spec.*'], extends: [vitest] },
 ]);

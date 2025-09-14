@@ -4,8 +4,7 @@
   "name": "@workspace/app",
   "exports": {
     ".": "./index.ts",
-    "./setPublicPath": "./setPublicPath.ts",
-    "./virtual-routes": "./virtual-routes.d.ts"
+    "./setPublicPath": "./setPublicPath.ts"
   },
   "sideEffects": [
     "./setPublicPath.ts"
