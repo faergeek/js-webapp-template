@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "type": "module",
+  "name": "@workspace/tsconfig",
+  "exports": {
+    "./node": "./tsconfig.node.json",
+    "./react": "./tsconfig.react.json"
+  },
+  "sideEffects": false
+}

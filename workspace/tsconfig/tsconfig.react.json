@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "module": "preserve"
+  },
+  "extends": "./tsconfig.base.json"
+}

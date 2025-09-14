@@ -1,0 +1,105 @@
+@import 'modern-normalize';
+
+:root {
+  --container-width: 800px;
+  --color-brand: 270 50% 40%;
+  --color-brand-light: 270 50% 60%;
+  --color-brand-fg: 0 0% 100%;
+  --color-fg: 0 0% 0%;
+  --color-bg: 0 0% 100%;
+  --color-accent: var(--color-brand);
+  --color-accent-alt: var(--color-brand-light);
+  --color-muted: 0 0% 33.3%;
+  min-width: 320px;
+  -webkit-tap-highlight-color: hsl(var(--color-accent-alt) / 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-fg: 0 0% 100%;
+    --color-bg: 0 0% 0%;
+    --color-accent: var(--color-brand-light);
+    --color-accent-alt: var(--color-brand);
+    --color-muted: 0 0% 80%;
+    color-scheme: dark;
+  }
+}
+
+::selection {
+  background: hsl(var(--color-accent-alt));
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  background: hsl(var(--color-bg));
+  color: hsl(var(--color-fg));
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+h1:first-child {
+  margin-top: 0;
+}
+
+:any-link {
+  color: hsl(var(--color-accent));
+  text-decoration: none;
+}
+
+:any-link:hover,
+:any-link:focus-visible {
+  color: hsl(var(--color-accent-alt));
+  text-decoration: underline;
+}
+
+:any-link:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 2px 2px hsl(var(--color-accent));
+}
+
+button:disabled,
+input:disabled,
+textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+label,
+button,
+select {
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid hsl(var(--color-accent));
+  padding: 0.5em;
+  border-radius: 8px;
+  background: none;
+  color: inherit;
+}
+
+select {
+  appearance: none;
+  background: url(./chevron.svg) no-repeat right center;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 0;
+  box-shadow: 0 0 2px 2px hsl(var(--color-accent));
+}
+
+textarea {
+  resize: vertical;
+}

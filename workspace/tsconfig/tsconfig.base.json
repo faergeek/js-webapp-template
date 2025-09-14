@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "isolatedModules": true,
+    "noErrorTruncation": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "../../node_modules/.cache/tsc",
+    "resolveJsonModule": true,
+    "rootDir": "../..",
+    "strict": true,
+    "target": "esnext",
+    "verbatimModuleSyntax": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "type": "module",
+  "name": "@workspace/respond",
+  "exports": "./index.tsx",
+  "sideEffects": false,
+  "devDependencies": {
+    "@workspace/app": "workspace:"
+  }
+}

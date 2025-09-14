@@ -1,6 +1,10 @@
 import * as path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 import makeWebpackConfig from '@faergeek/make-webpack-config';
+import { virtualRoutes } from '@workspace/virtual-routes';
+
+const routesDir = path.resolve('workspace', 'app', 'routes');
 
 /**
  * @param {NonNullable<import('webpack-cli').Argv['env']>} env
@@ -16,22 +20,29 @@ export default function webpackConfig(env, argv) {
       type: 'filesystem',
       buildDependencies: {
         config: [
-          new URL(import.meta.url).pathname,
-          new URL('.browserslistrc', import.meta.url).pathname,
+          fileURLToPath(import.meta.url),
+          './.browserslistrc',
+          './.swcrc',
+          './workspace/virtual-routes/index.ts',
         ],
       },
     },
     dev,
-    entry: {
-      webPage: './src/browser',
-      node: './src/node',
-      serviceWorker: './src/serviceWorker',
+    node: {
+      entry: '@workspace/node',
+      outputPath: path.resolve('workspace', 'node', 'dist'),
     },
-    paths: {
-      build: path.resolve('build'),
-      public: path.resolve('build', 'public'),
-    },
+    nodeArgs: ['--enable-source-maps', '--inspect=9229'],
+    plugins: () => [virtualRoutes(routesDir)],
     reactRefresh: true,
+    serviceWorker: {
+      entry: { sw: '@workspace/service-worker' },
+      outputPath: path.resolve('workspace', 'service-worker', 'dist'),
+    },
     watch,
+    webPage: {
+      entry: '@workspace/web-page',
+      outputPath: path.resolve('workspace', 'web-page', 'dist'),
+    },
   });
 }

@@ -1,7 +1,11 @@
+packages:
+  - workspace/*
+
 ignoredBuiltDependencies:
   - core-js-pure
 
 onlyBuiltDependencies:
   - '@swc/core'
   - bufferutil
+  - esbuild
   - utf-8-validate

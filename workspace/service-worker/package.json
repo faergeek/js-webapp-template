@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "type": "module",
+  "name": "@workspace/service-worker",
+  "exports": "./index.ts",
+  "sideEffects": [
+    "./src/index.ts"
+  ],
+  "devDependencies": {
+    "@workspace/app": "workspace:",
+    "@workspace/respond": "workspace:"
+  }
+}

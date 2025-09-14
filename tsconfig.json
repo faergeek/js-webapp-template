@@ -1,8 +1,10 @@
 {
-  "include": [],
+  "files": [],
   "references": [
     { "path": "./tsconfig.node.json" },
-    { "path": "./tsconfig.serviceWorker.json" },
-    { "path": "./tsconfig.web.json" }
+    { "path": "./workspace/node" },
+    { "path": "./workspace/service-worker" },
+    { "path": "./workspace/virtual-routes" },
+    { "path": "./workspace/web-page" }
   ]
 }

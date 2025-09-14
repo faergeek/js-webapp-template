@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "type": "module",
+  "name": "@workspace/app",
+  "exports": {
+    ".": "./index.ts",
+    "./setPublicPath": "./setPublicPath.ts",
+    "./virtual-routes": "./virtual-routes.d.ts"
+  },
+  "sideEffects": [
+    "./setPublicPath.ts"
+  ],
+  "devDependencies": {
+    "@types/htmlescape": "^1.1.3",
+    "clsx": "^2.0.0",
+    "htmlescape": "^1.1.1"
+  }
+}
