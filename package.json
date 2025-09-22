@@ -14,7 +14,7 @@
     "check-size-limits": "size-limit --highlight-less",
     "start": "node --enable-source-maps ."
   },
-  "packageManager": "pnpm@10.17.0",
+  "packageManager": "pnpm@10.17.1",
   "dependencies": {
     "@swc/helpers": "^0.5.17",
     "nanoid": "^5.1.5",
