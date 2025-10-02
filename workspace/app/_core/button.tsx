@@ -15,14 +15,7 @@ export function Button<
     as?: T;
   },
 ) {
-  if (typeof props.as === 'string') {
-    if (props.as === 'button') {
-      props = { ...props, type: 'button' };
-    } else {
-      props = { ...props, role: 'button' };
-    }
-  }
-
+  if (!props.as || props.as === 'button') props = { type: 'button', ...props };
   const { as: As = 'button', className, ...otherProps } = props;
 
   return <As {...otherProps} className={clsx(className, css.btn)} />;
