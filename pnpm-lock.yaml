@@ -32,7 +32,7 @@ importers:
         version: 8.1.6(@eslint/js@9.37.0)(eslint@9.37.0(jiti@2.6.1))(typescript@5.9.3)
       '@faergeek/fs-routes':
         specifier: ^1.0.2
-        version: 1.0.2(@types/react@19.2.1)(react-router@7.9.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(webpack@5.102.0)
+        version: 1.0.2(@types/react@19.2.2)(react-router@7.9.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(webpack@5.102.0)
       '@faergeek/make-webpack-config':
         specifier: ^25.0.0
         version: 25.0.1(@swc/helpers@0.5.17)(@types/node@24.7.0)(bufferutil@4.0.9)(react-refresh@0.18.0)(webpack-cli@6.0.1)(webpack-dev-server@5.2.2)(webpack@5.102.0)
@@ -41,10 +41,10 @@ importers:
         version: 11.2.0(size-limit@11.2.0)
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.1
+        version: 19.2.2
       '@types/react-dom':
         specifier: ^19.0.0
-        version: 19.2.0(@types/react@19.2.1)
+        version: 19.2.1(@types/react@19.2.2)
       '@types/rechoir':
         specifier: ^0.6.4
         version: 0.6.4
@@ -516,13 +516,13 @@ packages:
   '@types/range-parser@1.2.7':
     resolution: {integrity: sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==}
 
-  '@types/react-dom@19.2.0':
-    resolution: {integrity: sha512-brtBs0MnE9SMx7px208g39lRmC5uHZs96caOJfTjFcYSLHNamvaSMfJNagChVNkup2SdtOxKX1FDBkRSJe1ZAg==}
+  '@types/react-dom@19.2.1':
+    resolution: {integrity: sha512-/EEvYBdT3BflCWvTMO7YkYBHVE9Ci6XdqZciZANQgKpaiDRGOLIlRo91jbTNRQjgPFWVaRxcYc0luVNFitz57A==}
     peerDependencies:
       '@types/react': ^19.2.0
 
-  '@types/react@19.2.1':
-    resolution: {integrity: sha512-1U5NQWh/GylZQ50ZMnnPjkYHEaGhg6t5i/KI0LDDh3t4E3h3T3vzm+GLY2BRzMfIjSBwzm6tginoZl5z0O/qsA==}
+  '@types/react@19.2.2':
+    resolution: {integrity: sha512-6mDvHUFSjyT2B2yeNx2nUgMxh9LtOWvkhIU3uePn2I2oyNymUAX1NIsdgviM4CH+JSrp2D2hsMvJOkxY+0wNRA==}
 
   '@types/rechoir@0.6.4':
     resolution: {integrity: sha512-qpb56wvjUSuJQwZzDcmQEFudUsolIabyOE9aP9Wr5s1EYlWQ/4Zz7XSjr69gDhWY5PBX/+M62ZLQgQyUzTiPAA==}
@@ -2992,9 +2992,9 @@ snapshots:
       - typescript
       - vitest
 
-  '@faergeek/fs-routes@1.0.2(@types/react@19.2.1)(react-router@7.9.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(webpack@5.102.0)':
+  '@faergeek/fs-routes@1.0.2(@types/react@19.2.2)(react-router@7.9.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(webpack@5.102.0)':
     dependencies:
-      '@types/react': 19.2.1
+      '@types/react': 19.2.2
       react-router: 7.9.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       tiny-invariant: 1.3.3
       webpack: 5.102.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(webpack-cli@6.0.1)
@@ -3307,11 +3307,11 @@ snapshots:
 
   '@types/range-parser@1.2.7': {}
 
-  '@types/react-dom@19.2.0(@types/react@19.2.1)':
+  '@types/react-dom@19.2.1(@types/react@19.2.2)':
     dependencies:
-      '@types/react': 19.2.1
+      '@types/react': 19.2.2
 
-  '@types/react@19.2.1':
+  '@types/react@19.2.2':
     dependencies:
       csstype: 3.1.3
 
