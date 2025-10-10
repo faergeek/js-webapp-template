@@ -8,7 +8,7 @@ import compression from 'compression';
 import express from 'express';
 import morgan from 'morgan';
 import { nanoid } from 'nanoid';
-import { renderToPipeableStream } from 'react-dom/server';
+import { renderToReadableStream } from 'react-dom/server';
 import { createCookie } from 'react-router';
 
 const nodePublicRoot = path.resolve('workspace', 'node', 'dist', 'public');
@@ -190,20 +190,16 @@ export function createRequestHandler({
             );
           }
 
-          const { abort, pipe } = renderToPipeableStream(children, {
+          const body = await renderToReadableStream(children, {
             bootstrapScripts,
             nonce,
-            onShellError: next,
-            onShellReady: () => {
-              res.statusCode = status;
-              res.setHeaders(headers);
-              pipe(res);
-            },
+            signal: request.signal,
           });
 
-          request.signal.onabort = () => {
-            abort(request.signal.reason);
-          };
+          res.statusCode = status;
+          res.setHeaders(headers);
+
+          await body.pipeTo(Writable.toWeb(res));
         }
       } catch (err) {
         if (err instanceof DOMException && err.name === 'AbortError') {
