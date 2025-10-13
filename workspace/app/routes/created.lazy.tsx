@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useSyncExternalStore } from 'react';
 import { useLoaderData } from 'react-router';
 
 import { Button } from '../_core/button';
@@ -9,15 +9,12 @@ import * as css from './created.lazy.module.css';
 export function Component() {
   const { templateId, text, url } = useLoaderData<typeof loader>();
   const shareData: ShareData = useMemo(() => ({ url }), [url]);
-  const [isShareSupported, setIsShareSupported] = useState<boolean>();
 
-  useEffect(() => {
-    setIsShareSupported(
-      typeof navigator.canShare === 'function' &&
-        typeof navigator.share === 'function' &&
-        navigator.canShare(shareData),
-    );
-  }, [shareData]);
+  const isShareSupported = useSyncExternalStore(
+    () => () => undefined,
+    () => navigator.canShare?.(shareData) ?? false,
+    () => false,
+  );
 
   const telegramShareUrl = new URL('https://t.me/share/url');
   telegramShareUrl.searchParams.set('url', url);
