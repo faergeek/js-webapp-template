@@ -1,4 +1,4 @@
-FROM node:24.10.0-alpine
+FROM node:24.11.0-alpine
 RUN apk add --no-cache tini
 WORKDIR /home/node
 
