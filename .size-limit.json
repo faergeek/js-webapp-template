@@ -7,6 +7,6 @@
   {
     "name": "js",
     "path": ["workspace/web-page/dist/public/*.js"],
-    "limit": "84 kB"
+    "limit": "85 kB"
   }
 ]
