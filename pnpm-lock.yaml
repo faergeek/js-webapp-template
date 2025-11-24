@@ -32,7 +32,7 @@ importers:
         version: 8.1.7(@eslint/js@9.39.1)(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
       '@faergeek/fs-routes':
         specifier: ^1.0.2
-        version: 1.0.2(@types/react@19.2.6)(react-router@7.9.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(webpack@5.103.0)
+        version: 1.0.2(@types/react@19.2.7)(react-router@7.9.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(webpack@5.103.0)
       '@faergeek/make-webpack-config':
         specifier: ^25.0.0
         version: 25.0.2(@swc/helpers@0.5.17)(@types/node@24.10.1)(bufferutil@4.0.9)(react-refresh@0.18.0)(webpack-cli@6.0.1)(webpack-dev-server@5.2.2)(webpack@5.103.0)
@@ -41,10 +41,10 @@ importers:
         version: 11.2.0(size-limit@11.2.0)
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.6
+        version: 19.2.7
       '@types/react-dom':
         specifier: ^19.0.0
-        version: 19.2.3(@types/react@19.2.6)
+        version: 19.2.3(@types/react@19.2.7)
       '@types/rechoir':
         specifier: ^0.6.4
         version: 0.6.4
@@ -587,8 +587,8 @@ packages:
     peerDependencies:
       '@types/react': ^19.2.0
 
-  '@types/react@19.2.6':
-    resolution: {integrity: sha512-p/jUvulfgU7oKtj6Xpk8cA2Y1xKTtICGpJYeJXz2YVO2UcvjQgeRMLDGfDeqeRW2Ta+0QNFwcc8X3GH8SxZz6w==}
+  '@types/react@19.2.7':
+    resolution: {integrity: sha512-MWtvHrGZLFttgeEj28VXHxpmwYbor/ATPYbBfSFZEIRK0ecCFLl2Qo55z52Hss+UV9CRN7trSeq1zbgx7YDWWg==}
 
   '@types/rechoir@0.6.4':
     resolution: {integrity: sha512-qpb56wvjUSuJQwZzDcmQEFudUsolIabyOE9aP9Wr5s1EYlWQ/4Zz7XSjr69gDhWY5PBX/+M62ZLQgQyUzTiPAA==}
@@ -3132,9 +3132,9 @@ snapshots:
       - typescript
       - vitest
 
-  '@faergeek/fs-routes@1.0.2(@types/react@19.2.6)(react-router@7.9.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(webpack@5.103.0)':
+  '@faergeek/fs-routes@1.0.2(@types/react@19.2.7)(react-router@7.9.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(webpack@5.103.0)':
     dependencies:
-      '@types/react': 19.2.6
+      '@types/react': 19.2.7
       react-router: 7.9.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       tiny-invariant: 1.3.3
       webpack: 5.103.0(@swc/core@1.15.3(@swc/helpers@0.5.17))(webpack-cli@6.0.1)
@@ -3444,11 +3444,11 @@ snapshots:
 
   '@types/range-parser@1.2.7': {}
 
-  '@types/react-dom@19.2.3(@types/react@19.2.6)':
+  '@types/react-dom@19.2.3(@types/react@19.2.7)':
     dependencies:
-      '@types/react': 19.2.6
+      '@types/react': 19.2.7
 
-  '@types/react@19.2.6':
+  '@types/react@19.2.7':
     dependencies:
       csstype: 3.2.3
 
