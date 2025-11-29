@@ -37,8 +37,8 @@ importers:
         specifier: ^25.0.0
         version: 25.0.2(@swc/helpers@0.5.17)(@types/node@24.10.1)(bufferutil@4.0.9)(react-refresh@0.18.0)(webpack-cli@6.0.1)(webpack-dev-server@5.2.2)(webpack@5.103.0)
       '@size-limit/file':
-        specifier: ^11.0.0
-        version: 11.2.0(size-limit@12.0.0(jiti@2.6.1))
+        specifier: ^12.0.0
+        version: 12.0.0(size-limit@12.0.0(jiti@2.6.1))
       '@types/react':
         specifier: ^19.0.0
         version: 19.2.7
@@ -429,11 +429,11 @@ packages:
   '@polka/url@1.0.0-next.29':
     resolution: {integrity: sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww==}
 
-  '@size-limit/file@11.2.0':
-    resolution: {integrity: sha512-OZHE3putEkQ/fgzz3Tp/0hSmfVo3wyTpOJSRNm6AmcwX4Nm9YtTfbQQ/hZRwbBFR23S7x2Sd9EbqYzngKwbRoA==}
-    engines: {node: ^18.0.0 || >=20.0.0}
+  '@size-limit/file@12.0.0':
+    resolution: {integrity: sha512-OzKYpDzWJ2jo6cAIzVsaPuvzZTmMLDoVCViEvsctmImxpXzwJZcuBEpPohFKKdgVdZuNTU8WstmvywPq55Njdw==}
+    engines: {node: ^20.0.0 || ^22.0.0 || >=24.0.0}
     peerDependencies:
-      size-limit: 11.2.0
+      size-limit: 12.0.0
 
   '@swc/core-darwin-arm64@1.15.3':
     resolution: {integrity: sha512-AXfeQn0CvcQ4cndlIshETx6jrAM45oeUrK8YeEY6oUZU/qzz0Id0CyvlEywxkWVC81Ajpd8TQQ1fW5yx6zQWkQ==}
@@ -3286,7 +3286,7 @@ snapshots:
 
   '@polka/url@1.0.0-next.29': {}
 
-  '@size-limit/file@11.2.0(size-limit@12.0.0(jiti@2.6.1))':
+  '@size-limit/file@12.0.0(size-limit@12.0.0(jiti@2.6.1))':
     dependencies:
       size-limit: 12.0.0(jiti@2.6.1)
 
