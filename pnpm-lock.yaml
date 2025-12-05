@@ -22,7 +22,7 @@ importers:
         version: 19.2.1(react@19.2.1)
       react-router:
         specifier: ^7.0.1
-        version: 7.10.0(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 7.10.1(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       tiny-invariant:
         specifier: ^1.1.0
         version: 1.3.3
@@ -32,7 +32,7 @@ importers:
         version: 8.1.7(@eslint/js@9.39.1)(eslint@9.39.1)(typescript@5.9.3)
       '@faergeek/fs-routes':
         specifier: ^1.0.2
-        version: 1.0.2(@types/react@19.2.7)(react-router@7.10.0(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(webpack@5.103.0)
+        version: 1.0.2(@types/react@19.2.7)(react-router@7.10.1(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(webpack@5.103.0)
       '@faergeek/make-webpack-config':
         specifier: ^25.0.0
         version: 25.0.2(@swc/helpers@0.5.17)(@types/node@24.10.1)(bufferutil@4.0.9)(react-refresh@0.18.0)(webpack-cli@6.0.1)(webpack-dev-server@5.2.2)(webpack@5.103.0)
@@ -2316,8 +2316,8 @@ packages:
     resolution: {integrity: sha512-QgT5//D3jfjJb6Gsjxv0Slpj23ip+HtOpnNgnb2S5zU3CB26G/IDPGoy4RJB42wzFE46DRsstbW6tKHoKbhAxw==}
     engines: {node: '>=0.10.0'}
 
-  react-router@7.10.0:
-    resolution: {integrity: sha512-FVyCOH4IZ0eDDRycODfUqoN8ZSR2LbTvtx6RPsBgzvJ8xAXlMZNCrOFpu+jb8QbtZnpAd/cEki2pwE848pNGxw==}
+  react-router@7.10.1:
+    resolution: {integrity: sha512-gHL89dRa3kwlUYtRQ+m8NmxGI6CgqN+k4XyGjwcFoQwwCWF6xXpOCUlDovkXClS0d0XJN/5q7kc5W3kiFEd0Yw==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
@@ -3095,10 +3095,10 @@ snapshots:
       - typescript
       - vitest
 
-  '@faergeek/fs-routes@1.0.2(@types/react@19.2.7)(react-router@7.10.0(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(webpack@5.103.0)':
+  '@faergeek/fs-routes@1.0.2(@types/react@19.2.7)(react-router@7.10.1(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(webpack@5.103.0)':
     dependencies:
       '@types/react': 19.2.7
-      react-router: 7.10.0(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      react-router: 7.10.1(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       tiny-invariant: 1.3.3
       webpack: 5.103.0(@swc/core@1.15.3(@swc/helpers@0.5.17))(webpack-cli@6.0.1)
 
@@ -5303,7 +5303,7 @@ snapshots:
 
   react-refresh@0.18.0: {}
 
-  react-router@7.10.0(react-dom@19.2.1(react@19.2.1))(react@19.2.1):
+  react-router@7.10.1(react-dom@19.2.1(react@19.2.1))(react@19.2.1):
     dependencies:
       cookie: 1.1.1
       react: 19.2.1
