@@ -17,7 +17,7 @@
     "@types/compression": "^1.8.1",
     "@types/express": "^5.0.0",
     "@types/morgan": "^1.9.10",
-    "@types/node": "^24.3.1",
+    "@types/node": "^25.0.0",
     "@workspace/app": "workspace:",
     "@workspace/respond": "workspace:"
   }
