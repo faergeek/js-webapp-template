@@ -16,13 +16,13 @@ importers:
         version: 5.1.6
       react:
         specifier: ^19.0.0
-        version: 19.2.2
+        version: 19.2.3
       react-dom:
         specifier: ^19.0.0
-        version: 19.2.2(react@19.2.2)
+        version: 19.2.3(react@19.2.3)
       react-router:
         specifier: ^7.0.1
-        version: 7.10.1(react-dom@19.2.2(react@19.2.2))(react@19.2.2)
+        version: 7.10.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       tiny-invariant:
         specifier: ^1.1.0
         version: 1.3.3
@@ -32,7 +32,7 @@ importers:
         version: 8.1.7(@eslint/js@9.39.2)(eslint@9.39.2)(typescript@5.9.3)
       '@faergeek/fs-routes':
         specifier: ^1.0.2
-        version: 1.0.2(@types/react@19.2.7)(react-router@7.10.1(react-dom@19.2.2(react@19.2.2))(react@19.2.2))(webpack@5.103.0)
+        version: 1.0.2(@types/react@19.2.7)(react-router@7.10.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(webpack@5.103.0)
       '@faergeek/make-webpack-config':
         specifier: ^25.0.0
         version: 25.0.2(@swc/helpers@0.5.17)(@types/node@25.0.1)(bufferutil@4.0.9)(react-refresh@0.18.0)(webpack-cli@6.0.1)(webpack-dev-server@5.2.2)(webpack@5.103.0)
@@ -2296,10 +2296,10 @@ packages:
     resolution: {integrity: sha512-K5zQjDllxWkf7Z5xJdV0/B0WTNqx6vxG70zJE4N0kBs4LovmEYWJzQGxC9bS9RAKu3bgM40lrd5zoLJ12MQ5BA==}
     engines: {node: '>= 0.10'}
 
-  react-dom@19.2.2:
-    resolution: {integrity: sha512-fhyD2BLrew6qYf4NNtHff1rLXvzR25rq49p+FeqByOazc6TcSi2n8EYulo5C1PbH+1uBW++5S1SG7FcUU6mlDg==}
+  react-dom@19.2.3:
+    resolution: {integrity: sha512-yELu4WmLPw5Mr/lmeEpox5rw3RETacE++JgHqQzd2dg+YbJuat3jH4ingc+WPZhxaoFzdv9y33G+F7Nl5O0GBg==}
     peerDependencies:
-      react: ^19.2.2
+      react: ^19.2.3
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -2318,8 +2318,8 @@ packages:
       react-dom:
         optional: true
 
-  react@19.2.2:
-    resolution: {integrity: sha512-BdOGOY8OKRBcgoDkwqA8Q5XvOIhoNx/Sh6BnGJlet2Abt0X5BK0BDrqGyQgLhAVjD2nAg5f6o01u/OPUhG022Q==}
+  react@19.2.3:
+    resolution: {integrity: sha512-Ku/hhYbVjOQnXDZFv2+RibmLFGwFdeeKHFcOTlrt7xplBnya5OGn/hIRDsqDiSUcfORsDC7MPxwork8jBwsIWA==}
     engines: {node: '>=0.10.0'}
 
   readable-stream@2.3.8:
@@ -3091,10 +3091,10 @@ snapshots:
       - typescript
       - vitest
 
-  '@faergeek/fs-routes@1.0.2(@types/react@19.2.7)(react-router@7.10.1(react-dom@19.2.2(react@19.2.2))(react@19.2.2))(webpack@5.103.0)':
+  '@faergeek/fs-routes@1.0.2(@types/react@19.2.7)(react-router@7.10.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(webpack@5.103.0)':
     dependencies:
       '@types/react': 19.2.7
-      react-router: 7.10.1(react-dom@19.2.2(react@19.2.2))(react@19.2.2)
+      react-router: 7.10.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       tiny-invariant: 1.3.3
       webpack: 5.103.0(@swc/core@1.15.3(@swc/helpers@0.5.17))(webpack-cli@6.0.1)
 
@@ -5284,24 +5284,24 @@ snapshots:
       iconv-lite: 0.7.0
       unpipe: 1.0.0
 
-  react-dom@19.2.2(react@19.2.2):
+  react-dom@19.2.3(react@19.2.3):
     dependencies:
-      react: 19.2.2
+      react: 19.2.3
       scheduler: 0.27.0
 
   react-is@16.13.1: {}
 
   react-refresh@0.18.0: {}
 
-  react-router@7.10.1(react-dom@19.2.2(react@19.2.2))(react@19.2.2):
+  react-router@7.10.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
     dependencies:
       cookie: 1.1.1
-      react: 19.2.2
+      react: 19.2.3
       set-cookie-parser: 2.7.2
     optionalDependencies:
-      react-dom: 19.2.2(react@19.2.2)
+      react-dom: 19.2.3(react@19.2.3)
 
-  react@19.2.2: {}
+  react@19.2.3: {}
 
   readable-stream@2.3.8:
     dependencies:
