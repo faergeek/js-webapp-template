@@ -35,7 +35,7 @@ importers:
         version: 1.0.2(@types/react@19.2.7)(react-router@7.10.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(webpack@5.103.0)
       '@faergeek/make-webpack-config':
         specifier: ^25.0.0
-        version: 25.0.2(@swc/helpers@0.5.17)(@types/node@25.0.1)(bufferutil@4.0.9)(react-refresh@0.18.0)(webpack-cli@6.0.1)(webpack-dev-server@5.2.2)(webpack@5.103.0)
+        version: 25.0.2(@swc/helpers@0.5.17)(@types/node@25.0.2)(bufferutil@4.0.9)(react-refresh@0.18.0)(webpack-cli@6.0.1)(webpack-dev-server@5.2.2)(webpack@5.103.0)
       '@size-limit/file':
         specifier: ^12.0.0
         version: 12.0.0(size-limit@12.0.0)
@@ -132,7 +132,7 @@ importers:
         version: 1.9.10
       '@types/node':
         specifier: ^25.0.0
-        version: 25.0.1
+        version: 25.0.2
       '@workspace/app':
         specifier: 'workspace:'
         version: link:../app
@@ -561,8 +561,8 @@ packages:
   '@types/node-forge@1.3.14':
     resolution: {integrity: sha512-mhVF2BnD4BO+jtOp7z1CdzaK4mbuK0LLQYAvdOLqHTavxFNq4zA1EmYkpnFjP8HOUzedfQkRnp0E2ulSAYSzAw==}
 
-  '@types/node@25.0.1':
-    resolution: {integrity: sha512-czWPzKIAXucn9PtsttxmumiQ9N0ok9FrBwgRWrwmVLlp86BrMExzvXRLFYRJ+Ex3g6yqj+KuaxfX1JTgV2lpfg==}
+  '@types/node@25.0.2':
+    resolution: {integrity: sha512-gWEkeiyYE4vqjON/+Obqcoeffmk0NF15WSBwSs7zwVA2bAbTaE0SJ7P0WNGoJn8uE7fiaV5a7dKYIJriEqOrmA==}
 
   '@types/qs@6.14.0':
     resolution: {integrity: sha512-eOunJqu0K1923aExK6y8p6fsihYEn/BYuQ4g0CxAAgFc4b/ZLN4CrsRZ55srTdqoiLzU2B2evC+apEIxprEzkQ==}
@@ -3098,12 +3098,12 @@ snapshots:
       tiny-invariant: 1.3.3
       webpack: 5.103.0(@swc/core@1.15.3(@swc/helpers@0.5.17))(webpack-cli@6.0.1)
 
-  '@faergeek/make-webpack-config@25.0.2(@swc/helpers@0.5.17)(@types/node@25.0.1)(bufferutil@4.0.9)(react-refresh@0.18.0)(webpack-cli@6.0.1)(webpack-dev-server@5.2.2)(webpack@5.103.0)':
+  '@faergeek/make-webpack-config@25.0.2(@swc/helpers@0.5.17)(@types/node@25.0.2)(bufferutil@4.0.9)(react-refresh@0.18.0)(webpack-cli@6.0.1)(webpack-dev-server@5.2.2)(webpack@5.103.0)':
     dependencies:
-      '@faergeek/tiny-browser-hmr-webpack-plugin': 1.2.4(@types/node@25.0.1)(webpack@5.103.0)
+      '@faergeek/tiny-browser-hmr-webpack-plugin': 1.2.4(@types/node@25.0.2)(webpack@5.103.0)
       '@pmmmwh/react-refresh-webpack-plugin': 0.6.2(react-refresh@0.18.0)(webpack-dev-server@5.2.2)(webpack@5.103.0)
       '@swc/core': 1.15.3(@swc/helpers@0.5.17)
-      '@types/node': 25.0.1
+      '@types/node': 25.0.2
       '@types/webpack-bundle-analyzer': 4.7.0(@swc/core@1.15.3(@swc/helpers@0.5.17))(webpack-cli@6.0.1)
       css-loader: 7.1.2(webpack@5.103.0)
       lightningcss: 1.30.2
@@ -3132,9 +3132,9 @@ snapshots:
       - webpack-hot-middleware
       - webpack-plugin-serve
 
-  '@faergeek/tiny-browser-hmr-webpack-plugin@1.2.4(@types/node@25.0.1)(webpack@5.103.0)':
+  '@faergeek/tiny-browser-hmr-webpack-plugin@1.2.4(@types/node@25.0.2)(webpack@5.103.0)':
     dependencies:
-      '@types/node': 25.0.1
+      '@types/node': 25.0.2
       '@types/ws': 8.18.1
       webpack: 5.103.0(@swc/core@1.15.3(@swc/helpers@0.5.17))(webpack-cli@6.0.1)
       ws: 8.18.3(bufferutil@4.0.9)(utf-8-validate@6.0.5)
@@ -3300,25 +3300,25 @@ snapshots:
   '@types/body-parser@1.19.6':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 25.0.1
+      '@types/node': 25.0.2
 
   '@types/bonjour@3.5.13':
     dependencies:
-      '@types/node': 25.0.1
+      '@types/node': 25.0.2
 
   '@types/compression@1.8.1':
     dependencies:
       '@types/express': 5.0.6
-      '@types/node': 25.0.1
+      '@types/node': 25.0.2
 
   '@types/connect-history-api-fallback@1.5.4':
     dependencies:
       '@types/express-serve-static-core': 4.19.7
-      '@types/node': 25.0.1
+      '@types/node': 25.0.2
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 25.0.1
+      '@types/node': 25.0.2
 
   '@types/eslint-scope@3.7.7':
     dependencies:
@@ -3334,14 +3334,14 @@ snapshots:
 
   '@types/express-serve-static-core@4.19.7':
     dependencies:
-      '@types/node': 25.0.1
+      '@types/node': 25.0.2
       '@types/qs': 6.14.0
       '@types/range-parser': 1.2.7
       '@types/send': 1.2.1
 
   '@types/express-serve-static-core@5.1.0':
     dependencies:
-      '@types/node': 25.0.1
+      '@types/node': 25.0.2
       '@types/qs': 6.14.0
       '@types/range-parser': 1.2.7
       '@types/send': 1.2.1
@@ -3365,11 +3365,11 @@ snapshots:
 
   '@types/http-proxy@1.17.17':
     dependencies:
-      '@types/node': 25.0.1
+      '@types/node': 25.0.2
 
   '@types/interpret@1.1.4':
     dependencies:
-      '@types/node': 25.0.1
+      '@types/node': 25.0.2
 
   '@types/json-schema@7.0.15': {}
 
@@ -3377,13 +3377,13 @@ snapshots:
 
   '@types/morgan@1.9.10':
     dependencies:
-      '@types/node': 25.0.1
+      '@types/node': 25.0.2
 
   '@types/node-forge@1.3.14':
     dependencies:
-      '@types/node': 25.0.1
+      '@types/node': 25.0.2
 
-  '@types/node@25.0.1':
+  '@types/node@25.0.2':
     dependencies:
       undici-types: 7.16.0
 
@@ -3408,11 +3408,11 @@ snapshots:
   '@types/send@0.17.6':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 25.0.1
+      '@types/node': 25.0.2
 
   '@types/send@1.2.1':
     dependencies:
-      '@types/node': 25.0.1
+      '@types/node': 25.0.2
 
   '@types/serve-index@1.9.4':
     dependencies:
@@ -3421,21 +3421,21 @@ snapshots:
   '@types/serve-static@1.15.10':
     dependencies:
       '@types/http-errors': 2.0.5
-      '@types/node': 25.0.1
+      '@types/node': 25.0.2
       '@types/send': 0.17.6
 
   '@types/serve-static@2.2.0':
     dependencies:
       '@types/http-errors': 2.0.5
-      '@types/node': 25.0.1
+      '@types/node': 25.0.2
 
   '@types/sockjs@0.3.36':
     dependencies:
-      '@types/node': 25.0.1
+      '@types/node': 25.0.2
 
   '@types/webpack-bundle-analyzer@4.7.0(@swc/core@1.15.3(@swc/helpers@0.5.17))(webpack-cli@6.0.1)':
     dependencies:
-      '@types/node': 25.0.1
+      '@types/node': 25.0.2
       tapable: 2.3.0
       webpack: 5.103.0(@swc/core@1.15.3(@swc/helpers@0.5.17))(webpack-cli@6.0.1)
     transitivePeerDependencies:
@@ -3446,7 +3446,7 @@ snapshots:
 
   '@types/ws@8.18.1':
     dependencies:
-      '@types/node': 25.0.1
+      '@types/node': 25.0.2
 
   '@typescript-eslint/eslint-plugin@8.48.1(@typescript-eslint/parser@8.48.1(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3)':
     dependencies:
@@ -4829,7 +4829,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 25.0.1
+      '@types/node': 25.0.2
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
