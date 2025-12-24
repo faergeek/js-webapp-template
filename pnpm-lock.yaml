@@ -89,7 +89,7 @@ importers:
         version: 6.0.1(webpack-dev-server@5.2.2)(webpack@5.104.1)
       webpack-dev-server:
         specifier: ^5.2.2
-        version: 5.2.2(bufferutil@4.1.0)(utf-8-validate@5.0.10)(webpack-cli@6.0.1)(webpack@5.104.1)
+        version: 5.2.2(bufferutil@4.1.0)(utf-8-validate@6.0.6)(webpack-cli@6.0.1)(webpack@5.104.1)
 
   workspace/app:
     devDependencies:
@@ -3213,7 +3213,7 @@ snapshots:
       source-map: 0.7.6
       webpack: 5.104.1(@swc/core@1.15.7(@swc/helpers@0.5.17))(webpack-cli@6.0.1)
     optionalDependencies:
-      webpack-dev-server: 5.2.2(bufferutil@4.1.0)(utf-8-validate@5.0.10)(webpack-cli@6.0.1)(webpack@5.104.1)
+      webpack-dev-server: 5.2.2(bufferutil@4.1.0)(utf-8-validate@6.0.6)(webpack-cli@6.0.1)(webpack@5.104.1)
 
   '@polka/url@1.0.0-next.29': {}
 
@@ -3621,7 +3621,7 @@ snapshots:
       webpack: 5.104.1(@swc/core@1.15.7(@swc/helpers@0.5.17))(webpack-cli@6.0.1)
       webpack-cli: 6.0.1(webpack-dev-server@5.2.2)(webpack@5.104.1)
     optionalDependencies:
-      webpack-dev-server: 5.2.2(bufferutil@4.1.0)(utf-8-validate@5.0.10)(webpack-cli@6.0.1)(webpack@5.104.1)
+      webpack-dev-server: 5.2.2(bufferutil@4.1.0)(utf-8-validate@6.0.6)(webpack-cli@6.0.1)(webpack@5.104.1)
 
   '@xtuc/ieee754@1.2.0': {}
 
@@ -5872,7 +5872,7 @@ snapshots:
       webpack: 5.104.1(@swc/core@1.15.7(@swc/helpers@0.5.17))(webpack-cli@6.0.1)
       webpack-merge: 6.0.1
     optionalDependencies:
-      webpack-dev-server: 5.2.2(bufferutil@4.1.0)(utf-8-validate@5.0.10)(webpack-cli@6.0.1)(webpack@5.104.1)
+      webpack-dev-server: 5.2.2(bufferutil@4.1.0)(utf-8-validate@6.0.6)(webpack-cli@6.0.1)(webpack@5.104.1)
 
   webpack-dev-middleware@7.4.5(webpack@5.104.1):
     dependencies:
@@ -5885,7 +5885,7 @@ snapshots:
     optionalDependencies:
       webpack: 5.104.1(@swc/core@1.15.7(@swc/helpers@0.5.17))(webpack-cli@6.0.1)
 
-  webpack-dev-server@5.2.2(bufferutil@4.1.0)(utf-8-validate@5.0.10)(webpack-cli@6.0.1)(webpack@5.104.1):
+  webpack-dev-server@5.2.2(bufferutil@4.1.0)(utf-8-validate@6.0.6)(webpack-cli@6.0.1)(webpack@5.104.1):
     dependencies:
       '@types/bonjour': 3.5.13
       '@types/connect-history-api-fallback': 1.5.4
@@ -5914,7 +5914,7 @@ snapshots:
       sockjs: 0.3.24
       spdy: 4.0.2
       webpack-dev-middleware: 7.4.5(webpack@5.104.1)
-      ws: 8.18.3(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+      ws: 8.18.3(bufferutil@4.1.0)(utf-8-validate@6.0.6)
     optionalDependencies:
       webpack: 5.104.1(@swc/core@1.15.7(@swc/helpers@0.5.17))(webpack-cli@6.0.1)
       webpack-cli: 6.0.1(webpack-dev-server@5.2.2)(webpack@5.104.1)
@@ -6026,11 +6026,6 @@ snapshots:
   wrappy@1.0.2: {}
 
   ws@7.5.10(bufferutil@4.1.0)(utf-8-validate@5.0.10):
-    optionalDependencies:
-      bufferutil: 4.1.0
-      utf-8-validate: 5.0.10
-
-  ws@8.18.3(bufferutil@4.1.0)(utf-8-validate@5.0.10):
     optionalDependencies:
       bufferutil: 4.1.0
       utf-8-validate: 5.0.10
