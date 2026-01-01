@@ -36,7 +36,7 @@
     "@workspace/tsconfig": "workspace:",
     "@workspace/web-page": "workspace:",
     "eslint": "^9.9.1",
-    "globals": "^16.3.0",
+    "globals": "^17.0.0",
     "modern-normalize": "^3.0.1",
     "nanoid": "^5.0.0",
     "prettier": "^3.0.0",
