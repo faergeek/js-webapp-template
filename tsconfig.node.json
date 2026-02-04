@@ -1,4 +1,4 @@
 {
   "extends": "@workspace/tsconfig/node",
-  "files": ["webpack.config.js"]
+  "include": ["eslint.config.js", "webpack.config.js"]
 }
