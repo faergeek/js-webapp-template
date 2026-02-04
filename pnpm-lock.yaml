@@ -29,7 +29,7 @@ importers:
     devDependencies:
       '@faergeek/eslint-config':
         specifier: ^8.0.0
-        version: 8.1.7(@eslint/js@9.39.2)(eslint@9.39.2)(typescript@5.9.3)
+        version: 8.2.0(@eslint/js@9.39.2)(eslint@9.39.2)(typescript@5.9.3)
       '@faergeek/fs-routes':
         specifier: ^1.0.2
         version: 1.0.2(@types/react@19.2.10)(react-router@7.13.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(webpack@5.105.0)
@@ -281,8 +281,8 @@ packages:
     resolution: {integrity: sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@faergeek/eslint-config@8.1.7':
-    resolution: {integrity: sha512-37izuz3mpW2lNJKf0e+axwfodv8zUdRtiA3uCZ8WUrAPFuReaJZP03h68LIKU/ynD76mJg524DHDqR5Y1igzug==}
+  '@faergeek/eslint-config@8.2.0':
+    resolution: {integrity: sha512-FgvOe0X9tu6WcN9OopTWJI5+EV+gRDha4vsOSLB35lflvW4Xl6wRFQ3l9BoI28xEOU1bpDHqG7Eoy2Of2hGBOw==}
     peerDependencies:
       '@eslint/js': ^9.19.0
       eslint: ^9.0.0
@@ -3194,7 +3194,7 @@ snapshots:
       '@eslint/core': 0.17.0
       levn: 0.4.1
 
-  '@faergeek/eslint-config@8.1.7(@eslint/js@9.39.2)(eslint@9.39.2)(typescript@5.9.3)':
+  '@faergeek/eslint-config@8.2.0(@eslint/js@9.39.2)(eslint@9.39.2)(typescript@5.9.3)':
     dependencies:
       '@eslint/js': 9.39.2
       '@vitest/eslint-plugin': 1.6.6(eslint@9.39.2)(typescript@5.9.3)
