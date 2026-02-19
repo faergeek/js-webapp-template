@@ -26,7 +26,7 @@
   "devDependencies": {
     "@faergeek/eslint-config": "^8.0.0",
     "@faergeek/fs-routes": "^1.0.2",
-    "@faergeek/make-webpack-config": "^25.0.0",
+    "@faergeek/make-webpack-config": "^25.0.4",
     "@size-limit/file": "^12.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
