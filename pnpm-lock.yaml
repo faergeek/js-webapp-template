@@ -34,8 +34,8 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2(@types/react@19.2.14)(react-router@7.13.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(webpack@5.105.2)
       '@faergeek/make-webpack-config':
-        specifier: ^25.0.0
-        version: 25.0.3(@swc/helpers@0.5.18)(@types/node@25.2.3)(react-refresh@0.18.0)(webpack-cli@6.0.1)(webpack-dev-server@5.2.3)(webpack@5.105.2)
+        specifier: ^25.0.4
+        version: 25.0.4(@swc/helpers@0.5.18)(@types/node@25.2.3)(react-refresh@0.18.0)(webpack-cli@6.0.1)(webpack-dev-server@5.2.3)(webpack@5.105.2)
       '@size-limit/file':
         specifier: ^12.0.0
         version: 12.0.0(size-limit@12.0.0)
@@ -294,14 +294,14 @@ packages:
       react-router: ^7.0.0
       webpack: ^5.0.0
 
-  '@faergeek/make-webpack-config@25.0.3':
-    resolution: {integrity: sha512-1BpRD3qxrcd0N/1SNR1DguZ+PBFb+KXwkw+N+xbtrJRLqpr5bMQjfVlhECsPwnJ2+uAC23ibLBdvQDclIMw+IQ==}
+  '@faergeek/make-webpack-config@25.0.4':
+    resolution: {integrity: sha512-6jn3ifbDEcyWkhodPGrFQpQMzSWnVmw62LY7X+BGBgNOMuX0jpCrRli1F2fJJ7pVocJaMbViJhsU8wP+zbAmkg==}
     peerDependencies:
       '@types/node': '>= 22.0.0'
       webpack: ^5.36.2
 
-  '@faergeek/tiny-browser-hmr-webpack-plugin@1.2.6':
-    resolution: {integrity: sha512-bd703o3n+YTDFBJ3Q5WR3p0cWbsITUixt3QlCeXn7FjEmJdaJY2Ncg/1hc5GAv1+7upJid7F5DFxODDmtS7ZiA==}
+  '@faergeek/tiny-browser-hmr-webpack-plugin@1.2.7':
+    resolution: {integrity: sha512-NfxL9aSBKbEMjxuiabjDGyhh5F1EMzMHTmN05pEf9UBo3Pybk1AGUEiv9mdlGUH6YFBQrsc5/dojuw7TRP0hbQ==}
     peerDependencies:
       '@types/node': '>= 22.0.0'
       webpack: ^5.30.0
@@ -3219,9 +3219,9 @@ snapshots:
       tiny-invariant: 1.3.3
       webpack: 5.105.2(@swc/core@1.15.11(@swc/helpers@0.5.18))(webpack-cli@6.0.1)
 
-  '@faergeek/make-webpack-config@25.0.3(@swc/helpers@0.5.18)(@types/node@25.2.3)(react-refresh@0.18.0)(webpack-cli@6.0.1)(webpack-dev-server@5.2.3)(webpack@5.105.2)':
+  '@faergeek/make-webpack-config@25.0.4(@swc/helpers@0.5.18)(@types/node@25.2.3)(react-refresh@0.18.0)(webpack-cli@6.0.1)(webpack-dev-server@5.2.3)(webpack@5.105.2)':
     dependencies:
-      '@faergeek/tiny-browser-hmr-webpack-plugin': 1.2.6(@types/node@25.2.3)(utf-8-validate@5.0.10)(webpack@5.105.2)
+      '@faergeek/tiny-browser-hmr-webpack-plugin': 1.2.7(@types/node@25.2.3)(utf-8-validate@5.0.10)(webpack@5.105.2)
       '@pmmmwh/react-refresh-webpack-plugin': 0.6.2(react-refresh@0.18.0)(webpack-dev-server@5.2.3)(webpack@5.105.2)
       '@swc/core': 1.15.11(@swc/helpers@0.5.18)
       '@types/node': 25.2.3
@@ -3253,7 +3253,7 @@ snapshots:
       - webpack-hot-middleware
       - webpack-plugin-serve
 
-  '@faergeek/tiny-browser-hmr-webpack-plugin@1.2.6(@types/node@25.2.3)(utf-8-validate@5.0.10)(webpack@5.105.2)':
+  '@faergeek/tiny-browser-hmr-webpack-plugin@1.2.7(@types/node@25.2.3)(utf-8-validate@5.0.10)(webpack@5.105.2)':
     dependencies:
       '@types/node': 25.2.3
       '@types/ws': 8.18.1
