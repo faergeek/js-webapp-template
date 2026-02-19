@@ -35,7 +35,7 @@ importers:
         version: 1.0.2(@types/react@19.2.14)(react-router@7.13.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(webpack@5.105.2)
       '@faergeek/make-webpack-config':
         specifier: ^25.0.0
-        version: 25.0.3(@swc/helpers@0.5.18)(@types/node@25.2.3)(react-refresh@0.18.0)(webpack-cli@6.0.1)(webpack-dev-server@5.2.3)(webpack@5.105.2)
+        version: 25.0.4(@swc/helpers@0.5.18)(@types/node@25.3.0)(react-refresh@0.18.0)(webpack-cli@6.0.1)(webpack-dev-server@5.2.3)(webpack@5.105.2)
       '@size-limit/file':
         specifier: ^12.0.0
         version: 12.0.0(size-limit@12.0.0)
@@ -294,14 +294,14 @@ packages:
       react-router: ^7.0.0
       webpack: ^5.0.0
 
-  '@faergeek/make-webpack-config@25.0.3':
-    resolution: {integrity: sha512-1BpRD3qxrcd0N/1SNR1DguZ+PBFb+KXwkw+N+xbtrJRLqpr5bMQjfVlhECsPwnJ2+uAC23ibLBdvQDclIMw+IQ==}
+  '@faergeek/make-webpack-config@25.0.4':
+    resolution: {integrity: sha512-6jn3ifbDEcyWkhodPGrFQpQMzSWnVmw62LY7X+BGBgNOMuX0jpCrRli1F2fJJ7pVocJaMbViJhsU8wP+zbAmkg==}
     peerDependencies:
       '@types/node': '>= 22.0.0'
       webpack: ^5.36.2
 
-  '@faergeek/tiny-browser-hmr-webpack-plugin@1.2.6':
-    resolution: {integrity: sha512-bd703o3n+YTDFBJ3Q5WR3p0cWbsITUixt3QlCeXn7FjEmJdaJY2Ncg/1hc5GAv1+7upJid7F5DFxODDmtS7ZiA==}
+  '@faergeek/tiny-browser-hmr-webpack-plugin@1.2.7':
+    resolution: {integrity: sha512-NfxL9aSBKbEMjxuiabjDGyhh5F1EMzMHTmN05pEf9UBo3Pybk1AGUEiv9mdlGUH6YFBQrsc5/dojuw7TRP0hbQ==}
     peerDependencies:
       '@types/node': '>= 22.0.0'
       webpack: ^5.30.0
@@ -682,6 +682,9 @@ packages:
 
   '@types/node@25.2.3':
     resolution: {integrity: sha512-m0jEgYlYz+mDJZ2+F4v8D1AyQb+QzsNqRuI7xg1VQX/KlKS0qT9r1Mo16yo5F/MtifXFgaofIFsdFMox2SxIbQ==}
+
+  '@types/node@25.3.0':
+    resolution: {integrity: sha512-4K3bqJpXpqfg2XKGK9bpDTc6xO/xoUP/RBWS7AtRMug6zZFaRekiLzjVtAoZMquxoAbzBvy5nxQ7veS5eYzf8A==}
 
   '@types/qs@6.14.0':
     resolution: {integrity: sha512-eOunJqu0K1923aExK6y8p6fsihYEn/BYuQ4g0CxAAgFc4b/ZLN4CrsRZ55srTdqoiLzU2B2evC+apEIxprEzkQ==}
@@ -1170,11 +1173,11 @@ packages:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
 
-  css-loader@7.1.3:
-    resolution: {integrity: sha512-frbERmjT0UC5lMheWpJmMilnt9GEhbZJN/heUb7/zaJYeIzj5St9HvDcfshzzOqbsS+rYpMk++2SD3vGETDSyA==}
+  css-loader@7.1.4:
+    resolution: {integrity: sha512-vv3J9tlOl04WjiMvHQI/9tmIrCxVrj6PFbHemBB1iihpeRbi/I4h033eoFIhwxBBqLhI0KYFS7yvynBFhIZfTw==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
-      '@rspack/core': 0.x || 1.x
+      '@rspack/core': 0.x || ^1.0.0 || ^2.0.0-0
       webpack: ^5.27.0
     peerDependenciesMeta:
       '@rspack/core':
@@ -2877,6 +2880,9 @@ packages:
   undici-types@7.16.0:
     resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
 
+  undici-types@7.18.2:
+    resolution: {integrity: sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w==}
+
   unpipe@1.0.0:
     resolution: {integrity: sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==}
     engines: {node: '>= 0.8'}
@@ -3219,14 +3225,14 @@ snapshots:
       tiny-invariant: 1.3.3
       webpack: 5.105.2(@swc/core@1.15.11(@swc/helpers@0.5.18))(webpack-cli@6.0.1)
 
-  '@faergeek/make-webpack-config@25.0.3(@swc/helpers@0.5.18)(@types/node@25.2.3)(react-refresh@0.18.0)(webpack-cli@6.0.1)(webpack-dev-server@5.2.3)(webpack@5.105.2)':
+  '@faergeek/make-webpack-config@25.0.4(@swc/helpers@0.5.18)(@types/node@25.3.0)(react-refresh@0.18.0)(webpack-cli@6.0.1)(webpack-dev-server@5.2.3)(webpack@5.105.2)':
     dependencies:
-      '@faergeek/tiny-browser-hmr-webpack-plugin': 1.2.6(@types/node@25.2.3)(utf-8-validate@5.0.10)(webpack@5.105.2)
+      '@faergeek/tiny-browser-hmr-webpack-plugin': 1.2.7(@types/node@25.3.0)(utf-8-validate@5.0.10)(webpack@5.105.2)
       '@pmmmwh/react-refresh-webpack-plugin': 0.6.2(react-refresh@0.18.0)(webpack-dev-server@5.2.3)(webpack@5.105.2)
       '@swc/core': 1.15.11(@swc/helpers@0.5.18)
-      '@types/node': 25.2.3
+      '@types/node': 25.3.0
       '@types/webpack-bundle-analyzer': 4.7.0(@swc/core@1.15.11(@swc/helpers@0.5.18))(webpack-cli@6.0.1)
-      css-loader: 7.1.3(webpack@5.105.2)
+      css-loader: 7.1.4(webpack@5.105.2)
       lightningcss: 1.31.1
       lightningcss-loader: 3.0.0(webpack@5.105.2)
       mini-css-extract-plugin: 2.10.0(webpack@5.105.2)
@@ -3253,9 +3259,9 @@ snapshots:
       - webpack-hot-middleware
       - webpack-plugin-serve
 
-  '@faergeek/tiny-browser-hmr-webpack-plugin@1.2.6(@types/node@25.2.3)(utf-8-validate@5.0.10)(webpack@5.105.2)':
+  '@faergeek/tiny-browser-hmr-webpack-plugin@1.2.7(@types/node@25.3.0)(utf-8-validate@5.0.10)(webpack@5.105.2)':
     dependencies:
-      '@types/node': 25.2.3
+      '@types/node': 25.3.0
       '@types/ws': 8.18.1
       webpack: 5.105.2(@swc/core@1.15.11(@swc/helpers@0.5.18))(webpack-cli@6.0.1)
       ws: 8.19.0(utf-8-validate@5.0.10)
@@ -3665,7 +3671,7 @@ snapshots:
 
   '@types/http-proxy@1.17.17':
     dependencies:
-      '@types/node': 25.2.3
+      '@types/node': 25.3.0
 
   '@types/interpret@1.1.4':
     dependencies:
@@ -3682,6 +3688,10 @@ snapshots:
   '@types/node@25.2.3':
     dependencies:
       undici-types: 7.16.0
+
+  '@types/node@25.3.0':
+    dependencies:
+      undici-types: 7.18.2
 
   '@types/qs@6.14.0': {}
 
@@ -3731,7 +3741,7 @@ snapshots:
 
   '@types/webpack-bundle-analyzer@4.7.0(@swc/core@1.15.11(@swc/helpers@0.5.18))(webpack-cli@6.0.1)':
     dependencies:
-      '@types/node': 25.2.3
+      '@types/node': 25.3.0
       tapable: 2.3.0
       webpack: 5.105.2(@swc/core@1.15.11(@swc/helpers@0.5.18))(webpack-cli@6.0.1)
     transitivePeerDependencies:
@@ -4274,7 +4284,7 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
-  css-loader@7.1.3(webpack@5.105.2):
+  css-loader@7.1.4(webpack@5.105.2):
     dependencies:
       icss-utils: 5.1.0(postcss@8.5.6)
       postcss: 8.5.6
@@ -6158,6 +6168,8 @@ snapshots:
       which-boxed-primitive: 1.1.1
 
   undici-types@7.16.0: {}
+
+  undici-types@7.18.2: {}
 
   unpipe@1.0.0: {}
 
