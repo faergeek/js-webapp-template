@@ -35,7 +35,7 @@
     "@workspace/service-worker": "workspace:",
     "@workspace/tsconfig": "workspace:",
     "@workspace/web-page": "workspace:",
-    "eslint": "^9.9.1",
+    "eslint": "^10.0.0",
     "globals": "^17.0.0",
     "modern-normalize": "^3.0.1",
     "nanoid": "^5.0.0",
