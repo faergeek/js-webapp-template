@@ -38,7 +38,7 @@ importers:
         version: 25.0.4(@swc/helpers@0.5.19)(@types/node@25.3.5)(react-refresh@0.18.0)(webpack-cli@6.0.1)(webpack-dev-server@5.2.3)(webpack@5.105.4)
       '@size-limit/file':
         specifier: ^12.0.0
-        version: 12.0.0(size-limit@12.0.0)
+        version: 12.0.1(size-limit@12.0.0)
       '@types/react':
         specifier: ^19.0.0
         version: 19.2.14
@@ -531,11 +531,11 @@ packages:
   '@polka/url@1.0.0-next.29':
     resolution: {integrity: sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww==}
 
-  '@size-limit/file@12.0.0':
-    resolution: {integrity: sha512-OzKYpDzWJ2jo6cAIzVsaPuvzZTmMLDoVCViEvsctmImxpXzwJZcuBEpPohFKKdgVdZuNTU8WstmvywPq55Njdw==}
+  '@size-limit/file@12.0.1':
+    resolution: {integrity: sha512-Kvbnz46iV7WeHaANf1HmWjXBVMU2KkCU+0xJ78FzIjZwlVKKEqy+QCZprdBMfIWrzrvYeqP4cfuzKG8z6xVivg==}
     engines: {node: ^20.0.0 || ^22.0.0 || >=24.0.0}
     peerDependencies:
-      size-limit: 12.0.0
+      size-limit: 12.0.1
 
   '@swc/core-darwin-arm64@1.15.18':
     resolution: {integrity: sha512-+mIv7uBuSaywN3C9LNuWaX1jJJ3SKfiJuE6Lr3bd+/1Iv8oMU7oLBjYMluX1UrEPzwN2qCdY6Io0yVicABoCwQ==}
@@ -3523,7 +3523,7 @@ snapshots:
 
   '@polka/url@1.0.0-next.29': {}
 
-  '@size-limit/file@12.0.0(size-limit@12.0.0)':
+  '@size-limit/file@12.0.1(size-limit@12.0.0)':
     dependencies:
       size-limit: 12.0.0
 
