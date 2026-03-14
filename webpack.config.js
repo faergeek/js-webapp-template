@@ -7,14 +7,14 @@ import makeWebpackConfig from '@faergeek/make-webpack-config';
 const routesDir = path.resolve('workspace', 'app', 'routes');
 
 /**
- * @param {import('webpack-cli').Argv['env']} env
- * @param {import('webpack-cli').Argv} argv
+ * @param {{ WEBPACK_WATCH?: boolean }} env
+ * @param {Record<string, unknown>} argv
  *
  * @returns {import('webpack').Configuration[]}
  */
 export default function webpackConfig(env, argv) {
   const dev = argv.configNodeEnv === 'development';
-  const watch = env?.WEBPACK_WATCH;
+  const watch = env.WEBPACK_WATCH;
 
   return makeWebpackConfig({
     analyze: !dev,
