@@ -1,5 +1,3 @@
-/// <reference types="@faergeek/fs-routes/types" />
-/// <reference types="@faergeek/make-webpack-config/module" />
 import '@workspace/app/setPublicPath';
 import './index.css';
 

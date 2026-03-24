@@ -9,3 +9,6 @@ onlyBuiltDependencies:
   - bufferutil
   - esbuild
   - utf-8-validate
+
+catalog:
+  '@types/node': ^24.0.0

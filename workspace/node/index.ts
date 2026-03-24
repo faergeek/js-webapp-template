@@ -1,4 +1,3 @@
-/// <reference types="@faergeek/make-webpack-config/module" />
 import '@workspace/app/setPublicPath';
 
 import { createServer } from 'node:http';

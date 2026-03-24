@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "jsx": "preserve",
-    "module": "preserve"
+    "module": "preserve",
+    "types": [
+      "@faergeek/fs-routes/types",
+      "@faergeek/make-webpack-config/module"
+    ]
   },
   "extends": "./tsconfig.base.json"
 }
