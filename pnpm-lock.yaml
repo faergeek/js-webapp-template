@@ -35,7 +35,7 @@ importers:
         version: 1.0.2(@types/react@19.2.14)(react-router@7.13.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(webpack@5.105.4)
       '@faergeek/make-webpack-config':
         specifier: ^25.0.4
-        version: 25.0.4(@swc/helpers@0.5.19)(@types/node@25.5.0)(react-refresh@0.18.0)(webpack-cli@7.0.2)(webpack-dev-server@5.2.3)(webpack@5.105.4)
+        version: 25.0.6(@swc/helpers@0.5.19)(@types/node@25.5.0)(react-refresh@0.18.0)(webpack-cli@7.0.2)(webpack-dev-server@5.2.3)(webpack@5.105.4)
       '@size-limit/file':
         specifier: ^12.0.0
         version: 12.0.1(size-limit@12.0.1)
@@ -294,8 +294,8 @@ packages:
       react-router: ^7.0.0
       webpack: ^5.0.0
 
-  '@faergeek/make-webpack-config@25.0.4':
-    resolution: {integrity: sha512-6jn3ifbDEcyWkhodPGrFQpQMzSWnVmw62LY7X+BGBgNOMuX0jpCrRli1F2fJJ7pVocJaMbViJhsU8wP+zbAmkg==}
+  '@faergeek/make-webpack-config@25.0.6':
+    resolution: {integrity: sha512-hw5Q/sc50kSK3YkuP0UUith34WULpRdH9/XW/4gJu/8wu8GxzDm/KbLF/zJy3Th24eC3fSIx1Y1kWKo77rHoRQ==}
     peerDependencies:
       '@types/node': '>= 22.0.0'
       webpack: ^5.36.2
@@ -630,8 +630,8 @@ packages:
   '@swc/helpers@0.5.19':
     resolution: {integrity: sha512-QamiFeIK3txNjgUTNppE6MiG3p7TdninpZu0E0PbqVh1a9FNLT2FRhisaa4NcaX52XVhA5l7Pk58Ft7Sqi/2sA==}
 
-  '@swc/types@0.1.25':
-    resolution: {integrity: sha512-iAoY/qRhNH8a/hBvm3zKj9qQ4oc2+3w1unPJa2XvTK3XjeLXtzcCingVPw/9e5mn1+0yPqxcBGp9Jf0pkfMb1g==}
+  '@swc/types@0.1.26':
+    resolution: {integrity: sha512-lyMwd7WGgG79RS7EERZV3T8wMdmPq3xwyg+1nmAM64kIhx5yl+juO2PYIHb7vTiPgPCj8LYjsNV2T5wiQHUEaw==}
 
   '@types/body-parser@1.19.6':
     resolution: {integrity: sha512-HLFeCYgz89uk22N5Qg3dvGvsv46B8GLvKKo1zKG4NybA8U2DiEO3w9lqGg29t/tfLRJpJ6iQxnVw4OnB7MoM9g==}
@@ -2740,6 +2740,10 @@ packages:
     resolution: {integrity: sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg==}
     engines: {node: '>=6'}
 
+  tapable@2.3.2:
+    resolution: {integrity: sha512-1MOpMXuhGzGL5TTCZFItxCc0AARf1EZFQkGqMm7ERKj8+Hgr5oLvJOVFcC+lRmR8hCe2S3jC4T5D7Vg/d7/fhA==}
+    engines: {node: '>=6'}
+
   terser-webpack-plugin@5.4.0:
     resolution: {integrity: sha512-Bn5vxm48flOIfkdl5CaD2+1CiUVbonWQ3KQPyP7/EuIl9Gbzq/gQFOzaMFUEgVjB1396tcK0SG8XcNJ/2kDH8g==}
     engines: {node: '>= 10.13.0'}
@@ -3201,7 +3205,7 @@ snapshots:
       tiny-invariant: 1.3.3
       webpack: 5.105.4(@swc/core@1.15.21(@swc/helpers@0.5.19))(webpack-cli@7.0.2)
 
-  '@faergeek/make-webpack-config@25.0.4(@swc/helpers@0.5.19)(@types/node@25.5.0)(react-refresh@0.18.0)(webpack-cli@7.0.2)(webpack-dev-server@5.2.3)(webpack@5.105.4)':
+  '@faergeek/make-webpack-config@25.0.6(@swc/helpers@0.5.19)(@types/node@25.5.0)(react-refresh@0.18.0)(webpack-cli@7.0.2)(webpack-dev-server@5.2.3)(webpack@5.105.4)':
     dependencies:
       '@faergeek/tiny-browser-hmr-webpack-plugin': 1.2.7(@types/node@25.5.0)(utf-8-validate@5.0.10)(webpack@5.105.4)
       '@pmmmwh/react-refresh-webpack-plugin': 0.6.2(react-refresh@0.18.0)(webpack-dev-server@5.2.3)(webpack@5.105.4)
@@ -3559,7 +3563,7 @@ snapshots:
   '@swc/core@1.15.21(@swc/helpers@0.5.19)':
     dependencies:
       '@swc/counter': 0.1.3
-      '@swc/types': 0.1.25
+      '@swc/types': 0.1.26
     optionalDependencies:
       '@swc/core-darwin-arm64': 1.15.21
       '@swc/core-darwin-x64': 1.15.21
@@ -3581,7 +3585,7 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@swc/types@0.1.25':
+  '@swc/types@0.1.26':
     dependencies:
       '@swc/counter': 0.1.3
 
@@ -3720,7 +3724,7 @@ snapshots:
   '@types/webpack-bundle-analyzer@4.7.0(@swc/core@1.15.21(@swc/helpers@0.5.19))(webpack-cli@7.0.2)':
     dependencies:
       '@types/node': 25.5.0
-      tapable: 2.3.0
+      tapable: 2.3.2
       webpack: 5.105.4(@swc/core@1.15.21(@swc/helpers@0.5.19))(webpack-cli@7.0.2)
     transitivePeerDependencies:
       - '@swc/core'
@@ -5271,7 +5275,7 @@ snapshots:
   mini-css-extract-plugin@2.10.1(webpack@5.105.4):
     dependencies:
       schema-utils: 4.3.3
-      tapable: 2.3.0
+      tapable: 2.3.2
       webpack: 5.105.4(@swc/core@1.15.21(@swc/helpers@0.5.19))(webpack-cli@7.0.2)
 
   mini-svg-data-uri@1.4.4: {}
@@ -5996,6 +6000,8 @@ snapshots:
       webpack: 5.105.4(@swc/core@1.15.21(@swc/helpers@0.5.19))(webpack-cli@7.0.2)
 
   tapable@2.3.0: {}
+
+  tapable@2.3.2: {}
 
   terser-webpack-plugin@5.4.0(@swc/core@1.15.21(@swc/helpers@0.5.19))(webpack@5.105.4):
     dependencies:
