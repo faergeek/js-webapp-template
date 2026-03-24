@@ -1,4 +1,3 @@
-/// <reference types="@faergeek/fs-routes/types" />
 import { Outlet } from 'react-router';
 import type { VirtualNonIndexRouteObject } from 'virtual:@faergeek/fs-routes';
 import children from 'virtual:@faergeek/fs-routes';

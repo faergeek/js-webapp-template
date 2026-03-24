@@ -5,7 +5,8 @@
     "checkJs": true,
     "erasableSyntaxOnly": true,
     "module": "nodenext",
-    "rewriteRelativeImportExtensions": true
+    "rewriteRelativeImportExtensions": true,
+    "types": ["node"]
   },
   "extends": "./tsconfig.base.json"
 }
