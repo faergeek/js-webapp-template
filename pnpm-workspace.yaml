@@ -1,14 +1,11 @@
 packages:
   - workspace/*
 
-ignoredBuiltDependencies:
-  - core-js-pure
-
-onlyBuiltDependencies:
-  - '@swc/core'
-  - bufferutil
-  - esbuild
-  - utf-8-validate
-
 catalog:
   '@types/node': ^24.0.0
+allowBuilds:
+  '@swc/core': true
+  bufferutil: true
+  esbuild: true
+  utf-8-validate: true
+  core-js-pure: false
