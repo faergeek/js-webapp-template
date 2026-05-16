@@ -3,9 +3,12 @@ packages:
 
 catalog:
   '@types/node': ^24.0.0
+
 allowBuilds:
   '@swc/core': true
   bufferutil: true
   esbuild: true
   utf-8-validate: true
   core-js-pure: false
+
+minimumReleaseAge: 4320
