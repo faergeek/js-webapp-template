@@ -38,7 +38,7 @@ importers:
         version: 8.2.3(@eslint/js@9.39.4)(@typescript-eslint/eslint-plugin@8.59.3(@typescript-eslint/parser@8.59.3(eslint@9.39.4)(typescript@6.0.3))(eslint@9.39.4)(typescript@6.0.3))(eslint@9.39.4)(typescript@6.0.3)
       '@faergeek/fs-routes':
         specifier: ^1.0.2
-        version: 1.0.2(@types/react@19.2.17)(react-router@8.0.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(webpack@5.107.2)
+        version: 1.0.3(@types/react@19.2.17)(react-router@8.0.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(webpack@5.107.2)
       '@faergeek/make-webpack-config':
         specifier: ^25.0.6
         version: 25.0.6(@swc/helpers@0.5.23)(@types/node@24.13.2)(postcss@8.5.14)(react-refresh@0.18.0)(webpack-cli@7.1.0)(webpack-dev-server@5.2.5)(webpack@5.107.2)
@@ -296,11 +296,11 @@ packages:
       '@eslint/js': ^9.19.0
       eslint: ^9.0.0
 
-  '@faergeek/fs-routes@1.0.2':
-    resolution: {integrity: sha512-QLwIZtV31K3Wf2X+/0I/yBADanzbt+hc5M1M/0TOf9IjO4X+0WjIwfb05Wmpv7T+peuLU3ZzZzEnuAt09g8tMw==}
+  '@faergeek/fs-routes@1.0.3':
+    resolution: {integrity: sha512-EH75dXU9sv2lvdbYfayTc8+PXM3Doi0BMm2LKhSQDCXDaXQnmn51VsOe0+dZFlsKlVFY8RYjAjMUQJrjyNO4UA==}
     peerDependencies:
       '@types/react': ^18.0.0 || ^19.0.0
-      react-router: ^7.0.0
+      react-router: ^7.0.0 || ^8.0.0
       webpack: ^5.0.0
 
   '@faergeek/make-webpack-config@25.0.6':
@@ -3245,7 +3245,7 @@ snapshots:
       - typescript
       - vitest
 
-  '@faergeek/fs-routes@1.0.2(@types/react@19.2.17)(react-router@8.0.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(webpack@5.107.2)':
+  '@faergeek/fs-routes@1.0.3(@types/react@19.2.17)(react-router@8.0.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(webpack@5.107.2)':
     dependencies:
       '@types/react': 19.2.17
       react-router: 8.0.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
