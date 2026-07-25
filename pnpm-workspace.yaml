@@ -12,3 +12,6 @@ allowBuilds:
   core-js-pure: false
 
 minimumReleaseAge: 4320
+minimumReleaseAgeExclude:
+  # Renovate security update: react-router@8.3.0
+  - react-router@8.3.0
