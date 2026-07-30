@@ -38,10 +38,10 @@ importers:
         version: 8.2.4(@eslint/js@9.39.5)(@typescript-eslint/eslint-plugin@8.64.0(@typescript-eslint/parser@8.64.0(eslint@9.39.5(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@9.39.5(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@9.39.5(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)
       '@faergeek/fs-routes':
         specifier: ^1.0.2
-        version: 1.0.3(@types/react@19.2.17)(react-router@8.3.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(webpack@5.109.0)
+        version: 1.0.3(@types/react@19.2.17)(react-router@8.3.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(webpack@5.109.1)
       '@faergeek/make-webpack-config':
         specifier: ^25.0.6
-        version: 25.0.6(@swc/helpers@0.5.23)(@types/node@24.13.3)(postcss@8.5.14)(react-refresh@0.18.0)(webpack-cli@7.2.1)(webpack-dev-server@5.2.6)(webpack@5.109.0)
+        version: 25.0.6(@swc/helpers@0.5.23)(@types/node@24.13.3)(postcss@8.5.14)(react-refresh@0.18.0)(webpack-cli@7.2.1)(webpack-dev-server@5.2.6)(webpack@5.109.1)
       '@size-limit/file':
         specifier: ^13.0.0
         version: 13.0.1(size-limit@13.0.1)
@@ -92,10 +92,10 @@ importers:
         version: 6.0.3
       webpack:
         specifier: ^5.64.3
-        version: 5.109.0(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
+        version: 5.109.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
       webpack-cli:
         specifier: ^7.0.0
-        version: 7.2.1(js-yaml@4.3.0)(json5@2.2.3)(webpack-bundle-analyzer@5.3.0(utf-8-validate@5.0.10))(webpack-dev-server@5.2.6)(webpack@5.109.0)
+        version: 7.2.1(js-yaml@4.3.0)(json5@2.2.3)(webpack-bundle-analyzer@5.3.0(utf-8-validate@5.0.10))(webpack-dev-server@5.2.6)(webpack@5.109.1)
 
   workspace/app:
     devDependencies:
@@ -703,6 +703,9 @@ packages:
   '@types/node@26.1.1':
     resolution: {integrity: sha512-nxAkRSVkN1Y0JC1W8ky/fTfkGsMmcrRsbx+3XoZE+rMOX71kLYTV7fLXpqud1GpbpP5TuffXFqfX7fH2GgZREw==}
 
+  '@types/node@26.1.2':
+    resolution: {integrity: sha512-Vu4a5UFA9rIIFJ7rB/Vaafh9lrCQszopTCx6KjFboXTGQbPNasehVR5TEiithSDGyd1DEiUByggTZsg8jukeIg==}
+
   '@types/qs@6.15.1':
     resolution: {integrity: sha512-GZHUBZR9hckSUhrxmp1nG6NwdpM9fCunJwyThLW1X3AyHgd9IlHb6VANpQQqDr2o/qQp6McZ3y/IA2rVzKzSbw==}
 
@@ -983,13 +986,8 @@ packages:
     resolution: {integrity: sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==}
     engines: {node: 18 || 20 || >=22}
 
-  baseline-browser-mapping@2.10.43:
-    resolution: {integrity: sha512-AjYpR78kDWAY3Efj+cDTFH9t9SCoL7OoTp1BOb0mQV7S+6CiLwnWM3FyxhJtdPufDFKzmCSFoUncKjWgJEZTCQ==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
-
-  baseline-browser-mapping@2.11.1:
-    resolution: {integrity: sha512-HYXq73DDpCtNzOmrFsm9eSwCvWCql0RzqjpDzXN9EadiLJ4DNat0nsZ/Bzmy+Ud12mb4/zKDY0cQ805ZzN+i0A==}
+  baseline-browser-mapping@2.11.5:
+    resolution: {integrity: sha512-xJo6a6YZnwZfnyGmQKWMbVOcii7XRibjOskRh+WJ9UHQoX16xrQrcIgAMQOzfvs8XiLMx6ih/fsLPF73iY2D1A==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -1025,11 +1023,6 @@ packages:
   braces@3.0.3:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
     engines: {node: '>=8'}
-
-  browserslist@4.28.6:
-    resolution: {integrity: sha512-FQBYNK15VMslhLHpA7+n+n1GOlF1kId2xcCg7/j95f24AOF6VDYMNH4mFxF7KuaTdv627faazpOAjFzMrfJOUw==}
-    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
-    hasBin: true
 
   browserslist@4.28.7:
     resolution: {integrity: sha512-JxV13hNrFxqjOc8alRbq9dK1MM79NEXYpma2B2J4wAtpWS5zIEIKqWPGCl7N4o7Uc7B7itylh7SuDujATRyyTw==}
@@ -1283,11 +1276,8 @@ packages:
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
-  electron-to-chromium@1.5.393:
-    resolution: {integrity: sha512-kiDJdIUawuEIcp9XoICKp1iTYDEbgguIPq526N1Q7jIQDeQ3CqoMx71025PI/7E48Ddtw2HuWsVjY7afEgNxmg==}
-
-  electron-to-chromium@1.5.395:
-    resolution: {integrity: sha512-7zt9Aw+SrmxLWLN0zhaTWZQiCdryLVrYTq5R7iZakLvi2UQPYMMsROYV/2qVCzMeCiSXHwKOU+sZ4zOVVlrtKA==}
+  electron-to-chromium@1.5.396:
+    resolution: {integrity: sha512-yHiw2Y3C3H9U6TMbOfoWK/BPreiOPXRfTWPBwQBoZG6/8TB6eOPnsy5oaRYuatR7Fw2SJ4kKforgufeo7fq0EQ==}
 
   encodeurl@2.0.0:
     resolution: {integrity: sha512-Q0n9HRi4m6JuGIV1eFlmvJB7ZEVxu93IrMyiMsGC0lrMJMWzRgx6WGquyfQgZVb31vhGgXnfmPNNXmxnOkRBrg==}
@@ -2995,16 +2985,12 @@ packages:
     resolution: {integrity: sha512-hXXvrjtx2PLYx4qruKl+kyRSLc52V+cCvMxRjmKwoA+CBbbF5GfIBtR6kCvl0fYGqTUPKB+1ktVmTHqMOzgCBg==}
     engines: {node: '>=18.0.0'}
 
-  webpack-sources@3.5.0:
-    resolution: {integrity: sha512-HPuy+uuoTCaaoEoI1LQ3JN9+vrPBvEesnnX1jADHy728cHSMlq4wUc4afYqahq2B1mhQVZxCXOkNTnXltr+2vQ==}
-    engines: {node: '>=10.13.0'}
-
   webpack-sources@3.5.1:
     resolution: {integrity: sha512-jyuiGJdtvY434z5bUZrjz67v76/ePNvFZTp9Mdz29IlH4+GPsgyGjiv0fKI+M7BdkU6ADjulUcKAd3tUK3WlEw==}
     engines: {node: '>=10.13.0'}
 
-  webpack@5.109.0:
-    resolution: {integrity: sha512-vomrngskVVXEZF9sMZfYAd4pXZUnfaWdJGlF+BTNF+gJBCKYCQBnOeVPlrh39Ewl7nlCsirDplMy6o5g9xJHBg==}
+  webpack@5.109.1:
+    resolution: {integrity: sha512-Q4XQscWSLNQSaMFsIWUZ+IVpvwLqD+MvjIuSQC1hG8m1ZMK78VAsNMhTjD3icJelypp6aM5Hq8BZNEX3sc1PJw==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     peerDependencies:
@@ -3138,7 +3124,7 @@ snapshots:
     dependencies:
       '@babel/compat-data': 7.29.7
       '@babel/helper-validator-option': 7.29.7
-      browserslist: 4.28.6
+      browserslist: 4.28.7
       lru-cache: 5.1.1
       semver: 6.3.1
 
@@ -3263,29 +3249,29 @@ snapshots:
       - typescript
       - vitest
 
-  '@faergeek/fs-routes@1.0.3(@types/react@19.2.17)(react-router@8.3.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(webpack@5.109.0)':
+  '@faergeek/fs-routes@1.0.3(@types/react@19.2.17)(react-router@8.3.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(webpack@5.109.1)':
     dependencies:
       '@types/react': 19.2.17
       react-router: 8.3.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       tiny-invariant: 1.3.3
-      webpack: 5.109.0(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
+      webpack: 5.109.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
 
-  '@faergeek/make-webpack-config@25.0.6(@swc/helpers@0.5.23)(@types/node@24.13.3)(postcss@8.5.14)(react-refresh@0.18.0)(webpack-cli@7.2.1)(webpack-dev-server@5.2.6)(webpack@5.109.0)':
+  '@faergeek/make-webpack-config@25.0.6(@swc/helpers@0.5.23)(@types/node@24.13.3)(postcss@8.5.14)(react-refresh@0.18.0)(webpack-cli@7.2.1)(webpack-dev-server@5.2.6)(webpack@5.109.1)':
     dependencies:
-      '@faergeek/tiny-browser-hmr-webpack-plugin': 1.2.7(@types/node@24.13.3)(utf-8-validate@5.0.10)(webpack@5.109.0)
-      '@pmmmwh/react-refresh-webpack-plugin': 0.6.2(react-refresh@0.18.0)(webpack-dev-server@5.2.6)(webpack@5.109.0)
+      '@faergeek/tiny-browser-hmr-webpack-plugin': 1.2.7(@types/node@24.13.3)(utf-8-validate@5.0.10)(webpack@5.109.1)
+      '@pmmmwh/react-refresh-webpack-plugin': 0.6.2(react-refresh@0.18.0)(webpack-dev-server@5.2.6)(webpack@5.109.1)
       '@swc/core': 1.15.33(@swc/helpers@0.5.23)
       '@types/node': 24.13.3
       '@types/webpack-bundle-analyzer': 4.7.0(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
-      css-loader: 7.1.4(webpack@5.109.0)
+      css-loader: 7.1.4(webpack@5.109.1)
       lightningcss: 1.32.0
-      lightningcss-loader: 3.0.1(webpack@5.109.0)
-      mini-css-extract-plugin: 2.10.2(webpack@5.109.0)
+      lightningcss-loader: 3.0.1(webpack@5.109.1)
+      mini-css-extract-plugin: 2.10.2(webpack@5.109.1)
       mini-svg-data-uri: 1.4.4
       picocolors: 1.1.1
-      source-map-loader: 5.0.0(webpack@5.109.0)
-      swc-loader: 0.2.7(@swc/core@1.15.33(@swc/helpers@0.5.23))(webpack@5.109.0)
-      webpack: 5.109.0(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
+      source-map-loader: 5.0.0(webpack@5.109.1)
+      swc-loader: 0.2.7(@swc/core@1.15.33(@swc/helpers@0.5.23))(webpack@5.109.1)
+      webpack: 5.109.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
       webpack-bundle-analyzer: 5.3.0(utf-8-validate@5.0.10)
     optionalDependencies:
       utf-8-validate: 5.0.10
@@ -3312,11 +3298,11 @@ snapshots:
       - webpack-hot-middleware
       - webpack-plugin-serve
 
-  '@faergeek/tiny-browser-hmr-webpack-plugin@1.2.7(@types/node@24.13.3)(utf-8-validate@5.0.10)(webpack@5.109.0)':
+  '@faergeek/tiny-browser-hmr-webpack-plugin@1.2.7(@types/node@24.13.3)(utf-8-validate@5.0.10)(webpack@5.109.1)':
     dependencies:
       '@types/node': 24.13.3
       '@types/ws': 8.18.1
-      webpack: 5.109.0(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
+      webpack: 5.109.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
       ws: 8.20.1(utf-8-validate@5.0.10)
     transitivePeerDependencies:
       - bufferutil
@@ -3621,7 +3607,7 @@ snapshots:
       tsyringe: 4.10.0
     optional: true
 
-  '@pmmmwh/react-refresh-webpack-plugin@0.6.2(react-refresh@0.18.0)(webpack-dev-server@5.2.6)(webpack@5.109.0)':
+  '@pmmmwh/react-refresh-webpack-plugin@0.6.2(react-refresh@0.18.0)(webpack-dev-server@5.2.6)(webpack@5.109.1)':
     dependencies:
       anser: 2.3.5
       core-js-pure: 3.49.0
@@ -3630,9 +3616,9 @@ snapshots:
       react-refresh: 0.18.0
       schema-utils: 4.3.3
       source-map: 0.7.6
-      webpack: 5.109.0(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
+      webpack: 5.109.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
     optionalDependencies:
-      webpack-dev-server: 5.2.6(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)(tslib@2.8.1)(utf-8-validate@5.0.10)(webpack-cli@7.2.1)(webpack@5.109.0)
+      webpack-dev-server: 5.2.6(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)(tslib@2.8.1)(utf-8-validate@5.0.10)(webpack-cli@7.2.1)(webpack@5.109.1)
 
   '@polka/url@1.0.0-next.29': {}
 
@@ -3791,6 +3777,10 @@ snapshots:
     dependencies:
       undici-types: 8.3.0
 
+  '@types/node@26.1.2':
+    dependencies:
+      undici-types: 8.3.0
+
   '@types/qs@6.15.1': {}
 
   '@types/range-parser@1.2.7': {}
@@ -3846,7 +3836,7 @@ snapshots:
     dependencies:
       '@types/node': 24.13.3
       tapable: 2.3.3
-      webpack: 5.109.0(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
+      webpack: 5.109.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
     transitivePeerDependencies:
       - '@minify-html/node'
       - '@swc/core'
@@ -4186,9 +4176,7 @@ snapshots:
 
   balanced-match@4.0.4: {}
 
-  baseline-browser-mapping@2.10.43: {}
-
-  baseline-browser-mapping@2.11.1: {}
+  baseline-browser-mapping@2.11.5: {}
 
   basic-auth@2.0.1:
     dependencies:
@@ -4252,19 +4240,11 @@ snapshots:
       fill-range: 7.1.1
     optional: true
 
-  browserslist@4.28.6:
-    dependencies:
-      baseline-browser-mapping: 2.10.43
-      caniuse-lite: 1.0.30001806
-      electron-to-chromium: 1.5.393
-      node-releases: 2.0.51
-      update-browserslist-db: 1.2.3(browserslist@4.28.6)
-
   browserslist@4.28.7:
     dependencies:
-      baseline-browser-mapping: 2.11.1
+      baseline-browser-mapping: 2.11.5
       caniuse-lite: 1.0.30001806
-      electron-to-chromium: 1.5.395
+      electron-to-chromium: 1.5.396
       node-releases: 2.0.51
       update-browserslist-db: 1.2.3(browserslist@4.28.7)
 
@@ -4398,7 +4378,7 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
-  css-loader@7.1.4(webpack@5.109.0):
+  css-loader@7.1.4(webpack@5.109.1):
     dependencies:
       icss-utils: 5.1.0(postcss@8.5.14)
       postcss: 8.5.14
@@ -4409,7 +4389,7 @@ snapshots:
       postcss-value-parser: 4.2.0
       semver: 7.8.0
     optionalDependencies:
-      webpack: 5.109.0(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
+      webpack: 5.109.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
 
   cssesc@3.0.0: {}
 
@@ -4507,9 +4487,7 @@ snapshots:
 
   ee-first@1.1.1: {}
 
-  electron-to-chromium@1.5.393: {}
-
-  electron-to-chromium@1.5.395: {}
+  electron-to-chromium@1.5.396: {}
 
   encodeurl@2.0.0: {}
 
@@ -5303,7 +5281,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 26.1.1
+      '@types/node': 26.1.2
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -5376,12 +5354,12 @@ snapshots:
   lightningcss-linux-x64-musl@1.32.0:
     optional: true
 
-  lightningcss-loader@3.0.1(webpack@5.109.0):
+  lightningcss-loader@3.0.1(webpack@5.109.1):
     dependencies:
-      browserslist: 4.28.6
+      browserslist: 4.28.7
       lightningcss: 1.32.0
-      webpack: 5.109.0(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
-      webpack-sources: 3.5.0
+      webpack: 5.109.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
+      webpack-sources: 3.5.1
 
   lightningcss-win32-arm64-msvc@1.32.0:
     optional: true
@@ -5485,11 +5463,11 @@ snapshots:
   mime@1.6.0:
     optional: true
 
-  mini-css-extract-plugin@2.10.2(webpack@5.109.0):
+  mini-css-extract-plugin@2.10.2(webpack@5.109.1):
     dependencies:
       schema-utils: 4.3.3
       tapable: 2.3.3
-      webpack: 5.109.0(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
+      webpack: 5.109.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
 
   mini-svg-data-uri@1.4.4: {}
 
@@ -5504,13 +5482,13 @@ snapshots:
     dependencies:
       brace-expansion: 1.1.16
 
-  minimizer-webpack-plugin@5.6.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack@5.109.0):
+  minimizer-webpack-plugin@5.6.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack@5.109.1):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       jest-worker: 27.5.1
       schema-utils: 4.3.3
       terser: 5.49.0
-      webpack: 5.109.0(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
+      webpack: 5.109.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
     optionalDependencies:
       '@swc/core': 1.15.33(@swc/helpers@0.5.23)
       lightningcss: 1.32.0
@@ -6143,11 +6121,11 @@ snapshots:
 
   source-map-js@1.2.1: {}
 
-  source-map-loader@5.0.0(webpack@5.109.0):
+  source-map-loader@5.0.0(webpack@5.109.1):
     dependencies:
       iconv-lite: 0.6.3
       source-map-js: 1.2.1
-      webpack: 5.109.0(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
+      webpack: 5.109.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
 
   source-map-support@0.5.21:
     dependencies:
@@ -6260,11 +6238,11 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  swc-loader@0.2.7(@swc/core@1.15.33(@swc/helpers@0.5.23))(webpack@5.109.0):
+  swc-loader@0.2.7(@swc/core@1.15.33(@swc/helpers@0.5.23))(webpack@5.109.1):
     dependencies:
       '@swc/core': 1.15.33(@swc/helpers@0.5.23)
       '@swc/counter': 0.1.3
-      webpack: 5.109.0(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
+      webpack: 5.109.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
 
   tapable@2.3.3: {}
 
@@ -6393,12 +6371,6 @@ snapshots:
 
   unpipe@1.0.0: {}
 
-  update-browserslist-db@1.2.3(browserslist@4.28.6):
-    dependencies:
-      browserslist: 4.28.6
-      escalade: 3.2.0
-      picocolors: 1.1.1
-
   update-browserslist-db@1.2.3(browserslist@4.28.7):
     dependencies:
       browserslist: 4.28.7
@@ -6449,7 +6421,7 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  webpack-cli@7.2.1(js-yaml@4.3.0)(json5@2.2.3)(webpack-bundle-analyzer@5.3.0(utf-8-validate@5.0.10))(webpack-dev-server@5.2.6)(webpack@5.109.0):
+  webpack-cli@7.2.1(js-yaml@4.3.0)(json5@2.2.3)(webpack-bundle-analyzer@5.3.0(utf-8-validate@5.0.10))(webpack-dev-server@5.2.6)(webpack@5.109.1):
     dependencies:
       '@discoveryjs/json-ext': 1.1.0
       commander: 14.0.3
@@ -6458,15 +6430,15 @@ snapshots:
       import-local: 3.2.0
       interpret: 3.1.1
       rechoir: 0.8.0
-      webpack: 5.109.0(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
+      webpack: 5.109.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
       webpack-merge: 6.0.1
     optionalDependencies:
       js-yaml: 4.3.0
       json5: 2.2.3
       webpack-bundle-analyzer: 5.3.0(utf-8-validate@5.0.10)
-      webpack-dev-server: 5.2.6(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)(tslib@2.8.1)(utf-8-validate@5.0.10)(webpack-cli@7.2.1)(webpack@5.109.0)
+      webpack-dev-server: 5.2.6(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)(tslib@2.8.1)(utf-8-validate@5.0.10)(webpack-cli@7.2.1)(webpack@5.109.1)
 
-  webpack-dev-middleware@7.4.5(tslib@2.8.1)(webpack@5.109.0):
+  webpack-dev-middleware@7.4.5(tslib@2.8.1)(webpack@5.109.1):
     dependencies:
       colorette: 2.0.20
       memfs: 4.57.8(tslib@2.8.1)
@@ -6475,12 +6447,12 @@ snapshots:
       range-parser: 1.3.0
       schema-utils: 4.3.3
     optionalDependencies:
-      webpack: 5.109.0(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
+      webpack: 5.109.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
     transitivePeerDependencies:
       - tslib
     optional: true
 
-  webpack-dev-server@5.2.6(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)(tslib@2.8.1)(utf-8-validate@5.0.10)(webpack-cli@7.2.1)(webpack@5.109.0):
+  webpack-dev-server@5.2.6(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)(tslib@2.8.1)(utf-8-validate@5.0.10)(webpack-cli@7.2.1)(webpack@5.109.1):
     dependencies:
       '@types/bonjour': 3.5.13
       '@types/connect-history-api-fallback': 1.5.4
@@ -6508,11 +6480,11 @@ snapshots:
       serve-index: 1.9.2(supports-color@8.1.1)
       sockjs: 0.3.24
       spdy: 4.0.2(supports-color@8.1.1)
-      webpack-dev-middleware: 7.4.5(tslib@2.8.1)(webpack@5.109.0)
+      webpack-dev-middleware: 7.4.5(tslib@2.8.1)(webpack@5.109.1)
       ws: 8.21.0(utf-8-validate@5.0.10)
     optionalDependencies:
-      webpack: 5.109.0(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
-      webpack-cli: 7.2.1(js-yaml@4.3.0)(json5@2.2.3)(webpack-bundle-analyzer@5.3.0(utf-8-validate@5.0.10))(webpack-dev-server@5.2.6)(webpack@5.109.0)
+      webpack: 5.109.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1)
+      webpack-cli: 7.2.1(js-yaml@4.3.0)(json5@2.2.3)(webpack-bundle-analyzer@5.3.0(utf-8-validate@5.0.10))(webpack-dev-server@5.2.6)(webpack@5.109.1)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -6527,11 +6499,9 @@ snapshots:
       flat: 5.0.2
       wildcard: 2.0.1
 
-  webpack-sources@3.5.0: {}
-
   webpack-sources@3.5.1: {}
 
-  webpack@5.109.0(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1):
+  webpack@5.109.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.1):
     dependencies:
       '@types/estree': 1.0.9
       '@types/json-schema': 7.0.15
@@ -6547,14 +6517,14 @@ snapshots:
       events: 3.3.0
       graceful-fs: 4.2.11
       mime-db: 1.54.0
-      minimizer-webpack-plugin: 5.6.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack@5.109.0)
+      minimizer-webpack-plugin: 5.6.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack@5.109.1)
       neo-async: 2.6.2
       schema-utils: 4.3.3
       tapable: 2.3.3
       watchpack: 2.5.2
       webpack-sources: 3.5.1
     optionalDependencies:
-      webpack-cli: 7.2.1(js-yaml@4.3.0)(json5@2.2.3)(webpack-bundle-analyzer@5.3.0(utf-8-validate@5.0.10))(webpack-dev-server@5.2.6)(webpack@5.109.0)
+      webpack-cli: 7.2.1(js-yaml@4.3.0)(json5@2.2.3)(webpack-bundle-analyzer@5.3.0(utf-8-validate@5.0.10))(webpack-dev-server@5.2.6)(webpack@5.109.1)
     transitivePeerDependencies:
       - '@minify-html/node'
       - '@swc/core'
