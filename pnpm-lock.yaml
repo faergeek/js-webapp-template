@@ -122,7 +122,7 @@ importers:
         version: 5.2.1(supports-color@8.1.1)
       morgan:
         specifier: ^1.10.0
-        version: 1.11.0(supports-color@8.1.1)
+        version: 1.12.0(supports-color@8.1.1)
       picocolors:
         specifier: ^1.1.1
         version: 1.1.1
@@ -2161,8 +2161,8 @@ packages:
     resolution: {integrity: sha512-VqlMdYi59Uch6fnUPxnpijWUQe+TW6zeWCvyr6Mb7JibheHzSuAAoJi2c71ZwIaWKpECpGpYHoaaBp6rBRr+/g==}
     engines: {node: '>=6'}
 
-  morgan@1.11.0:
-    resolution: {integrity: sha512-zSkVu3t18r39pw4ixfBKvfZi3y2UOqr7d4WYwcj3m8nXpEQK4rPO6GLzs/CExoRgmX3y9EjmmcXqv6jq0SK46g==}
+  morgan@1.12.0:
+    resolution: {integrity: sha512-OHpTRQwn2ezasILW8iKe+Yww1XsfWsZIpUOLF7RDb2g5GwO3trPaRwi7+8BDiJ7HFx2Kg2mfUdCBcVhwYlOz2g==}
     engines: {node: '>= 0.8.0'}
 
   mrmime@2.0.1:
@@ -5477,7 +5477,7 @@ snapshots:
 
   modern-normalize@3.0.1: {}
 
-  morgan@1.11.0(supports-color@8.1.1):
+  morgan@1.12.0(supports-color@8.1.1):
     dependencies:
       basic-auth: 2.0.1
       debug: 2.6.9(supports-color@8.1.1)
