@@ -41,7 +41,7 @@ importers:
         version: 1.0.3(@types/react@19.2.18)(react-router@8.3.1(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(webpack@5.110.1)
       '@faergeek/make-webpack-config':
         specifier: ^25.0.6
-        version: 25.0.6(@swc/helpers@0.5.23)(@types/node@24.13.3)(postcss@8.5.14)(react-refresh@0.18.0)(webpack-cli@7.2.2)(webpack-dev-server@5.2.6)(webpack@5.110.1)
+        version: 25.0.6(@swc/helpers@0.5.23)(@types/node@24.13.3)(postcss@8.5.14)(react-refresh@0.18.0)(webpack-cli@7.2.3)(webpack-dev-server@5.2.6)(webpack@5.110.1)
       '@size-limit/file':
         specifier: ^13.0.0
         version: 13.0.3(size-limit@13.0.3)
@@ -92,10 +92,10 @@ importers:
         version: 6.0.3
       webpack:
         specifier: ^5.64.3
-        version: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.2)
+        version: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.3)
       webpack-cli:
         specifier: ^7.0.0
-        version: 7.2.2(js-yaml@4.3.0)(json5@2.2.3)(webpack-bundle-analyzer@5.3.0(utf-8-validate@5.0.10))(webpack-dev-server@5.2.6)(webpack@5.110.1)
+        version: 7.2.3(js-yaml@4.3.0)(json5@2.2.3)(webpack-bundle-analyzer@5.3.0(utf-8-validate@5.0.10))(webpack-dev-server@5.2.6)(webpack@5.110.1)
 
   workspace/app:
     devDependencies:
@@ -2926,14 +2926,14 @@ packages:
     engines: {node: '>= 20.9.0'}
     hasBin: true
 
-  webpack-cli@7.2.2:
-    resolution: {integrity: sha512-lD0pALneslq8FfV+rwvm1BMW0AFAJrHHhNupAGN4asYjMvqrtRsenU4iKpiBo09gS4ntMxKGUxl9jhTEzVt0oA==}
+  webpack-cli@7.2.3:
+    resolution: {integrity: sha512-vDFU7jrfCctnN7jJQWPl+V26B51GLp11prVZXg50oeonsgeBzSTJEWmXkjHsOjTgMjlPOQM8GWLh33X9RN/0ow==}
     engines: {node: '>=20.9.0'}
     hasBin: true
     peerDependencies:
       js-yaml: ^4.0.0 || ^5.0.0
       json5: ^2.2.3
-      toml: ^3.0.0 || ^4.0.0
+      toml: ^3.0.0 || ^4.0.0 || ^5.0.0
       webpack: ^5.101.0
       webpack-bundle-analyzer: ^4.0.0 || ^5.0.0
       webpack-dev-server: ^5.0.0 || ^6.0.0
@@ -3244,15 +3244,15 @@ snapshots:
       '@types/react': 19.2.18
       react-router: 8.3.1(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       tiny-invariant: 1.3.3
-      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.2)
+      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.3)
 
-  '@faergeek/make-webpack-config@25.0.6(@swc/helpers@0.5.23)(@types/node@24.13.3)(postcss@8.5.14)(react-refresh@0.18.0)(webpack-cli@7.2.2)(webpack-dev-server@5.2.6)(webpack@5.110.1)':
+  '@faergeek/make-webpack-config@25.0.6(@swc/helpers@0.5.23)(@types/node@24.13.3)(postcss@8.5.14)(react-refresh@0.18.0)(webpack-cli@7.2.3)(webpack-dev-server@5.2.6)(webpack@5.110.1)':
     dependencies:
       '@faergeek/tiny-browser-hmr-webpack-plugin': 1.2.7(@types/node@24.13.3)(utf-8-validate@5.0.10)(webpack@5.110.1)
       '@pmmmwh/react-refresh-webpack-plugin': 0.6.2(react-refresh@0.18.0)(webpack-dev-server@5.2.6)(webpack@5.110.1)
       '@swc/core': 1.15.33(@swc/helpers@0.5.23)
       '@types/node': 24.13.3
-      '@types/webpack-bundle-analyzer': 4.7.0(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.2)
+      '@types/webpack-bundle-analyzer': 4.7.0(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.3)
       css-loader: 7.1.4(webpack@5.110.1)
       lightningcss: 1.32.0
       lightningcss-loader: 3.0.1(webpack@5.110.1)
@@ -3261,7 +3261,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-loader: 5.0.0(webpack@5.110.1)
       swc-loader: 0.2.7(@swc/core@1.15.33(@swc/helpers@0.5.23))(webpack@5.110.1)
-      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.2)
+      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.3)
       webpack-bundle-analyzer: 5.3.0(utf-8-validate@5.0.10)
     optionalDependencies:
       utf-8-validate: 5.0.10
@@ -3292,7 +3292,7 @@ snapshots:
     dependencies:
       '@types/node': 24.13.3
       '@types/ws': 8.18.1
-      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.2)
+      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.3)
       ws: 8.20.1(utf-8-validate@5.0.10)
     transitivePeerDependencies:
       - bufferutil
@@ -3606,9 +3606,9 @@ snapshots:
       react-refresh: 0.18.0
       schema-utils: 4.3.3
       source-map: 0.7.6
-      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.2)
+      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.3)
     optionalDependencies:
-      webpack-dev-server: 5.2.6(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)(tslib@2.8.1)(utf-8-validate@5.0.10)(webpack-cli@7.2.2)(webpack@5.110.1)
+      webpack-dev-server: 5.2.6(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)(tslib@2.8.1)(utf-8-validate@5.0.10)(webpack-cli@7.2.3)(webpack@5.110.1)
 
   '@polka/url@1.0.0-next.29': {}
 
@@ -3818,11 +3818,11 @@ snapshots:
       '@types/node': 26.1.2
     optional: true
 
-  '@types/webpack-bundle-analyzer@4.7.0(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.2)':
+  '@types/webpack-bundle-analyzer@4.7.0(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.3)':
     dependencies:
       '@types/node': 24.13.3
       tapable: 2.3.3
-      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.2)
+      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.3)
     transitivePeerDependencies:
       - '@minify-html/node'
       - '@swc/core'
@@ -4375,7 +4375,7 @@ snapshots:
       postcss-value-parser: 4.2.0
       semver: 7.8.0
     optionalDependencies:
-      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.2)
+      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.3)
 
   cssesc@3.0.0: {}
 
@@ -5337,7 +5337,7 @@ snapshots:
     dependencies:
       browserslist: 4.28.7
       lightningcss: 1.32.0
-      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.2)
+      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.3)
       webpack-sources: 3.5.1
 
   lightningcss-win32-arm64-msvc@1.32.0:
@@ -5446,7 +5446,7 @@ snapshots:
     dependencies:
       schema-utils: 4.3.3
       tapable: 2.3.3
-      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.2)
+      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.3)
 
   mini-svg-data-uri@1.4.4: {}
 
@@ -5467,7 +5467,7 @@ snapshots:
       jest-worker: 27.5.1
       schema-utils: 4.3.3
       terser: 5.51.2
-      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.2)
+      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.3)
     optionalDependencies:
       '@swc/core': 1.15.33(@swc/helpers@0.5.23)
       lightningcss: 1.32.0
@@ -6103,7 +6103,7 @@ snapshots:
     dependencies:
       iconv-lite: 0.6.3
       source-map-js: 1.2.1
-      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.2)
+      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.3)
 
   source-map-support@0.5.21:
     dependencies:
@@ -6220,7 +6220,7 @@ snapshots:
     dependencies:
       '@swc/core': 1.15.33(@swc/helpers@0.5.23)
       '@swc/counter': 0.1.3
-      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.2)
+      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.3)
 
   tapable@2.3.3: {}
 
@@ -6399,7 +6399,7 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  webpack-cli@7.2.2(js-yaml@4.3.0)(json5@2.2.3)(webpack-bundle-analyzer@5.3.0(utf-8-validate@5.0.10))(webpack-dev-server@5.2.6)(webpack@5.110.1):
+  webpack-cli@7.2.3(js-yaml@4.3.0)(json5@2.2.3)(webpack-bundle-analyzer@5.3.0(utf-8-validate@5.0.10))(webpack-dev-server@5.2.6)(webpack@5.110.1):
     dependencies:
       '@discoveryjs/json-ext': 1.1.0
       commander: 14.0.3
@@ -6408,13 +6408,13 @@ snapshots:
       import-local: 3.2.0
       interpret: 3.1.1
       rechoir: 0.8.0
-      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.2)
+      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.3)
       webpack-merge: 6.0.1
     optionalDependencies:
       js-yaml: 4.3.0
       json5: 2.2.3
       webpack-bundle-analyzer: 5.3.0(utf-8-validate@5.0.10)
-      webpack-dev-server: 5.2.6(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)(tslib@2.8.1)(utf-8-validate@5.0.10)(webpack-cli@7.2.2)(webpack@5.110.1)
+      webpack-dev-server: 5.2.6(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)(tslib@2.8.1)(utf-8-validate@5.0.10)(webpack-cli@7.2.3)(webpack@5.110.1)
 
   webpack-dev-middleware@7.4.5(tslib@2.8.1)(webpack@5.110.1):
     dependencies:
@@ -6425,12 +6425,12 @@ snapshots:
       range-parser: 1.3.0
       schema-utils: 4.3.3
     optionalDependencies:
-      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.2)
+      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.3)
     transitivePeerDependencies:
       - tslib
     optional: true
 
-  webpack-dev-server@5.2.6(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)(tslib@2.8.1)(utf-8-validate@5.0.10)(webpack-cli@7.2.2)(webpack@5.110.1):
+  webpack-dev-server@5.2.6(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)(tslib@2.8.1)(utf-8-validate@5.0.10)(webpack-cli@7.2.3)(webpack@5.110.1):
     dependencies:
       '@types/bonjour': 3.5.13
       '@types/connect-history-api-fallback': 1.5.4
@@ -6461,8 +6461,8 @@ snapshots:
       webpack-dev-middleware: 7.4.5(tslib@2.8.1)(webpack@5.110.1)
       ws: 8.21.0(utf-8-validate@5.0.10)
     optionalDependencies:
-      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.2)
-      webpack-cli: 7.2.2(js-yaml@4.3.0)(json5@2.2.3)(webpack-bundle-analyzer@5.3.0(utf-8-validate@5.0.10))(webpack-dev-server@5.2.6)(webpack@5.110.1)
+      webpack: 5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.3)
+      webpack-cli: 7.2.3(js-yaml@4.3.0)(json5@2.2.3)(webpack-bundle-analyzer@5.3.0(utf-8-validate@5.0.10))(webpack-dev-server@5.2.6)(webpack@5.110.1)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -6479,7 +6479,7 @@ snapshots:
 
   webpack-sources@3.5.1: {}
 
-  webpack@5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.2):
+  webpack@5.110.1(@swc/core@1.15.33(@swc/helpers@0.5.23))(lightningcss@1.32.0)(postcss@8.5.14)(webpack-cli@7.2.3):
     dependencies:
       '@types/estree': 1.0.9
       '@types/json-schema': 7.0.15
@@ -6501,7 +6501,7 @@ snapshots:
       watchpack: 2.5.2
       webpack-sources: 3.5.1
     optionalDependencies:
-      webpack-cli: 7.2.2(js-yaml@4.3.0)(json5@2.2.3)(webpack-bundle-analyzer@5.3.0(utf-8-validate@5.0.10))(webpack-dev-server@5.2.6)(webpack@5.110.1)
+      webpack-cli: 7.2.3(js-yaml@4.3.0)(json5@2.2.3)(webpack-bundle-analyzer@5.3.0(utf-8-validate@5.0.10))(webpack-dev-server@5.2.6)(webpack@5.110.1)
     transitivePeerDependencies:
       - '@minify-html/node'
       - '@swc/core'
